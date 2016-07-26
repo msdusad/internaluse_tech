@@ -160,15 +160,16 @@
                       <div class="clearfix"></div>
                     </div>
                     <div class="x_content">
-                       <form action="#" class="checkList">
+                    	 <p id="pass_update_result"></p>
+                       <form  class="checkList">
 					         <label>Current password</label>
-							 <input type="password" class="form-control margin-bottom-10">
+							 <input type="password" id="current_password" name="current_password" class="form-control margin-bottom-10" required>
 							 <label>New password</label>
-							 <input type="password" class="form-control margin-bottom-10">
+							 <input type="password" id="new_password" name="new_password" class="form-control margin-bottom-10" required>
 							 <label>Confirm password</label>
-							 <input type="password" class="form-control margin-bottom-20">
+							 <input type="password" name="confirm_password" class="form-control margin-bottom-20" required>
 							 <p class="text-right">
-							   <input type="submit" value="Change Password" class="btn btn-dark noBorderRadius">
+							   <input id="update_password" type="button" name="update_password" value="Change Password" class="btn btn-dark noBorderRadius">
 							 </p>						
 					   </form>
                     </div>

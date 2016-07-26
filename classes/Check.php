@@ -45,19 +45,6 @@ echo "Username Already Exists";
 
 }
 
-public function password(){
-$passwordcheck="select * from users where password='$this->_value'";
-$obj=Common::NumRows($passwordcheck);
-if($obj==false){
-return true;
-}
-else{
-return "Password Already Exists";
-}
-
-}
-
-
 }
 
 //new Check($_POST['search'],$_POST['search_type']);

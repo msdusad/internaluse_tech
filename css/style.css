@@ -243,8 +243,11 @@ ul.listProb li:last-child{ border-bottom: 0;}
 .pdLogin{padding-top:50px;}
 .mrLogin{margin-bottom:60px;}
 ul.list-right{list-style:none;padding-left:20px;}
-ul.list-right li{text-align:left; border-bottom:solid 1px #ddd; border-top:solid 1px #ddd; padding:10px 0; margin-top:-1px}
-ul.list-right li:before{font-family:"fontello";content:'\e87c'; margin-right:10px;margin-left:-20px;font-size:14px;color:#1ABB9C;}
+ul.list-right li{text-align:left; transition: 0.5s ease; border-bottom:solid 1px #ddd; border-top:solid 1px #ddd; margin-top:-1px; position:relative}
+ul.list-right li:before{font-family:"fontello";content:'\e87c'; margin-right:10px;
+margin-left:-20px;font-size:14px;position:absolute; top:6px; left:0;}
+ul.list-right li a{padding:5px 0; display:block;}
+ul.list-right li a:hover{background:#f5f5f5;}
 @media (max-width:767px){
 .pdLogin{padding-top:10px;}
 }

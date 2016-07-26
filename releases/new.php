@@ -13,7 +13,7 @@
 					<div class="x_title">
 					 <div class="row">
 					    <div class="col-lg-7 padding-top-10">
-						  <a href="index.php" class="h4"><i class="icon-left-small"></i>Back to Releases</a>
+						  <a href="index.php" class="h4"><i class="icon-left-small"></i>Back to Changes</a>
 						</div>
 						<div class="col-lg-5 text-right MrTpMd-10">
 						 <a href="index.php" class="btn btn-danger btn-round">Cancel</a>
@@ -34,7 +34,7 @@
 					   <div class="clearfix"></div>
 					</div>
 					<div class="x_content">
-						<h1 class="h3 padding-bottom-10">Create a New Releases</h1>
+						<h1 class="h3 padding-bottom-10">Create a New Changes</h1>
 						
 						<form action="#" class="checkList">
 						    <label>Search a requester <span class="text-red">*</span> or <a data-toggle="modal" data-target="#requester" class="green">Add New Requester</a></label>
@@ -122,31 +122,29 @@
 							</div>
 													  
 							</form>
-						<div class="panel panel-default noBorderRadius noShadow margin-top-20">
-						    <div class="panel-heading nav">	
-							  <a href="#" class="BoldAlign">&nbsp;</a>
-							  <a href="#" class="italicAlign">&nbsp;</a>
-							  <a href="#" class="list">&nbsp;</a>
-							  <a href="#" class="listNum">&nbsp;</a>
-							  <a href="#" class="shiftTab">&nbsp;</a>
-							  <a href="#" class="shiftTab2">&nbsp;</a>
-							  <a href="#" class="fontColor">&nbsp;</a>
-							  <a href="#" class="backColor">&nbsp;</a>
-							  <span class="dropdown">
-							  <a href="#" class="dropdown-toggle links" data-toggle="dropdown" role="button" aria-expanded="false" title="link">&nbsp;</a>
-							  <ul class="dropdown-menu">
-								<li><a href="#insertLink" data-toggle="modal" data-target="#insertLink">Insert Link ...</a></li>
-								<li><a href="#">Unlink</a></li>
-							  </ul>
-							  </span>
-							  <a href="#" data-toggle="modal" data-target="#imageSelecter" class="imageSelect">&nbsp;</a>
-							  <a href="#" class="imageSelect2">&nbsp;</a>
-							</div>
-							<div class="panel-body panelHeight">
-							     Text
-							</div>
-						</div>	
-						<p>				
+							<!-- start-->
+                  <div class="btn-toolbar editor nav" data-role="editor-toolbar" data-target="#editor">
+                   <a href="#" class="BoldAlign" data-toggle="tooltip" data-placement="top" title="" data-original-title="Bold">&nbsp;</a>
+				  <a href="#" data-toggle="tooltip" data-placement="top" title="" data-original-title="Italic" class="italicAlign">&nbsp;</a>
+				  <a href="#" data-toggle="tooltip" data-placement="top" title="" data-original-title="List Circle" class="list">&nbsp;</a>
+				  <a href="#" data-toggle="tooltip" data-placement="top" title="" data-original-title="List Number" class="listNum">&nbsp;</a>
+				  <a href="#" data-toggle="tooltip" data-placement="top" title="" data-original-title="Shift Tab" class="shiftTab">&nbsp;</a>
+				  <a href="#" data-toggle="tooltip" data-placement="top" title="" data-original-title="Shift Tab" class="shiftTab2">&nbsp;</a>
+				  <a href="#" data-toggle="tooltip" data-placement="top" title="" data-original-title="Font Color" class="fontColor">&nbsp;</a>
+				  <span class="dropdown">
+				  <a href="#" class="dropdown-toggle links" data-toggle="dropdown" role="button" aria-expanded="false" title="link">&nbsp;</a>
+				  <ul class="dropdown-menu">
+					<li><a href="#insertLink" data-toggle="modal" data-target="#insertLink">Insert Link ...</a></li>
+					<li><a href="#">Unlink</a></li>
+				  </ul>
+				  </span>
+				  <a href="#" data-toggle="tooltip" data-placement="top" title="" data-original-title="Image" data-toggle="modal" data-target="#imageSelecter" class="imageSelect">&nbsp;</a>
+				  <a href="#" data-toggle="tooltip" data-placement="top" title="" data-original-title="Align" class="imageSelect2">&nbsp;</a>
+                  </div>
+                  <div id="editor" class="editor-wrapper placeholderText" contenteditable="true"></div>
+                  <textarea name="descr" id="descr" style="display:none;"></textarea>
+			   <!--end-->	
+						<p class="margin-top-20">				
 						    <label>Tags</label>
 							<input type="text" class="form-control">
 						</p>

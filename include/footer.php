@@ -10,6 +10,7 @@
 <script src="../js/prettify.js"></script> 
 <script src="../js/select2.full.min.js"></script> 
 <script src="../js/custom.min.js"></script>
+<script src="../js/register.js"></script>
 <script>
       $(function() {
 	  $(document).on('change', ':file', function() {

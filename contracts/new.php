@@ -73,18 +73,32 @@
                 </div>
               </form>
 			  <p class="margin-top-10">Description</p>
-              <div class="panel panel-default noBorderRadius noShadow">
-                <div class="panel-heading nav"> <a href="#" class="BoldAlign">&nbsp;</a> <a href="#" class="italicAlign">&nbsp;</a> <a href="#" class="list">&nbsp;</a> <a href="#" class="listNum">&nbsp;</a> <a href="#" class="shiftTab">&nbsp;</a> <a href="#" class="shiftTab2">&nbsp;</a> <a href="#" class="fontColor">&nbsp;</a> <a href="#" class="backColor">&nbsp;</a> <span class="dropdown"> <a href="#" class="dropdown-toggle links" data-toggle="dropdown" role="button" aria-expanded="false" title="link">&nbsp;</a>
+			   <!-- start-->
+                  <div class="btn-toolbar editor nav" data-role="editor-toolbar" data-target="#editor">
+                   <a href="#" class="BoldAlign" data-toggle="tooltip" data-placement="top" title="" data-original-title="Bold">&nbsp;</a> 
+				   <a href="#" class="italicAlign" data-toggle="tooltip" data-placement="top" title="" data-original-title="Italic">&nbsp;</a> 
+				   <a href="#" class="list" data-toggle="tooltip" data-placement="top" title="" data-original-title="List Circle">&nbsp;</a> 
+				   <a href="#" class="listNum" data-toggle="tooltip" data-placement="top" title="" data-original-title="List Number">&nbsp;</a> 
+				   <a href="#" class="shiftTab" data-toggle="tooltip" data-placement="top" title="" data-original-title="Shift Tab">&nbsp;</a> 
+				   <a href="#" class="shiftTab2" data-toggle="tooltip" data-placement="top" title="" data-original-title="Shift Tab">&nbsp;</a> 
+				   <a href="#" class="fontColor" data-toggle="tooltip" data-placement="top" title="" data-original-title="Font Color">&nbsp;</a> 
+				   <a href="#" class="backColor" data-toggle="tooltip" data-placement="top" title="" data-original-title="Back Color">&nbsp;</a> 
+				   <span class="dropdown"> <a href="#" class="dropdown-toggle links" data-toggle="dropdown" role="button" aria-expanded="false" title="link">&nbsp;</a>
                   <ul class="dropdown-menu">
                     <li><a href="#insertLink" data-toggle="modal" data-target="#insertLink">Insert Link ...</a></li>
                     <li><a href="#">Unlink</a></li>
                   </ul>
-				</div>  
-                <div class="panel-body panelHeight"> Text </div>
-              </div>
-			  <p class="left_col padding-5 text-white">Tenure of Contract</p>
+                  </div>
+                  <div id="editor" class="editor-wrapper placeholderText" contenteditable="true"></div>
+                  <textarea name="descr" id="descr" style="display:none;"></textarea>
+			   <!--end-->
+			  <p class="left_col padding-5 text-white margin-top-20">Tenure of Contract</p>
               <p>
                 <label>Tags</label>
+                <input type="text" class="form-control">
+              </p>
+			  <p>
+                <label>Assigned on</label>
                 <input type="text" class="form-control">
               </p>
               <p class="margin-top-20"><a href="#" class="green h4" data-toggle="modal" data-target="#attach"><i class="icon-plus-circled-1"></i> Attach Assets </a></p>
