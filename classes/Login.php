@@ -19,11 +19,14 @@ if($obj==false){
 echo "Login Failed , Wrong Username/Password";
 }
 else{
-
+	if(!isset($_SESSION)){
+session_start();
+}
 foreach($obj as $loginuser){
-	session_start();
-	$_SESSION['username']=$loginuser['username'];
-      header('Location:../index.php');
+	
+	$_SESSION['userid']=$loginuser['id'];
+	$_SESSION['tokenid']=$loginuser['token_id'];
+      header('Location:../profiles/index.php');
 }
 
 

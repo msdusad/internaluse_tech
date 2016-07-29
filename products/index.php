@@ -12,12 +12,11 @@
             <div class="x_title">
               <ol class="breadcrumb noBorderRadius noMargin">
                 <li><a href="../problems/index.php">Problems</a></li>
-                <li>#PRB-1</li>
               </ol>
               <div class="clearfix"></div>
             </div>
             <div class="x_content" id="imageSelecter">
-              <div class="panel-info bg-info panel-body margin-bottom-20"> Hi </div>
+              <h2 class="h3 padding-bottom-10">Logitech Desktop Keyboard</h2>
               <ul class="nav nav-pills">
                 <li class="active"><a class="btn btn-default" href="#tab1" data-toggle="tab"><i class="icon-cubes"></i> Overview</a></li>
                 <li><a href="#tab2" class="btn btn-default" data-toggle="tab"><i class="icon-book-1"></i> Relationships</a></li>
@@ -31,12 +30,12 @@
                     <table class="table table-striped jambo_table bulk_action">
                       <tbody>
                         <tr>
-                          <td><span class="text-grey">Product:</span> <a href="../products/index.php">Cisco 7301 Router</a></td>
-                          <td><span class="text-grey">Vendor:</span></td>
+                          <td class=" "><span class="text-grey">Product:</span> <a href="#">Cisco 7301 Router</a></td>
+                          <td class=" "><span class="text-grey">Vendor:</span></td>
                         </tr>
                         <tr>
-                          <td><span class="text-grey">Acquisition Date:</span> Fri, 22 Jul at 11:53 am</td>
-                          <td><span class="text-grey">Warranty Expiry Date:</span> Fri, 22 Jul at 12:08 pm</td>
+                          <td class=" "><span class="text-grey">Acquisition Date:</span> Fri, 22 Jul at 11:53 am</td>
+                          <td class=" "><span class="text-grey">Warranty Expiry Date:</span> Fri, 22 Jul at 12:08 pm</td>
                         </tr>
                       </tbody>
                     </table>
@@ -48,12 +47,12 @@
                     <table class="table table-striped jambo_table bulk_action">
                       <tbody>
                         <tr>
-                          <td><span class="text-grey">Product:</span> <a href="#">Cisco 7301 Router</a></td>
-                          <td><span class="text-grey">Vendor:</span></td>
+                          <td class=" "><span class="text-grey">Product:</span> <a href="#">Cisco 7301 Router</a></td>
+                          <td class=" "><span class="text-grey">Vendor:</span></td>
                         </tr>
                         <tr>
-                          <td><span class="text-grey">Acquisition Date:</span> Fri, 22 Jul at 11:53 am</td>
-                          <td><span class="text-grey">Warranty Expiry Date:</span> Fri, 22 Jul at 12:08 pm</td>
+                          <td class=" "><span class="text-grey">Acquisition Date:</span> Fri, 22 Jul at 11:53 am</td>
+                          <td class=" "><span class="text-grey">Warranty Expiry Date:</span> Fri, 22 Jul at 12:08 pm</td>
                         </tr>
                       </tbody>
                     </table>

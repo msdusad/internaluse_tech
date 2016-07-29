@@ -2,7 +2,6 @@
 <?php 
 require_once('../classes/Login.php');
 require_once('../classes/Register.php');
-//require_once('../classes/Check.php');
 ?>
 
 <!DOCTYPE html>
@@ -101,13 +100,21 @@ if(isset($_POST['Register'])){
 }
 ?> 
 
-          <form action="" method="post" class="margin-top-10 checkList">
-            <input type="text" name="firstname" class="form-control margin-bottom-20" placeholder="First Name" required />
-            <input id="signup_email" type="email"  name="email" class="form-control margin-bottom-20" placeholder="Your e-mail address" required />
+          <form action="" method="post" class="margin-top-20 checkList">
+		   <div class="Signups margin-bottom-20">
+            <input type="text" name="firstname" class="form-control" placeholder="First Name" required />
+           </div>
+		    <div class="Signups margin-bottom-20">
+			  <input id="signup_email" type="email"  name="email" class="form-control margin-bottom-20" placeholder="Your e-mail address" required />
+			</div>
            <p id="email_result"></p>
-            <input id="signup_username" type="text" name="username" class="form-control margin-bottom-20" placeholder="UserName" required />
+			 <div class="Signups margin-bottom-20">
+			   <input id="signup_username" type="text" name="username" class="form-control" placeholder="UserName" required />
+			</div>
 			 <p  id="username_result"></p>
-      <input type="password" name="password" class="form-control margin-bottom-20" placeholder="password" required />
+			 <div class="Signups margin-bottom-20">
+             <input type="password" name="password" class="form-control" placeholder="password" required />
+			</div>
             <input type="submit" name="Register" class="btn btn-success noBorderRadius margin-bottom-20" value="Register">
             &nbsp;
             <button type="reset" class="btn btn-dark noBorderRadius margin-bottom-20">Cancel</button>

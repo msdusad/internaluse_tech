@@ -2,15 +2,15 @@
   <div class="pull-right"> Gentelella - Bootstrap Admin Template by <a href="https://colorlib.com">Colorlib</a> </div>
   <div class="clearfix"></div>
 </footer>
- <script src="../js/jquery.min.js"></script>
- <script src="../js/select.js"></script>
-<script src="../js/bootstrap.min.js"></script>
-<script src="../js/nprogress.js"></script>
-<script src="../js/tab.js"></script> 
-<script src="../js/prettify.js"></script> 
-<script src="../js/select2.full.min.js"></script> 
-<script src="../js/custom.min.js"></script>
-<script src="../js/register.js"></script>
+ <script src="http://192.168.1.194:8081/currenteasyweb/js/jquery.min.js"></script>
+ <script src="http://192.168.1.194:8081/currenteasyweb/js/select.js"></script>
+<script src="http://192.168.1.194:8081/currenteasyweb/js/bootstrap.min.js"></script>
+<script src="http://192.168.1.194:8081/currenteasyweb/js/nprogress.js"></script>
+<script src="http://192.168.1.194:8081/currenteasyweb/js/tab.js"></script> 
+<script src="http://192.168.1.194:8081/currenteasyweb/js/prettify.js"></script> 
+<script src="http://192.168.1.194:8081/currenteasyweb/js/select2.full.min.js"></script> 
+<script src="http://192.168.1.194:8081/currenteasyweb/js/custom.min.js"></script>
+<script src="http://192.168.1.194:8081/currenteasyweb/js/register.js"></script>
 <script>
       $(function() {
 	  $(document).on('change', ':file', function() {

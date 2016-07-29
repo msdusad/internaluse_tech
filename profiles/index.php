@@ -28,46 +28,18 @@
 						<h1 class="h3 padding-bottom-10">Edit Profile</h1>
 						<form action="#" class="checkList">
 						    <label>Full Name</label>
-							<input type="text" class="form-control margin-bottom-20" placeholder="Account Admin">
-							<label>Title</label>
-							<input type="text" class="form-control margin-bottom-20">
+							<input type="text" class="form-control margin-bottom-20" value="<?php echo $viewdata['name']; ?>" placeholder="Name">
 							<label>Email</label>
-							<input type="eamil" placeholder="account.desk@gmx.com" class="form-control margin-bottom-20" readonly>
+							<input type="eamil" placeholder="Email" value="" class="form-control margin-bottom-20" readonly>
 							<label>Phone No</label>
-							<input type="text" class="form-control margin-bottom-20" placeholder="work">
-							<input type="text" class="form-control margin-bottom-20" placeholder="mobile">
+			
+							<input type="text" value="<?php echo $viewdata['mobile_number']; ?>" class="form-control margin-bottom-20" placeholder="mobile">
 						</form>
 						
                         <p>A Profile image of the person, it's best if the picture has the same length and height</p>
                         <form action="#" class="checkList">
                              <input type="file" class="margin-bottom-20">
-							 <label>Time Zone</label>
-							 <div class="form-group margin-bottom-20">
-									<select class="select2_group form-control">
-										<option selected="selected" value="">Select Groups Name</option>
-										<optgroup label="Alaskan/Hawaiian Time Zone">
-										  <option value="AK">Alaska</option>
-										  <option value="HI">Hawaii</option>
-										</optgroup>
-										<optgroup label="Pacific Time Zone">
-										  <option value="CA">California</option>
-										  <option value="NV">Nevada</option>
-										  <option value="OR">Oregon</option>
-										  <option value="WA">Washington</option>
-										</optgroup>
-										<optgroup label="Mountain Time Zone">
-										  <option value="AZ">Arizona</option>
-										  <option value="CO">Colorado</option>
-										  <option value="ID">Idaho</option>
-										  <option value="MT">Montana</option>
-										  <option value="NE">Nebraska</option>
-										  <option value="NM">New Mexico</option>
-										  <option value="ND">North Dakota</option>
-										  <option value="UT">Utah</option>
-										  <option value="WY">Wyoming</option>
-										</optgroup>
-								    </select>
-							    </div>
+	
 								<label>Language</label>
 								 <div class="form-group margin-bottom-20">
 									<select class="select2_group form-control">
@@ -123,7 +95,7 @@
 									</select>
 								</div>
 								<label>Reporting manager</label>
-							   <input type="eamil" placeholder="Enter Reporting Manager's Name" class="form-control margin-bottom-20">
+							   <input type="text" value="<?php echo $viewdata['reporting_manager']; ?>" placeholder="Enter Reporting Manager's Name" class="form-control margin-bottom-20">
                         </form>	
 						<p>Signature</p>
                         <div class="panel panel-default noBorderRadius noShadow margin-top-10">
