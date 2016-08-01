@@ -63,8 +63,14 @@ $(document).ready(function() {
 
            var old_pass_check = $("#current_password");
            var newpass = $("#new_password");
+            var repeatpass = $("#repeat_password");
         $("#update_password").click(function() {
             if (old_pass_check.val() !='' && newpass.val() !='') {
+
+                if(newpass.val()!=repeatpass.val()){
+                    $("#pass_update_result").text('Confirm password did not match');
+                    return false;
+                }
                
                 $.ajax({
                   type:"POST",
@@ -78,8 +84,34 @@ $(document).ready(function() {
                   
                 });
 
+
             }
 
         });
+
+
+
+$("#forgot_password").click(function(){
+var forgot_password=$("#forgot_password_email");
+            if (forgot_password.val() !='') {      
+                $.ajax({
+                  type:"POST",
+                 url:"../classes/Check.php",
+                 data:{search:forgot_password.val(),search_type:'forgot_password'},
+
+                 success:function(data){
+                 $("#forgot_password_result").html(data);
+                 //alert(search.val());
+                 },
+                  
+                });
+
+
+
+                //alert(search.val());
+            }
+
+});
+
 
 });

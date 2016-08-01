@@ -4,6 +4,7 @@ class Common{
 # function for retrive data from database
 public static function FetchData($query){
 $new_query=mysql_query($query);
+if($new_query){
 if(mysql_num_rows($new_query)>0){
 	$row=array();
 while($rows=mysql_fetch_array($new_query)){
@@ -17,6 +18,10 @@ return $row;
 else{
 	return false;
 	//return "No Record Found";
+}
+}
+else{
+	return false;
 }
 
 }
@@ -40,7 +45,6 @@ $new_query=mysql_query($query);
 if(mysql_num_rows($new_query)>0){
 return true;
 }
-
 else{
 	return false;
 }

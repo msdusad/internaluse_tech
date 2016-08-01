@@ -65,8 +65,9 @@ if(isset($_POST['Login'])){
           <div id="password" style="display:none;">
             <form action="#" class="margin-top-10 checkList">
               <h2>Forgot Password</h2>
-              <p>Give us your email address and instructions to reset your password will be emailed to you.</p>
-              <input type="email" name="email" class="form-control margin-bottom-20" placeholder="Your e-mail address" />
+              <p>Give us your email address and instructions to reset your password will be emailed to you.</p><br>
+              <p id="forgot_password_result"></p>
+              <input type="email" id="forgot_password_email" name="forgot_password_email" class="form-control margin-bottom-20" placeholder="Your e-mail address" />
               <div class="row">
                 <div class="col-md-6 padding-top-5">
                   <p>
@@ -75,7 +76,7 @@ if(isset($_POST['Login'])){
                 </div>
                 <div class="col-md-6 text-right visible-sm-right-left">
                   <p>
-                    <button type="button" name="Login" id="click_to_hide" class="btn btn-danger margin-top-10 noBorderRadius">Reset my password</button>
+                    <button type="button" name="forgot_password" id="forgot_password" class="btn btn-danger margin-top-10 noBorderRadius">Reset my password</button>
                   </p>
                 </div>
               </div>

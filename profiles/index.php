@@ -139,7 +139,7 @@
 							 <label>New password</label>
 							 <input type="password" id="new_password" name="new_password" class="form-control margin-bottom-10" required>
 							 <label>Confirm password</label>
-							 <input type="password" name="confirm_password" class="form-control margin-bottom-20" required>
+							 <input type="password" id="repeat_password" name="confirm_password" class="form-control margin-bottom-20" required>
 							 <p class="text-right">
 							   <input id="update_password" type="button" name="update_password" value="Change Password" class="btn btn-dark noBorderRadius">
 							 </p>						

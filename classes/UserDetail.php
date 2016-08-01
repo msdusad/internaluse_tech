@@ -7,8 +7,6 @@ require_once('Common.php');
 class UserDetail extends Common
 {
 	private $_userid;
-	private $_name;
-	private $_email;
 	
 	public function __construct()
 	{
