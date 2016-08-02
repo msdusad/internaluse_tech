@@ -20,6 +20,7 @@ return $this->register();
 public function register(){
 	$register="insert into users (username,password,email,created_at,updated_at,token_id) values('$this->_username','$this->_password','$this->_email',now(),now(),$this->_token_id);";
 $obj=Common::InsertData($register);
+
 if($obj==true){
 
 	$userloginacess="select * from users where username='$this->_username' && token_id='$this->_token_id'";
