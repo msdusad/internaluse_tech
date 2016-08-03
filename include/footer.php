@@ -11,6 +11,7 @@
 <script src="http://192.168.1.194:8081/currenteasyweb/js/select2.full.min.js"></script> 
 <script src="http://192.168.1.194:8081/currenteasyweb/js/custom.min.js"></script>
 <script src="http://192.168.1.194:8081/currenteasyweb/js/register.js"></script>
+<script src="http://192.168.1.194:8081/currenteasyweb/js/users/profile.js"></script>
 <script>
       $(function() {
 	  $(document).on('change', ':file', function() {

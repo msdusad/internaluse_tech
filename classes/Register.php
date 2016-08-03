@@ -19,6 +19,8 @@ return $this->register();
 
 public function register(){
 	$register="insert into users (username,password,email,created_at,updated_at,token_id) values('$this->_username','$this->_password','$this->_email',now(),now(),$this->_token_id);";
+$userdetailinsert="insert into user_detail(user_id,name,created_at,updated_at,token_id) values('$this->_username','$this->_password','$this->_email',now(),now(),$this->_token_id);";
+
 $obj=Common::InsertData($register);
 
 if($obj==true){
