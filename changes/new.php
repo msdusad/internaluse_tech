@@ -137,7 +137,89 @@
             </div>
           </div>
         </div>
-        
+		<div class="modal fade" id="requester" role="dialog">
+              <div class="modal-dialog">
+                <div class="modal-content noBorderRadius">
+                  <div class="modal-header">
+                    <button type="button" class="close" data-dismiss="modal">&times;</button>
+                    <h4 class="modal-title">Add New Requester</h4>
+                  </div>
+                  <div class="modal-body">
+                    <p>
+                      <label>Name</label>
+                      <input type="text" class="form-control">
+                    </p>
+                    <p>
+                      <label>Email</label>
+                      <input type="email" class="form-control">
+                    </p>
+                    <p>
+                      <label>Phone no</label>
+                      <input type="text" class="form-control">
+                    </P>
+                    <p>
+                      <label>Department</label>
+                      <input type="text" class="form-control" placeholder="Enter Department Name">
+                    </p>
+                  </div>
+                  <div class="modal-footer">
+                    <button type="button" class="btn btn-default noBorderRadius" data-dismiss="modal">Cancel</button>
+                    <button type="button" class="btn btn-dark noBorderRadius" data-dismiss="modal">Create</button>
+                  </div>
+                </div>
+              </div>
+            </div>
+		<div class="modal fade" id="attach" role="dialog">
+              <div class="modal-dialog">
+                <div class="modal-content noBorderRadius">
+                  <div class="modal-body">
+                    <div class="row">
+                      <div class="col-sm-6">
+                        <p>
+                          <label>Search</label>
+                          <select class="form-control">
+                            <option>Choose option</option>
+                            <option>Option one</option>
+                            <option>Option two</option>
+                            <option>Option three</option>
+                            <option>Option four</option>
+                          </select>
+                        </p>
+                      </div>
+                      <div class="col-sm-6">
+                        <p>
+                          <label>Search</label>
+                          <input type="text" class="form-control">
+                        </p>
+                      </div>
+                    </div>
+                    <div class="table-responsive margin-top-20">
+                      <table class="table table-striped jambo_table bulk_action">
+                        <thead>
+                          <tr class="headings">
+                            <th>&nbsp; </th>
+                            <th>Asset Name </th>
+                            <th>Used By</th>
+                          </tr>
+                        </thead>
+                        <tbody>
+                          <tr class="checkList">
+                            <td><input type="checkbox" id="testNew" />
+                              <label for="testNew">&nbsp;</label></td>
+                            <td>Andrea's Laptop</td>
+                            <td class=" ">Andrea</td>
+                          </tr>
+                        </tbody>
+                      </table>
+                    </div>
+                  </div>
+                  <div class="modal-footer">
+                    <button type="button" class="btn btn-default noBorderRadius">Attach</button>
+                  </div>
+                </div>
+              </div>
+            </div>
+        </form>
     </div>
     <?php include("../include/footer.php"); ?>
   </div>

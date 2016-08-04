@@ -111,12 +111,20 @@
                   </div>
                 </div>
                 <!-- start-->
-                <div class="btn-toolbar editor nav" data-role="editor-toolbar" data-target="#editor"> <a href="#" class="BoldAlign" data-toggle="tooltip" data-placement="top" title="" data-original-title="Bold">&nbsp;</a> <a href="#" data-toggle="tooltip" data-placement="top" title="" data-original-title="Italic" class="italicAlign">&nbsp;</a> <a href="#" data-toggle="tooltip" data-placement="top" title="" data-original-title="List Circle" class="list">&nbsp;</a> <a href="#" data-toggle="tooltip" data-placement="top" title="" data-original-title="List Number" class="listNum">&nbsp;</a> <a href="#" data-toggle="tooltip" data-placement="top" title="" data-original-title="Shift Tab" class="shiftTab">&nbsp;</a> <a href="#" data-toggle="tooltip" data-placement="top" title="" data-original-title="Shift Tab" class="shiftTab2">&nbsp;</a> <a href="#" data-toggle="tooltip" data-placement="top" title="" data-original-title="Font Color" class="fontColor">&nbsp;</a> <span class="dropdown"> <a href="#" class="dropdown-toggle links" data-toggle="dropdown" role="button" aria-expanded="false" title="link">&nbsp;</a>
+                <div class="btn-toolbar editor nav" data-role="editor-toolbar" data-target="#editor"> 
+				<a href="#" class="BoldAlign" data-toggle="tooltip" data-placement="top" title="" data-original-title="Bold">&nbsp;</a> 
+				<a href="#" data-toggle="tooltip" data-placement="top" title="" data-original-title="Italic" class="italicAlign">&nbsp;</a> 
+				<a href="#" data-toggle="tooltip" data-placement="top" title="" data-original-title="List Circle" class="list">&nbsp;</a> 
+				<a href="#" data-toggle="tooltip" data-placement="top" title="" data-original-title="List Number" class="listNum">&nbsp;</a> 
+				<a href="#" data-toggle="tooltip" data-placement="top" title="" data-original-title="Shift Tab" class="shiftTab">&nbsp;</a> 
+				<a href="#" data-toggle="tooltip" data-placement="top" title="" data-original-title="Shift Tab" class="shiftTab2">&nbsp;</a> 
+				<a href="#" data-toggle="tooltip" data-placement="top" title="" data-original-title="Font Color" class="fontColor">&nbsp;</a> 
+				<span class="dropdown"> <a href="#" class="dropdown-toggle links" data-toggle="dropdown" role="button" aria-expanded="false" title="link">&nbsp;</a>
                   <ul class="dropdown-menu">
                     <li><a href="#insertLink" data-toggle="modal" data-target="#insertLink">Insert Link ...</a></li>
                     <li><a href="#">Unlink</a></li>
                   </ul>
-                  </span> <a href="#" data-toggle="tooltip" data-placement="top" title="" data-original-title="Image" data-toggle="modal" data-target="#imageSelecter" class="imageSelect">&nbsp;</a> <a href="#" data-toggle="tooltip" data-placement="top" title="" data-original-title="Align" class="imageSelect2">&nbsp;</a> </div>
+                  </span> <a href="#imageSelecter" data-toggle="modal" data-target="#imageSelecter"  class="imageSelect">&nbsp;</a> <a href="#" data-toggle="tooltip" data-placement="top" title="" data-original-title="Align" class="imageSelect2">&nbsp;</a> </div>
                 <div id="editor" class="editor-wrapper placeholderText" contenteditable="true"></div>
                 <textarea name="descr" id="descr" style="display:none;"></textarea>
                 <!--end-->
@@ -162,7 +170,7 @@
                     </p>
                   </div>
                   <div class="modal-footer">
-                    <button type="button" class="btn btn-default noBorderRadius">Cancel</button>
+                    <button type="button" class="btn btn-default noBorderRadius" data-dismiss="modal">Cancel</button>
                     <button type="button" class="btn btn-dark noBorderRadius">Create</button>
                   </div>
                 </div>
@@ -211,7 +219,7 @@
                     </p>
                   </div>
                   <div class="modal-footer">
-                    <button type="button" class="btn btn-default noBorderRadius">Cancel</button>
+                    <button type="button" class="btn btn-default noBorderRadius" data-dismiss="modal">Cancel</button>
                     <button type="button" class="btn btn-dark noBorderRadius">Insert</button>
                   </div>
                 </div>
@@ -244,7 +252,7 @@
                     </div>
                   </div>
                   <div class="modal-footer">
-                    <button type="button" class="btn btn-default noBorderRadius">Cancel</button>
+                    <button type="button" class="btn btn-default noBorderRadius" data-dismiss="modal">Cancel</button>
                     <button type="button" class="btn btn-dark noBorderRadius">Insert</button>
                   </div>
                 </div>
@@ -295,7 +303,7 @@
                     </div>
                   </div>
                   <div class="modal-footer">
-                    <button type="button" class="btn btn-default noBorderRadius">Attach</button>
+                    <button type="button" class="btn btn-default noBorderRadius" data-dismiss="modal">Attach</button>
                   </div>
                 </div>
               </div>

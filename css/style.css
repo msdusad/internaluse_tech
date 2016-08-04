@@ -26,6 +26,7 @@
 .text-white{color:#fff;}
 .text-grey{color:#999;}
 .line-height-35{line-height:35px}
+.line-height-25{line-height:25px}
 ul.bdList{padding:0; margin:0;}
 ul.bdList li{border-bottom: 1px solid #efefef; list-style:none; padding-bottom:10px; padding-top:10px}
 ul.bdList li:last-child{border-bottom:0;}
@@ -251,6 +252,7 @@ ul.list-right li a:hover{background:#f5f5f5;}
 .Signups{position:relative;}
 .Signups:before{position:absolute; top:0; right:0; width:34px; height:34px; 
 font-family:fontello; content:'\e86c'; padding:8px 10px; border-left:solid 1px #ddd; color:#26B99A;}
+.error{font-size:12px; color:#d43f3a; border:solid 1px #d43f3a !important; background:#fbe9e8; padding:4px 8px; margin-bottom:8px; display:block;}
 @media (max-width:767px){
 .pdLogin{padding-top:10px;}
 }

@@ -101,38 +101,6 @@
                 </div>
               </div>
             </div>
-            <div class="modal fade" id="requester" role="dialog">
-              <div class="modal-dialog">
-                <div class="modal-content noBorderRadius">
-                  <div class="modal-header">
-                    <button type="button" class="close" data-dismiss="modal">&times;</button>
-                    <h4 class="modal-title">Add New Requester</h4>
-                  </div>
-                  <div class="modal-body">
-                    <p>
-                      <label>Name</label>
-                      <input type="text" class="form-control">
-                    </p>
-                    <p>
-                      <label>Email</label>
-                      <input type="email" class="form-control">
-                    </p>
-                    <p>
-                      <label>Phone no</label>
-                      <input type="text" class="form-control">
-                    </P>
-                    <p>
-                      <label>Department</label>
-                      <input type="text" class="form-control" placeholder="Enter Department Name">
-                    </p>
-                  </div>
-                  <div class="modal-footer">
-                    <button type="button" class="btn btn-default noBorderRadius">Cancel</button>
-                    <button type="button" class="btn btn-dark noBorderRadius">Create</button>
-                  </div>
-                </div>
-              </div>
-            </div>
             <div class="modal fade" id="insertLink" role="dialog">
               <div class="modal-dialog">
                 <div class="modal-content noBorderRadius">
@@ -176,40 +144,7 @@
                     </p>
                   </div>
                   <div class="modal-footer">
-                    <button type="button" class="btn btn-default noBorderRadius">Cancel</button>
-                    <button type="button" class="btn btn-dark noBorderRadius">Insert</button>
-                  </div>
-                </div>
-              </div>
-            </div>
-            <div class="modal fade" id="imageSelecter" role="dialog">
-              <div class="modal-dialog">
-                <div class="modal-content noBorderRadius">
-                  <div class="modal-header">
-                    <button type="button" class="close" data-dismiss="modal">&times;</button>
-                    <h4 class="modal-title">Insert Image...</h4>
-                  </div>
-                  <div class="modal-body">
-                    <ul class="nav nav-pills">
-                      <li class="active"><a href="#upload" class="btn btn-default" data-toggle="tab">Upload</a></li>
-                      <li><a href="#linkTap" class="btn btn-default" data-toggle="tab">Link</a></li>
-                    </ul>
-                    <div class="tab-content padding-top-10">
-                      <div class="tab-pane active" id="upload">
-                        <div class="fileUpload btn btn-danger btn-round padding-top-10"> <span><i class="icon-download"></i> Upload</span>
-                          <input type="file" class="upload" />
-                        </div>
-                      </div>
-                      <div class="tab-pane" id="linkTap">
-                        <p class="padding-top-10">
-                          <label>Image URL</label>
-                          <input type="text" class="form-control">
-                        </p>
-                      </div>
-                    </div>
-                  </div>
-                  <div class="modal-footer">
-                    <button type="button" class="btn btn-default noBorderRadius">Cancel</button>
+                    <button type="button" class="btn btn-default noBorderRadius" data-dismiss="modal">Cancel</button>
                     <button type="button" class="btn btn-dark noBorderRadius">Insert</button>
                   </div>
                 </div>
@@ -260,7 +195,7 @@
                     </div>
                   </div>
                   <div class="modal-footer">
-                    <button type="button" class="btn btn-default noBorderRadius">Attach</button>
+                    <button type="button" class="btn btn-default noBorderRadius" data-dismiss="modal">Attach</button>
                   </div>
                 </div>
               </div>

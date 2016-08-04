@@ -144,45 +144,13 @@
                     </p>
                   </div>
                   <div class="modal-footer">
-                    <button type="button" class="btn btn-default noBorderRadius">Cancel</button>
+                    <button type="button" class="btn btn-default noBorderRadius" data-dismiss="modal">Cancel</button>
                     <button type="button" class="btn btn-dark noBorderRadius">Insert</button>
                   </div>
                 </div>
               </div>
             </div>
-            <div class="modal fade" id="imageSelecter" role="dialog">
-              <div class="modal-dialog">
-                <div class="modal-content noBorderRadius">
-                  <div class="modal-header">
-                    <button type="button" class="close" data-dismiss="modal">&times;</button>
-                    <h4 class="modal-title">Insert Image...</h4>
-                  </div>
-                  <div class="modal-body">
-                    <ul class="nav nav-pills">
-                      <li class="active"><a href="#upload" class="btn btn-default" data-toggle="tab">Upload</a></li>
-                      <li><a href="#linkTap" class="btn btn-default" data-toggle="tab">Link</a></li>
-                    </ul>
-                    <div class="tab-content padding-top-10">
-                      <div class="tab-pane active  padding-top-10" id="upload">
-                        <div class="fileUpload btn btn-danger btn-round"> <span><i class="icon-download"></i> Upload</span>
-                          <input type="file" class="upload" />
-                        </div>
-                      </div>
-                      <div class="tab-pane" id="linkTap">
-                        <p class="padding-top-10">
-                          <label>Image URL</label>
-                          <input type="text" class="form-control">
-                        </p>
-                      </div>
-                    </div>
-                  </div>
-                  <div class="modal-footer">
-                    <button type="button" class="btn btn-default noBorderRadius">Cancel</button>
-                    <button type="button" class="btn btn-dark noBorderRadius">Insert</button>
-                  </div>
-                </div>
-              </div>
-            </div>
+           
             <div class="modal fade" id="attach" role="dialog">
               <div class="modal-dialog">
                 <div class="modal-content noBorderRadius">

@@ -1,22 +1,5 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="utf-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-
-    <title>Techvedic - Reports </title>
-    <link href="css/bootstrap.min.css" rel="stylesheet">
-	<link href="css/fontello.css" rel="stylesheet">
-    <link href="css/nprogress.css" rel="stylesheet"> 
-    <link href="css/custom.min.css" rel="stylesheet">
-	<link href="css/style.css" rel="stylesheet">
-	<!--[if lte IE 8]>
-	<script type='text/javascript' src='js/html5shiv.js'></script>
-	<script type='text/javascript' src='js/respond.min.js'></script>
-	<![endif]-->
-  </head>
-
   <body class="nav-md">
     <div class="container body">
       <div class="main_container">
@@ -120,10 +103,4 @@
          <?php include("../include/footer.php"); ?>
       </div>
     </div>
-    <script src="js/jquery.min.js"></script>
-    <script src="js/bootstrap.min.js"></script>
-    <script src="js/nprogress.js"></script>
-	<script src="js/tab.js"></script> 
-    <script src="js/custom.min.js"></script>
-   </body>
 </html>

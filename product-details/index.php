@@ -182,51 +182,5 @@
     </div>
   </div>
 </div>
-<div class="modal fade" id="depends_on" role="dialog">
-  <div class="modal-dialog">
-    <div class="modal-content">
-      <div class="modal-header">
-        <button type="button" class="close" data-dismiss="modal">&times;</button>
-        <h4>Add Relationship- ' Depends On '</h4>
-      </div>
-      <div class="modal-body">
-        <div class="row">
-          <div class="col-sm-6">
-            <select class="form-control margin-bottom-10">
-              <option>Hosting Service</option>
-              <option>Option one</option>
-              <option>Option two</option>
-              <option>Option three</option>
-              <option>Option four</option>
-            </select>
-          </div>
-          <div class="col-sm-6">
-            <input type="text" class="form-control" placeholder="search">
-          </div>
-        </div>
-        <div class="table-responsive margin-top-20">
-          <table class="table table-striped jambo_table bulk_action">
-            <thead>
-              <tr>
-                <th>Asset Name</th>
-                <th>Used By</th>
-              </tr>
-            </thead>
-            <tbody>
-              <tr>
-                <td>&nbsp;</td>
-                <td>No data available in table</td>
-              </tr>
-            </tbody>
-          </table>
-        </div>
-      </div>
-      <div class="modal-footer">
-        <button type="button" class="btn btn-default" data-dismiss="modal">Cancel</button>
-        <button type="button" class="btn btn-dark" data-dismiss="modal">Attach</button>
-      </div>
-    </div>
-  </div>
-</div>
 </body>
 </html>
