@@ -1,9 +1,7 @@
 <?php
 //require_once('Connection.php');
 require_once('Common.php');
- 	if(!isset($_SESSION)){
-session_start();
- 	}
+ 	
  	
  class UserDirectory extends common{
 
@@ -12,6 +10,11 @@ private static $profile_directory_name;
 private static $maildocs_directory_name;
 private static $commondocs_directory_name;
 
+public function __construct(){
+    if(!isset($_SESSION)){
+session_start();
+    }
+}
 
 public static function userdirectories(){
 	
@@ -64,6 +67,11 @@ if (file_exists(self::$commondocs_directory_name)) {
         mkdir("../docs/".$_SESSION['userid']."/".self::$commondocs_directory_name, 0777);
         echo "The directory ".self::$commondocs_directory_name." was successfully created.";
     }
+
+}
+
+public static function FilenameCheck($name){
+
 
 }
 

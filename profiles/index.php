@@ -4,8 +4,9 @@
 <body class="nav-md">
 <div class="container body">
   <div class="main_container">
-    <?php include("../include/right-nav.php"); ?>
+   
     <?php include("../include/top-nav.php"); ?>
+     <?php include("../include/right-nav.php"); ?>
     <div class="right_col" role="main">
       <div class="row">
         <div class="col-md-9 col-sm-8 col-xs-12 padding-top-10">
@@ -31,15 +32,15 @@
 							 Phone:<br>
 							 Language:<br>
 							 Location:<br>
-							 Reporting&nbsp;manager:
+							 Reporting&nbsp;manager 
 						  </div>
 						  <div class="media-body">
-						     Abc Singh<br>
-							 Abc@gmail.com<br>
-							 999 99 9999<br>
-							 English<br>
-                             India<br>
-                             bac							 
+						   <?php echo $viewdata['name'];?><br>
+							 <?php echo $viewdata['email'];?><br>
+							<?php echo $viewdata['mobile_number'];?><br>
+							 <?php echo $viewdata['user_language'];?><br>
+                <?php echo $viewdata['location'];?><br>
+                <?php echo $viewdata['reporting_manager'];?>					 
 						  </div>
 						</div>
 						

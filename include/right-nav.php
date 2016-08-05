@@ -5,7 +5,7 @@
     <div class="profile">
       <div class="profile_pic"> <img src="http://192.168.1.194:8081/currenteasyweb/images/img.jpg" alt="..." class="img-circle profile_img"> </div>
       <div class="profile_info"> <span>Welcome,</span>
-        <h2>John Doe</h2>
+        <h2><?php echo $viewdata['name'];?></h2>
       </div>
     </div>
     <div id="sidebar-menu" class="main_menu_side hidden-print main_menu">

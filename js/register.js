@@ -1,11 +1,10 @@
+
+//start  here show hide for login and forgot password
 $("#click_to_hide").click(function(){
       $("#click").hide();
         $("#password").show();
 
-    // $("#cancel").click(function(){
-    //     $("#click").show();
-    //     $("#password").hide();
-   
+
 });
 $("#cancel").click(function(){
     
@@ -13,6 +12,11 @@ $("#cancel").click(function(){
         $("#password").hide();
 });
 $(document).ready(function() {
+
+//end here show hide for login and forgot password
+ 
+ // script for checking signup email exists or not 
+
     var search = $("#signup_email");
         search.keyup(function() {
 
@@ -34,6 +38,8 @@ $(document).ready(function() {
             }
 
           });
+
+// for checking username during signup 
 
    var search_username = $("#signup_username");
         search_username.keyup(function() {
@@ -58,6 +64,7 @@ $(document).ready(function() {
 
         });
 
+// script for update password in profile
 
            var old_pass_check = $("#current_password");
            var newpass = $("#new_password");
@@ -88,6 +95,7 @@ $(document).ready(function() {
         });
 
 
+// script for send en email to forgot password user
 
 $("#forgot_password").click(function(){
 var forgot_password=$("#forgot_password_email");

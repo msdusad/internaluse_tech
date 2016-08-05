@@ -18,7 +18,7 @@ class UserDetail extends Common
 	}
 
 public function userdetails(){
-$getdetail="select * from user_detail where user_id='$this->_userid'";
+$getdetail="SELECT b.email,a.* from user_detail a   left OUTER JOIN users b ON b.id=a.user_id && b.token_id=a.token_id where b.id='$this->_userid'";
 //$result=Common::FetchData($getdetail);
 $result=array();
 $result=$this->FetchData($getdetail);

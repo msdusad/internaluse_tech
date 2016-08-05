@@ -4,19 +4,28 @@
 <body class="nav-md">
 <div class="container body">
   <div class="main_container">
+     <?php include("../include/top-nav.php"); ?>
     <?php include("../include/right-nav.php"); ?>
-    <?php include("../include/top-nav.php"); ?>
+   <?php include("../classes/UpdateProfile.php"); ?>
+   
     <div class="right_col" role="main">
       <div class="row">
         <div class="col-md-9 col-sm-8 col-xs-12 padding-top-10">
-          <form action="#" class="checkList" name="profile_update" id="profile-form" novalidate="novalidate">
+          <?php if(isset($_POST['update_profile'])){
+            $up_profile=new UpdateProfile();
+            $upresult=$up_profile->update_profile();
+            if($upresult==true){
+              echo "<script type='text/javascript'>window.location.href='index.php';</script>";
+            }
+} ?>
+          <form action="" method="post" class="checkList" name="profile_update" id="profile-form" novalidate="novalidate">
             <div class="x_panel tile">
               <div class="x_title">
                 <div class="row">
                   <div class="col-lg-7 padding-top-10"> <a href="../index.php" class="h4"><i class="icon-left-small"></i>Back to Dashboard</a> </div>
                   <div class="col-lg-5 text-right MrTpMd-10"> <a href="index.php" class="btn btn-danger btn-round">Cancel</a>
                     <div class="btn-group">
-                      <input type="submit" name="submit" value="Update" id="profile_update" class="btn btn-success btn-round">
+                      <input type="submit" name="update_profile" value="Update" id="profile_update" class="btn btn-success btn-round">
                     </div>
                   </div>
                 </div>
@@ -27,27 +36,30 @@
                 <label>Full Name</label>
                 <input  type="text" id="full_name" name="full_name" class="form-control margin-bottom-20" value="<?php echo $viewdata['name']; ?>" placeholder="Name">
                 <label>Email</label>
-                <input  type="email" name="email" placeholder="Email" value="" class="form-control margin-bottom-20">
+                <input  type="email" name="email" placeholder="Email" value="<?php echo $viewdata['email'];?>" class="form-control margin-bottom-20">
                 <label>Phone No</label>
                 <input type="text" name="mobile_number" value="<?php echo $viewdata['mobile_number']; ?>" class="form-control margin-bottom-20" placeholder="mobile">
-                <p>A Profile image of the person, it's best if the picture has the same length and height</p>
-                <input type="file" class="margin-bottom-20">
+                <img src="" id="output"   alt="No File Selected" class="img-circle" style="padding:3px;display:none;" height="100" width="100"><br>
+                <p>A Profile image of the person</p>
+                <input type="file" name="profilepic"  onchange="loadFile(event)" name="profilepic" class="margin-bottom-20">
                 <label>Language</label>
                 <div class="form-group margin-bottom-20">
-                  <select class="select2_group form-control">
-    
-                    <option value="AK">Alaska</option>
-                    <option value="HI">Hawaii</option>
- 
+                  <select class="select2_group form-control" name="user_language">
+                   <?php if($viewdata['user_language']!=''){
+                    echo "<option value='".$viewdata['user_language']."' selected>".$viewdata['user_language']."</option>";
+                   }?>
+                    
+                    <option value="EN">English</option>
+                   <option value="HI">Hindi</option>
                   </select>
                 </div>
                 <label>Location</label>
-                <input type="text" placeholder="Select Location" name="location" class="form-control margin-bottom-20">
+                <input type="text" value="<?php echo $viewdata['location']; ?>" placeholder="Your Location" name="location" class="form-control margin-bottom-20">
                 <label>Reporting manager</label>
-                <input type="text" value="<?php echo $viewdata['reporting_manager']; ?>" placeholder="Enter Reporting Manager's Name" class="form-control margin-bottom-20">
-                <p>Signature</p>
+                <input type="text" name="reporting_manager" value="<?php echo $viewdata['reporting_manager']; ?>" placeholder="Enter Reporting Manager's Name" class="form-control margin-bottom-20">
+               <!--  <p>Signature</p> -->
                 <!-- start-->
-                <div class="btn-toolbar editor nav" data-role="editor-toolbar" data-target="#editor"> <a href="#" class="BoldAlign" data-toggle="tooltip" data-placement="top" title="" data-original-title="Bold">&nbsp;</a> <a href="#" data-toggle="tooltip" data-placement="top" title="" data-original-title="Italic" class="italicAlign">&nbsp;</a> <a href="#" data-toggle="tooltip" data-placement="top" title="" data-original-title="List Circle" class="list">&nbsp;</a> <a href="#" data-toggle="tooltip" data-placement="top" title="" data-original-title="List Number" class="listNum">&nbsp;</a> <a href="#" data-toggle="tooltip" data-placement="top" title="" data-original-title="Shift Tab" class="shiftTab">&nbsp;</a> <a href="#" data-toggle="tooltip" data-placement="top" title="" data-original-title="Shift Tab" class="shiftTab2">&nbsp;</a> <a href="#" data-toggle="tooltip" data-placement="top" title="" data-original-title="Font Color" class="fontColor">&nbsp;</a> <span class="dropdown"> <a href="#" class="dropdown-toggle links" data-toggle="dropdown" role="button" aria-expanded="false" title="link">&nbsp;</a>
+            <!--     <div class="btn-toolbar editor nav" data-role="editor-toolbar" data-target="#editor"> <a href="#" class="BoldAlign" data-toggle="tooltip" data-placement="top" title="" data-original-title="Bold">&nbsp;</a> <a href="#" data-toggle="tooltip" data-placement="top" title="" data-original-title="Italic" class="italicAlign">&nbsp;</a> <a href="#" data-toggle="tooltip" data-placement="top" title="" data-original-title="List Circle" class="list">&nbsp;</a> <a href="#" data-toggle="tooltip" data-placement="top" title="" data-original-title="List Number" class="listNum">&nbsp;</a> <a href="#" data-toggle="tooltip" data-placement="top" title="" data-original-title="Shift Tab" class="shiftTab">&nbsp;</a> <a href="#" data-toggle="tooltip" data-placement="top" title="" data-original-title="Shift Tab" class="shiftTab2">&nbsp;</a> <a href="#" data-toggle="tooltip" data-placement="top" title="" data-original-title="Font Color" class="fontColor">&nbsp;</a> <span class="dropdown"> <a href="#" class="dropdown-toggle links" data-toggle="dropdown" role="button" aria-expanded="false" title="link">&nbsp;</a>
                   <ul class="dropdown-menu">
                     <li><a href="#insertLink" data-toggle="modal" data-target="#insertLink">Insert Link ...</a></li>
                     <li><a href="#">Unlink</a></li>
@@ -57,8 +69,8 @@
                 <textarea name="descr" id="descr" style="display:none;"></textarea>
                 <!--end-->
               </div>
-            </div>
-            <div class="modal fade" id="insertLink" role="dialog">
+            </div> 
+           <!--  <div class="modal fade" id="insertLink" role="dialog">
               <div class="modal-dialog">
                 <div class="modal-content noBorderRadius">
                   <div class="modal-header">
@@ -106,7 +118,7 @@
                   </div>
                 </div>
               </div>
-            </div>
+            </div> -->
           </form>
         </div>
         <div class="col-md-3 col-sm-4 col-xs-12 margin-top-10">

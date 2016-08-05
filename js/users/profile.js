@@ -1,6 +1,6 @@
 $(function() {
   
-    // Setup form validation on the #register-form element
+    // Setup form validation on the #profile complete -form element
     $("#profile-form").validate({
     
         // Specify the validation rules
@@ -33,3 +33,15 @@ $(function() {
     });
 
   });
+
+//script for show during upload in profile complete section 
+
+    // code for show uploaded file
+  var loadFile = function(event) {
+
+    var output = document.getElementById('output');
+    output.style.display="block";
+    output.src = URL.createObjectURL(event.target.files[0]);
+  };
+
+// end Here
