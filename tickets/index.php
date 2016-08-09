@@ -3,8 +3,9 @@
   <body class="nav-md">
     <div class="container body">
       <div class="main_container">
+      	 <?php include("../include/top-nav.php"); ?>
         <?php include("../include/right-nav.php"); ?>
-        <?php include("../include/top-nav.php"); ?>
+       
         <div class="right_col" role="main">
 		    <div class="row">
 			   <div class="col-sm-5 col-md-4 col-lg-3 col-xs-12 margin-top-10">

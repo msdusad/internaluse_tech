@@ -1,6 +1,5 @@
 <!DOCTYPE html>
 <html lang="en">
-<script src="http://ajax.aspnetcdn.com/ajax/jquery.validate/1.9/jquery.validate.min.js"></script>
 <body class="nav-md">
 <div class="container body">
   <div class="main_container">
@@ -18,7 +17,7 @@
               echo "<script type='text/javascript'>window.location.href='index.php';</script>";
             }
 } ?>
-          <form action="" method="post" class="checkList" name="profile_update" id="profile-form" novalidate="novalidate">
+          <form action="" method="post" class="checkList" name="profile_update" id="profile-form" novalidate="novalidate" enctype="multipart/form-data">
             <div class="x_panel tile">
               <div class="x_title">
                 <div class="row">
@@ -39,9 +38,15 @@
                 <input  type="email" name="email" placeholder="Email" value="<?php echo $viewdata['email'];?>" class="form-control margin-bottom-20">
                 <label>Phone No</label>
                 <input type="text" name="mobile_number" value="<?php echo $viewdata['mobile_number']; ?>" class="form-control margin-bottom-20" placeholder="mobile">
-                <img src="" id="output"   alt="No File Selected" class="img-circle" style="padding:3px;display:none;" height="100" width="100"><br>
+                <img src="<?php if($viewdata['profile_pic']!=''){
+echo "../docs/".$_SESSION['userid']."/profile/".$viewdata['profile_pic'];
+             }else{
+              echo "../images/profile.gif";
+             } ?>" id="output"   alt="No File Selected" class="img-circle" style="padding:3px;display:block;" height="100" width="100"><br>
                 <p>A Profile image of the person</p>
                 <input type="file" name="profilepic"  onchange="loadFile(event)" name="profilepic" class="margin-bottom-20">
+                
+                  <input type="text" name="oldpic" value="<?php echo $viewdata['profile_pic'];?>" style="display:none;">
                 <label>Language</label>
                 <div class="form-group margin-bottom-20">
                   <select class="select2_group form-control" name="user_language">
@@ -136,9 +141,9 @@
                 <input type="password" id="new_password" name="new_password" class="form-control margin-bottom-10" required>
                 <label>Confirm password</label>
                 <input type="password" id="repeat_password" name="confirm_password" class="form-control margin-bottom-20" required>
-                <p class="text-right">
-                  <input id="update_password" type="button" name="update_password" value="Change Password" class="btn btn-dark noBorderRadius">
-                </p>
+               
+                 <center> <input id="update_password" type="button" name="update_password" value="Change Password" class="btn btn-dark noBorderRadius">
+            </center
               </form>
             </div>
           </div>

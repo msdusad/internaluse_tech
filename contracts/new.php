@@ -3,8 +3,9 @@
 <body class="nav-md">
 <div class="container body">
   <div class="main_container">
+       <?php include("../include/top-nav.php"); ?>
     <?php include("../include/right-nav.php"); ?>
-    <?php include("../include/top-nav.php"); ?>
+ 
     <div class="right_col" role="main">
       <div class="row checkList">
         <div class="col-md-9 col-sm-8 col-xs-12 margin-top-10">

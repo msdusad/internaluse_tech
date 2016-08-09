@@ -23,28 +23,50 @@
               <div class="x_content">
                 <h1 class="h3 padding-bottom-10">Edit Profile</h1>
 				<div class="row">
-				     <div class="col-sm-3"><img src="../images/profile.gif" alt="" class="img-responsive img-thumbnail noBorderRadius"></div>
+				     <div class="col-sm-3"><img src="<?php if($viewdata['profile_pic']!=''){
+echo "../docs/".$_SESSION['userid']."/profile/".$viewdata['profile_pic'];
+             }else{
+              echo "../images/profile.gif";
+             } ?>" alt="" class="img-responsive img-thumbnail noBorderRadius"></div>
 					 <div class="col-sm-9">
-					    <div class="media line-height-25">
-						  <div class="media-left weight-600 green">
-						     Name:<br>
-						     Email:<br>
-							 Phone:<br>
-							 Language:<br>
-							 Location:<br>
-							 Reporting&nbsp;manager 
-						  </div>
-						  <div class="media-body">
-						   <?php echo $viewdata['name'];?><br>
-							 <?php echo $viewdata['email'];?><br>
-							<?php echo $viewdata['mobile_number'];?><br>
-							 <?php echo $viewdata['user_language'];?><br>
-                <?php echo $viewdata['location'];?><br>
-                <?php echo $viewdata['reporting_manager'];?>					 
-						  </div>
-						</div>
-						
-						
+					    <ul class="bdList">
+						    <li>
+							  <div class="media">
+							   <div class="left weight-600 green">Name:</div> 
+							   <div class="right"><?php echo $viewdata['name'];?></div>
+							  </div> 
+							</li>
+							<li>
+							<div class="media">
+							   <div class="left weight-600 green">Email:</div> 
+							   <div class="right"><?php echo $viewdata['email'];?></div>
+							 </div>  
+							</li>
+							<li>
+							 <div class="media">
+							  <div class="left weight-600 green">Phone:</div> 
+							  <div class="right"><?php echo $viewdata['mobile_number'];?></div> 
+							 </div> 
+							</li>
+							<li>
+							 <div class="media">
+							   <div class="left weight-600 green">Language:</div> 
+							   <div class="right"><?php echo $viewdata['user_language'];?></div> 
+							 </div>  
+							</li>
+							<li>
+							 <div class="media">
+							   <div class="left weight-600 green">Location:</div> 
+							   <div class="right"><?php echo $viewdata['location'];?></div> 
+							  </div> 
+							</li>
+							<li>
+							 <div class="media">
+							    <div class="left weight-600 green"> Reporting Manager </div> 
+								<div class="right"><?php echo $viewdata['reporting_manager'];?></div> 
+							 </div>	
+							</li>
+						</ul>
 					 </div>
 				</div>
 				<h3 class="margin-top-20 weight-600">Signature</h3>

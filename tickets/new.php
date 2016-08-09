@@ -3,8 +3,9 @@
 <body class="nav-md">
 <div class="container body">
   <div class="main_container">
+       <?php include("../include/top-nav.php"); ?>
     <?php include("../include/right-nav.php"); ?>
-    <?php include("../include/top-nav.php"); ?>
+ 
     <div class="right_col" role="main">
       <form action="#" class="checkList">
         <div class="row">
