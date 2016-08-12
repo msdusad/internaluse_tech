@@ -3,26 +3,43 @@
   <body class="nav-md">
     <div class="container body">
       <div class="main_container">
-      	<?php include("../include/top-nav.php"); ?>
-        <?php include("../include/right-nav.php"); ?>
+      	<?php require_once("../include/top-nav.php"); 
+         require_once("../include/right-nav.php"); 
+ require_once("../classes/Category.php");?>
+        ?>
         
         <div class="right_col" role="main">
 		  <div class="row checkList">
 		    <div class="col-md-3 col-sm-4 col-xs-12 margin-top-10">
-			    <div class="accordion-plus">
+			   
+						
+<!-- for category auto Genrate -->
+
+	<?php					
+$get_all_category=$category_object->display_child_nodes(NULL, 0);
+?>
+
+<!-- End of category auto Genrate -->
+						
+				
+
+
+ <!--  <div class="accordion-plus">
 					<div class="panel-group noMargin accordion" id="accordion">
 						<div class="panel noMargin noBorderRadius borderTop">
+
+
 							<div class="panel-heading" id="headingOne"> 
 								<a class="collapsed" role="button" data-toggle="collapse" href="#collapseOne" aria-expanded="false" aria-controls="collapseOne"> 
 									<p class="panel-title"><i class="icon-chart-pie-3 green p-sm"></i> Services</p>
 								</a> 
-							</div>
+							</div> 
 							<div id="collapseOne" class="panel-collapse collapse" aria-labelledby="headingOne">
 								<div class="panel-body">
-									   <div class="panel noMargin noBorderRadius noBorder">
+									
 										<div class="panel-heading noPadding noBorder" id="heading1"> 
 											<a class="collapsed" role="button" data-toggle="collapse" href="#collapse1" aria-expanded="false" aria-controls="collapse1"> 
-												 <p class="panel-title">Services</p>
+												 <p class="panel-title">MA</p>
 											</a> 
 										</div>
 										<div id="collapse1" class="panel-collapse collapse" aria-labelledby="heading1">
@@ -34,37 +51,23 @@
 												</ul>
 											</div>
 										</div>
-									  </div>
+									  
 								</div>
 							</div>
+
+
 						</div>
-						<div class="panel noMargin noBorderRadius">
-							<div class="panel-heading" id="headingTwo"> 
-								<a class="collapsed" role="button" data-toggle="collapse" href="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo"> 
-									 <p class="panel-title">Services</p>
-								</a> 
-							</div>
-							<div id="collapseTwo" class="panel-collapse collapse" aria-labelledby="headingTwo">
-								<div class="panel-body">
-									<p> You can combinetwo or more Outlook PST files at a particular instant.</p>
-								</div>
-							</div>
-						</div>
-						<div class="panel noMargin noBorderRadius">
-							<div class="panel-heading" id="headingThree"> 
-								<a class="collapsed" role="button" data-toggle="collapse" href="#collapseThree" aria-expanded="false" aria-controls="collapseThree"> 
-									 <p class="panel-title">Services</p>
-								</a> 
-							</div>
-							<div id="collapseThree" class="panel-collapse collapse" aria-labelledby="headingThree">
-								<div class="panel-body">
-									<p> You can combinetwo or more Outlook PST files at a particular instant.</p>
-								</div>
-							</div>
-						</div>
-						
 					</div>
-				</div>	
+				</div> -->
+
+
+
+
+
+
+
+
+
 			</div>
 		  
 		  <div class="col-md-9 col-sm-8 col-xs-12 margin-top-10">
