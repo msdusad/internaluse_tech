@@ -12,8 +12,8 @@
           <div class="x_panel tile">
             <div class="x_title">
               <div class="row">
-                <div class="col-lg-7 padding-top-10"> <a href="index.php" class="h4"><i class="icon-left-small"></i>Back to Contracts</a> </div>
-                <div class="col-lg-5 text-right MrTpMd-10"> <a href="index.php" class="btn btn-danger btn-round">Cancel</a>
+                <div class="col-lg-7 padding-top-10"> <a href="index" class="h4"><i class="icon-left-small"></i>Back to Contracts</a> </div>
+                <div class="col-lg-5 text-right MrTpMd-10"> <a href="index" class="btn btn-danger btn-round">Cancel</a>
                   <div class="btn-group">
                     <button type="button" class="btn btn-dark btn-round">Save</button>
                   </div>

@@ -34,36 +34,40 @@ function display_child_nodes($parent_id, $level)
     $parent_id = $parent_id === NULL ? "NULL" : $parent_id;
     if (isset($this->index[$parent_id])) {
         foreach ($this->index[$parent_id] as $id) {
-           //echo str_repeat('<span class="category"><i class="icon-angle-double-right"></i></span>', $level) . $this->data[$id]["name"] . "<br>";
+           //echo str_repeat('<button type="button" class="btn btn-primary">', $level) . $this->data[$id]["name"]."</button><br>";
         	// $this->cat_level=$level;
         	// $this->cat_name=$this->data[$id]["name"];
-            $lv=1;
-            $newlevel=convertNum($lv);
-            $lv++;
+          $i=0;
+          $i++;
+
+           if($level==0){
+
+
+    echo '<div class="panel panel-info">
+      <div class="panel-heading">'.$this->data[$id]["name"].'</div>
+   
+    ';
+
+           }
+           else{
+            echo '   <div class="panel-body">'.$this->data[$id]["name"].'</div>';
+          
+        }
+
+                if($level==0){
+    
+echo '</div>';
+
+           }
 
            
-			   if($level==0){
-			   		   
-                            echo '<ul class="assetsCategory"><li><a href="javascript:void(0)" data-toggle="collapse" data-target="#'.$lv.'">'. $this->data[$id]["name"] .'</a></li></ul>';
-                               
-		   }
-
-else{
-  echo ' <div id="'.$lv.'" class="collapse category">
-    '. $this->data[$id]["name"] .'
-  </div>';
-}
-
-           
-
-        	
-
-
-
-
+        
 
             $this->display_child_nodes($id, $level + 1);
         }
+
+
+
        
     }
 }

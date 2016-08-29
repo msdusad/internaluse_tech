@@ -12,7 +12,7 @@
           <div class="x_panel tile">
             <div class="x_title">
 			<ol class="breadcrumb noBorderRadius noMargin">
-			  <li><a href="../problems/index.php">Problems</a></li>
+			  <li><a href="../problems/index">Problems</a></li>
 			  <li>#PRB-1</li>
 			</ol>
               <div class="clearfix"></div>

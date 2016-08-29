@@ -13,18 +13,28 @@
             <div class="x_panel tile">
               <div class="x_title">
                 <div class="row">
-                  <div class="col-lg-7 padding-top-10"> <a href="index.php" class="h4"><i class="icon-left-small"></i>Back to Tickets</a> </div>
-                  <div class="col-lg-5 text-right MrTpMd-10"> <a href="index.php" class="btn btn-danger btn-round">Cancel</a>
-                    <div class="btn-group">
-                      <button type="button" class="btn btn-success btn-round">Save</button>
-                      <button type="button" class="btn btn-success btn-round dropdown-toggle" data-toggle="dropdown" aria-expanded="false"> <span class="caret"></span> <span class="sr-only">Toggle Dropdown</span> </button>
-                      <ul class="dropdown-menu">
-                        <li><a href="#">Save & <strong>New</strong></a></li>
-                        <li><a href="#">Save & <strong>Close</strong></a></li>
-                      </ul>
-                    </div>
-                  </div>
-                </div>
+				  <div class="col-lg-12">
+				  <div class="row affix-top" style="background:#fff;" data-spy="affix" data-offset-top="197">
+				  <div class="col-lg-7 padding-top-10">
+						  <a href="index" class="h4"><i class="icon-left-small"></i>Back to Changes</a>
+						</div>
+						<div class="col-lg-5 text-right MrTpMd-10">
+						 <a href="index" class="btn btn-danger btn-round">Cancel</a>
+						 <div class="btn-group">
+						  <button type="button" class="btn btn-success btn-round">Save</button>
+						  <button type="button" class="btn btn-success btn-round dropdown-toggle" data-toggle="dropdown" aria-expanded="false">
+							<span class="caret"></span>
+							<span class="sr-only">Toggle Dropdown</span>
+						  </button>
+						  <ul class="dropdown-menu">
+							<li><a href="#">Save & <strong>New</strong></a></li>
+							<li><a href="#">Save & <strong>Close</strong></a></li>
+						  </ul>
+						</div>
+						</div>
+				 </div> 
+				 </div>
+				</div>
                 <div class="clearfix"></div>
               </div>
               <div class="x_content">

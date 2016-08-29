@@ -6,7 +6,8 @@
      <?php include("../include/top-nav.php"); ?>
     <?php include("../include/right-nav.php"); ?>
    <?php include("../classes/UpdateProfile.php"); ?>
-   
+   <?php include("../classes/Language.php"); ?>
+  
     <div class="right_col" role="main">
       <div class="row">
         <div class="col-md-9 col-sm-8 col-xs-12 padding-top-10">
@@ -14,15 +15,15 @@
             $up_profile=new UpdateProfile();
             $upresult=$up_profile->update_profile();
             if($upresult==true){
-              echo "<script type='text/javascript'>window.location.href='index.php';</script>";
+              echo "<script type='text/javascript'>window.location.href='index';</script>";
             }
 } ?>
           <form action="" method="post" class="checkList" name="profile_update" id="profile-form" novalidate="novalidate" enctype="multipart/form-data">
             <div class="x_panel tile">
               <div class="x_title">
                 <div class="row">
-                  <div class="col-lg-7 padding-top-10"> <a href="../index.php" class="h4"><i class="icon-left-small"></i>Back to Dashboard</a> </div>
-                  <div class="col-lg-5 text-right MrTpMd-10"> <a href="index.php" class="btn btn-danger btn-round">Cancel</a>
+                  <div class="col-lg-7 padding-top-10"> <a href="../index" class="h4"><i class="icon-left-small"></i>Back to Dashboard</a> </div>
+                  <div class="col-lg-5 text-right MrTpMd-10"> <a href="index" class="btn btn-danger btn-round">Cancel</a>
                     <div class="btn-group">
                       <input type="submit" name="update_profile" value="Update" id="profile_update" class="btn btn-success btn-round">
                     </div>
@@ -39,9 +40,9 @@
                 <label>Phone No</label>
                 <input type="text" name="mobile_number" value="<?php echo $viewdata['mobile_number']; ?>" class="form-control margin-bottom-20" placeholder="mobile">
                 <img src="<?php if($viewdata['profile_pic']!=''){
-echo "../docs/".$_SESSION['userid']."/profile/".$viewdata['profile_pic'];
+echo DOCS_ROOT.$_SESSION['userid']."/profile/".$viewdata['profile_pic'];
              }else{
-              echo "../images/profile.gif";
+              echo IMAGE_ROOT."profile.gif";
              } ?>" id="output"   alt="No File Selected" class="img-circle" style="padding:3px;display:block;" height="100" width="100"><br>
                 <p>A Profile image of the person</p>
                 <input type="file" name="profilepic"  onchange="loadFile(event)" name="profilepic" class="margin-bottom-20">
@@ -54,8 +55,16 @@ echo "../docs/".$_SESSION['userid']."/profile/".$viewdata['profile_pic'];
                     echo "<option value='".$viewdata['user_language']."' selected>".$viewdata['user_language']."</option>";
                    }?>
                     
-                    <option value="EN">English</option>
-                   <option value="HI">Hindi</option>
+                   
+
+<?php
+$languages=Language::all_laguage();
+foreach ($languages as $view_lang) {
+echo   '<option value="'.$view_lang["name"].'">'.$view_lang["name"].'</option>';
+
+}
+?>
+
                   </select>
                 </div>
                 <label>Location</label>

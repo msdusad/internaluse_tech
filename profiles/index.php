@@ -1,6 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
-<script src="http://ajax.aspnetcdn.com/ajax/jquery.validate/1.9/jquery.validate.min.js"></script>
+<!-- <script src="http://ajax.aspnetcdn.com/ajax/jquery.validate/1.9/jquery.validate.min.js"></script> -->
 <body class="nav-md">
 <div class="container body">
   <div class="main_container">
@@ -13,8 +13,8 @@
             <div class="x_panel tile">
               <div class="x_title">
                 <div class="row">
-                  <div class="col-lg-7 padding-top-10"> <a href="../login/index.php" class="h4"><i class="icon-left-small"></i>Back to Dashboard</a> </div>
-                  <div class="col-lg-5 text-right MrTpMd-10"> <a href="edit.php" class="btn btn-danger btn-round">Edit profile</a>
+                  <div class="col-lg-7 padding-top-10"> <a href="<?php echo WEB_ROOT;?>/login/index" class="h4"><i class="icon-left-small"></i>Back to Dashboard</a> </div>
+                  <div class="col-lg-5 text-right MrTpMd-10"> <a href="edit" class="btn btn-danger btn-round">Edit profile</a>
                     
                   </div>
                 </div>
@@ -24,9 +24,9 @@
                 <h1 class="h3 padding-bottom-10">Edit Profile</h1>
 				<div class="row">
 				     <div class="col-sm-3"><img src="<?php if($viewdata['profile_pic']!=''){
-echo "../docs/".$_SESSION['userid']."/profile/".$viewdata['profile_pic'];
+echo DOCS_ROOT.$_SESSION['userid']."/profile/".$viewdata['profile_pic'];
              }else{
-              echo "../images/profile.gif";
+              echo IMAGE_ROOT."profile.gif";
              } ?>" alt="" class="img-responsive img-thumbnail noBorderRadius"></div>
 					 <div class="col-sm-9">
 					    <ul class="bdList">

@@ -3,9 +3,10 @@
   <body class="nav-md">
     <div class="container body">
       <div class="main_container">
-      	<?php require_once("../include/top-nav.php"); 
+      	<?php 
+      	require_once("../include/top-nav.php"); 	
          require_once("../include/right-nav.php"); 
- require_once("../classes/Category.php");?>
+ require_once("../classes/Category.php");
         ?>
         
         <div class="right_col" role="main">
@@ -18,13 +19,52 @@
 	<?php					
 $get_all_category=$category_object->display_child_nodes(NULL, 0);
 ?>
+<div class="">
+          <div class="panel-group" id="accordion">
+            <div class="panel panel-default noBorderRadius">
+              <div class="panel-heading">
+                <h4 class="panel-title">
+                  <a data-toggle="collapse" data-parent="#accordion" href="#collapseOne" class=""><span class="icon-up-circled">
+                    </span>Content</a>
+                </h4>
+              </div>
+              <div id="collapseOne" class="panel-collapse collapse">
+                <ul class="list-group">
+                  <li class="list-group-item"><span class="glyphicon-pencil text-primary"></span><a href="#">Articles</a>
+                    <ul class="list-group">
+                      <li class="list-group-item"><span class="glyphicon-pencil text-primary"></span><a href="#">Articles</a></li>              
+                    </ul>
+                  </li>
+
+                  
+                </ul>
+              </div>
+            </div>
+            
+          </div>
+        </div>
+<!-- <ul class="assetsCategory"><li><a href="javascript:void(0)" data-toggle="collapse" data-target="#1">1</a></li></ul>
+                               <div id="1" class="collapse category">
+							      <div >1</div>
+                                <div>1</div>
+                                 <div>1</div>
+							   </div>
+
+							   <ul class="assetsCategory"><li><a href="javascript:void(0)" data-toggle="collapse" data-target="#2">1</a></li></ul>
+                               <div id="2" class="collapse category">
+							      <div >1</div>
+                                <div>1</div>
+                                 <div>1</div>
+							   </div> -->
+                              
+
 
 <!-- End of category auto Genrate -->
 						
 				
 
 
- <!--  <div class="accordion-plus">
+  <!-- <div class="accordion-plus">
 					<div class="panel-group noMargin accordion" id="accordion">
 						<div class="panel noMargin noBorderRadius borderTop">
 
@@ -79,8 +119,8 @@ $get_all_category=$category_object->display_child_nodes(NULL, 0);
 							</div>
 							<div class="col-lg-5 col-xs-12 text-right MrTpMd-10 visible-sm-right-left">
 							 <a href="#export" class="btn btn-round" data-toggle="modal" data-target="#export">Export</a>
-							 <a href="csv.php" class="btn btn-round">Import</a>
-							 <a href="new.php" class="btn btn-danger btn-round">Add New</a>
+							 <a href="csv" class="btn btn-round">Import</a>
+							 <a href="new" class="btn btn-danger btn-round">Add New</a>
 							</div>
 						</div>
                     </div>
@@ -127,7 +167,7 @@ $get_all_category=$category_object->display_child_nodes(NULL, 0);
 								<tr>
 									<td class="a-center ">
 									    <input type="checkbox" id="laptop" />
-								        <label for="laptop" class="column-title">Andrea's Laptop</label>
+								        <label for="laptop" class="column-title"><a href="<?php echo WEB_ROOT;?>products/index">Andrea's Laptop</a></label>
 									</td>
 									<td class=" ">121000040</td>
 									<td class=" ">May 23, 2014 11:47:56 PM </td>

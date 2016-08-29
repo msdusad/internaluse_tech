@@ -5,7 +5,8 @@
   <div class="main_container">
         <?php include("../include/top-nav.php"); ?>
     <?php include("../include/right-nav.php"); ?>
-
+      <?php include("../classes/Assets.php"); ?>
+   <?php include("../classes/Location.php"); ?>
     <div class="right_col" role="main">
       <div class="row checkList">
         <div class="col-md-9 col-sm-8 col-xs-12 margin-top-10">
@@ -13,20 +14,24 @@
             <div class="x_panel tile">
               <div class="x_title">
                 <div class="row">
-                  <div class="col-lg-7 padding-top-10"> <a href="index.php" class="h4"><i class="icon-left-small"></i>Back to Contracts</a> </div>
-                  <div class="col-lg-5 text-right MrTpMd-10"> <a href="index.php" class="btn btn-danger btn-round">Cancel</a>
+				  <div class="col-lg-12">
+				  <div class="row" style="background:#fff;" data-spy="affix" data-offset-top="197">
+                  <div class="col-lg-7 padding-top-10"> <a href="index" class="h4"><i class="icon-left-small"></i>Back to Contracts</a> </div>
+                  <div class="col-lg-5 text-right MrTpMd-10"> <a href="index" class="btn btn-danger btn-round">Cancel</a>
                     <div class="btn-group">
                       <button type="button" class="btn btn-dark btn-round">Save</button>
                     </div>
                   </div>
+				 </div> 
+				 </div>
                 </div>
                 <div class="clearfix"></div>
               </div>
               <div class="x_content">
-                <h1 class="h3 padding-bottom-10">New Contract</h1>
+                <h1 class="h3 padding-bottom-10">New Assets</h1>
                 <div class="row">
                   <div class="col-sm-6 padding-bottom-10">
-                    <label>Contract Name <span class="text-red">*</span></label>
+                    <label>Display Name <span class="text-red">*</span></label>
                     <input type="text" class="form-control">
                   </div>
                   <div class="col-sm-6 padding-bottom-10">
@@ -36,35 +41,41 @@
                 </div>
                 <div class="row">
                   <div class="col-sm-6 col-xs-12 padding-bottom-10">
-                    <label>Type <span class="text-red">*</span></label>
+                    <label>Impact <span class="text-red">*</span></label>
                     <select class="form-control">
-                      <option>--Choose--</option>
-                      <option>Option one</option>
-                      <option>Option two</option>
-                      <option>Option three</option>
-                      <option>Option four</option>
+                      <?php
+$impact_object=Assets::Impact();
+foreach ($impact_object as $view_impact) {
+echo   '<option value="'.$view_impact["name"].'">'.$view_impact["name"].'</option>';
+
+}
+?>
                     </select>
                   </div>
                   <div class="col-sm-6 col-xs-12 padding-bottom-10">
-                    <label>Status <span class="text-red">*</span></label>
-                    <select class="form-control" disabled>
-                      <option>Draft</option>
-                      <option>Option one</option>
-                      <option>Option two</option>
-                      <option>Option three</option>
-                      <option>Option four</option>
+                    <label>Assets Type <span class="text-red">*</span></label>
+                    <select class="form-control" >
+                    <?php
+$assets_object=Assets::Assets_type();
+foreach ($assets_object as $view_assets_type) {
+echo   '<option value="'.$view_assets_type["name"].'">'.$view_assets_type["name"].'</option>';
+
+}
+?>
                     </select>
                   </div>
                 </div>
                 <div class="row">
                   <div class="col-sm-6 col-xs-12 padding-bottom-10">
-                    <label>Approver <span class="text-red">*</span></label>
+                    <label>Location <span class="text-red">*</span></label>
                     <select class="form-control">
-                      <option>--Choose--</option>
-                      <option>Option one</option>
-                      <option>Option two</option>
-                      <option>Option three</option>
-                      <option>Option four</option>
+<?php
+$location_object=Location::Country();
+foreach ($location_object as $view_location) {
+echo   '<option value="'.$view_location["name"].'">'.$view_location["name"].'</option>';
+
+}
+?>
                     </select>
                   </div>
                   <div class="col-sm-6 col-xs-12 padding-bottom-10">

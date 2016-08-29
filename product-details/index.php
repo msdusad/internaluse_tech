@@ -12,7 +12,7 @@
           <div class="x_panel tile">
             <div class="x_title">
               <ol class="breadcrumb noBorderRadius noMargin">
-                <li><a href="../problems/index.php">Problems</a></li>
+                <li><a href="../problems/index">Problems</a></li>
                 <li>#PRB-1</li>
               </ol>
               <div class="clearfix"></div>
@@ -32,7 +32,7 @@
                     <table class="table table-striped jambo_table bulk_action">
                       <tbody>
                         <tr>
-                          <td><span class="text-grey">Product:</span> <a href="../products/index.php">Cisco 7301 Router</a></td>
+                          <td><span class="text-grey">Product:</span> <a href="../products/index">Cisco 7301 Router</a></td>
                           <td><span class="text-grey">Vendor:</span></td>
                         </tr>
                         <tr>
@@ -73,7 +73,7 @@
         </div>
         <div class="col-sm-5 col-md-4 col-lg-3 col-xs-12 margin-top-10">
           <div class="x_panel tile">
-            <div class="x_title"> <a href="#" class="btn btn-success noBorderRadius" data-toggle="modal" data-target="#attach">Attach</a> <a href="../assets/new.php" class="btn btn-dark noBorderRadius">Edit</a> <a href="#" class="btn btn-danger noBorderRadius">Delete</a>
+            <div class="x_title"> <a href="#" class="btn btn-success noBorderRadius" data-toggle="modal" data-target="#attach">Attach</a> <a href="../assets/new" class="btn btn-dark noBorderRadius">Edit</a> <a href="#" class="btn btn-danger noBorderRadius">Delete</a>
               <div class="clearfix"></div>
             </div>
             <div class="x_content">
