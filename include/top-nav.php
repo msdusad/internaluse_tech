@@ -46,18 +46,18 @@ echo DOCS_ROOT.$_SESSION['userid']."/profile/".$viewdata['profile_pic'];
 <?php echo $viewdata['name'];?>
   <span class=" fa icon-angle-down"></span> </a>
           <ul class="dropdown-menu dropdown-usermenu pull-right">
-            <li><a href="<?php echo WEB_ROOT;?>profiles/index"> Profile</a></li>
+            <li><a href="<?php echo WEB_ROOT;?>profiles/index.php"> Profile</a></li>
             <li> <a href="javascript:;"> <span class="badge bg-red pull-right">50%</span> <span>Settings</span> </a> </li>
             <li><a href="javascript:;">Help</a></li>
-            <li><a href="<?php echo WEB_ROOT;?>classes/Logout"><i class="fa fa-sign-out pull-right"></i> Log Out</a></li>
+            <li><a href="<?php echo WEB_ROOT;?>classes/Logout.php"><i class="fa fa-sign-out pull-right"></i> Log Out</a></li>
           </ul>
         </li>
         <li role="presentation" class="dropdown"> <a href="javascript:;" class="dropdown-toggle info-number" data-toggle="dropdown" aria-expanded="false"> <i class="fa icon-mail"></i> <span class="badge bg-green">6</span> </a>
           <ul id="menu1" class="dropdown-menu list-unstyled msg_list">
-            <li> <a href="<?php echo WEB_ROOT;?>releases/notification"> <span class="image"><img src="<?php echo IMAGE_ROOT;?>img.jpg" alt="Profile Image" /></span> <span> <span>John Smith</span> <span class="time">3 mins ago</span> </span> <span class="message"> Film festivals used to be do-or-die moments for movie makers. They were where... </span> </a> </li>
-            <li> <a href="<?php echo WEB_ROOT;?>releases/notification"> <span class="image"><img src="<?php echo IMAGE_ROOT;?>img.jpg" alt="Profile Image" /></span> <span> <span>John Smith</span> <span class="time">3 mins ago</span> </span> <span class="message"> Film festivals used to be do-or-die moments for movie makers. They were where... </span> </a> </li>
-            <li> <a href="<?php echo WEB_ROOT;?>releases/notification"> <span class="image"><img src="<?php echo IMAGE_ROOT;?>img.jpg" alt="Profile Image" /></span> <span> <span>John Smith</span> <span class="time">3 mins ago</span> </span> <span class="message"> Film festivals used to be do-or-die moments for movie makers. They were where... </span> </a> </li>
-            <li> <a href="<?php echo WEB_ROOT;?>releases/notification"> <span class="image"><img src="<?php echo IMAGE_ROOT;?>img.jpg" alt="Profile Image" /></span> <span> <span>John Smith</span> <span class="time">3 mins ago</span> </span> <span class="message"> Film festivals used to be do-or-die moments for movie makers. They were where... </span> </a> </li>
+            <li> <a href="<?php echo WEB_ROOT;?>releases/notification.php"> <span class="image"><img src="<?php echo IMAGE_ROOT;?>img.jpg" alt="Profile Image" /></span> <span> <span>John Smith</span> <span class="time">3 mins ago</span> </span> <span class="message"> Film festivals used to be do-or-die moments for movie makers. They were where... </span> </a> </li>
+            <li> <a href="<?php echo WEB_ROOT;?>releases/notification.php"> <span class="image"><img src="<?php echo IMAGE_ROOT;?>img.jpg" alt="Profile Image" /></span> <span> <span>John Smith</span> <span class="time">3 mins ago</span> </span> <span class="message"> Film festivals used to be do-or-die moments for movie makers. They were where... </span> </a> </li>
+            <li> <a href="<?php echo WEB_ROOT;?>releases/notification.php"> <span class="image"><img src="<?php echo IMAGE_ROOT;?>img.jpg" alt="Profile Image" /></span> <span> <span>John Smith</span> <span class="time">3 mins ago</span> </span> <span class="message"> Film festivals used to be do-or-die moments for movie makers. They were where... </span> </a> </li>
+            <li> <a href="<?php echo WEB_ROOT;?>releases/notification.php"> <span class="image"><img src="<?php echo IMAGE_ROOT;?>img.jpg" alt="Profile Image" /></span> <span> <span>John Smith</span> <span class="time">3 mins ago</span> </span> <span class="message"> Film festivals used to be do-or-die moments for movie makers. They were where... </span> </a> </li>
             <li>
               <div class="text-center"> <a> <strong>See All Alerts</strong> <i class="fa fa-angle-right"></i> </a> </div>
             </li>
@@ -76,10 +76,10 @@ echo DOCS_ROOT.$_SESSION['userid']."/profile/".$viewdata['profile_pic'];
         </li>
         <li role="presentation" class="dropdown"> <a href="javascript:;" class="dropdown-toggle info-number" data-toggle="dropdown" aria-expanded="false"> <i class="fa icon-plus"></i>New </a>
           <ul id="menu3" class="dropdown-menu list-unstyled msg_list">
-            <li> <a href="<?php echo WEB_ROOT;?>tickets/new"> Incident </a> </li>
-            <li> <a href="<?php echo WEB_ROOT;?>problems/new"> Problem </a> </li>
-            <li> <a href="<?php echo WEB_ROOT;?>changes/new"> Change </a> </li>
-            <li> <a href="<?php echo WEB_ROOT;?>releases/new"> Release </a> </li>
+            <li> <a href="<?php echo WEB_ROOT;?>tickets/new.php"> Incident </a> </li>
+            <li> <a href="<?php echo WEB_ROOT;?>problems/new.php"> Problem </a> </li>
+            <li> <a href="<?php echo WEB_ROOT;?>changes/new.php"> Change </a> </li>
+            <li> <a href="<?php echo WEB_ROOT;?>releases/new.php"> Release </a> </li>
           </ul>
         </li>
       </ul>

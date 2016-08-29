@@ -22,8 +22,8 @@
             <div class="x_panel tile">
               <div class="x_title">
                 <div class="row">
-                  <div class="col-lg-7 padding-top-10"> <a href="../index" class="h4"><i class="icon-left-small"></i>Back to Dashboard</a> </div>
-                  <div class="col-lg-5 text-right MrTpMd-10"> <a href="index" class="btn btn-danger btn-round">Cancel</a>
+                  <div class="col-lg-7 padding-top-10"> <a href="<?php echo WEB_ROOT;?>index.php" class="h4"><i class="icon-left-small"></i>Back to Dashboard</a> </div>
+                  <div class="col-lg-5 text-right MrTpMd-10"> <a href="<?php echo WEB_ROOT;?>profiles/index.php" class="btn btn-danger btn-round">Cancel</a>
                     <div class="btn-group">
                       <input type="submit" name="update_profile" value="Update" id="profile_update" class="btn btn-success btn-round">
                     </div>

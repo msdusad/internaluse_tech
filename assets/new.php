@@ -16,8 +16,8 @@
                 <div class="row">
 				  <div class="col-lg-12">
 				  <div class="row" style="background:#fff;" data-spy="affix" data-offset-top="197">
-                  <div class="col-lg-7 padding-top-10"> <a href="index" class="h4"><i class="icon-left-small"></i>Back to Contracts</a> </div>
-                  <div class="col-lg-5 text-right MrTpMd-10"> <a href="index" class="btn btn-danger btn-round">Cancel</a>
+                  <div class="col-lg-7 padding-top-10"> <a href="<?php echo WEB_ROOT;?>assets/index.php" class="h4"><i class="icon-left-small"></i>Back to Contracts</a> </div>
+                  <div class="col-lg-5 text-right MrTpMd-10"> <a href="<?php echo WEB_ROOT;?>assets/index.php" class="btn btn-danger btn-round">Cancel</a>
                     <div class="btn-group">
                       <button type="button" class="btn btn-dark btn-round">Save</button>
                     </div>

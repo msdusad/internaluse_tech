@@ -29,7 +29,7 @@
                 </div>
                 </div>
                 <div class="col-lg-5 col-xs-12 text-right MrTpMd-10 visible-sm-right-left">
-                  <a href="new" class="btn btn-danger btn-round">Add New</a>
+                  <a href="<?php echo WEB_ROOT;?>contracts/new.php" class="btn btn-danger btn-round">Add New</a>
                 </div>
               </div>
             </div>

@@ -12,7 +12,7 @@
           <div class="x_panel tile">
             <div class="x_title">
               <ol class="breadcrumb noBorderRadius noMargin">
-                <li><a href="../problems/index">Problems</a></li>
+                <li><a href="<?php echo WEB_ROOT;?>problems/index.php">Problems</a></li>
               </ol>
               <div class="clearfix"></div>
             </div>
@@ -72,7 +72,7 @@
         </div>
         <div class="col-sm-5 col-md-4 col-lg-3 col-xs-12 margin-top-10">
           <div class="x_panel tile">
-            <div class="x_title"> <a href="#" class="btn btn-success noBorderRadius" data-toggle="modal" data-target="#attach">Attach</a> <a href="../assets/new" class="btn btn-dark noBorderRadius">Edit</a> <a href="#" class="btn btn-danger noBorderRadius">Delete</a>
+            <div class="x_title"> <a href="#" class="btn btn-success noBorderRadius" data-toggle="modal" data-target="#attach">Attach</a> <a href="<?php echo WEB_ROOT;?>assets/new.php" class="btn btn-dark noBorderRadius">Edit</a> <a href="#" class="btn btn-danger noBorderRadius">Delete</a>
               <div class="clearfix"></div>
             </div>
             <div class="x_content">

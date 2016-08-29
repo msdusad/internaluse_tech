@@ -41,19 +41,19 @@
 						    <div class="acc-content">
 						        <ul class="reportList">
 								    <li>
-										<a href="/reports/1">Agent ticket summary</a><br>
+										<a href="<?php echo WEB_ROOT;?>reports/1.php">Agent ticket summary</a><br>
 										Compare the performance of agents based on ticket response and resolution
 									</li>
 									<li>
-										<a href="/reports/1">Agent ticket summary</a><br>
+										<a href="<?php echo WEB_ROOT;?>reports/1.php">Agent ticket summary</a><br>
 										Compare the performance of agents based on ticket response and resolution
 									</li>
 									<li>
-										<a href="/reports/1">Agent ticket summary</a><br>
+										<a href="<?php echo WEB_ROOT;?>reports/1.php">Agent ticket summary</a><br>
 										Compare the performance of agents based on ticket response and resolution
 									</li>
 									<li>
-										<a href="/reports/1">Agent ticket summary</a><br>
+										<a href="<?php echo WEB_ROOT;?>reports/1.php">Agent ticket summary</a><br>
 										Compare the performance of agents based on ticket response and resolution
 									</li>
 								</ul>
@@ -64,11 +64,11 @@
 						    <div class="acc-content">
 						        <ul class="reportList">
 								     <li>
-										<a href="/reports/1">Agent ticket summary</a><br>
+										<a href="<?php echo WEB_ROOT;?>reports/1.php">Agent ticket summary</a><br>
 										Compare the performance of agents based on ticket response and resolution
 									</li>
 									<li>
-										<a href="/reports/1">Agent ticket summary</a><br>
+										<a href="<?php echo WEB_ROOT;?>reports/1.php">Agent ticket summary</a><br>
 										Compare the performance of agents based on ticket response and resolution
 									</li>
 								</ul>
@@ -79,19 +79,19 @@
 						    <div class="acc-content">
 						        <ul class="reportList">
 								    <li>
-										<a href="/reports/1">Agent ticket summary</a><br>
+										<a href="<?php echo WEB_ROOT;?>reports/1.php">Agent ticket summary</a><br>
 										Compare the performance of agents based on ticket response and resolution
 									</li>
 									<li>
-										<a href="/reports/1">Agent ticket summary</a><br>
+										<a href="<?php echo WEB_ROOT;?>reports/1.php">Agent ticket summary</a><br>
 										Compare the performance of agents based on ticket response and resolution
 									</li>
 									<li>
-										<a href="/reports/1">Agent ticket summary</a><br>
+										<a href="<?php echo WEB_ROOT;?>reports/1.php">Agent ticket summary</a><br>
 										Compare the performance of agents based on ticket response and resolution
 									</li>
 									<li>
-										<a href="/reports/1">Agent ticket summary</a><br>
+										<a href="<?php echo WEB_ROOT;?>reports/1.php">Agent ticket summary</a><br>
 										Compare the performance of agents based on ticket response and resolution
 									</li>
 								</ul>

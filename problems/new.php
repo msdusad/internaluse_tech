@@ -16,10 +16,10 @@
 				  <div class="col-lg-12">
 				  <div class="row affix-top" style="background:#fff;" data-spy="affix" data-offset-top="197">
                   <div class="col-lg-7 padding-top-10">
-						  <a href="index" class="h4"><i class="icon-left-small"></i>Back to Changes</a>
+						  <a href="<?php echo WEB_ROOT;?>problems/index.php" class="h4"><i class="icon-left-small"></i>Back to Changes</a>
 						</div>
 						<div class="col-lg-5 text-right MrTpMd-10">
-						 <a href="index" class="btn btn-danger btn-round">Cancel</a>
+						 <a href="<?php echo WEB_ROOT;?>problems/index.php" class="btn btn-danger btn-round">Cancel</a>
 						 <div class="btn-group">
 						  <button type="button" class="btn btn-success btn-round">Save</button>
 						  <button type="button" class="btn btn-success btn-round dropdown-toggle" data-toggle="dropdown" aria-expanded="false">

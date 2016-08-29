@@ -119,8 +119,8 @@ $get_all_category=$category_object->display_child_nodes(NULL, 0);
 							</div>
 							<div class="col-lg-5 col-xs-12 text-right MrTpMd-10 visible-sm-right-left">
 							 <a href="#export" class="btn btn-round" data-toggle="modal" data-target="#export">Export</a>
-							 <a href="csv" class="btn btn-round">Import</a>
-							 <a href="new" class="btn btn-danger btn-round">Add New</a>
+							 <a href="<?php echo WEB_ROOT;?>assets/csv.php" class="btn btn-round">Import</a>
+							 <a href="<?php echo WEB_ROOT;?>assets/new.php" class="btn btn-danger btn-round">Add New</a>
 							</div>
 						</div>
                     </div>
@@ -167,7 +167,7 @@ $get_all_category=$category_object->display_child_nodes(NULL, 0);
 								<tr>
 									<td class="a-center ">
 									    <input type="checkbox" id="laptop" />
-								        <label for="laptop" class="column-title"><a href="<?php echo WEB_ROOT;?>products/index">Andrea's Laptop</a></label>
+								        <label for="laptop" class="column-title"><a href="<?php echo WEB_ROOT;?>products/index.php">Andrea's Laptop</a></label>
 									</td>
 									<td class=" ">121000040</td>
 									<td class=" ">May 23, 2014 11:47:56 PM </td>

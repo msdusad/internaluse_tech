@@ -10,11 +10,11 @@ require_once('../classes/Register.php');
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Techvedic</title>
-<link href="../css/bootstrap.min.css" rel="stylesheet">
-<link href="../css/fontello.css" rel="stylesheet">
-<link href="../css/nprogress.css" rel="stylesheet">
-<link href="../css/custom.min.css" rel="stylesheet">
-<link href="../css/style.css" rel="stylesheet">
+<link href="<?php echo CSS_ROOT;?>bootstrap.min.css" rel="stylesheet">
+<link href="<?php echo CSS_ROOT;?>fontello.css" rel="stylesheet">
+<link href="<?php echo CSS_ROOT;?>nprogress.css" rel="stylesheet">
+<link href="<?php echo CSS_ROOT;?>custom.min.css" rel="stylesheet">
+<link href="<?php echo CSS_ROOT;?>style.css" rel="stylesheet">
 <body class="footer_fixed">
 <div class="nav_menu">
    <div class="containerTwo">

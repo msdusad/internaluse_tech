@@ -70,7 +70,7 @@
                     </ul>
                   </div>
                 </div>
-                <div class="col-lg-5 text-right MrTpMd-10"><a href="new" class="btn btn-round btn-dark">New Problem</a> </div>
+                <div class="col-lg-5 text-right MrTpMd-10"><a href="<?php echo WEB_ROOT;?>problems/new.php" class="btn btn-round btn-dark">New Problem</a> </div>
               </div>
               <div class="clearfix"></div>
             </div>
