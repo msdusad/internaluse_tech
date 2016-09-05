@@ -34,11 +34,11 @@ function display_child_nodes($parent_id, $level)
     $parent_id = $parent_id === NULL ? "NULL" : $parent_id;
     if (isset($this->index[$parent_id])) {
         foreach ($this->index[$parent_id] as $id) {
-           //echo str_repeat('<button type="button" class="btn btn-primary">', $level) . $this->data[$id]["name"]."</button><br>";
+           //echo c. $this->data[$id]["name"]."</button><br>";
         	// $this->cat_level=$level;
         	// $this->cat_name=$this->data[$id]["name"];
-          $i=0;
-          $i++;
+  
+          
 
            if($level==0){
 
@@ -50,7 +50,8 @@ function display_child_nodes($parent_id, $level)
 
            }
            else{
-            echo '   <div class="panel-body">'.$this->data[$id]["name"].'</div>';
+            echo str_repeat('<span class="glyphicon-pencil text-primary" style="display:inline-block;"></span>', $level);
+            echo '<div class="panel-body">'.$this->data[$id]["name"].'</div>';
           
         }
 

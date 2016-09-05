@@ -1,5 +1,6 @@
 
-<?php 
+<?php
+require_once('../classes/Path.php'); 
 require_once('../classes/Login.php');
 require_once('../classes/Register.php');
 ?>

@@ -10,7 +10,7 @@ echo DOCS_ROOT.$_SESSION['userid']."/profile/".$viewdata['profile_pic'];
               echo IMAGE_ROOT."profile.gif";
              } ?>" alt="Upload Image" class="img-circle profile_img"> </div>
       <div class="profile_info"> <span>Welcome,</span>
-        <h2><?php echo $viewdata['name'];?></h2>
+        <h2><?php echo ucwords($viewdata['name']);?></h2>
       </div>
     </div>
     <div id="sidebar-menu" class="main_menu_side hidden-print main_menu">

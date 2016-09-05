@@ -30,16 +30,28 @@
               <div class="x_content">
                 <h1 class="h3 padding-bottom-10">New Assets</h1>
                 <div class="row">
-                  <div class="col-sm-6 padding-bottom-10">
+                  <div class="col-sm-12 padding-bottom-10">
                     <label>Display Name <span class="text-red">*</span></label>
-                    <input type="text" class="form-control">
+                    <input type="text" name="assets_name" class="form-control" required>
                   </div>
-                  <div class="col-sm-6 padding-bottom-10">
-                    <label>Contract Number <span class="text-red">*</span></label>
-                    <input type="text" class="form-control" placeholder="CNTR-2">
-                  </div>
+                 
                 </div>
                 <div class="row">
+
+                         <div class="col-sm-6 col-xs-12 padding-bottom-10">
+                    <label>Assets Type <span class="text-red">*</span></label>
+                    <select class="form-control" >
+                    <?php
+$assets_object=Assets::Assets_type();
+foreach ($assets_object as $view_assets_type) {
+echo   '<option value="'.$view_assets_type["name"].'">'.$view_assets_type["name"].'</option>';
+
+}
+?>
+                    </select>
+                  </div>
+
+
                   <div class="col-sm-6 col-xs-12 padding-bottom-10">
                     <label>Impact <span class="text-red">*</span></label>
                     <select class="form-control">
@@ -52,20 +64,28 @@ echo   '<option value="'.$view_impact["name"].'">'.$view_impact["name"].'</optio
 ?>
                     </select>
                   </div>
-                  <div class="col-sm-6 col-xs-12 padding-bottom-10">
-                    <label>Assets Type <span class="text-red">*</span></label>
-                    <select class="form-control" >
-                    <?php
-$assets_object=Assets::Assets_type();
-foreach ($assets_object as $view_assets_type) {
-echo   '<option value="'.$view_assets_type["name"].'">'.$view_assets_type["name"].'</option>';
-
-}
-?>
-                    </select>
-                  </div>
+           
                 </div>
-                <div class="row">
+
+
+
+   <p class="margin-top-10">Description</p>
+                <!-- start-->
+                <div class="btn-toolbar editor nav" data-role="editor-toolbar" data-target="#editor"> <a href="#" class="BoldAlign" data-toggle="tooltip" data-placement="top" title="" data-original-title="Bold">&nbsp;</a> <a href="#" class="italicAlign" data-toggle="tooltip" data-placement="top" title="" data-original-title="Italic">&nbsp;</a> <a href="#" class="list" data-toggle="tooltip" data-placement="top" title="" data-original-title="List Circle">&nbsp;</a> <a href="#" class="listNum" data-toggle="tooltip" data-placement="top" title="" data-original-title="List Number">&nbsp;</a> <a href="#" class="shiftTab" data-toggle="tooltip" data-placement="top" title="" data-original-title="Shift Tab">&nbsp;</a> <a href="#" class="shiftTab2" data-toggle="tooltip" data-placement="top" title="" data-original-title="Shift Tab">&nbsp;</a> <a href="#" class="fontColor" data-toggle="tooltip" data-placement="top" title="" data-original-title="Font Color">&nbsp;</a> <a href="#" class="backColor" data-toggle="tooltip" data-placement="top" title="" data-original-title="Back Color">&nbsp;</a> <span class="dropdown"> <a href="#" class="dropdown-toggle links" data-toggle="dropdown" role="button" aria-expanded="false" title="link">&nbsp;</a>
+                  <ul class="dropdown-menu">
+                    <li><a href="#insertLink" data-toggle="modal" data-target="#insertLink">Insert Link ...</a></li>
+                    <li><a href="#">Unlink</a></li>
+                  </ul>
+                </div>
+                <div id="editor" class="editor-wrapper placeholderText" contenteditable="true"></div>
+                <textarea name="descr" id="descr" style="display:none;"></textarea>
+                <!--end-->
+
+
+               
+             
+                <p class="left_col padding-5 text-white margin-top-20">Assignment</p>
+                 <div class="row">
                   <div class="col-sm-6 col-xs-12 padding-bottom-10">
                     <label>Location <span class="text-red">*</span></label>
                     <select class="form-control">
@@ -78,23 +98,24 @@ echo   '<option value="'.$view_location["name"].'">'.$view_location["name"].'</o
 ?>
                     </select>
                   </div>
-                  <div class="col-sm-6 col-xs-12 padding-bottom-10">
-                    <label>Cost ($) <span class="text-red">*</span></label>
-                    <input type="text" class="form-control">
+
+
+                     <div class="col-sm-6 col-xs-12 padding-bottom-10">
+                    <label>Managed By <span class="text-red">*</span></label>
+                    <select class="form-control">
+<?php
+$location_object=Location::Country();
+foreach ($location_object as $view_location) {
+echo   '<option value="'.$view_location["name"].'">'.$view_location["name"].'</option>';
+
+}
+?>
+                    </select>
                   </div>
+
+
                 </div>
-                <p class="margin-top-10">Description</p>
-                <!-- start-->
-                <div class="btn-toolbar editor nav" data-role="editor-toolbar" data-target="#editor"> <a href="#" class="BoldAlign" data-toggle="tooltip" data-placement="top" title="" data-original-title="Bold">&nbsp;</a> <a href="#" class="italicAlign" data-toggle="tooltip" data-placement="top" title="" data-original-title="Italic">&nbsp;</a> <a href="#" class="list" data-toggle="tooltip" data-placement="top" title="" data-original-title="List Circle">&nbsp;</a> <a href="#" class="listNum" data-toggle="tooltip" data-placement="top" title="" data-original-title="List Number">&nbsp;</a> <a href="#" class="shiftTab" data-toggle="tooltip" data-placement="top" title="" data-original-title="Shift Tab">&nbsp;</a> <a href="#" class="shiftTab2" data-toggle="tooltip" data-placement="top" title="" data-original-title="Shift Tab">&nbsp;</a> <a href="#" class="fontColor" data-toggle="tooltip" data-placement="top" title="" data-original-title="Font Color">&nbsp;</a> <a href="#" class="backColor" data-toggle="tooltip" data-placement="top" title="" data-original-title="Back Color">&nbsp;</a> <span class="dropdown"> <a href="#" class="dropdown-toggle links" data-toggle="dropdown" role="button" aria-expanded="false" title="link">&nbsp;</a>
-                  <ul class="dropdown-menu">
-                    <li><a href="#insertLink" data-toggle="modal" data-target="#insertLink">Insert Link ...</a></li>
-                    <li><a href="#">Unlink</a></li>
-                  </ul>
-                </div>
-                <div id="editor" class="editor-wrapper placeholderText" contenteditable="true"></div>
-                <textarea name="descr" id="descr" style="display:none;"></textarea>
-                <!--end-->
-                <p class="left_col padding-5 text-white margin-top-20">Tenure of Contract</p>
+
                 <p>
                   <label>Tags</label>
                   <input type="text" class="form-control">

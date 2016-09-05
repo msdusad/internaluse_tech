@@ -4,6 +4,7 @@
        if(!isset($_SESSION['userid'])){
    header('Location:login/index.php');
  }
+  require_once('classes/Path.php');
  require_once('classes/UserDetail.php');
  $getuser=new UserDetail() ;
 $getuserdetail=$getuser->userdetails();
@@ -17,13 +18,13 @@ foreach ($getuserdetail as $viewdata)
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Techvedic</title>
-<link href=" css/bootstrap.min.css" rel="stylesheet">
-<link href=" css/fontello.css" rel="stylesheet">
-<link href=" css/nprogress.css" rel="stylesheet">
-<link href=" css/prettify.min.css" rel="stylesheet">
-<link href=" css/select2.min.css" rel="stylesheet">
-<link href=" css/custom.min.css" rel="stylesheet">
-<link href=" css/style.css" rel="stylesheet">
+<link href="<?php echo CSS_ROOT;?>bootstrap.min.css" rel="stylesheet">
+<link href="<?php echo CSS_ROOT;?>fontello.css" rel="stylesheet">
+<link href="<?php echo CSS_ROOT;?>nprogress.css" rel="stylesheet">
+<link href="<?php echo CSS_ROOT;?>prettify.min.css" rel="stylesheet">
+<link href="<?php echo CSS_ROOT;?>select2.min.css" rel="stylesheet">
+<link href="<?php echo CSS_ROOT;?>custom.min.css" rel="stylesheet">
+<link href="<?php echo CSS_ROOT;?>style.css" rel="stylesheet">
 <!--[if lte IE 8]>
 	<script type='text/javascript' src=' js/html5shiv.js'></script>
 	<script type='text/javascript' src=' js/respond.min.js'></script>
@@ -37,22 +38,26 @@ foreach ($getuserdetail as $viewdata)
     <nav>
       <div class="nav toggle"> <a id="menu_toggle"><i class="fa icon-menu"></i></a> </div>
       <ul class="nav navbar-nav navbar-right">
-<li> <a href="javascript:;" class="user-profile dropdown-toggle" data-toggle="dropdown" aria-expanded="false"> <img src="images/img.jpg" alt="">
+<li> <a href="javascript:;" class="user-profile dropdown-toggle" data-toggle="dropdown" aria-expanded="false"> <img src="<?php if($viewdata['profile_pic']!=''){
+echo DOCS_ROOT.$_SESSION['userid']."/profile/".$viewdata['profile_pic'];
+             }else{
+              echo IMAGE_ROOT."profile.gif";
+             } ?>" alt="">
 
   <span class=" fa icon-angle-down"></span> </a>
           <ul class="dropdown-menu dropdown-usermenu pull-right">
-            <li><a href=" profiles/index.php"> Profile</a></li>
+            <li><a href="<?php echo WEB_ROOT;?>profiles/index.php"> Profile</a></li>
             <li> <a href="javascript:;"> <span class="badge bg-red pull-right">50%</span> <span>Settings</span> </a> </li>
             <li><a href="javascript:;">Help</a></li>
-            <li><a href=" classes/Logout.php"><i class="fa fa-sign-out pull-right"></i> Log Out</a></li>
+            <li><a href="<?php echo WEB_ROOT;?>classes/Logout.php"><i class="fa fa-sign-out pull-right"></i> Log Out</a></li>
           </ul>
         </li>
         <li role="presentation" class="dropdown"> <a href="javascript:;" class="dropdown-toggle info-number" data-toggle="dropdown" aria-expanded="false"> <i class="fa icon-mail"></i> <span class="badge bg-green">6</span> </a>
           <ul id="menu1" class="dropdown-menu list-unstyled msg_list">
-            <li> <a href="releases/notification.php"> <span class="image"><img src=" images/img.jpg" alt="Profile Image" /></span> <span> <span>John Smith</span> <span class="time">3 mins ago</span> </span> <span class="message"> Film festivals used to be do-or-die moments for movie makers. They were where... </span> </a> </li>
-            <li> <a href="releases/notification.php"> <span class="image"><img src=" images/img.jpg" alt="Profile Image" /></span> <span> <span>John Smith</span> <span class="time">3 mins ago</span> </span> <span class="message"> Film festivals used to be do-or-die moments for movie makers. They were where... </span> </a> </li>
-            <li> <a href="releases/notification.php"> <span class="image"><img src=" images/img.jpg" alt="Profile Image" /></span> <span> <span>John Smith</span> <span class="time">3 mins ago</span> </span> <span class="message"> Film festivals used to be do-or-die moments for movie makers. They were where... </span> </a> </li>
-            <li> <a href="releases/notification.php"> <span class="image"><img src=" images/img.jpg" alt="Profile Image" /></span> <span> <span>John Smith</span> <span class="time">3 mins ago</span> </span> <span class="message"> Film festivals used to be do-or-die moments for movie makers. They were where... </span> </a> </li>
+            <li> <a href="<?php echo WEB_ROOT;?>releases/notification.php"> <span class="image"><img src=" <?php echo IMAGE_ROOT;?>img.jpg" alt="Profile Image" /></span> <span> <span>John Smith</span> <span class="time">3 mins ago</span> </span> <span class="message"> Film festivals used to be do-or-die moments for movie makers. They were where... </span> </a> </li>
+            <li> <a href="<?php echo WEB_ROOT;?>releases/notification.php"> <span class="image"><img src=" <?php echo IMAGE_ROOT;?>img.jpg" alt="Profile Image" /></span> <span> <span>John Smith</span> <span class="time">3 mins ago</span> </span> <span class="message"> Film festivals used to be do-or-die moments for movie makers. They were where... </span> </a> </li>
+            <li> <a href="<?php echo WEB_ROOT;?>releases/notification.php"> <span class="image"><img src=" <?php echo IMAGE_ROOT;?>img.jpg" alt="Profile Image" /></span> <span> <span>John Smith</span> <span class="time">3 mins ago</span> </span> <span class="message"> Film festivals used to be do-or-die moments for movie makers. They were where... </span> </a> </li>
+            <li> <a href="<?php echo WEB_ROOT;?>releases/notification.php"> <span class="image"><img src=" <?php echo IMAGE_ROOT;?>img.jpg" alt="Profile Image" /></span> <span> <span>John Smith</span> <span class="time">3 mins ago</span> </span> <span class="message"> Film festivals used to be do-or-die moments for movie makers. They were where... </span> </a> </li>
             <li>
               <div class="text-center"> <a> <strong>See All Alerts</strong> <i class="fa fa-angle-right"></i> </a> </div>
             </li>
@@ -71,10 +76,10 @@ foreach ($getuserdetail as $viewdata)
         </li>
         <li role="presentation" class="dropdown"> <a href="javascript:;" class="dropdown-toggle info-number" data-toggle="dropdown" aria-expanded="false"> <i class="fa icon-plus"></i>New </a>
           <ul id="menu3" class="dropdown-menu list-unstyled msg_list">
-            <li> <a href=" tickets/new.php"> Incident </a> </li>
-            <li> <a href=" problems/new.php"> Problem </a> </li>
-            <li> <a href=" changes/new.php"> Change </a> </li>
-            <li> <a href=" releases/new.php"> Release </a> </li>
+            <li> <a href="<?php echo WEB_ROOT;?>tickets/new.php"> Incident </a> </li>
+            <li> <a href="<?php echo WEB_ROOT;?>problems/new.php"> Problem </a> </li>
+            <li> <a href="<?php echo WEB_ROOT;?>changes/new.php"> Change </a> </li>
+            <li> <a href="<?php echo WEB_ROOT;?>releases/new.php"> Release </a> </li>
           </ul>
         </li>
       </ul>
@@ -111,7 +116,7 @@ foreach ($getuserdetail as $viewdata)
             <ul class="bdList">
               <li>
                 <div class="media">
-                  <div class="media-left"><img src="images/profile_blank_thumb.gif" alt="" class="img-circle" /></div>
+                  <div class="media-left"><img src="<?php echo IMAGE_ROOT;?>profile_blank_thumb.gif" alt="" class="img-circle" /></div>
                   <div class="media-body">
                     <p>Account Admin changed the release status of <a href="#"><strong>Replacing Exchange Server 3 (ES3) (#REL-1)</strong></a> to Completed.M</p>
                     <p>3 days ago</p>
@@ -120,7 +125,7 @@ foreach ($getuserdetail as $viewdata)
               </li>
               <li>
                 <div class="media">
-                  <div class="media-left"><img src="images/profile_blank_thumb.gif" alt="" class="img-circle" /></div>
+                  <div class="media-left"><img src="<?php echo IMAGE_ROOT;?>profile_blank_thumb.gif" alt="" class="img-circle" /></div>
                   <div class="media-body">
                     <p>Account Admin changed the release status of <a href="#"><strong>Replacing Exchange Server 3 (ES3) (#REL-1)</strong></a> to Completed.M</p>
                     <p>3 days ago</p>
@@ -129,7 +134,7 @@ foreach ($getuserdetail as $viewdata)
               </li>
               <li>
                 <div class="media">
-                  <div class="media-left"><img src="images/profile_blank_thumb.gif" alt="" class="img-circle" /></div>
+                  <div class="media-left"><img src="<?php echo IMAGE_ROOT;?>profile_blank_thumb.gif" alt="" class="img-circle" /></div>
                   <div class="media-body">
                     <p>Account Admin changed the release status of <a href="#"><strong>Replacing Exchange Server 3 (ES3) (#REL-1)</strong></a> to Completed.M</p>
                     <p>3 days ago</p>
@@ -138,7 +143,7 @@ foreach ($getuserdetail as $viewdata)
               </li>
               <li>
                 <div class="media">
-                  <div class="media-left"><img src="images/profile_blank_thumb.gif" alt="" class="img-circle" /></div>
+                  <div class="media-left"><img src="<?php echo IMAGE_ROOT;?>profile_blank_thumb.gif" alt="" class="img-circle" /></div>
                   <div class="media-body">
                     <p>Account Admin changed the release status of <a href="#"><strong>Replacing Exchange Server 3 (ES3) (#REL-1)</strong></a> to Completed.M</p>
                     <p>3 days ago</p>
@@ -258,32 +263,32 @@ foreach ($getuserdetail as $viewdata)
               <ul class="bdList">
                 <li>
                   <div class="media">
-                    <div class="media-left"><img src="images/profile_blank_thumb.gif" width="40" alt="" class="img-circle borderSolid"></div>
+                    <div class="media-left"><img src="<?php echo IMAGE_ROOT;?>profile_blank_thumb.gif" width="40" alt="" class="img-circle borderSolid"></div>
                     <div class="media-body">
                       <p><a href="#" class="green">Account Admin</a><br>
                         Most Valuable Player</p>
                     </div>
-                    <div class="media-right"><img src="images/trophy1.png" width="40" alt=""></div>
+                    <div class="media-right"><img src="<?php echo IMAGE_ROOT;?>trophy1.png" width="40" alt=""></div>
                   </div>
                 </li>
                 <li>
                   <div class="media">
-                    <div class="media-left"><img src="images/profile_blank_thumb.gif" width="40" alt="" class="img-circle borderSolid"></div>
+                    <div class="media-left"><img src="<?php echo IMAGE_ROOT;?>profile_blank_thumb.gif" width="40" alt="" class="img-circle borderSolid"></div>
                     <div class="media-body">
                       <p><a href="#" class="green">Account Admin</a><br>
                         Sharpshooter</p>
                     </div>
-                    <div class="media-right"><img src="images/trophy2.png" width="40" alt=""></div>
+                    <div class="media-right"><img src="<?php echo IMAGE_ROOT;?>trophy2.png" width="40" alt=""></div>
                   </div>
                 </li>
                 <li>
                   <div class="media">
-                    <div class="media-left"><img src="images/profile_blank_thumb.gif" width="40" alt="" class="img-circle borderSolid"></div>
+                    <div class="media-left"><img src="<?php echo IMAGE_ROOT;?>profile_blank_thumb.gif" width="40" alt="" class="img-circle borderSolid"></div>
                     <div class="media-body">
                       <p><a href="#" class="green">Account Admin</a><br>
                         Most Valuable Player</p>
                     </div>
-                    <div class="media-right"><img src="images/trophy1.png" width="40" alt=""></div>
+                    <div class="media-right"><img src="<?php echo IMAGE_ROOT;?>trophy1.png" width="40" alt=""></div>
                   </div>
                 </li>
               </ul>
@@ -312,7 +317,7 @@ foreach ($getuserdetail as $viewdata)
                 <li>
                   <div class="media">
                     <div class="media-left">
-                      <p class="padding-top-10"><img src="images/Capture1.png" alt="" width="35" />
+                      <p class="padding-top-10"><img src="<?php echo IMAGE_ROOT;?>Capture1.png" alt="" width="35" />
                       <p>
                       <p class="text-center"><span class="bg-green img-rounded padding-5">200</span></p>
                     </div>
@@ -324,7 +329,7 @@ foreach ($getuserdetail as $viewdata)
                 <li>
                   <div class="media">
                     <div class="media-left">
-                      <p class="padding-top-10"><img src="images/Capture1.png" alt="" width="35" />
+                      <p class="padding-top-10"><img src="<?php echo IMAGE_ROOT;?>Capture1.png" alt="" width="35" />
                       <p>
                       <p class="text-center"><span class="bg-green img-rounded padding-5">500</span></p>
                     </div>

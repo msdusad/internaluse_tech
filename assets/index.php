@@ -16,7 +16,11 @@
 						
 <!-- for category auto Genrate -->
 
-	<?php					
+
+	<?php		
+// 	$rawPass='Er5O1X03D7PuGoS6mahenders1';
+// $prevPass=hash("sha256",'Er5O1X03D7PuGoS6mahenders1'); 
+// echo 	$prevPass;		
 $get_all_category=$category_object->display_child_nodes(NULL, 0);
 ?>
 <div class="">
@@ -25,14 +29,18 @@ $get_all_category=$category_object->display_child_nodes(NULL, 0);
               <div class="panel-heading">
                 <h4 class="panel-title">
                   <a data-toggle="collapse" data-parent="#accordion" href="#collapseOne" class=""><span class="icon-up-circled">
-                    </span>Content</a>
+	                    </span>Content</a>
                 </h4>
               </div>
               <div id="collapseOne" class="panel-collapse collapse">
                 <ul class="list-group">
                   <li class="list-group-item"><span class="glyphicon-pencil text-primary"></span><a href="#">Articles</a>
                     <ul class="list-group">
+                      <li class="list-group-item"><span class="glyphicon-pencil text-primary"></span><a href="#">Articles</a>
+                      <ul class="list-group">
                       <li class="list-group-item"><span class="glyphicon-pencil text-primary"></span><a href="#">Articles</a></li>              
+                    </ul>
+                       </li>           
                     </ul>
                   </li>
 
