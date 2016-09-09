@@ -23,7 +23,7 @@
 // echo 	$prevPass;		
 $get_all_category=$category_object->display_child_nodes(NULL, 0);
 ?>
-<div class="">
+<!-- <div class="">
           <div class="panel-group" id="accordion">
             <div class="panel panel-default noBorderRadius">
               <div class="panel-heading">
@@ -50,7 +50,7 @@ $get_all_category=$category_object->display_child_nodes(NULL, 0);
             </div>
             
           </div>
-        </div>
+        </div> -->
 <!-- <ul class="assetsCategory"><li><a href="javascript:void(0)" data-toggle="collapse" data-target="#1">1</a></li></ul>
                                <div id="1" class="collapse category">
 							      <div >1</div>
@@ -196,6 +196,17 @@ $get_all_category=$category_object->display_child_nodes(NULL, 0);
 								</tr>
 							</tbody>
                         </table>
+
+<!-- pagination -->
+
+<?php require_once('../classes/test.php');
+
+ $pobj=$pob->test();
+ echo $pobj;
+?>
+<!-- end Here -->
+
+
                     </div>
                   </div>
                 </div>

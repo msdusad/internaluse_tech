@@ -50,8 +50,8 @@ function display_child_nodes($parent_id, $level)
 
            }
            else{
-            echo str_repeat('<span class="glyphicon-pencil text-primary" style="display:inline-block;"></span>', $level);
-            echo '<div class="panel-body">'.$this->data[$id]["name"].'</div>';
+          
+            echo '<div class="panel-body" style="padding:5px;">'.str_repeat('<span class="glyphicon-pencil text-primary" style=""></span>', $level).$this->data[$id]["name"].'</div>';
           
         }
 

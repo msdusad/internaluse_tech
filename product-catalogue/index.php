@@ -13,7 +13,7 @@
             <div class="x_panel tile">
               <div class="x_title">
                 <div class="row">
-                  <div class="col-lg-7 h4">Admin</div>
+                  <div class="col-lg-7 h4"><a href="<?php echo WEB_ROOT;?>admin/index.php"><i class="icon-cog"></i>Admin</a></div>
                   <div class="col-lg-5 text-right MrTpMd-10"> 
                      <div class="input-group noMargin">
 						<input class="form-control" placeholder="Search for..." type="text">
@@ -26,57 +26,39 @@
                 <div class="clearfix"></div>
               </div>
               <div class="x_content">
-                <h1 class="h3 padding-bottom-10">Asset Management</h1>
-				<div class="row text-center">
-				     <a class="admin col-xs-6 col-sm-4 col-md-2" href="#">
-					     <div class="circleBig">
-						     <div class="circle">
-							     <i class="icon-box"></i>
-							 </div>
-						 </div>
-						 <h4>Product Catalogue</h4>
-					 </a>
-					 <a class="admin col-xs-6 col-sm-4 col-md-2" href="#">
-					     <div class="circleBig">
-						     <div class="circle">
-							     <i class="icon-home"></i>
-							 </div>
-						 </div>
-						 <h4>Vendors</h4>
-					 </a>
-					 <a class="admin col-xs-6 col-sm-4 col-md-2" href="#">
-					     <div class="circleBig">
-						     <div class="circle">
-							     <i class="icon-slideshare"></i>
-							 </div>
-						 </div>
-						 <h4>Relationship Types</h4>
-					 </a>
-					 <a class="admin col-xs-6 col-sm-4 col-md-2" href="#">
-					     <div class="circleBig">
-						     <div class="circle">
-							     <i class="icon-sitemap"></i>
-							 </div>
-						 </div>
-						 <h4>Asset Types</h4>
-					 </a>
-					 <a class="admin col-xs-6 col-sm-4 col-md-2" href="#">
-					     <div class="circleBig">
-						     <div class="circle">
-							     <i class="icon-location"></i>
-							 </div>
-						 </div>
-						 <h4>Locations</h4>
-					 </a>
-					 <a class="admin col-xs-6 col-sm-4 col-md-2" href="#">
-					     <div class="circleBig">
-						     <div class="circle">
-							     <i class="icon-target"></i>
-							 </div>
-						 </div>
-						 <h4>Discovery</h4>
-					 </a>
-				</div>
+                <h1 class="h4 padding-bottom-10">Products</h1>
+				  <!-- start table -->
+				     <div class="table-responsive margin-top-20">
+                        <table class="table table-striped jambo_table bulk_action">
+                            <thead>
+							  <tr>
+								<th>Name</th>
+								<th>Type</th>
+								<th>Manufacturer</th>
+								<th>Status</th>
+								<th>&nbsp;</th>
+							  </tr>	
+							</thead>
+
+							<tbody>
+								<tr>
+									<td class=" ">121000040</td>
+									<td class=" ">May 23, 2014 11:47:56 PM </td>
+									<td class=" ">121000210 <i class="success fa fa-long-arrow-up"></i></td>
+									<td class=" ">John Blank L</td>
+									<td class=" "><i class="icon-pencil"></i></td>
+								</tr>
+								<tr>
+									<td class=" ">121000040</td>
+									<td class=" ">May 23, 2014 11:47:56 PM </td>
+									<td class=" ">121000210 <i class="success fa fa-long-arrow-up"></i></td>
+									<td class=" ">John Blank L</td>
+									<td class=" ">Paid</td>
+								</tr>
+							</tbody>
+                        </table>
+                    </div>
+				  <!-- end table -->
               </div>
             </div>
         </div>

@@ -43,7 +43,8 @@ else{
 public static function NumRows($query){
 $new_query=mysql_query($query);
 if(mysql_num_rows($new_query)>0){
-return true;
+	$totalrows=mysql_num_rows($new_query);
+return $totalrows;
 }
 else{
 	return false;

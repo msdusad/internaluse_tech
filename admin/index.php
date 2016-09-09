@@ -28,7 +28,7 @@
               <div class="x_content">
                 <h1 class="h4 padding-bottom-10">Asset Management</h1>
 				<div class="row text-center">
-				     <a class="admin col-xs-6 col-sm-4 col-md-2" href="#">
+				     <a class="admin col-xs-6 col-sm-4 col-md-2" href="<?php echo WEB_ROOT;?>product-catalogue/index.php">
 					     <div class="circleBig">
 						     <div class="circle">
 							     <i class="icon-box"></i>
