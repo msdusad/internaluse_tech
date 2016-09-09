@@ -197,15 +197,6 @@ $get_all_category=$category_object->display_child_nodes(NULL, 0);
 							</tbody>
                         </table>
 
-<!-- pagination -->
-
-<?php require_once('../classes/test.php');
-
- $pobj=$pob->test();
- echo $pobj;
-?>
-<!-- end Here -->
-
 
                     </div>
                   </div>

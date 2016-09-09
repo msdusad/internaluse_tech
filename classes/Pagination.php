@@ -7,7 +7,7 @@ class Pagination
      public static function dataview($query)
      {
          
-         $pago=Common::NumRows($query);
+         $pago=Common::FetchData($query);
          return $pago;
 //         foreach($pago as $viewres){
 // echo $viewres['name']."<br>";
