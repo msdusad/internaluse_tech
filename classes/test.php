@@ -6,9 +6,9 @@ class Test{
 	public $records_per_page;
     public $newquery;
 
-	public  function  __construct(){
-		  $this->query = "SELECT * FROM category";       
-        $this->records_per_page=3;    
+	public  function  __construct($pagination_query,$record_set){
+		  $this->query = $pagination_query;       
+        $this->records_per_page=$record_set;    
 	}
 
 	public function pagination_link(){
@@ -17,7 +17,7 @@ class Test{
         return  Pagination::dataview($this->newquery);
 	}
 }
-$pob=new Test();
+//$pob=new Test();
 //  $pobj=$pob->pagination_link();
 // foreach($pobj as $viewd){
 // echo $viewd['name']."<br>";
