@@ -198,8 +198,8 @@ $get_all_category=$category_object->display_child_nodes(NULL, 0);
                         </table>
 
 <?php 
-include_once('../classes/test.php');
-$pob=new Test('select * from category','3');
+include_once('../classes/PaginatedData.php');
+$pob=new PaginatedData('select * from category','3');
 $pobj=$pob->pagination_link();
 
 ?>

@@ -7,8 +7,8 @@ class Pagination
      public static function dataview($query)
      {
          
-         $pago=Common::FetchData($query);
-         return $pago;
+         $data_retrive=Common::FetchData($query);
+         return $data_retrive;
 //         foreach($pago as $viewres){
 // echo $viewres['name']."<br>";
 //         }

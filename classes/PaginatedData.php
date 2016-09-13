@@ -1,6 +1,6 @@
 <?php
 include_once('Pagination.php');
-class Test{
+class PaginatedData{
 
 	public $query;
 	public $records_per_page;
