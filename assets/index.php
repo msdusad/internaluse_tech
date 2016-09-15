@@ -7,6 +7,8 @@
       	require_once("../include/top-nav.php"); 	
          require_once("../include/right-nav.php"); 
  require_once("../classes/Category.php");
+ include_once('../classes/PaginatedData.php');
+include_once('../classes/AddAssets.php');
         ?>
         
         <div class="right_col" role="main">
@@ -198,11 +200,46 @@ $get_all_category=$category_object->display_child_nodes(NULL, 0);
                         </table>
 
 <?php 
-include_once('../classes/PaginatedData.php');
 $pob=new PaginatedData('select * from category','3');
 $pobj=$pob->pagination_link();
-
+		
 ?>
+
+
+<form method="post" action="" name="asset_add_category">
+	<input type="text" name="name" placeholder="Category Name" required>
+	Parent<select name="parent_id" > 
+		<option value="">Root Category</option>
+<?php			
+$get_all_cat_view=Category::View_Cat();
+foreach ($get_all_cat_view as $value_of_cat) {
+	echo "<option value='".$value_of_cat['id']."'>".$value_of_cat['name']."</option>";
+}
+?>
+
+	
+	</select>
+	<input type="submit" name='add_category_assets'>
+	</form>
+<br>
+<form method="post" action="" name="add_new_department">
+<input name="department_name" required>
+<input name="department_description">
+<input name="department_head">
+<input name="department_prime_user">
+<input type="submit" name="add_new_department">
+</form>
+<br>
+
+<form method="post" action="" name="add_groups">
+<input name="group_name" required>
+<input name="group_description">
+<input name="group_agents">
+<input type="submit" name="add_groups">
+</form>
+
+
+
                     </div>
                   </div>
                 </div>

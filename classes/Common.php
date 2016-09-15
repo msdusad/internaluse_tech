@@ -53,6 +53,14 @@ else{
 }
 
 
+public static function remove_sql_injection($value){
+
+$new_value=mysql_real_escape_string($value);
+return $new_value;
+
+}
+
+
 
 }
 

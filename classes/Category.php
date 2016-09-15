@@ -4,7 +4,7 @@ require_once('Extrnal/NumberToWordConverter.php');
 class Category{
  public $data=array();
  public $index=array();
-public $id;
+public  $id;
 public $parent_id;
 public $cat_name;
 public $cat_level;
@@ -71,6 +71,15 @@ echo '</div>';
 
        
     }
+}
+
+
+public  static function View_Cat(){
+
+$view_cat_data="SELECT * FROM category";
+$view_cat_query=Common::FetchData($view_cat_data);
+return $view_cat_query;
+
 }
 
 }
