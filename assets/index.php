@@ -6,9 +6,12 @@
       	<?php 
       	require_once("../include/top-nav.php"); 	
          require_once("../include/right-nav.php"); 
- require_once("../classes/Category.php");
- include_once('../classes/PaginatedData.php');
-include_once('../classes/AddAssets.php');
+           require_once("../classes/Include_all.php"); 
+
+//  require_once("../classes/Category.php");
+//  include_once('../classes/PaginatedData.php');
+// include_once('../classes/AddAssets.php');
+// include_once('../classes/Location.php');
         ?>
         
         <div class="right_col" role="main">
@@ -112,12 +115,6 @@ $get_all_category=$category_object->display_child_nodes(NULL, 0);
 
 
 
-
-
-
-
-
-
 			</div>
 		  
 		  <div class="col-md-9 col-sm-8 col-xs-12 margin-top-10">
@@ -128,8 +125,9 @@ $get_all_category=$category_object->display_child_nodes(NULL, 0);
 							  <h2 class="h2">Services</h2>
 							</div>
 							<div class="col-lg-5 col-xs-12 text-right MrTpMd-10 visible-sm-right-left">
-							 <a href="#export" class="btn btn-round" data-toggle="modal" data-target="#export">Export</a>
-							 <a href="<?php echo WEB_ROOT;?>assets/csv.php" class="btn btn-round">Import</a>
+							 <a href="#export" class="btn btn-round" data-toggle="modal" data-target="#export">Export</a>&nbsp;&nbsp;&nbsp;&nbsp;
+							 <a href="<?php echo WEB_ROOT;?>assets/csv.php" class="btn btn-round">Import</a>&nbsp;&nbsp;&nbsp;&nbsp;
+							 <a href="<?php echo WEB_ROOT;?>assets/csv.php" class="btn btn-round">Import</a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
 							 <a href="<?php echo WEB_ROOT;?>assets/new.php" class="btn btn-danger btn-round">Add New</a>
 							</div>
 						</div>
@@ -206,39 +204,32 @@ $pobj=$pob->pagination_link();
 ?>
 
 
-<form method="post" action="" name="asset_add_category">
-	<input type="text" name="name" placeholder="Category Name" required>
-	Parent<select name="parent_id" > 
-		<option value="">Root Category</option>
-<?php			
-$get_all_cat_view=Category::View_Cat();
-foreach ($get_all_cat_view as $value_of_cat) {
-	echo "<option value='".$value_of_cat['id']."'>".$value_of_cat['name']."</option>";
+<form method="post" action="" name="add_location">
+<input name="location_name" required>
+<input name="primary_contact">
+<input name="email">
+<input name="phone">
+<textarea name="address"></textarea>
+
+<select name="country" id="country_change">
+<?php $location=Location::Country();
+foreach ($location as $view_loc) {
+	echo "<option value=".$view_loc['id'].">".$view_loc['name']."</option>";
 }
 ?>
+</select>
+<select name="state" id="states">
+<?php $location=Location::State('1');
+foreach ($location as $view_loc) {
+	echo "<option value=".$view_loc['id'].">".$view_loc['name']."</option>";
+}
+?>
+</select>
+<input name="city">
+<input name="zipcode">
 
-	
-	</select>
-	<input type="submit" name='add_category_assets'>
-	</form>
-<br>
-<form method="post" action="" name="add_new_department">
-<input name="department_name" required>
-<input name="department_description">
-<input name="department_head">
-<input name="department_prime_user">
-<input type="submit" name="add_new_department">
+<input type="submit" name="add_location">
 </form>
-<br>
-
-<form method="post" action="" name="add_groups">
-<input name="group_name" required>
-<input name="group_description">
-<input name="group_agents">
-<input type="submit" name="add_groups">
-</form>
-
-
 
                     </div>
                   </div>

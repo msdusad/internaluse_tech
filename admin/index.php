@@ -52,15 +52,15 @@
 						 </div>
 						 <h4>Relationship Types</h4>
 					 </a>
-					 <a class="admin col-xs-6 col-sm-4 col-md-2" href="#">
+					 <a class="admin col-xs-6 col-sm-4 col-md-2" href="<?php echo WEB_ROOT;?>assets/addnew.php">
 					     <div class="circleBig">
 						     <div class="circle">
 							     <i class="icon-sitemap"></i>
 							 </div>
 						 </div>
-						 <h4>Asset Types</h4>
-					 </a>
-					 <a class="admin col-xs-6 col-sm-4 col-md-2" href="#">
+						 <h4>Asset Types</h4></a>
+					 
+					 <a class="admin col-xs-6 col-sm-4 col-md-2" href="<?php echo WEB_ROOT;?>assets/add_location.php">
 					     <div class="circleBig">
 						     <div class="circle">
 							     <i class="icon-location"></i>
@@ -75,8 +75,26 @@
 							 </div>
 						 </div>
 						 <h4>Discovery</h4>
-					 </a>
+					 </a>					
 				</div>
+				<div class="row text-center">
+				     <a class="admin col-xs-6 col-sm-4 col-md-2" href="<?php echo WEB_ROOT;?>admin/addgroup.php">
+					     <div class="circleBig">
+						     <div class="circle">
+							     <i class="icon-users"></i>
+							 </div>
+						 </div>
+						 <h4>Groups</h4>
+					 </a>
+					 <div class="row text-center">
+				     <a class="admin col-xs-6 col-sm-4 col-md-2" href="<?php echo WEB_ROOT;?>admin/deparment.php">
+					     <div class="circleBig">
+						     <div class="circle">
+							     <i class="icon-home"></i>
+							 </div>
+						 </div>
+						 <h4>Departments</h4>
+					 </a>
               </div>
             </div>
         </div>

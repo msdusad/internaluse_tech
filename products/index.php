@@ -61,7 +61,7 @@
                   <!-- end --> 
                 </div>
                 <div class="tab-pane" id="tab2">
-                  <p> There are no Relationships available. <a href="addnew" class="green">Add new</a> </p>
+                  <p> There are no Relationships available. <a href="<?php echo WEB_ROOT;?>products/addnewrelationship.php" class="green">Add new</a> </p>
                 </div>
                 <div class="tab-pane" id="tab3">
                   <p> There are no Asset available. </p>

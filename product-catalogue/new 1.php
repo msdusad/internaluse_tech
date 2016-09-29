@@ -41,14 +41,14 @@
 									<td class=" ">May 23, 2014 11:47:56 PM </td>
 									<td class=" ">121000210 <i class="success fa fa-long-arrow-up"></i></td>
 									<td class=" ">John Blank L</td>
-									<td class=" "><a href="#"><i class="icon-pencil"></i></a> &nbsp; <a href="#"><i class="icon-trash"></i></a></td>
+									<td class=" "><a href="#"><i class="icon-pencil"></i></a> &nbsp; <a href="#"><i class="icon-trash-empty"></i></a></td>
 								</tr>
 								<tr class="assTable">
 									<td class=" ">121000040</td>
 									<td class=" ">May 23, 2014 11:47:56 PM </td>
 									<td class=" ">121000210 <i class="success fa fa-long-arrow-up"></i></td>
 									<td class=" ">John Blank L</td>
-									<td class=" "><a href="#"><i class="icon-pencil"></i></a> &nbsp; <a href="#"><i class="icon-trash"></i></a></td>
+									<td class=" "><a href="#"><i class="icon-pencil"></i></a> &nbsp; <a href="#"><i class="icon-trash-empty"></i></a></td>
 								</tr>
 							</tbody>
                         </table>
@@ -65,3 +65,7 @@
 
 </body>
 </html>
+
+
+               
+             

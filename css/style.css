@@ -306,3 +306,125 @@ transition: width 0.5s, height 0.8s; color:rgba(255, 255, 255, 0.95); font-size:
 .visible-sm-right-center{display:block!important;text-align:center !important;}
 .visible-sm-right-left{display:block!important;text-align:left !important;}
 }
+.assTable  .icon-pencil, .assTable  .icon-trash{color:#fff; transition:ease 0.1s}
+.assTable:hover .icon-pencil, .assTable:hover  .icon-trash{
+	color:#333;
+	
+}
+#itil_product_name1  input.text, input[type="text"], textarea {
+    border: 1px solid #e4e4e4;
+    border-radius: 0px;
+    box-shadow: 0 1px 0 #bbb inset;
+    font-weight: 300;
+    padding: 4px;
+    font-size: 14px;
+}
+#select-box
+{
+	border: 1px solid #e4e4e4;
+    border-radius: 8px;
+    box-shadow: 0 1px 0 #bbb inset;
+    font-weight: 300;
+    padding: 4px;
+    font-size: 14px;
+}
+.editor-wrapper {
+    min-height: 150px;
+    background-color: white;
+    border-collapse: separate;
+    border: 1px solid #ccc;
+	border-radius:0px;
+    padding: 4px;
+    box-sizing: content-box;
+    box-shadow: rgba(0, 0, 0, 0.07451) 0px 1px 1px 0px inset;
+    border-top-right-radius: 3px;
+    border-bottom-right-radius: 3px;
+    border-bottom-left-radius: 3px;
+    border-top-left-radius: 3px;
+    overflow: scroll;
+    outline: none;
+}
+.dropdown-menu {
+    border: medium none;
+    box-shadow: none;
+    display: none;
+    float: left;
+    font-size: 12px;
+    left: 0;
+    list-style: none outside none;
+    padding: 0;
+    text-shadow: none;
+    top: 100%;
+    z-index: 9998;
+    border: 1px solid #D9DEE4;
+    border-top-left-radius: 0;
+    border-top-right-radius: 0;
+	padding-bottom:40px;
+}
+.table thead th {
+	text-align:center;
+	}
+	
+	.footer1
+	{
+		position:relative;
+		bottom:40px;
+	}
+     #prce ,#quantiy
+	 {
+		 border-radius:0px;
+	 }
+	 .tag1
+	 {
+		 position:relative;
+		 top:20px;
+	
+	 
+	 }
+	 .list-page .list-page-header {
+    overflow: visible;
+}
+.list-page .list-page-header {
+    margin-bottom: 0px;
+}
+.list-page-header {
+    background: #fff;
+}
+.row-fluid {
+    width: 100%;
+}
+.list-page-header ul li{
+	list-style-type:none;
+	display:inline-block;
+	padding:1px;
+	font-size:bold;
+}
+.sp h1{
+	position:relative;
+	top:20px;
+}
+.panel1
+{
+	position:relative;
+	top:40px;
+}
+ul li 
+{
+	list-style-type:none;
+	
+}
+.choicelist ul li
+{
+	list-style-type:none;
+	display:inline-block;
+}
+table.jambo_table1 thead {
+    background:#0b0a0a1a;;
+    color:#09090966;
+	
+}
+	table tr td 
+	{
+		text-align:center;
+	
+	}

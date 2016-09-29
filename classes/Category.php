@@ -74,11 +74,75 @@ echo '</div>';
 }
 
 
-public  static function View_Cat(){
 
-$view_cat_data="SELECT * FROM category";
-$view_cat_query=Common::FetchData($view_cat_data);
-return $view_cat_query;
+
+public  function Edit_category($parent_id, $level){
+
+ global $data, $index;
+    $parent_id = $parent_id === NULL ? "NULL" : $parent_id;
+    if (isset($this->index[$parent_id])) {
+        foreach ($this->index[$parent_id] as $id) {
+           //echo c. $this->data[$id]["name"]."</button><br>";
+          // $this->cat_level=$level;
+          // $this->cat_name=$this->data[$id]["name"];
+  
+          
+
+           if($level==0){
+
+
+    echo '<div class="panel panel-info">
+      <div class="panel-heading">'.$this->data[$id]["name"].'<span style="float:right">Edit</span></div>
+   
+    ';
+
+           }
+           else{
+          
+            echo '<div class="panel-body" style="padding:5px;">'.str_repeat('<span class="glyphicon-pencil text-primary" style=""></span>', $level).$this->data[$id]["name"].'<span style="float:right">Edit</span></div>';
+          
+        }
+
+                if($level==0){
+    
+echo '</div>';
+
+           }
+
+           
+        
+
+            $this->Edit_category($id, $level + 1);
+        }
+
+
+
+       
+    }
+
+
+}
+
+
+public   function View_Cat($parent_id, $level){
+
+// $view_cat_data="SELECT * FROM category";
+// $view_cat_query=Common::FetchData($view_cat_data);
+// return $view_cat_query;
+
+  global $data, $index;
+    $parent_id = $parent_id === NULL ? "NULL" : $parent_id;
+    if (isset($this->index[$parent_id])) {
+        foreach ($this->index[$parent_id] as $id) {
+           //echo c. $this->data[$id]["name"]."</button><br>";
+          // $this->cat_level=$level;
+          // $this->cat_name=$this->data[$id]["name"];
+
+            echo '<option value="'.$this->data[$id]["id"].'">'.str_repeat('--', $level).$this->data[$id]["name"].'</option>';
+
+            $this->View_Cat($id, $level + 1);
+        }
+      }
 
 }
 

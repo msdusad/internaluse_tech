@@ -189,7 +189,7 @@
 						</div>
 						<div class="col-lg-5 text-right MrTpMd-10">
 						 <a href="<?php echo WEB_ROOT;?>tickets/new.php" class="btn btn-round btn-dark">New Incident</a>
-						 <a href="javascript:void(0)" data-toggle="modal" data-target="#request1" class="btn btn-danger btn-round">Request Item</a>
+						 <a href="javascript:void(0)" data-toggle="modal" data-target="#request1" class="btn btn-danger btn-round button1">Request Item</a>
 						</div>
 					 </div>
 					

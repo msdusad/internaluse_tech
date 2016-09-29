@@ -18,6 +18,13 @@ return $assets_data;
 
 }
 
+public static function Department(){
+	$department_query="select * from department";
+$department_data=Common::FetchData($department_query);
+return $department_data;
+
+}
+
 }
 
 ?>

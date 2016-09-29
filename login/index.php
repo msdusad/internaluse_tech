@@ -53,12 +53,11 @@ if(isset($_POST['Login'])){
                   </p>
                 </div>
                 <div class="col-md-6 text-right visible-sm-right-left">
-                  <p>
-                    <button type="button" id="click_to_hide" class="btn btn-danger margin-top-10 noBorderRadius"> forgot your password?</button>
-                  </p>
-                  <p>
-                    <input type="submit" name="Login" value="Login" class="btn btn-dark noBorderRadius">
-                  </p>
+                  
+                    <button type="button" id="click_to_hide" class="btn btn-danger margin-top-10 noBorderRadius "> forgot your password?</button>
+              
+                 <input type="submit" name="Login" value="Login" class="btn btn-dark noBorderRadius margin-top-10">
+                 
                 </div>
               </div>
             </form>
