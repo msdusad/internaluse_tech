@@ -36,45 +36,24 @@ function display_child_nodes($parent_id, $level)
         foreach ($this->index[$parent_id] as $id) {
            //echo c. $this->data[$id]["name"]."</button><br>";
         	// $this->cat_level=$level;
-        	// $this->cat_name=$this->data[$id]["name"];
-  
-          
+        	// $this->cat_name=$this->data[$id]["name"];     
 
            if($level==0){
-
-
     echo '<div class="panel panel-info">
-      <div class="panel-heading">'.$this->data[$id]["name"].'</div>
-   
-    ';
-
+      <div class="panel-heading">'.$this->data[$id]["name"].'</div>';
            }
            else{
           
             echo '<div class="panel-body" style="padding:5px;">'.str_repeat('<span class="glyphicon-pencil text-primary" style=""></span>', $level).$this->data[$id]["name"].'</div>';
-          
         }
-
                 if($level==0){
-    
 echo '</div>';
 
            }
-
-           
-        
-
-            $this->display_child_nodes($id, $level + 1);
-        }
-
-
-
-       
+$this->display_child_nodes($id, $level + 1);
+        }      
     }
 }
-
-
-
 
 public  function Edit_category($parent_id, $level){
 
@@ -82,62 +61,33 @@ public  function Edit_category($parent_id, $level){
     $parent_id = $parent_id === NULL ? "NULL" : $parent_id;
     if (isset($this->index[$parent_id])) {
         foreach ($this->index[$parent_id] as $id) {
-           //echo c. $this->data[$id]["name"]."</button><br>";
-          // $this->cat_level=$level;
-          // $this->cat_name=$this->data[$id]["name"];
-  
-          
 
            if($level==0){
-
-
     echo '<div class="panel panel-info">
-      <div class="panel-heading">'.$this->data[$id]["name"].'<span style="float:right">Edit</span></div>
-   
+      <div class="panel-heading">'.$this->data[$id]["name"].'<span style="float:right"><a href="edit_cat.php?id='.$this->data[$id]["id"].'&name='.$this->data[$id]["name"].'">Edit</a></span></div>
     ';
-
            }
            else{
           
-            echo '<div class="panel-body" style="padding:5px;">'.str_repeat('<span class="glyphicon-pencil text-primary" style=""></span>', $level).$this->data[$id]["name"].'<span style="float:right">Edit</span></div>';
-          
-        }
+            echo '<div class="panel-body" style="padding:5px;">'.str_repeat('<span class="glyphicon-pencil text-primary" style=""></span>', $level).$this->data[$id]["name"].'<span style="float:right"><a href="edit_cat.php?id='.$this->data[$id]["id"].'&name='.$this->data[$id]["name"].'">Edit</a></span></div>';
 
-                if($level==0){
-    
+        }
+               if($level==0){  
 echo '</div>';
 
            }
-
-           
-        
-
             $this->Edit_category($id, $level + 1);
         }
-
-
-
-       
     }
-
-
 }
 
 
 public   function View_Cat($parent_id, $level){
 
-// $view_cat_data="SELECT * FROM category";
-// $view_cat_query=Common::FetchData($view_cat_data);
-// return $view_cat_query;
-
   global $data, $index;
     $parent_id = $parent_id === NULL ? "NULL" : $parent_id;
     if (isset($this->index[$parent_id])) {
         foreach ($this->index[$parent_id] as $id) {
-           //echo c. $this->data[$id]["name"]."</button><br>";
-          // $this->cat_level=$level;
-          // $this->cat_name=$this->data[$id]["name"];
-
             echo '<option value="'.$this->data[$id]["id"].'">'.str_repeat('--', $level).$this->data[$id]["name"].'</option>';
 
             $this->View_Cat($id, $level + 1);
@@ -145,6 +95,19 @@ public   function View_Cat($parent_id, $level){
       }
 
 }
+
+
+// public static function update_category(){
+
+//   $name=Common::remove_sql_injection($_POST['name']);
+//   $parent_id=Common::remove_sql_injection($_POST['parent_id']);
+//   $id=$_POST['id'];
+//   $cat_update_qry="update category set name='$name',parent_id='$parent_id' where id='$id'";
+//   Common::InsertData();
+// echo Common::SuccessDailog(' Category  Updated  ');
+
+// }
+
 
 }
 $category_object=new Category();

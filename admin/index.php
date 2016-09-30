@@ -60,7 +60,7 @@
 						 </div>
 						 <h4>Asset Types</h4></a>
 					 
-					 <a class="admin col-xs-6 col-sm-4 col-md-2" href="<?php echo WEB_ROOT;?>assets/add_location.php">
+					 <a class="admin col-xs-6 col-sm-4 col-md-2" href="<?php echo WEB_ROOT;?>assets/indexlocation.php">
 					     <div class="circleBig">
 						     <div class="circle">
 							     <i class="icon-location"></i>

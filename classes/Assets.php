@@ -18,8 +18,15 @@ return $assets_data;
 
 }
 
-public static function Department(){
-	$department_query="select * from department";
+public static function Department($var){
+	if($var==''){
+    	$department_query="select * from department ";
+	}
+	else{
+	$department_query="select * from department where id='$var'";
+	}
+
+
 $department_data=Common::FetchData($department_query);
 return $department_data;
 

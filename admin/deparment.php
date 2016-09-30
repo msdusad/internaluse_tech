@@ -48,13 +48,13 @@
 
 							<tbody>
 <?php
-$dep_obj=Assets::Department();
+$dep_obj=Assets::Department('');
 foreach ($dep_obj as $dep_value) {
 	echo '<tr class="assTable">
-									<td class=" "><a href="'.WEB_ROOT.'admin/editdepartment.php">'.$dep_value["name"].'</a></td>
+									<td class=" "><a href="'.WEB_ROOT.'admin/editdepartment.php?id='.$dep_value["id"].'">'.$dep_value["name"].'</a></td>
 									<td class=" ">'.$dep_value["department_head"].'</td>
 <td class=" ">'.$dep_value["prime_user"].'</td>
-<td class=""><a href="'.WEB_ROOT.'admin/editdepartment.php"><i class="icon-pencil"></i></a> &nbsp; <a href="#"><i class="icon-trash"></i></a></td></td>
+<td class=""><a href="'.WEB_ROOT.'admin/editdepartment.php?id='.$dep_value["id"].'"><i class="icon-pencil"></i></a> &nbsp; <a href="#"><i class="icon-trash"></i></a></td></td>
 								</tr>';
 }
 

@@ -5,8 +5,12 @@
 <div class="container body">
   <div class="main_container">
    
-    <?php include("../include/top-nav.php"); ?>
-     <?php include("../include/right-nav.php"); ?>
+    <?php include("../include/top-nav.php"); 
+      include("../include/right-nav.php");
+ require_once("../classes/Include_all.php"); 
+ $dep_obj=Assets::Department($_GET['id']);
+foreach ($dep_obj as $dep_value) 
+      ?>
     <div class="right_col" role="main">
       <div class="row">
         <div class="col-md-9 col-sm-8 col-xs-12 padding-top-10">
@@ -32,10 +36,13 @@
               </div>
               <div class="x_content">
                <div class="list-page-header row-fluid"> 
-    <h2 class="modal-title"><strong>Customer Support</strong></h2>
+    <h2 class="modal-title"><strong><?php echo $dep_value["name"]; ?></strong></h2>
 	
   </div>
-   <h4 class="h4 padding-bottom-10"><strong>Description</strong></h4>
+   <h4 class="h4 padding-bottom-10"><strong><?php echo $dep_value["prime_user"]; ?></strong></h4>
+   <h4 class="h4 padding-bottom-10"><strong><?php echo $dep_value["department_head"]; ?></strong></h4>
+   <h4 class="h4 padding-bottom-10"><strong><?php echo $dep_value["description"]; ?></strong></h4>
+  
    <p>Support Team</p>
     <div class="sp">            
  <h1><strong>Members</strong></h1>
