@@ -13,4 +13,6 @@ include_once('Update_password.php');
 include_once('UpdateProfile.php');
 include_once('UserDetail.php');
 include_once('UserDirectory.php');
+include_once('UpdateAssets.php');
+include_once('DeleteAssets.php');
 ?>

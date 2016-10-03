@@ -7,7 +7,16 @@ class UpdateAssets{
 
 public  static function UpdateImpact(){
 
-return "asd";
+$name=Common::remove_sql_injection($_POST['name']);
+$id=Common::remove_sql_injection($_POST['id']);
+$add_query="update  impact set name='$name' where id='$id'";
+$run_qry=Common::InsertData($add_query);
+if($run_qry){
+
+return 'Update Sucessfully';
+
+}
+
 }
 
 
@@ -25,7 +34,7 @@ if ($_POST['parent_id'] === '') {
 $parent_id=$_POST['parent_id'];
  $id=$_POST['id'];
 
-$add_query="update category set name='$cat_name',parent_id='$parent_id' where id='$id')";
+$add_query="update category set name='$cat_name',parent_id='$parent_id' where id='$id'";
 $run_qry=Common::InsertData($add_query);
 if($run_qry){
 
@@ -96,22 +105,28 @@ return 'Updated Sucessfully';
 
 }
 
-if(isset($_POST['add_category_assets'])){
+
+if(isset($_POST['update_impact'])){
+AddAssets::UpdateImpact();
+echo Common::SuccessDailog('  Category Updated');
+} 
+
+if(isset($_POST['update_category_assets'])){
 AddAssets::UpdateCategory();
-echo Common::SuccessDailog(' New Category ');
+echo Common::SuccessDailog('  Category Updated');
 } 
-if(isset($_POST['add_new_department'])){
+if(isset($_POST['update_new_department'])){
 AddAssets::UpdateDepartment();
-echo Common::SuccessDailog(' New Department ');
+echo Common::SuccessDailog('  Department Updated ');
 } 
-if(isset($_POST['add_groups'])){
+if(isset($_POST['update_groups'])){
 AddAssets::UpdateGroup();
-echo Common::SuccessDailog(' New Group ');
+echo Common::SuccessDailog(' New Group Updated ');
 }
 
-if(isset($_POST['add_location'])){
+if(isset($_POST['update_location'])){
 AddAssets::UpdateLocation();
-echo Common::SuccessDailog(' New Location ');
+echo Common::SuccessDailog(' New Location Updated ');
 }
 
 ?>

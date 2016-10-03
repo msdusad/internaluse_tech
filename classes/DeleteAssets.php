@@ -1,0 +1,105 @@
+<?php
+require_once('Common.php');
+
+class DeleteAssets{
+
+public  static function DeleteImpact(){
+$id=Common::remove_sql_injection($_POST['id']);
+$add_query="delete from impact where id='$id'";
+$run_qry=Common::InsertData($add_query);
+if($run_qry){
+
+return 'Deleted Sucessfully';
+
+}
+
+}
+
+
+public static  function DeleteManagedBy(){
+return "df";
+}
+
+
+public static function  DeleteCategory(){	
+
+ $id=Common::remove_sql_injection($_POST['id']);
+
+$add_query="delete from category where id='$id'";
+$run_qry=Common::InsertData($add_query);
+if($run_qry){
+
+return 'Deleted Sucessfully';
+
+}
+
+	}
+
+public static function DeleteDepartment(){
+
+$id=Common::remove_sql_injection($_POST['id']);
+$add_query="delete from  department where id='$id'";
+$run_qry=Common::InsertData($add_query);
+if($run_qry){
+
+return 'Deleted Sucessfully';
+
+}
+
+	}
+
+
+public static  function DeleteGroup(){
+
+$id=Common::remove_sql_injection($_POST['id']);
+$add_query="delete from groups where id='$id'";
+$run_qry=Common::InsertData($add_query);
+if($run_qry){
+return 'Deleted Sucessfully';
+}
+
+
+}
+
+
+
+
+public  function DeleteLocation(){
+
+$id=Common::remove_sql_injection($_POST['id']);
+
+$add_query="delete from  location where id='$id'";
+$run_qry=Common::InsertData($add_query);
+if($run_qry){
+return 'Deleted Sucessfully';
+}
+ 
+}
+
+}
+
+
+if(isset($_POST['delete_impact'])){
+AddAssets::UpdateImpact();
+echo Common::SuccessDailog('  Category Updated');
+} 
+
+if(isset($_POST['delete_category_assets'])){
+AddAssets::UpdateCategory();
+echo Common::SuccessDailog('  Category Updated');
+} 
+if(isset($_POST['delete_new_department'])){
+AddAssets::UpdateDepartment();
+echo Common::SuccessDailog('  Department Updated ');
+} 
+if(isset($_POST['delete_groups'])){
+AddAssets::UpdateGroup();
+echo Common::SuccessDailog(' New Group Updated ');
+}
+
+if(isset($_POST['delete_location'])){
+AddAssets::UpdateLocation();
+echo Common::SuccessDailog(' New Location Updated ');
+}
+
+?>

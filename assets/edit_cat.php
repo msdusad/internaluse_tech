@@ -75,9 +75,7 @@ $get_all_category=$category_object->View_Cat(NULL, 0);
                 </div>
                 	
                   </div>
-                    <?php    
-$get_all_category=$category_object->Edit_category(NULL, 0);
-?> 
+                   
                 </div>
   <?php include("../include/footer.php"); ?>
   </div>

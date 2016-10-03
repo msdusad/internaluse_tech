@@ -7,7 +7,16 @@ class AddAssets{
 
 public  static function AddImpact(){
 
-return "asd";
+$name=Common::remove_sql_injection($_POST['name']);
+
+$add_query="insert into impact (name) values ('$name')";
+$run_qry=Common::InsertData($add_query);
+if($run_qry){
+
+return 'Added Sucessfully';
+
+}
+
 }
 
 
@@ -94,22 +103,28 @@ return 'Added Sucessfully';
 
 }
 
+
+if(isset($_POST['add_impact'])){
+AddAssets::AddImpact();
+echo Common::SuccessDailog(' New Impact Added ');
+} 
+
 if(isset($_POST['add_category_assets'])){
 AddAssets::AddCategory();
-echo Common::SuccessDailog(' New Category ');
+echo Common::SuccessDailog(' New Category Added ');
 } 
 if(isset($_POST['add_new_department'])){
 AddAssets::AddDepartment();
-echo Common::SuccessDailog(' New Department ');
+echo Common::SuccessDailog(' New Department Added ');
 } 
 if(isset($_POST['add_groups'])){
 AddAssets::AddGroup();
-echo Common::SuccessDailog(' New Group ');
+echo Common::SuccessDailog(' New Group Added ');
 }
 
 if(isset($_POST['add_location'])){
 AddAssets::AddLocation();
-echo Common::SuccessDailog(' New Location ');
+echo Common::SuccessDailog(' New Location Added ');
 }
 
 ?>
