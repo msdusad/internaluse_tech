@@ -15,7 +15,7 @@
                 <div class="row">
 				  <div class="col-lg-12">
 				  <div class="row" style="background:#fff;" data-spy="affix" data-offset-top="197">
-                  <div class="col-lg-7 padding-top-10"> <a href="<?php echo WEB_ROOT;?>admin/deparment.php" class="h4"><i class="icon-left-small"></i>Back to Departments</a> </div>
+                  <div class="col-lg-7 padding-top-10"> <a href="<?php echo WEB_ROOT;?>admin/addgroup.php" class="h4"><i class="icon-left-small"></i>Back to Groups</a> </div>
                   <div class="col-lg-5 text-right MrTpMd-10"> <a href="javascript:window.history.back();" class="btn btn-default ">Cancel</a>
                     
                       <button type="button" class="btn btn-dark ">Save</button>

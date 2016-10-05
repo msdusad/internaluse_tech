@@ -69,7 +69,10 @@ public  function Edit_category($parent_id, $level){
            }
            else{
           
-            echo '<div class="panel-body" style="padding:5px;">'.str_repeat('<span class="glyphicon-pencil text-primary" style=""></span>', $level).$this->data[$id]["name"].'<span style="float:right"><a href="edit_cat.php?id='.$this->data[$id]["id"].'&name='.$this->data[$id]["name"].'">Edit</a></span></div>';
+            echo '<div class="panel-body" style="padding:5px;">'.str_repeat('<span class="glyphicon-pencil text-primary" style=""></span>', $level).$this->data[$id]["name"].'<span style="float:right"><a href="edit_cat.php?id='.$this->data[$id]["id"].'&name='.$this->data[$id]["name"].'">Edit </a> <form action="" method="post">
+            <input type="hidden" name="id" value="'.$this->data[$id]["id"].'">
+            <input type="submit" value="Delete" name="delete_category_assets">
+            </form></span> </div>';
 
         }
                if($level==0){  
@@ -96,7 +99,7 @@ public   function View_Cat($parent_id, $level){
 
 }
 
-
+  
 // public static function update_category(){
 
 //   $name=Common::remove_sql_injection($_POST['name']);

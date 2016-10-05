@@ -80,25 +80,25 @@ return 'Deleted Sucessfully';
 
 
 if(isset($_POST['delete_impact'])){
-AddAssets::UpdateImpact();
+DeleteAssets::DeleteImpact();
 echo Common::SuccessDailog('  Category Updated');
 } 
 
 if(isset($_POST['delete_category_assets'])){
-AddAssets::UpdateCategory();
+DeleteAssets::DeleteCategory();
 echo Common::SuccessDailog('  Category Updated');
 } 
 if(isset($_POST['delete_new_department'])){
-AddAssets::UpdateDepartment();
+DeleteAssets::DeleteDepartment();
 echo Common::SuccessDailog('  Department Updated ');
 } 
 if(isset($_POST['delete_groups'])){
-AddAssets::UpdateGroup();
+DeleteAssets::DeleteGroup();
 echo Common::SuccessDailog(' New Group Updated ');
 }
 
 if(isset($_POST['delete_location'])){
-AddAssets::UpdateLocation();
+DeleteAssets::DeleteLocation();
 echo Common::SuccessDailog(' New Location Updated ');
 }
 

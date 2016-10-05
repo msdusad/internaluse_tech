@@ -16,7 +16,7 @@
 				  <div class="col-lg-12">
 				  <div class="row" style="background:#fff;" data-spy="affix" data-offset-top="197">
              <?php require_once("../classes/Include_all.php"); ?>
-                  <div class="col-lg-7 padding-top-10"> <a href="<?php echo WEB_ROOT;?>assets/index.php" class="h4"><i class="icon-left-small"></i>Back to Locations</a> </div>
+                  <div class="col-lg-7 padding-top-10"> <a href="<?php echo WEB_ROOT;?>assets/indexlocation.php" class="h4"><i class="icon-left-small"></i>Back to Locations</a> </div>
                   <div class="col-lg-5 text-right MrTpMd-10"><button type="button "class="btn btn-default ">Cancel</button>
                     
                       <input type="submit" name="add_location" class="btn btn-dark" value="Save">

@@ -13,7 +13,7 @@
             <div class="x_panel tile">
               <div class="x_title">
                 <div class="row">
-                  <div class="col-lg-7 h4"><a href="<?php echo WEB_ROOT;?>Groups/edit.php"><i class="icon-cog"></i>Admin</a></div>
+                  <div class="col-lg-7 h4"><a href="<?php echo WEB_ROOT;?>admin/edit.php"><i class="icon-cog"></i>Admin</a></div>
                   <div class="col-lg-5 text-right MrTpMd-10"> 
                      <a href="" class="btn btn-round btn-default"  data-dismiss="modal" >Cancel</a>
 					 <a href="" class="btn btn-round btn-dark"  data-dismiss="modal" >Update</a>

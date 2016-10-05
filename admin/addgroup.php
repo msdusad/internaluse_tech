@@ -13,7 +13,7 @@
             <div class="x_panel tile">
               <div class="x_title">
                 <div class="row">
-                  <div class="col-lg-7 h4"><a href="<?php echo WEB_ROOT;?>Groups/index.php"><i class="icon-cog"></i>Admin</a></div>
+                  <div class="col-lg-7 h4"><a href="<?php echo WEB_ROOT;?>admin/index.php"><i class="icon-cog"></i>Admin</a></div>
                   <div class="col-lg-5 text-right MrTpMd-10"> 
                <button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
     Create New <span class="caret"></span>
@@ -839,7 +839,7 @@ if a ticket remains un-assigned for more than :
         <div class="muted"></div>
       </td>
       <td class="text-right">
-        <a href="/itil/requester_groups/4000031781/edit" class="btn btn-mini">Edit</a>
+       <a href="<?php echo WEB_ROOT;?>admin/editrequestorgroup.php" class="btn btn-mini">Edit</a>
         <a href="/itil/requester_groups/4000031781" class="btn btn-mini" onclick="if (confirm('Are you sure you want to delete this group?')) { var f = document.createElement('form'); f.style.display = 'none'; this.parentNode.appendChild(f); f.method = 'POST'; f.action = this.href;var m = document.createElement('input'); m.setAttribute('type', 'hidden'); m.setAttribute('name', '_method'); m.setAttribute('value', 'delete'); f.appendChild(m);var s = document.createElement('input'); s.setAttribute('type', 'hidden'); s.setAttribute('name', 'authenticity_token'); s.setAttribute('value', 'g2BJBIcBDKA2VcLlNA2qtGT6ipS9iNCterm+aPnGUrQ='); f.appendChild(s);f.submit(); };return false;"><i class="icon-trash"></i></a>
       </td>
     </tr>
@@ -849,7 +849,7 @@ if a ticket remains un-assigned for more than :
         <div class="muted"></div>
       </td>
       <td class="text-right">
-        <a href="/itil/requester_groups/4000031780/edit" class="btn btn-mini">Edit</a>
+         <a href="<?php echo WEB_ROOT;?>admin/editrequestorgroup.php" class="btn btn-mini">Edit</a>
         <a href="/itil/requester_groups/4000031780" class="btn btn-mini" onclick="if (confirm('Are you sure you want to delete this group?')) { var f = document.createElement('form'); f.style.display = 'none'; this.parentNode.appendChild(f); f.method = 'POST'; f.action = this.href;var m = document.createElement('input'); m.setAttribute('type', 'hidden'); m.setAttribute('name', '_method'); m.setAttribute('value', 'delete'); f.appendChild(m);var s = document.createElement('input'); s.setAttribute('type', 'hidden'); s.setAttribute('name', 'authenticity_token'); s.setAttribute('value', 'g2BJBIcBDKA2VcLlNA2qtGT6ipS9iNCterm+aPnGUrQ='); f.appendChild(s);f.submit(); };return false;"><i class="icon-trash"></i></a>
       </td>
     </tr>
@@ -859,7 +859,7 @@ if a ticket remains un-assigned for more than :
         <div class="muted"></div>
       </td>
       <td class="text-right">
-        <a href="/itil/requester_groups/4000031779/edit" class="btn btn-mini">Edit</a>
+          <a href="<?php echo WEB_ROOT;?>admin/editrequestorgroup.php" class="btn btn-mini">Edit</a>
         <a href="/itil/requester_groups/4000031779" class="btn btn-mini" onclick="if (confirm('Are you sure you want to delete this group?')) { var f = document.createElement('form'); f.style.display = 'none'; this.parentNode.appendChild(f); f.method = 'POST'; f.action = this.href;var m = document.createElement('input'); m.setAttribute('type', 'hidden'); m.setAttribute('name', '_method'); m.setAttribute('value', 'delete'); f.appendChild(m);var s = document.createElement('input'); s.setAttribute('type', 'hidden'); s.setAttribute('name', 'authenticity_token'); s.setAttribute('value', 'g2BJBIcBDKA2VcLlNA2qtGT6ipS9iNCterm+aPnGUrQ='); f.appendChild(s);f.submit(); };return false;"><i class="icon-trash"></i></a>
       </td>
     </tr>

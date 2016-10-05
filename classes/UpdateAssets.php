@@ -107,25 +107,25 @@ return 'Updated Sucessfully';
 
 
 if(isset($_POST['update_impact'])){
-AddAssets::UpdateImpact();
+UpdateAssets::UpdateImpact();
 echo Common::SuccessDailog('  Category Updated');
 } 
 
 if(isset($_POST['update_category_assets'])){
-AddAssets::UpdateCategory();
+UpdateAssets::UpdateCategory();
 echo Common::SuccessDailog('  Category Updated');
 } 
 if(isset($_POST['update_new_department'])){
-AddAssets::UpdateDepartment();
+UpdateAssets::UpdateDepartment();
 echo Common::SuccessDailog('  Department Updated ');
 } 
 if(isset($_POST['update_groups'])){
-AddAssets::UpdateGroup();
+UpdateAssets::UpdateGroup();
 echo Common::SuccessDailog(' New Group Updated ');
 }
 
 if(isset($_POST['update_location'])){
-AddAssets::UpdateLocation();
+UpdateAssets::UpdateLocation();
 echo Common::SuccessDailog(' New Location Updated ');
 }
 
