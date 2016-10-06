@@ -23,7 +23,7 @@ return "df";
 
 public static function  DeleteCategory(){	
 
- $id=Common::remove_sql_injection($_POST['id']);
+ $id=Common::remove_sql_injection($_GET['assets_id']);
 
 $add_query="delete from category where id='$id'";
 $run_qry=Common::InsertData($add_query);
@@ -81,25 +81,26 @@ return 'Deleted Sucessfully';
 
 if(isset($_POST['delete_impact'])){
 DeleteAssets::DeleteImpact();
-echo Common::SuccessDailog('  Category Updated');
+echo Common::SuccessDailog('  Category Deleted');
 } 
 
-if(isset($_POST['delete_category_assets'])){
+if(isset($_GET['assets_id'])){
 DeleteAssets::DeleteCategory();
-echo Common::SuccessDailog('  Category Updated');
+echo Common::SuccessDailog('  Category Deleted');
+echo "<script>window.location.href='../assets/addnew.php';</script>";
 } 
 if(isset($_POST['delete_new_department'])){
 DeleteAssets::DeleteDepartment();
-echo Common::SuccessDailog('  Department Updated ');
+echo Common::SuccessDailog('  Department Deleted ');
 } 
 if(isset($_POST['delete_groups'])){
 DeleteAssets::DeleteGroup();
-echo Common::SuccessDailog(' New Group Updated ');
+echo Common::SuccessDailog('  Group Deleted ');
 }
 
 if(isset($_POST['delete_location'])){
 DeleteAssets::DeleteLocation();
-echo Common::SuccessDailog(' New Location Updated ');
+echo Common::SuccessDailog('  Location Deleted ');
 }
 
 ?>

@@ -17,7 +17,7 @@
 				  <div class="row" style="background:#fff;" data-spy="affix" data-offset-top="197">
              <?php require_once("../classes/Include_all.php"); ?>
                   <div class="col-lg-7 padding-top-10"> <a href="<?php echo WEB_ROOT;?>assets/indexlocation.php" class="h4"><i class="icon-left-small"></i>Back to Locations</a> </div>
-                  <div class="col-lg-5 text-right MrTpMd-10"><button type="button" onclick="window.history.back();" class="btn btn-default ">Cancel</button>
+                  <div class="col-lg-5 text-right MrTpMd-10"><button type="button "class="btn btn-default ">Cancel</button>
                     
                       <input type="submit" name="add_location" class="btn btn-dark" value="Save">
                    
@@ -28,13 +28,22 @@
                 <div class="clearfix"></div>
               </div>
               <div class="x_content">
-                <h1 class="h3 padding-bottom-10">New Location</h1>
+                <h1 class="h3 padding-bottom-10">Edit Location</h1>
                 <div class="row">
+                  <?php
+$loc_obj=Assets::Location($_GET['id']);
+if($loc_obj!='')
+foreach ($loc_obj as $loc_value) 
+
+  ?>
+
+
                   <div class="col-sm-6  col-xs-12 padding-bottom-10">
                     <label>Location Name <span class="text-red">*</span></label>
-                    <input type="text"  id="itil_product_name1" name="location_name" class="form-control" required  >
+                <input type="hidden"  id="itil_product_name1" name="id" class="form-control" value="<?php echo $loc_value['id']; ?>" required  >        
+                    <input type="text"  id="itil_product_name1" name="location_name" class="form-control" value="<?php echo $loc_value['location_name']; ?>" required  >
                   </div>
-                 <!--  <div class="col-sm-6  col-xs-12 padding-bottom-10">
+                   <!-----<div class="col-sm-6  col-xs-12 padding-bottom-10">
                     <label>Parent Location <span class="text-red">*</span></label>
                    <select name="city" id="city" class="form-control">
 <option value="2">.....</option>
@@ -45,7 +54,7 @@
 <option value="4">France</option>
 <option value="4">United Kingdom</option>
 </select>
-                  </div> -->
+                  </div>----->
 
 					</div>
 					
@@ -54,17 +63,17 @@
 
 <div class="col-sm-6  col-xs-12 padding-bottom-10">
                     <label>Primary Contact<span class="text-red"></span></label>
-                    <input type="text" id="itil_product_name1" name="primary_contact" class="form-control" required>
+                    <input type="text" id="itil_product_name1" name="primary_contact" class="form-control" value="<?php echo $loc_value['primary_contact']; ?>" required>
                   </div>
                   <div class="col-sm-6 col-xs-12 padding-bottom-10">
                     <label> Email<span class="text-red"></span></label>
-                    <input type="text"  id="itil_product_name1" name="email" class="form-control" required  >
+                    <input type="text"  id="itil_product_name1" name="email" class="form-control" value="<?php echo $loc_value['email']; ?>" required  >
 									</div>
 								
 									
 									  <div class="col-sm-6 col-xs-12 padding-bottom-10">
                     <label>Phone<span class="text-red"></span></label>
-                   <input type="text"  id="itil_product_name1" name="phone" class="form-control" required  >
+                   <input type="text"  id="itil_product_name1" name="phone" class="form-control" value="<?php echo $loc_value['phone']; ?>" required  >
 
                     </select>
                   </div>
@@ -73,7 +82,7 @@
                 <div class="row">
                   <div class="col-sm-6  col-xs-12 padding-bottom-10">
                     <label>Line1 <span class="text-red"></span></label>
-                    <input type="text"  id="itil_product_name1" name="address" class="form-control"  required >
+                    <input type="text"  id="itil_product_name1" name="address" class="form-control" value="<?php echo $loc_value['address']; ?>"  required >
 					&nbsp;
 					<div class="row padding-bottom-20">
 <div class="col-sm-6  col-xs-12 padding-bottom-10">
@@ -89,7 +98,7 @@ foreach ($location as $view_loc) {
                   <div class="col-sm-6 col-xs-12 padding-bottom-10">
                     <label> State<span class="text-red"></span></label>
                   <select name="state" id="states" class="form-control">
-<?php $location=Location::State('1');
+<?php $location=Location::State($loc_value['state_id']);
 foreach ($location as $view_loc) {
   echo "<option value=".$view_loc['id'].">".$view_loc['name']."</option>";
 }
@@ -106,13 +115,13 @@ foreach ($location as $view_loc) {
 
                     <div class="col-sm-6  col-xs-12 padding-bottom-10">
                     <label>Line2 <span class="text-red"></span></label>
-                    <input type="text"  id="itil_product_name1" name="address2" class="form-control" required  >
+                    <input type="text"  id="itil_product_name1" name="address2" class="form-control" value="<?php echo $loc_value['address_line2']; ?>" required  >
           &nbsp;
           <div class="row padding-bottom-20">
 <div class="col-sm-6  col-xs-12 padding-bottom-10">
                     <label>City<span class="text-red"></span></label>
                     <select name="city" id="city" class="form-control">
-<?php $location=Location::City('1');
+<?php $location=Location::City($loc_value['city_id']);
 foreach ($location as $view_loc) {
   echo "<option value=".$view_loc['id'].">".$view_loc['name']."</option>";
 }
@@ -121,7 +130,7 @@ foreach ($location as $view_loc) {
                   </div>
                   <div class="col-sm-6 col-xs-12 padding-bottom-10">
                     <label> ZipCode<span class="text-red"></span></label>
-                   <input type="text"  id="itil_product_name1" name="zipcode" class="form-control" required  >
+                   <input type="text"  id="itil_product_name1" name="zipcode" class="form-control" value="<?php echo $loc_value['zip_code']; ?>" required  >
                   </div>
                 
                   

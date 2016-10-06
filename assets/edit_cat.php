@@ -61,7 +61,7 @@ $get_all_category=$category_object->View_Cat(NULL, 0);
 					
          
         <div class="modal-footer">
-          <button type="button" class="btn btn-default" data-dismiss="modal">Cancel</button> 
+          <button type="button" onclick="window.history.back();" class="btn btn-default" data-dismiss="modal">Cancel</button> 
 		  <input type="submit" name='update_category_assets' class="btn btn-dark"  value="Save">
         </div>
 					</form>

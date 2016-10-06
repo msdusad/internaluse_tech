@@ -108,7 +108,7 @@ return 'Updated Sucessfully';
 
 if(isset($_POST['update_impact'])){
 UpdateAssets::UpdateImpact();
-echo Common::SuccessDailog('  Category Updated');
+echo Common::SuccessDailog('  Impact Updated');
 } 
 
 if(isset($_POST['update_category_assets'])){

@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+  <!DOCTYPE html>
 <html lang="en">
 <!-- <script src="http://ajax.aspnetcdn.com/ajax/jquery.validate/1.9/jquery.validate.min.js"></script> -->
 <body class="nav-md">
@@ -7,13 +7,12 @@
    
     <?php require_once("../include/top-nav.php"); 
       require_once("../include/right-nav.php"); 
-
-      require_once("../classes/Include_all.php"); 
 ?>
 
     <div class="right_col" role="main">
       <div class="row">
         <div class="col-md-9 col-sm-8 col-xs-12 padding-top-10">
+          <?php   require_once("../classes/Include_all.php"); ?>
             <div class="x_panel tile">
               <div class="x_title">
                 <div class="row">
@@ -49,12 +48,13 @@
 							<tbody>
 <?php
 $dep_obj=Assets::Department('');
+if($dep_obj!='')
 foreach ($dep_obj as $dep_value) {
 	echo '<tr class="assTable">
 									<td class=" "><a href="'.WEB_ROOT.'admin/editdepartment.php?id='.$dep_value["id"].'">'.$dep_value["name"].'</a></td>
 									<td class=" ">'.$dep_value["department_head"].'</td>
 <td class=" ">'.$dep_value["prime_user"].'</td>
-<td class=""><a href="'.WEB_ROOT.'admin/editdepartment.php?id='.$dep_value["id"].'"><i class="icon-pencil"></i></a> &nbsp; <a href="#"><i class="icon-trash"></i></a></td></td>
+<td class=""><a href="'.WEB_ROOT.'admin/editdepartment.php?id='.$dep_value["id"].'"><i class="icon-pencil"></i></a> &nbsp; <form action="" method="post" id="'.$dep_value["id"].'" style="display:none;"><input type="hidden" name="id" value="'.$dep_value["id"].'"><input type="hidden" name="delete_new_department"></form><i onclick="department_delete_form(this.id);" id="'.$dep_value["id"].'" class="icon-trash" style="cursor:pointer;"></i></td></td>
 								</tr>';
 }
 
@@ -68,9 +68,6 @@ foreach ($dep_obj as $dep_value) {
 					
 					 </div>
 					 </div>
-					 		 
-                   
-
               
 </div>
 </div>

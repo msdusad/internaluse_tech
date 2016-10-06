@@ -17,10 +17,8 @@
 				  <div class="row" style="background:#fff;" data-spy="affix" data-offset-top="197">
                   <div class="col-lg-7 padding-top-10"> <a href="<?php echo WEB_ROOT;?>admin/addgroup.php" class="h4"><i class="icon-left-small"></i>Back to Groups</a> </div>
                   <div class="col-lg-5 text-right MrTpMd-10"> <a href="javascript:window.history.back();" class="btn btn-default ">Cancel</a>
-                    
-                      <button type="button" class="btn btn-dark ">Save</button>
-                   
-                  </div>
+                    <button type="button" class="btn btn-dark ">Save</button>
+                   </div>
 				 </div> 
 				 </div>
                 </div>
@@ -47,9 +45,10 @@
     <div class="rgcriteria" id="edit_filters">
   <div>
 	  <h3 class="s-title">Conditions</h3>
-    <span class="pull-right"></span>
+    <span class=""></span>
   </div>
-  <p>Set conditions to add members to the group.</p>
+  <div class="col-sm-12">
+  <p class="p2">Set conditions to add members to the group.</p></div>
 	<div class="ui-form gray-box-rounded">
 		<div class="choicelist">
 		<ul>
@@ -61,14 +60,16 @@
 		</div>
 		<div id="groupDOM"><input name="filter_data" value="" type="hidden">
 		<div class="conditionset" id="filterDOM">
-			<i class="icon-roadblock"><button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+			 <button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
     Create New <span class="caret"></span>
   </button>
   <ul class="dropdown-menu">
-    <li><a href="<?php echo WEB_ROOT;?>admin/Agent.php">Agent Group</a></li>
-    <li><a href="<?php echo WEB_ROOT;?>admin/Requestorgroup.php">Requester Group</a></li>
+  <li><a href="<?php echo WEB_ROOT;?>admin/Agent.php">Select Condition</a></li>
+  <li><a href="<?php echo WEB_ROOT;?>admin/Agent.php">---------</a></li>
+    <li><a href="<?php echo WEB_ROOT;?>admin/Agent.php">Departments</a></li>
+    <li><a href="<?php echo WEB_ROOT;?>admin/Requestorgroup.php">Job Title</a></li>
     
-  </ul>    </i>
+  </ul>     </div>   
 			<fieldset class="addchoice">
 	         	<p>Add new condition</p> 
 	         	<img alt="Add New choice" class="add" src="/images/add.png">
@@ -77,7 +78,10 @@
     	</div>
 	</div>
 </div>
+
     <div id="members-list"></div>
+</div>
+ <div id="members-list"></div>
 </div>
 				</div>
 </div>
@@ -85,16 +89,7 @@
 
            
                 </div>
-
-
-
-   
-
-               
-            
-
-               
-    <?php include("../include/footer.php"); ?>
+				<?php include("../include/footer.php"); ?>
   </div>
 </div>
 </body>

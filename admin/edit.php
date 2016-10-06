@@ -52,7 +52,7 @@
                     <input type="text"  name="name" placeholder="Category Name" class="form-control" required >
                   </div>
                  </div>
-<div class="row padding-bottom-10">
+<!-- <div class="row padding-bottom-10">
 <div class="col-sm-8 col-xs-12 text-center" >
 if a ticket remains un-assigned for more than : 
 </div> 
@@ -69,7 +69,7 @@ if a ticket remains un-assigned for more than :
     <li><a href="#">Separated link</a></li>
   </ul>
 </div>
-</div>
+</div> -->
 
 
 

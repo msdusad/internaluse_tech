@@ -306,7 +306,7 @@ transition: width 0.5s, height 0.8s; color:rgba(255, 255, 255, 0.95); font-size:
 .visible-sm-right-center{display:block!important;text-align:center !important;}
 .visible-sm-right-left{display:block!important;text-align:left !important;}
 }
-.assTable  .icon-pencil, .assTable  .icon-trash{color:#fff; transition:ease 0.1s}
+.assTable .icon-pencil, .assTable  .icon-trash{color:#fff; transition:ease 0.1s}
 .assTable:hover .icon-pencil, .assTable:hover  .icon-trash{
 	color:#333;
 	
@@ -361,9 +361,7 @@ transition: width 0.5s, height 0.8s; color:rgba(255, 255, 255, 0.95); font-size:
     border-top-right-radius: 0;
 	padding-bottom:40px;
 }
-.table thead th {
-	text-align:center;
-	}
+
 	
 	.footer1
 	{
@@ -422,9 +420,25 @@ table.jambo_table1 thead {
     background:#0b0a0a1a;;
     color:#09090966;
 	
-}
-	table tr td 
-	{
-		text-align:center;
+}	
 	
+	.s-title {
+		position:relative;
+		left:20px;
 	}
+	.p2
+	{
+		position:relative;
+		left:15px;
+	}
+	.conditionset
+	{
+		position:relative;
+		left:20px;
+	}
+	.addchoice
+	{
+		position:relative;
+		left:20px;
+	}
+	

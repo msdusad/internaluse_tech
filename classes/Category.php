@@ -64,15 +64,12 @@ public  function Edit_category($parent_id, $level){
 
            if($level==0){
     echo '<div class="panel panel-info">
-      <div class="panel-heading">'.$this->data[$id]["name"].'<span style="float:right"><a href="edit_cat.php?id='.$this->data[$id]["id"].'&name='.$this->data[$id]["name"].'">Edit</a></span></div>
+      <div class="panel-heading">'.$this->data[$id]["name"].'&nbsp;&nbsp;<i onclick="Assets_category_delete_form(this.id);" id="'.$this->data[$id]["id"].'" class="icon-trash" style="cursor:pointer;float:right"></i> <span style="float:right"><a href="edit_cat.php?id='.$this->data[$id]["id"].'&name='.$this->data[$id]["name"].'"><i class="icon-pencil"></i></a></span></div>
     ';
            }
            else{
           
-            echo '<div class="panel-body" style="padding:5px;">'.str_repeat('<span class="glyphicon-pencil text-primary" style=""></span>', $level).$this->data[$id]["name"].'<span style="float:right"><a href="edit_cat.php?id='.$this->data[$id]["id"].'&name='.$this->data[$id]["name"].'">Edit </a> <form action="" method="post">
-            <input type="hidden" name="id" value="'.$this->data[$id]["id"].'">
-            <input type="submit" value="Delete" name="delete_category_assets">
-            </form></span> </div>';
+            echo '<div class="panel-body" style="padding:5px;">'.str_repeat('<span class="glyphicon-pencil text-primary" style=""></span>', $level).$this->data[$id]["name"].'&nbsp;&nbsp;<i onclick="Assets_category_delete_form(this.id);" id="'.$this->data[$id]["id"].'" class="icon-trash" style="cursor:pointer;float:right"></i>  <span style="float:right"><a href="edit_cat.php?id='.$this->data[$id]["id"].'&name='.$this->data[$id]["name"].'"><i class="icon-pencil"></i> </a> </span></div>';
 
         }
                if($level==0){  

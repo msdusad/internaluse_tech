@@ -93,7 +93,7 @@ $city=Common::remove_sql_injection($_POST['city']);
 $zipcode=Common::remove_sql_injection($_POST['zipcode']);
 
 
-$add_query="insert into location (location_name,primary_contact,phone,email,address,adderss_line2,country_id,state_id,city_id,zip_code) values ('$location_name','$primary_contact','$phone','$email','$address','$address2','$country','$state','$city','$zipcode')";
+$add_query="insert into location (location_name,primary_contact,phone,email,address,address_line2,country_id,state_id,city_id,zip_code) values ('$location_name','$primary_contact','$phone','$email','$address','$address2','$country','$state','$city','$zipcode')";
 $run_qry=Common::InsertData($add_query);
 if($run_qry){
 return 'Added Sucessfully';

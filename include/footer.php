@@ -16,5 +16,5 @@
 <script src="<?php echo SCRIPT_ROOT;?>validate.min.js"></script>
 <script src="<?php echo SCRIPT_ROOT;?>other.js"></script>
 <script src="<?php echo SCRIPT_ROOT;?>users/location.js"></script>
-	
+<script src="<?php echo SCRIPT_ROOT;?>users/form_submit.js"></script>
 

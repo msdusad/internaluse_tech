@@ -32,6 +32,20 @@ return $department_data;
 
 }
 
+public static function Location($var){
+	if($var==''){
+    	$location_query="select * from location ";
+	}
+	else{
+	$location_query="select * from location where id='$var'";
+	}
+
+
+$location_data=Common::FetchData($location_query);
+return $location_data;
+
+}
+
 }
 
 ?>
