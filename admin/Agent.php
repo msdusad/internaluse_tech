@@ -9,13 +9,14 @@
     <div class="right_col" role="main">
       <div class="row checkList">
         <div class="col-md-9 col-sm-8 col-xs-12 margin-top-10">
-          <form method="post" action="" name="add_groups">
+        
             <div class="x_panel tile">
               <div class="x_title">
                 <div class="row">
 				  <div class="col-lg-12">
 				  <div class="row" style="background:#fff;" data-spy="affix" data-offset-top="197">
-             <?php require_once("../classes/Include_all.php"); ?>
+             <?php require_once("../classes/Include_all.php");?>
+               <form method="post" action="" name="add_groups">
                   <div class="col-lg-7 padding-top-10"> <a href="<?php echo WEB_ROOT;?>admin/addgroup.php" class="h4"><i class="icon-left-small"></i>Back to Groups</a> </div>
                   <div class="col-lg-5 text-right MrTpMd-10"> <a href="javascript:window.history.back();" class="btn btn-default ">Cancel</a>
                     

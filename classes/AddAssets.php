@@ -7,8 +7,7 @@ class AddAssets{
 
 public  static function AddImpact(){
 
-$name=Common::remove_sql_injection($_POST['name']);
-
+$name=Common::remove_sql_injection((isset($_POST['name'])) ? $_POST['name'] : null);
 $add_query="insert into impact (name) values ('$name')";
 $run_qry=Common::InsertData($add_query);
 if($run_qry){
@@ -27,7 +26,7 @@ return "df";
 
 public static function  AddCategory(){	
 
-$cat_name=Common::remove_sql_injection($_POST['name']);
+$cat_name=Common::remove_sql_injection((isset($_POST['name'])) ? $_POST['name'] : null);
 if ($_POST['parent_id'] === '') {
     $_POST['parent_id'] = 'NULL'; // or 'NULL' for SQL
 }
@@ -45,10 +44,10 @@ return 'Added Sucessfully';
 public static function AddDepartment(){
 
 
-$department_name=Common::remove_sql_injection($_POST['department_name']);
-$department_description=Common::remove_sql_injection($_POST['department_description']);
-$department_head=Common::remove_sql_injection($_POST['department_head']);
-$department_prime_user=Common::remove_sql_injection($_POST['department_prime_user']);
+$department_name=Common::remove_sql_injection((isset($_POST['department_name'])) ? $_POST['department_name'] : null);
+$department_description=Common::remove_sql_injection((isset($_POST['department_description'])) ? $_POST['department_description'] : null);
+$department_head=Common::remove_sql_injection((isset($_POST['department_head'])) ? $_POST['department_head'] : null);
+$department_prime_user=Common::remove_sql_injection((isset($_POST['department_prime_user'])) ? $_POST['department_prime_user'] : null);
 
 $add_query="insert into department (name,description,department_head,prime_user) values ('$department_name','$department_description','$department_head','$department_prime_user')";
 $run_qry=Common::InsertData($add_query);
@@ -63,9 +62,9 @@ return 'Added Sucessfully';
 
 public static  function AddGroup(){
 
-$group_name=Common::remove_sql_injection($_POST['group_name']);
-$group_description=Common::remove_sql_injection($_POST['group_description']);
-$group_agents=Common::remove_sql_injection($_POST['group_agents']);
+$group_name=Common::remove_sql_injection((isset($_POST['group_name'])) ? $_POST['group_name'] : null);
+$group_description=Common::remove_sql_injection((isset($_POST['group_description'])) ? $_POST['group_description'] : null);
+$group_agents=Common::remove_sql_injection((isset($_POST['group_agents'])) ? $_POST['group_agents'] : null);
 
 $add_query="insert into groups (group_name,description,agents) values ('$group_name','$group_description','$group_agents')";
 $run_qry=Common::InsertData($add_query);
@@ -80,17 +79,17 @@ return 'Added Sucessfully';
 
 
 public  function AddLocation(){
-
-$location_name=Common::remove_sql_injection($_POST['location_name']);
-$primary_contact=Common::remove_sql_injection($_POST['primary_contact']);
-$email=Common::remove_sql_injection($_POST['email']);
-$phone=Common::remove_sql_injection($_POST['phone']);
-$address=Common::remove_sql_injection($_POST['address']);
-$address2=Common::remove_sql_injection($_POST['address2']);
-$country=Common::remove_sql_injection($_POST['country']);
-$state=Common::remove_sql_injection($_POST['state']);
-$city=Common::remove_sql_injection($_POST['city']);
-$zipcode=Common::remove_sql_injection($_POST['zipcode']);
+	
+$location_name=Common::remove_sql_injection((isset($_POST['location_name'])) ? $_POST['location_name'] : null);
+$primary_contact=Common::remove_sql_injection((isset($_POST['primary_contact'])) ? $_POST['primary_contact'] : null);
+$email=Common::remove_sql_injection((isset($_POST['email'])) ? $_POST['email'] : null);
+$phone=Common::remove_sql_injection((isset($_POST['phone'])) ? $_POST['phone'] : null);
+$address=Common::remove_sql_injection((isset($_POST['address'])) ? $_POST['address'] : null);
+$address2=Common::remove_sql_injection((isset($_POST['address2'])) ? $_POST['address2'] : null);
+$country=Common::remove_sql_injection((isset($_POST['country'])) ? $_POST['country'] : null);
+$state=Common::remove_sql_injection((isset($_POST['state'])) ? $_POST['state'] : null);
+$city=Common::remove_sql_injection((isset($_POST['city'])) ? $_POST['city'] : null);
+$zipcode=Common::remove_sql_injection((isset($_POST['zipcode'])) ? $_POST['zipcode'] : null);
 
 
 $add_query="insert into location (location_name,primary_contact,phone,email,address,address_line2,country_id,state_id,city_id,zip_code) values ('$location_name','$primary_contact','$phone','$email','$address','$address2','$country','$state','$city','$zipcode')";

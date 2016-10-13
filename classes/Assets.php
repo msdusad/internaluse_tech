@@ -46,6 +46,22 @@ return $location_data;
 
 }
 
+
+public static function GuropAgent($var){
+	if($var==''){
+    	$agent_query="select * from groups ";
+	}
+	else{
+	$agent_query="select * from groups where id='$var'";
+	}
+
+
+$agent_data=Common::FetchData($agent_query);
+return $agent_data;
+
+}
+
+
 }
 
 ?>

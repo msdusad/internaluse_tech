@@ -54,7 +54,7 @@ echo   '<option value="'.$view_assets_type["name"].'">'.$view_assets_type["name"
 
 
                   <div class="col-sm-6 col-xs-12 padding-bottom-10">
-                    <label>Impact <span class="text-red">*</span></label>
+                    <label>Impact <span class="text-red"></span></label>
                     <select class="form-control">
                       <?php
 $impact_object=Assets::Impact();
@@ -90,13 +90,7 @@ echo   '<option value="'.$view_impact["name"].'">'.$view_impact["name"].'</optio
                   <div class="col-sm-6 col-xs-12 padding-bottom-10">
                     <label>Location <span class="text-red">*</span></label>
                     <select class="form-control">
-<?php
-$location_object=Location::Country();
-foreach ($location_object as $view_location) {
-echo   '<option value="'.$view_location["name"].'">'.$view_location["name"].'</option>';
 
-}
-?>
                     </select>
                   </div>
 
@@ -104,25 +98,102 @@ echo   '<option value="'.$view_location["name"].'">'.$view_location["name"].'</o
                      <div class="col-sm-6 col-xs-12 padding-bottom-10">
                     <label>Managed By <span class="text-red">*</span></label>
                     <select class="form-control">
-<?php
-$location_object=Location::Country();
-foreach ($location_object as $view_location) {
-echo   '<option value="'.$view_location["name"].'">'.$view_location["name"].'</option>';
 
-}
-?>
+                    </select>
+                  </div>
+
+ <div id="accordion">
+
+	<h3 class="field_header ci_type"><span class="add_symbol icon-caret-down"></span>CloudProperties</h3>
+	<div>
+	  	<div class="row-fluid">
+		<div class="col-sm-4">
+                    <label>Cost<span class="text-red"></span></label>
+                    <input name="assets_name" class="form-control" required="" type="text">
+                  </div>
+			<div class="col-sm-8">
+			<span class="span6"><label for="cmdb_ci_level_0_field_cloud_last_audit_date_4000584656">Last Audit Date</label><div class="date_time_box"><input automate="Cloud_Last Audit Date_date" class="datepair date    hasDatepicker" id="cmdb_config_item_level_field_attributes_cloud_last_audit_date_4000584656_date" name="cmdb_config_item[level_field_attributes][cloud_last_audit_date_4000584656_date]" placeholder="DD-MM-YYYY" size="30" value="07-10-2016" readonly="readonly" type="text"><input automate="Cloud_Last Audit Date_time" class="datepair time   ui-timepicker-input" id="cmdb_config_item_level_field_attributes_cloud_last_audit_date_4000584656_time" name="cmdb_config_item[level_field_attributes][cloud_last_audit_date_4000584656_time]" placeholder="HH:MM" size="30" value="11:45" autocomplete="off" type="text"></div></span>
+		</div>
+		</div>
+  </div>
+</div>
+<div class="row border2">
+
+	</div>
+	  	</br>
+		<div class="row padding-bottom-10 border4">
+		 <p class="left_col padding-5 text-white margin-top-20">AWS</p>
+                 <div class="row">
+                  <div class="col-sm-6 col-xs-12 padding-bottom-10">
+                    <label>Account <span class="text-red">*</span></label>
+                    <select class="form-control">
+                     <option>--choose option</option>
+					  <option>No matches found</option>
                     </select>
                   </div>
 
 
+                     <div class="col-sm-6 col-xs-12 padding-bottom-10">
+                    <label>Region<span class="text-red">*</span></label>
+                    <select class="form-control">
+ <option>--choose--</option>
+					  <option>U.S.East(N.Virginia)</option>
+					   <option>U.S.West(N.California)</option>
+					    <option>U.S.West(Oregon)</option>
+						 <option>EU(Ireland)</option>
+						  <option>EU(Frankfurt)</option>
+						   <option>Asia Pacific(Singapore)</option>
+						    <option>Asia Pacific(Tokoyo)</option>
+							 <option>South America(Sao Paulo)</option>
+							 <option>Asia Pacific(Seoul)</option>
+                    </select>
+        		</div>
+        		</div>
+<div class="col-sm-6 padding-bottom-10">
+                    <label>Availablity Zone<span class="text-red"></span></label>
+                    <input name="assets_name" class="form-control" required="" type="text">
+                  </div>
                 </div>
+<div class="row padding-bottom-10 border4">
+		 <p class="left_col padding-5 text-white margin-top-20">Hardware Properities</p>
+                 <div class="row">
+                  <div class="col-sm-6 col-xs-12 padding-bottom-10">
+                    <label>Product <span class="text-red">*</span></label>
+                    <select class="form-control">
+                     <option>--choose option</option>
+					  <option>No matches found</option>
+                    </select>
+                  </div>
 
+
+                     <div class="col-sm-6 col-xs-12 padding-bottom-10">
+                    <label>Vendor<span class="text-red"></span></label>
+                    <select class="form-control">
+ <option>--choose--</option>
+					  <option>U.S.East(N.Virginia)</option>
+					   <option>U.S.West(N.California)</option>
+					    <option>U.S.West(Oregon)</option>
+						 <option>EU(Ireland)</option>
+						  <option>EU(Frankfurt)</option>
+						   <option>Asia Pacific(Singapore)</option>
+						    <option>Asia Pacific(Tokoyo)</option>
+							 <option>South America(Sao Paulo)</option>
+							 <option>Asia Pacific(Seoul)</option>
+                    </select>
+        		</div>
+        		</div>
+<div class="col-sm-6 padding-bottom-10">
+                    <label>Availablity Zone<span class="text-red"></span></label>
+                    <input name="assets_name" class="form-control" required="" type="text">
+                  </div>
+                </div>
                 <p>
                   <label>Tags</label>
                   <input type="text" class="form-control">
                 </p>
                 <p>
                   <label>Assigned on</label>
+    
                   <input type="text" class="form-control">
                 </p>
                 <p class="margin-top-20"><a href="#" class="green h4" data-toggle="modal" data-target="#attach"><i class="icon-plus-circled-1"></i> Attach Assets </a></p>
@@ -134,7 +205,34 @@ echo   '<option value="'.$view_location["name"].'">'.$view_location["name"].'</o
                     </span> </label>
                 </div>
               </div>
+		<div class="container">
+    <div class="col-sm-6" style="height:130px;">
+        <div class="form-group">
+            <div class='input-group date' id='datetimepicker11'>
+                <input type='text' class="form-control" />
+                <span class="input-group-addon">
+                    <i class="icon-calendar">
+                    </i>
+                </span>
             </div>
+        </div>
+    </div>
+	</div>
+    
+
+			  <div class="row">
+			  <p class="p2">Attach a file (File size < 15 MB)</p>
+			  <div class="input-group">
+                  <input type="text" class="form-group " placeholder="1 file(s) selected" readonly>
+                  <label class="input-group-btn pull-left"> <span class="btn btn-default"> Choose File
+                    <input type="file" style="display: none;" multiple>
+                    </span> </label>
+                </div>
+			  </div>
+			   </div>
+</div>
+            </div>
+			
             <div class="modal fade" id="insertLink" role="dialog">
               <div class="modal-dialog">
                 <div class="modal-content noBorderRadius">
@@ -251,19 +349,26 @@ echo   '<option value="'.$view_location["name"].'">'.$view_location["name"].'</o
                 </li>
                 <li><a class="close-link"><i class="fa icon-cancel"></i></a> </li>
               </ul>
-              <div class="clearfix"></div>
-            </div>
             <div class="x_content">
               <p>Freshservice's contract management module lets you manage contracts established with third-party vendors.</p>
               <p>Freshservice supports different types of contracts – from creating your very own custom contract types to supporting lease, maintenance, as well as software license contracts, by default.</p>
               <p>Note - Only users who have drafted the contract will be able to submit the contract for approval.</p>
             </div>
           </div>
+		
         </div>
       </div>
     </div>
+	</div>
     <?php include("../include/footer.php"); ?>
   </div>
 </div>
 </body>
 </html>
+<script type="text/javascript">
+        $(function () {
+            $('#datetimepicker11').datetimepicker({
+                daysOfWeekDisabled: [0, 6]
+            });
+        });
+    </script>

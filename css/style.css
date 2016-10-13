@@ -441,4 +441,35 @@ table.jambo_table1 thead {
 		position:relative;
 		left:20px;
 	}
+	.p2{
+	position:relative;
+left:10px;	
+	}
+	.input-group{
+		position:relative;
+		left:10px;
+	}
+	.input-group .form-group {
+    position: relative;
+    z-index: 2;
+    float: left;
+    width: 300px;
+	height:35px;
+    margin-bottom: 0;
+	}
+	.input-group span success1
+	{
+		position:relative;
+		right:100px;
+	}
+	.border2
+	{
+		position:relative;
+		top:50px;
+	}
 	
+.border4
+{
+	position:relative;
+		top:20px;
+}

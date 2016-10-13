@@ -31,3 +31,11 @@ if (result) {
  
 }
 
+
+function group_delete_form(id){
+var result = confirm("Sure Want to delete?");
+if (result) {
+document.getElementById(id).submit();
+}
+ 
+}
