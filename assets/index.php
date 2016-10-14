@@ -113,14 +113,6 @@ $get_all_category=$category_object->display_child_nodes(NULL, 0);
 					</div>
 				</div> -->
 
-
-
-
-
-
-
-
-
 			</div>
 		  
 		  <div class="col-md-9 col-sm-8 col-xs-12 margin-top-10">
@@ -168,37 +160,39 @@ $get_all_category=$category_object->display_child_nodes(NULL, 0);
 								  <input type="checkbox" id="test1" />
 								  <label for="test1" class="column-title weight-600" style="padding-top:3px;">Display Name</label>
 								</th>
-								<th>Invoice </th>
-								<th>Invoice Date </th>
-								<th>Order </th>
-								<th>Bill to Name </th>
-								<th>Status </th>
+								<th>Asset Type </th>
+								<th>Location </th>
+								<th>Department </th>
+								<th>Managed By </th>
+								<th>Used By </th>
 							  </tr>	
 							</thead>
 
 							<tbody>
-								<tr>
+
+								<?php
+$items=Assets::Items('');
+if($items!=''){
+foreach ($items as  $items_value){
+
+echo '<tr>
 									<td class="a-center ">
 									    <input type="checkbox" id="laptop" />
-								        <label for="laptop" class="column-title"><a href="<?php echo WEB_ROOT;?>products/index.php">Andrea's Laptop</a></label>
+								        <label for="laptop" class="column-title"><a href="'.WEB_ROOT.'"products/index.php">'.$items_value['display_name'].'</a></label>
 									</td>
-									<td class=" ">121000040</td>
-									<td class=" ">May 23, 2014 11:47:56 PM </td>
-									<td class=" ">121000210 <i class="success fa fa-long-arrow-up"></i></td>
-									<td class=" ">John Blank L</td>
-									<td class=" ">Paid</td>
-								</tr>
-								<tr>
-									<td class="a-center ">
-									    <input type="checkbox" id="laptop1" />
-								        <label for="laptop1" class="column-title" style="padding-top:3px;">Display Name</label>
-									</td>
-									<td class=" ">121000040</td>
-									<td class=" ">May 23, 2014 11:47:56 PM </td>
-									<td class=" ">121000210 <i class="success fa fa-long-arrow-up"></i></td>
-									<td class=" ">John Blank L</td>
-									<td class=" ">Paid</td>
-								</tr>
+									<td class=" ">'.$items_value['assets_type_id'].'</td>
+									<td class=" ">'.$items_value['location_name'].' </td>
+									<td class=" ">'.$items_value['department_id'].' <i class="success fa fa-long-arrow-up"></i></td>
+									<td class=" ">'.$items_value['managed_by_id'].'</td>
+									<td class=" ">None</td>
+								</tr>';
+
+}
+
+}
+?>
+								
+						
 							</tbody>
                         </table>
 
@@ -208,67 +202,6 @@ $pobj=$pob->pagination_link();
 		
 ?>
 
-
-<form method="post" action="" name="asset_add_category">
-	<input type="text" name="name" placeholder="Category Name" required>
-	Parent<select name="parent_id" > 
-		<option value="">Root Category</option>
-<?php			
-$get_all_cat_view=Category::View_Cat();
-foreach ($get_all_cat_view as $value_of_cat) {
-	echo "<option value='".$value_of_cat['id']."'>".$value_of_cat['name']."</option>";
-}
-?>
-
-	
-	</select>
-	<input type="submit" name='add_category_assets'>
-	</form>
-<br>
-<form method="post" action="" name="add_new_department">
-<input name="department_name" required>
-<input name="department_description">
-<input name="department_head">
-<input name="department_prime_user">
-<input type="submit" name="add_new_department">
-</form>
-<br>
-
-<form method="post" action="" name="add_groups">
-<input name="group_name" required>
-<input name="group_description">
-<input name="group_agents">
-<input type="submit" name="add_groups">
-</form>
-
-
-<form method="post" action="" name="add_location">
-<input name="location_name" required>
-<input name="primary_contact">
-<input name="email">
-<input name="phone">
-<textarea name="address"></textarea>
-
-<select name="country" id="country_change">
-<?php $location=Location::Country();
-foreach ($location as $view_loc) {
-	echo "<option value=".$view_loc['id'].">".$view_loc['name']."</option>";
-}
-?>
-</select>
-<select name="state" id="states">
-<?php $location=Location::State('1');
-foreach ($location as $view_loc) {
-	echo "<option value=".$view_loc['id'].">".$view_loc['name']."</option>";
-}
-?>
-</select>
- <input onkeyup="search_suggestion(this.value)" type="text" name="sPattern" id="query" class="input-text" placeholder="dfdf"  />
-<input name="city">
-<input name="zipcode">
-
-<input type="submit" name="add_location">
-</form>
 
                     </div>
                   </div>

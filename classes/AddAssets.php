@@ -100,6 +100,30 @@ return 'Added Sucessfully';
  
 }
 
+
+
+
+public  function AddItems(){
+	
+$display_name=Common::remove_sql_injection((isset($_POST['display_name'])) ? $_POST['display_name'] : null);
+$assets_type_id=Common::remove_sql_injection((isset($_POST['assets_type_id'])) ? $_POST['assets_type_id'] : null);
+$impact_id=Common::remove_sql_injection((isset($_POST['impact_id'])) ? $_POST['impact_id'] : null);
+$description=Common::remove_sql_injection((isset($_POST['description'])) ? $_POST['description'] : null);
+$location_id=Common::remove_sql_injection((isset($_POST['location_id'])) ? $_POST['location_id'] : null);
+$managed_by_id=Common::remove_sql_injection((isset($_POST['managed_by_id'])) ? $_POST['managed_by_id'] : null);
+$department_id=Common::remove_sql_injection((isset($_POST['department_id'])) ? $_POST['department_id'] : null);
+
+$add_query="insert into items (display_name,assets_type_id,impact_id,description,location_id,department_id,managed_by_id,date) values ('$display_name','$assets_type_id','$impact_id','$description','$location_id','$department_id','$managed_by_id',now())";
+$run_qry=Common::InsertData($add_query);
+if($run_qry){
+return 'Added Sucessfully';
+}
+ 
+}
+
+
+
+
 }
 
 
@@ -124,6 +148,11 @@ echo Common::SuccessDailog(' New Group Added ');
 if(isset($_POST['add_location'])){
 AddAssets::AddLocation();
 echo Common::SuccessDailog(' New Location Added ');
+}
+
+if(isset($_POST['add_item'])){
+AddAssets::AddItems();
+echo Common::SuccessDailog(' New Item Added ');
 }
 
 ?>
