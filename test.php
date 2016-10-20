@@ -10,25 +10,25 @@ Go Back History Didnot work
 // </script>
 // <body onLoad="noBack();" onpageshow="if (event.persisted) noBack();" onUnload="">
 //    <a href="index.php">sdfg</a> -->
-<script>
-$(document).ready(function() {
 
-if( document.location.href.indexOf('section') == -1 ) {
-var categories = $('ul.article-list');
-for (var j = categories.length - 1; j >= 0; j--) {
-var articles = $(categories[j]).find('li'),
-nativeMore = $(categories[j]).siblings('.see-all-articles');
-if ( articles.length > 3 ) {
-for (var k = 3; k < articles.length; k++ ) {
-$(articles[k]).hide();
-}
-var moreLink = $(categories[j]).parent().find('h3 a').attr('href'),
-linkText = '';
-if( articles.length <= 6 && nativeMore.length == 0 ) {
-linkText += "See all " + articles.length + " articles";
-}
-$("<a class='see-all-articles' href=" + moreLink + ">" + linkText + "</a>").insertAfter($(categories[j]));
-}
-}
-}
-});
+<?php
+$arr1=[];
+$arr2=[];
+$arr1[1]="First";
+$arr2[2]=$arr1;
+$arr5=[];
+$arr5['M']="Singh";
+$arr6['mahender']=$arr5;
+var_dump($arr2);
+echo "<br>";
+var_dump($arr6);
+echo "<br>";
+
+
+$array = array("my", "litte", "array", 88);
+
+$serialized_array = serialize($array); 
+$unserialized_array = unserialize($serialized_array); 
+
+var_dump($serialized_array); // gives back a string, perfectly for db saving!
+var_dump($unserialized_array); //

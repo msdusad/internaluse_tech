@@ -178,7 +178,7 @@ foreach ($items as  $items_value){
 echo '<tr>
 									<td class="a-center ">
 									    <input type="checkbox" id="laptop" />
-								        <label for="laptop" class="column-title"><a href="'.WEB_ROOT.'"products/index.php">'.$items_value['display_name'].'</a></label>
+								        <label for="laptop" class="column-title"><a href="'.WEB_ROOT.'products/index.php?id='.$items_value['id'].'">'.$items_value['display_name'].'</a></label>
 									</td>
 									<td class=" ">'.$items_value['assets_type_id'].'</td>
 									<td class=" ">'.$items_value['location_name'].' </td>

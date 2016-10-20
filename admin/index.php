@@ -95,6 +95,14 @@
 						 </div>
 						 <h4>Departments</h4>
 					 </a>
+					 <a class="admin col-xs-6 col-sm-4 col-md-2" href="<?php echo WEB_ROOT;?>agents/index.php">
+					     <div class="circleBig">
+						     <div class="circle">
+							     <i class="icon-user"></i>
+							 </div>
+						 </div>
+						 <h4>Agents</h4>
+					 </a>
               </div>
             </div>
         </div>

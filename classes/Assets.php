@@ -65,7 +65,7 @@ return $agent_data;
 
 public static function Items($var){
 	if($var==''){
-    	$item_query="SELECT a.display_name,a.managed_by_id,b.name as assets_type_id,c.location_name,d.name as impact_id,e.name as department_id from items a,assets_type b,location c,impact d ,department e where a.assets_type_id=b.id && a.location_id=c.id && a.impact_id=d.id && a.department_id=e.id ";
+    	$item_query="SELECT a.id,a.display_name,a.managed_by_id,b.name as assets_type_id,c.location_name,d.name as impact_id,e.name as department_id from items a,assets_type b,location c,impact d ,department e where a.assets_type_id=b.id && a.location_id=c.id && a.impact_id=d.id && a.department_id=e.id ";
 	}
 	else{
 	$item_query="select * from items where id='$var'";

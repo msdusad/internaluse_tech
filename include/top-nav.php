@@ -21,6 +21,7 @@ require_once('../classes/UserDetail.php');
 <link href="<?php echo CSS_ROOT;?>select2.min.css" rel="stylesheet">
 <link href="<?php echo CSS_ROOT;?>custom.min.css" rel="stylesheet">
 <link href="<?php echo CSS_ROOT;?>style.css" rel="stylesheet">
+<link  href="<?php echo CSS_ROOT;?>datetimer.css" rel="stylesheet" />
 <!--[if lte IE 8]>
 	<script type='text/javascript' src='../js/html5shiv.js'></script>
 	<script type='text/javascript' src='../js/respond.min.js'></script>
@@ -82,7 +83,7 @@ echo strtoupper($short_name);
             </li>
           </ul>
         </li>
-        <li role="presentation" class="dropdown"> <a href="javascript:;" class="dropdown-toggle info-number" data-toggle="dropdown" aria-expanded="false"> <i class="fa icon-plus"></i>New </a>
+        <li role="presentation" class="dropdown"> <a href="javascript:;" class="dropdown-toggle info-number" data-toggle="dropdown" aria-expanded="false"> <i class="fa icon-plus"></i>&nbsp;&nbsp;New </a>
           <ul id="menu3" class="dropdown-menu list-unstyled msg_list">
             <li> <a href="<?php echo WEB_ROOT;?>tickets/new.php"> Incident </a> </li>
             <li> <a href="<?php echo WEB_ROOT;?>problems/new.php"> Problem </a> </li>

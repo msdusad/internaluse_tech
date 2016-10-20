@@ -1,9 +1,8 @@
 <?php
+
 require_once('Common.php');
 
 class AddAssets{
-
-
 
 public  static function AddImpact(){
 

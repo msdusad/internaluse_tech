@@ -24,6 +24,7 @@ body {
 .padding-bottom-5{padding-bottom:5px}
 .padding-bottom-15{padding-bottom:15px}
 .padding-bottom-20{padding-bottom:20px}
+.padding-bottom-30{padding-bottom:30px}
 .margin-top-10{margin-top:10px}
 .margin-top-20{margin-top:20px}
 .margin-bottom-10{margin-bottom:10px}
@@ -70,26 +71,24 @@ ul.list-right-open li:before{font-family:"fontello";content:'\e841';margin-right
   content: '';
   position: absolute;
   left:0; top: 2px;
-  width: 17px; height: 17px;
+  width: 17px; height: 18px;
   border: 0;
   background: #d9d9da;
-  border-radius: 3px;
 }
 /* checked mark aspect */
 .checkList [type="checkbox"]:not(:checked) + label:after,
 .checkList [type="checkbox"]:checked + label:after {
-  content: '\e87e';
+  content: '\e870';
   font-family:fontello;
   width: 17px; 
-  height: 17px;
-  padding:4px 0 0 4px;
+  height: 18px;
+  padding:6px 0 0 3px;
   position: absolute;
   top: 2px; left: 0px;
   font-size: 10px;
   line-height: 0.8;
   color: #fff;
   background:#1ABB9C;
-  border-radius: 3px;
   transition: all .2s;
 }
 /* checked mark aspect changes */
@@ -309,14 +308,9 @@ transition: width 0.5s, height 0.8s; color:rgba(255, 255, 255, 0.95); font-size:
 .assTable .icon-pencil, .assTable  .icon-trash{color:#fff; transition:ease 0.1s}
 .assTable:hover .icon-pencil, .assTable:hover  .icon-trash{
 	color:#333;
-	
 }
 #itil_product_name1  input.text, input[type="text"], textarea {
-    border: 1px solid #e4e4e4;
     border-radius: 0px;
-    box-shadow: 0 1px 0 #bbb inset;
-    font-weight: 300;
-    padding: 4px;
     font-size: 14px;
 }
 #select-box
@@ -376,10 +370,8 @@ transition: width 0.5s, height 0.8s; color:rgba(255, 255, 255, 0.95); font-size:
 	 {
 		 position:relative;
 		 top:20px;
-	
-	 
 	 }
-	 .list-page .list-page-header {
+.list-page .list-page-header {
     overflow: visible;
 }
 .list-page .list-page-header {
@@ -473,3 +465,6 @@ left:10px;
 	position:relative;
 		top:20px;
 }
+.bgProfile{background:url(../images/bg.png); border:solid 1px #eee}
+.border-bottom{border-bottom:dashed 1px #ddd}
+.profilePic{margin-right:15px; margin-top:15px; margin-bottom:8px;}

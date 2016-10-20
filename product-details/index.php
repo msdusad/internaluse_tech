@@ -8,7 +8,7 @@
    
     <div class="right_col" role="main">
       <div class="row">
-        <div class="col-sm-7 col-md-8 col-lg-9 margin-top-10">
+        <div class="col-xs-12 col-sm-7 col-md-8 col-lg-9 margin-top-10">
           <div class="x_panel tile">
             <div class="x_title">
               <ol class="breadcrumb noBorderRadius noMargin">
