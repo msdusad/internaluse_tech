@@ -85,7 +85,7 @@
               
               <textarea type="text" name="description" rows="6" cols="20" style="width:100%;"></textarea>
               <p class="left_col padding-5 text-white margin-top-20">Assignment</p>
-              <div class="row">
+              <div class="row padding-top-10">
                 <div class="col-sm-6 col-xs-12 padding-bottom-10">
                   <label>Location <span class="text-red">*</span></label>
                   <select class="form-control" name="location_id">
@@ -107,119 +107,25 @@ echo   '<option value="'.$view_loc_object["id"].'">'.$view_loc_object["location_
                 </div>
               </div>
               <div class="row">
-                <p class="p2">Assigned on</p>
-          <input type="text" name="date" value="">
-      
-                <p class="p2">Attach a file (File size < 15 MB)</p>
-                <div class="input-group">
-                  <input type="text" name="attachment" class="form-group " placeholder="1 file(s) selected" readonly>
-                  <label class="input-group-btn pull-left"> <span class="btn btn-default"> Choose File
-                    <input type="file" style="display: none;" multiple>
+                  <div class="col-sm-6 col-xs-12 padding-bottom-10">
+                     <label class="padding-top-5">Assigned on</label>
+                     <input type="text" name="assign_date" class="form-control" id="datetimepicker_dark"/>
+                  </div>
+                  <div class="col-sm-6 col-xs-12 padding-bottom-10">
+                   <label class="padding-top-5">Attach a file (File size < 15 MB)</label>
+                <div class="input-group no-left">
+                  <input type="text" class="form-control" placeholder="1 file(s) selected" readonly="">
+                  <label class="input-group-btn"> <span class="btn btn-success"> Choose File
+                    <input type="file" style="display: none;" multiple="">
                     </span> </label>
                 </div>
+                  </div>
               </div>
             </div>
           </div>
           </div>
-          <div class="modal fade" id="insertLink" role="dialog">
-            <div class="modal-dialog">
-              <div class="modal-content noBorderRadius">
-                <div class="modal-header">
-                  <button type="button" class="close" data-dismiss="modal">&times;</button>
-                  <h4 class="modal-title">Link</h4>
-                </div>
-                <div class="modal-body">
-                  <ul class="nav nav-pills">
-                    <li class="active"><a class="btn btn-default" href="#tab1" data-toggle="tab">URL</a></li>
-                    <li><a href="#tab2" class="btn btn-default" data-toggle="tab">Email</a></li>
-                    <li><a href="#tab3" class="btn btn-default" data-toggle="tab">Anchor</a></li>
-                  </ul>
-                  <div class="tab-content padding-top-10">
-                    <div class="tab-pane active" id="tab1">
-                      <p class="padding-top-10">
-                        <label>URL</label>
-                        <input type="text" class="form-control">
-                      </p>
-                    </div>
-                    <div class="tab-pane" id="tab2">
-                      <p class="padding-top-10">
-                        <label>Email</label>
-                        <input type="email" class="form-control">
-                      </p>
-                    </div>
-                    <div class="tab-pane" id="tab3">
-                      <p class="padding-top-10">
-                        <label>Anchor</label>
-                        <input type="text" class="form-control">
-                      </p>
-                    </div>
-                  </div>
-                  <p>
-                    <label>text</label>
-                    <input type="text" class="form-control">
-                  </p>
-                  <p>
-                    <input type="checkbox" id="newTab" />
-                    <label for="newTab">Open link in new tab</label>
-                  </p>
-                </div>
-                <div class="modal-footer">
-                  <button type="button" class="btn btn-default noBorderRadius" data-dismiss="modal">Cancel</button>
-                  <button type="button" class="btn btn-dark noBorderRadius">Insert</button>
-                </div>
-              </div>
-            </div>
-          </div>
-          <div class="modal fade" id="attach" role="dialog">
-            <div class="modal-dialog">
-              <div class="modal-content noBorderRadius">
-                <div class="modal-body">
-                  <div class="row">
-                    <div class="col-sm-6">
-                      <p>
-                        <label>Search</label>
-                        <select class="form-control">
-                          <option>Choose option</option>
-                          <option>Option one</option>
-                          <option>Option two</option>
-                          <option>Option three</option>
-                          <option>Option four</option>
-                        </select>
-                      </p>
-                    </div>
-                    <div class="col-sm-6">
-                      <p>
-                        <label>Search</label>
-                        <input type="text" class="form-control">
-                      </p>
-                    </div>
-                  </div>
-                  <div class="table-responsive margin-top-20">
-                    <table class="table table-striped jambo_table bulk_action">
-                      <thead>
-                        <tr class="headings">
-                          <th>&nbsp; </th>
-                          <th>Asset Name </th>
-                          <th>Used By</th>
-                        </tr>
-                      </thead>
-                      <tbody>
-                        <tr class="checkList">
-                          <td><input type="checkbox" id="testNew" />
-                            <label for="testNew">&nbsp;</label></td>
-                          <td>Andrea's Laptop</td>
-                          <td class=" ">Andrea</td>
-                        </tr>
-                      </tbody>
-                    </table>
-                  </div>
-                </div>
-                <div class="modal-footer">
-                  <button type="button" class="btn btn-default noBorderRadius">Attach</button>
-                </div>
-              </div>
-            </div>
-          </div>
+    </div>
+    </div>
         </form>
       </div>
     </div>
@@ -229,9 +135,6 @@ echo   '<option value="'.$view_loc_object["id"].'">'.$view_loc_object["location_
 </div>
 </body>
 </html>
-<script type="text/javascript">
-		$(function(){
-			$('*[name=date]').appendDtpicker();
-		});
-</script>
+
+
             

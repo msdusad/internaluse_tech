@@ -44,14 +44,14 @@
 						</div>
 						<div class="col-sm-5">
 						  <div>
-						    <input type="checkbox" id="test1">
+						    <input type="radio" name="agent_type" value="Full Time">
 							<label for="test1">Full time</label>
 						  </div>1 Agent seats available 
 						</div>
 						<div class="col-sm-5">
 						  <div>
-						    <input type="checkbox" id="test1">
-							<label for="test1">Occasional</label>
+						    <input type="radio" name="agent_type" value="Occasional">
+							<label for="test2">Occasional</label>
 						  </div>3 Day passes available  
 						</div>
 					</div>
@@ -59,7 +59,7 @@
 					<form>
 					    <p class="margin-top-10">
 						  <label>Full Name</label>
-						  <input type="text" name="name" id="name" class="form-control">
+						  <input type="text" name="agent_name" id="name" class="form-control">
 						</p>
 						<p class="margin-top-10">
 						  <label>Email</label>
@@ -71,15 +71,15 @@
 						</p>
 						<p class="margin-top-10">
 						  <label>Phone No.</label>
-						  <input type="text" name="phone" id="phone" class="form-control">
+						  <input type="text" name="phone_number" id="phone" class="form-control">
 						</p>
 						<p class="margin-top-10">
 						  <label>Mobile No.</label>
-						  <input type="text" name="mob" id="mob" class="form-control">
+						  <input type="text" name="mobile_number" id="mob" class="form-control">
 						</p>
 						<p class="margin-top-10">
 						  <label>Location</label>
-						  <select class="form-control">
+						  <select class="form-control" name="location_id">
                             <option>Select Location</option>
                             <option>Option one</option>
                             <option>Option two</option>
@@ -89,19 +89,19 @@
 						</p>
 						<p class="margin-top-10">
 						  <label>Reporting Manager</label>
-						  <input type="text" name="mob" id="mob" class="form-control">
+						  <input type="text" name="reporting_manager" id="mob" class="form-control">
 						</p>
 						<div class="margin-top-10 border-bottom padding-bottom-30">
 						  <label>Signature</label>
 						  <!-- start-->
-							<div class="btn-toolbar editor nav" data-role="editor-toolbar" data-target="#editor"> <a href="#" class="BoldAlign" data-toggle="tooltip" data-placement="top" title="" data-original-title="Bold">&nbsp;</a> <a href="#" class="italicAlign" data-toggle="tooltip" data-placement="top" title="" data-original-title="Italic">&nbsp;</a> <a href="#" class="list" data-toggle="tooltip" data-placement="top" title="" data-original-title="List Circle">&nbsp;</a> <a href="#" class="listNum" data-toggle="tooltip" data-placement="top" title="" data-original-title="List Number">&nbsp;</a> <a href="#" class="shiftTab" data-toggle="tooltip" data-placement="top" title="" data-original-title="Shift Tab">&nbsp;</a> <a href="#" class="shiftTab2" data-toggle="tooltip" data-placement="top" title="" data-original-title="Shift Tab">&nbsp;</a> <a href="#" class="fontColor" data-toggle="tooltip" data-placement="top" title="" data-original-title="Font Color">&nbsp;</a> <a href="#" class="backColor" data-toggle="tooltip" data-placement="top" title="" data-original-title="Back Color">&nbsp;</a> <span class="dropdown"> <a href="#" class="dropdown-toggle links" data-toggle="dropdown" role="button" aria-expanded="false" title="link">&nbsp;</a>
+							<!-- <div class="btn-toolbar editor nav" data-role="editor-toolbar" data-target="#editor"> <a href="#" class="BoldAlign" data-toggle="tooltip" data-placement="top" title="" data-original-title="Bold">&nbsp;</a> <a href="#" class="italicAlign" data-toggle="tooltip" data-placement="top" title="" data-original-title="Italic">&nbsp;</a> <a href="#" class="list" data-toggle="tooltip" data-placement="top" title="" data-original-title="List Circle">&nbsp;</a> <a href="#" class="listNum" data-toggle="tooltip" data-placement="top" title="" data-original-title="List Number">&nbsp;</a> <a href="#" class="shiftTab" data-toggle="tooltip" data-placement="top" title="" data-original-title="Shift Tab">&nbsp;</a> <a href="#" class="shiftTab2" data-toggle="tooltip" data-placement="top" title="" data-original-title="Shift Tab">&nbsp;</a> <a href="#" class="fontColor" data-toggle="tooltip" data-placement="top" title="" data-original-title="Font Color">&nbsp;</a> <a href="#" class="backColor" data-toggle="tooltip" data-placement="top" title="" data-original-title="Back Color">&nbsp;</a> <span class="dropdown"> <a href="#" class="dropdown-toggle links" data-toggle="dropdown" role="button" aria-expanded="false" title="link">&nbsp;</a>
 							  <ul class="dropdown-menu">
 								<li><a href="#insertLink" data-toggle="modal" data-target="#insertLink">Insert Link ...</a></li>
 								<li><a href="#">Unlink</a></li>
 							  </ul>
-							</div>
+							</div> -->
 							<div id="editor" class="editor-wrapper placeholderText" contenteditable="true"></div>
-							<textarea name="descr" id="descr" style="display:none;"></textarea>
+							<textarea name="signature" id="descr" style="display:none;"></textarea>
 						  <!--end-->
 						</div>
 						<h4 class="h4 padding-top-10 weight-600">Roles and Scope</h4>
@@ -110,15 +110,15 @@
 							     Ticket Scope
 							</div>
 							<div class="col-sm-7 col-md-8 col-xs-12">
-								<input type="checkbox" id="group">
+								<input type="radio" name="ticket_scope" id="global">
 								<label for="global">Group Access
 								<div class="p-xs text-gray padding-bottom-10">Can view all Tickets in the Helpdesk</div>
 								</label>
-								<input type="checkbox" id="group">
-								<label for="group">Global Access
+								<input type="radio" name="ticket_scope" id="group1">
+								<label for="group1">Global Access
 								<div class="p-xs text-gray padding-bottom-10">Can view all Tickets in the Helpdesk</div>
 								</label>
-								<input type="checkbox" id="restricted">
+								<input type="radio" name="ticket_scope" id="restricted">
 								<label for="restricted">Restricted Access
 								<div class="p-xs text-gray padding-bottom-10">Can view all Tickets in the Helpdesk</div>
 								</label>
@@ -138,55 +138,7 @@
                 </div>
               </div>
             </div>
-            <div class="modal fade" id="insertLink" role="dialog">
-              <div class="modal-dialog">
-                <div class="modal-content noBorderRadius">
-                  <div class="modal-header">
-                    <button type="button" class="close" data-dismiss="modal">&times;</button>
-                    <h4 class="modal-title">Link</h4>
-                  </div>
-                  <div class="modal-body">
-                    <ul class="nav nav-pills">
-                      <li class="active"><a class="btn btn-default" href="#tab1" data-toggle="tab">URL</a></li>
-                      <li><a href="#tab2" class="btn btn-default" data-toggle="tab">Email</a></li>
-                      <li><a href="#tab3" class="btn btn-default" data-toggle="tab">Anchor</a></li>
-                    </ul>
-                    <div class="tab-content padding-top-10">
-                      <div class="tab-pane active" id="tab1">
-                        <p class="padding-top-10">
-                          <label>URL</label>
-                          <input type="text" class="form-control">
-                        </p>
-                      </div>
-                      <div class="tab-pane" id="tab2">
-                        <p class="padding-top-10">
-                          <label>Email</label>
-                          <input type="email" class="form-control">
-                        </p>
-                      </div>
-                      <div class="tab-pane" id="tab3">
-                        <p class="padding-top-10">
-                          <label>Anchor</label>
-                          <input type="text" class="form-control">
-                        </p>
-                      </div>
-                    </div>
-                    <p>
-                      <label>text</label>
-                      <input type="text" class="form-control">
-                    </p>
-                    <p>
-                      <input type="checkbox" id="newTab" />
-                      <label for="newTab">Open link in new tab</label>
-                    </p>
-                  </div>
-                  <div class="modal-footer">
-                    <button type="button" class="btn btn-default noBorderRadius" data-dismiss="modal">Cancel</button>
-                    <button type="button" class="btn btn-dark noBorderRadius">Insert</button>
-                  </div>
-                </div>
-              </div>
-            </div>
+ 
             <div class="modal fade" id="attach" role="dialog">
               <div class="modal-dialog">
                 <div class="modal-content noBorderRadius">
@@ -227,7 +179,7 @@
             </div>
           </form>
         </div>
-        <div class="col-md-3 col-sm-4 col-xs-12 margin-top-10">
+      <!--   <div class="col-md-3 col-sm-4 col-xs-12 margin-top-10">
           <div class="x_panel tile overflow_hidden">
             <div class="x_title">
               <h2>Contracts</h2>
@@ -249,7 +201,7 @@
               <p>Note - Only users who have drafted the contract will be able to submit the contract for approval.</p>
             </div>
           </div>
-        </div>
+        </div> -->
       </div>
     </div>
     <?php include("../include/footer.php"); ?>

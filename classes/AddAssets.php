@@ -111,8 +111,35 @@ $description=Common::remove_sql_injection((isset($_POST['description'])) ? $_POS
 $location_id=Common::remove_sql_injection((isset($_POST['location_id'])) ? $_POST['location_id'] : null);
 $managed_by_id=Common::remove_sql_injection((isset($_POST['managed_by_id'])) ? $_POST['managed_by_id'] : null);
 $department_id=Common::remove_sql_injection((isset($_POST['department_id'])) ? $_POST['department_id'] : null);
+$assign_date=Common::remove_sql_injection((isset($_POST['assign_date'])) ? $_POST['assign_date'] : null);
 
-$add_query="insert into items (display_name,assets_type_id,impact_id,description,location_id,department_id,managed_by_id,date) values ('$display_name','$assets_type_id','$impact_id','$description','$location_id','$department_id','$managed_by_id',now())";
+
+$add_query="insert into items (display_name,assets_type_id,impact_id,description,location_id,department_id,managed_by_id,assign_date,date) values ('$display_name','$assets_type_id','$impact_id','$description','$location_id','$department_id','$managed_by_id','$assign_date',now())";
+$run_qry=Common::InsertData($add_query);
+if($run_qry){
+return 'Added Sucessfully';
+}
+ 
+}
+
+
+
+public  function AddAgent(){
+
+$agent_type=Common::remove_sql_injection((isset($_POST['agent_type'])) ? $_POST['agent_type'] : null);
+$agent_name=Common::remove_sql_injection((isset($_POST['agent_name'])) ? $_POST['agent_name'] : null);
+$email=Common::remove_sql_injection((isset($_POST['email'])) ? $_POST['email'] : null);
+$title=Common::remove_sql_injection((isset($_POST['title'])) ? $_POST['title'] : null);
+$phone_number=Common::remove_sql_injection((isset($_POST['phone_number'])) ? $_POST['phone_number'] : null);
+$mobile_number=Common::remove_sql_injection((isset($_POST['mobile_number'])) ? $_POST['mobile_number'] : null);
+$location_id=Common::remove_sql_injection((isset($_POST['location_id'])) ? $_POST['location_id'] : null);
+$reporting_manager=Common::remove_sql_injection((isset($_POST['reporting_manager'])) ? $_POST['reporting_manager'] : null);
+$signature=Common::remove_sql_injection((isset($_POST['signature'])) ? $_POST['signature'] : null);
+$ticket_scope=Common::remove_sql_injection((isset($_POST['ticket_scope'])) ? $_POST['ticket_scope'] : null);
+$associate_role=Common::remove_sql_injection((isset($_POST['associate_role'])) ? $_POST['associate_role'] : null);
+
+
+$add_query="insert into agents (agent_type,name,email,title,phone_no,mobile_number,location_id,reporting_manager_id,signature,ticket_scope,associate_role,created_at) values ('$agent_type','$agent_name','$email','$title','$phone_number','$mobile_number','$location_id','$reporting_manager','$signature','$ticket_scope','$associate_role',now())";
 $run_qry=Common::InsertData($add_query);
 if($run_qry){
 return 'Added Sucessfully';

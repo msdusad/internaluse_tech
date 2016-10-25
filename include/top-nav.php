@@ -21,7 +21,7 @@ require_once('../classes/UserDetail.php');
 <link href="<?php echo CSS_ROOT;?>select2.min.css" rel="stylesheet">
 <link href="<?php echo CSS_ROOT;?>custom.min.css" rel="stylesheet">
 <link href="<?php echo CSS_ROOT;?>style.css" rel="stylesheet">
-<link  href="<?php echo CSS_ROOT;?>datetimer.css" rel="stylesheet" />
+<link  href="<?php echo CSS_ROOT;?>jquery.datetimepicker.css" rel="stylesheet" />
 <!--[if lte IE 8]>
 	<script type='text/javascript' src='../js/html5shiv.js'></script>
 	<script type='text/javascript' src='../js/respond.min.js'></script>
