@@ -127,14 +127,21 @@ return 'Added Sucessfully';
 public  function AddAgent(){
 
 // code for image uplad 
+	if(isset($_FILES['agent_image_sent']['name'])){
 
 $agent_pic=$_FILES['agent_image_sent']['name'];
 $agent_pic_tmp=$_FILES['agent_image_sent']['tmp_name'];
 $agent_pic_type=$_FILES["agent_image_sent"]["type"];
+$agent_pic_size=$_FILES["agent_image_sent"]["size"];
+$agent_pic_size_value="500"; // in KB
+
 
 $file_upload_obj= new FileUpload();
 $file_upload_obj->createdirectory('Agent');
-$file_upload_obj->imagetype($agent_pic,$agent_pic_tmp,$agent_pic_type);
+$file_upload_obj->getimageproperty($agent_pic,$agent_pic_tmp,$agent_pic_type,$agent_pic_size,$agent_pic_size_value);
+$file_upload_process=$file_upload_obj->file_error_test();
+
+}
 
 // code image upload end here
 
@@ -165,7 +172,7 @@ else{
 $add_query="insert into agents (agent_type,name,email,title,phone_no,mobile_number,location_id,reporting_manager_id,signature,ticket_scope,associate_role,created_at) values ('$agent_type','$agent_name','$email','$title','$phone_number','$mobile_number','$location_id','$reporting_manager','$signature','$ticket_scope','$chk',now())";
 $run_qry=Common::InsertData($add_query);
 if($run_qry){
-return 'Added Sucessfully';
+return $file_upload_process;
 }
  
 }
@@ -205,8 +212,8 @@ echo Common::SuccessDailog(' New Item Added ');
 }
 
 if(isset($_POST['add_agent'])){
-AddAssets::AddAgent();
-echo Common::SuccessDailog(' New Agent Added ');
+$agent_obj=AddAssets::AddAgent();
+echo Common::SuccessDailog($agent_obj);
 }
 
 ?>
