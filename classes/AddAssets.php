@@ -1,7 +1,7 @@
 <?php
 
 require_once('Common.php');
-
+require_once('FileUpload.php');
 class AddAssets{
 
 public  static function AddImpact(){
@@ -126,6 +126,18 @@ return 'Added Sucessfully';
 
 public  function AddAgent(){
 
+// code for image uplad 
+
+$agent_pic=$_FILES['agent_image_sent']['name'];
+$agent_pic_tmp=$_FILES['agent_image_sent']['tmp_name'];
+$agent_pic_type=$_FILES["agent_image_sent"]["type"];
+
+$file_upload_obj= new FileUpload();
+$file_upload_obj->createdirectory('Agent');
+$file_upload_obj->imagetype($agent_pic,$agent_pic_tmp,$agent_pic_type);
+
+// code image upload end here
+
 $agent_type=Common::remove_sql_injection((isset($_POST['agent_type'])) ? $_POST['agent_type'] : null);
 $agent_name=Common::remove_sql_injection((isset($_POST['agent_name'])) ? $_POST['agent_name'] : null);
 $email=Common::remove_sql_injection((isset($_POST['email'])) ? $_POST['email'] : null);
@@ -136,10 +148,21 @@ $location_id=Common::remove_sql_injection((isset($_POST['location_id'])) ? $_POS
 $reporting_manager=Common::remove_sql_injection((isset($_POST['reporting_manager'])) ? $_POST['reporting_manager'] : null);
 $signature=Common::remove_sql_injection((isset($_POST['signature'])) ? $_POST['signature'] : null);
 $ticket_scope=Common::remove_sql_injection((isset($_POST['ticket_scope'])) ? $_POST['ticket_scope'] : null);
-$associate_role=Common::remove_sql_injection((isset($_POST['associate_role'])) ? $_POST['associate_role'] : null);
+$associate_role=(isset($_POST['associate_role']) ? $_POST['associate_role'] : null);
+if($associate_role!=null){
 
+$chk="";  
+foreach($associate_role as $chk1)  
+   {  
+      $chk .= $chk1.",";  
+   }  
 
-$add_query="insert into agents (agent_type,name,email,title,phone_no,mobile_number,location_id,reporting_manager_id,signature,ticket_scope,associate_role,created_at) values ('$agent_type','$agent_name','$email','$title','$phone_number','$mobile_number','$location_id','$reporting_manager','$signature','$ticket_scope','$associate_role',now())";
+}
+else{
+	$chk="";
+}
+
+$add_query="insert into agents (agent_type,name,email,title,phone_no,mobile_number,location_id,reporting_manager_id,signature,ticket_scope,associate_role,created_at) values ('$agent_type','$agent_name','$email','$title','$phone_number','$mobile_number','$location_id','$reporting_manager','$signature','$ticket_scope','$chk',now())";
 $run_qry=Common::InsertData($add_query);
 if($run_qry){
 return 'Added Sucessfully';
@@ -179,6 +202,11 @@ echo Common::SuccessDailog(' New Location Added ');
 if(isset($_POST['add_item'])){
 AddAssets::AddItems();
 echo Common::SuccessDailog(' New Item Added ');
+}
+
+if(isset($_POST['add_agent'])){
+AddAssets::AddAgent();
+echo Common::SuccessDailog(' New Agent Added ');
 }
 
 ?>

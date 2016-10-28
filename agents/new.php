@@ -8,16 +8,17 @@
     <div class="right_col" role="main">
       <div class="row checkList">
         <div class="col-md-9 col-sm-8 col-xs-12 margin-top-10">
-          <form action="#" class="checkList">
             <div class="x_panel tile">
               <div class="x_title">
                 <div class="row">
+                    <?php require_once("../classes/Include_all.php"); ?>
 				  <div class="col-lg-12">
 				  <div class="row affix-top" style="background:#fff;" data-spy="affix" data-offset-top="197">
+             <form action="" method="post"  enctype="multipart/form-data">
                   <div class="col-lg-7 padding-top-10"> <a href="<?php echo WEB_ROOT;?>agents/index.php" class="h4"><i class="icon-left-small"></i>Back to Contracts</a> </div>
                   <div class="col-lg-5 text-right MrTpMd-10"> <a href="<?php echo WEB_ROOT;?>agents/index.php" class="btn btn-danger btn-round">Cancel</a>
                     <div class="btn-group">
-                      <button type="button" class="btn btn-dark btn-round">Save</button>
+                      <input type="submit" value="Save" name="add_agent" class="btn btn-dark btn-round">
                     </div>
                   </div>
 				 </div> 
@@ -31,10 +32,19 @@
                   <div class="col-sm-4 col-xs-12 padding-bottom-10">
                      <div class="bgProfile">
 						<div class="panel-body ">
-							<p><img src="<?php echo IMAGE_ROOT;?>profile_blank_thumb.gif" alt="profile" class="pull-left profilePic"></p>
-						    <input type="file" name="userFile" value="Add Photo">
+							<p><img src="<?php echo IMAGE_ROOT;?>profile_blank_thumb.gif" id="output"  alt="profile" class="pull-left profilePic"></p>
+						    <input type="file" name="agent_image_sent"  onchange="loadFile(event)" accept="image/*">
 						  <p class="p-xs padding-top-5">A Profile image of the person, it's best if the picture has the same length and height</p>
-						</div> 							
+						</div> 	
+
+            <script>
+    // code for show uploaded file
+  var loadFile = function(event) {
+    var output = document.getElementById('output');
+    output.src = URL.createObjectURL(event.target.files[0]);
+  };
+</script>
+						
 					</div>	
                   </div>
                   <div class="col-sm-8 col-xs-12 padding-bottom-10">
@@ -46,17 +56,18 @@
 						  <div>
 						    <input type="radio" name="agent_type" value="Full Time">
 							<label for="test1">Full time</label>
-						  </div>1 Agent seats available 
+						  </div>
 						</div>
 						<div class="col-sm-5">
 						  <div>
 						    <input type="radio" name="agent_type" value="Occasional">
 							<label for="test2">Occasional</label>
-						  </div>3 Day passes available  
+						  </div>  
 						</div>
 					</div>
 					<h4 class="h4 padding-top-10 weight-600">Agent information</h4>
-					<form>
+				
+        
 					    <p class="margin-top-10">
 						  <label>Full Name</label>
 						  <input type="text" name="agent_name" id="name" class="form-control">
@@ -80,11 +91,14 @@
 						<p class="margin-top-10">
 						  <label>Location</label>
 						  <select class="form-control" name="location_id">
-                            <option>Select Location</option>
-                            <option>Option one</option>
-                            <option>Option two</option>
-                            <option>Option three</option>
-                            <option>Option four</option>
+                            <?php
+$loc_object=Assets::Location('');
+if($loc_object!=''){
+foreach ($loc_object as $view_loc_object) {
+echo   '<option value="'.$view_loc_object["id"].'">'.$view_loc_object["location_name"].'</option>';
+}
+}
+?>
                           </select>
 						</p>
 						<p class="margin-top-10">
@@ -110,17 +124,17 @@
 							     Ticket Scope
 							</div>
 							<div class="col-sm-7 col-md-8 col-xs-12">
-								<input type="radio" name="ticket_scope" id="global">
+								<input type="radio" name="ticket_scope" id="global" value="Group Acess">
 								<label for="global">Group Access
-								<div class="p-xs text-gray padding-bottom-10">Can view all Tickets in the Helpdesk</div>
-								</label>
-								<input type="radio" name="ticket_scope" id="group1">
+								<!-- <div class="p-xs text-gray padding-bottom-10">Can view all Tickets in the Helpdesk</div> -->
+								</label><br>
+								<input type="radio" name="ticket_scope" id="group1" value="Global Access">
 								<label for="group1">Global Access
-								<div class="p-xs text-gray padding-bottom-10">Can view all Tickets in the Helpdesk</div>
-								</label>
-								<input type="radio" name="ticket_scope" id="restricted">
+							<!-- 	<div class="p-xs text-gray padding-bottom-10">Can view all Tickets in the Helpdesk</div> -->
+								</label><br>
+								<input type="radio" name="ticket_scope" id="restricted" value="Restricted Access">
 								<label for="restricted">Restricted Access
-								<div class="p-xs text-gray padding-bottom-10">Can view all Tickets in the Helpdesk</div>
+						<!-- 		<div class="p-xs text-gray padding-bottom-10">Can view all Tickets in the Helpdesk</div> -->
 								</label>
 								
 							</div>
@@ -133,7 +147,7 @@
 								<a href="javascript:void(0)" data-toggle="modal" data-target="#attach" class="btn btn-success">Associate Roles </a>
 							</div>
 						</div>
-					</form>
+			
                   </div>
                 </div>
               </div>
@@ -152,7 +166,7 @@
                         <tbody>
                           <tr>
                             <td>
-							    <input type="checkbox" id="admin">
+							    <input type="checkbox" id="admin" name="associate_role[]" value="Account Admin">
 								<label for="admin">Account Admin
 								<div class="p-xs text-gray padding-bottom-10">Can view all Tickets in the Helpdesk</div>
 								</label>
@@ -160,7 +174,7 @@
                           </tr>
 						  <tr>
 							<td>
-							    <input type="checkbox" id="sd">
+							    <input type="checkbox" id="sd" name="associate_role[]" value="SD Supervisor">
 								<label for="sd">SD Supervisor
 								<div class="p-xs text-gray padding-bottom-10">Can view all Tickets in the Helpdesk</div>
 								</label>

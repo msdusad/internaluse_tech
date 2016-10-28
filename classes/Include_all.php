@@ -15,4 +15,5 @@ include_once('UserDetail.php');
 include_once('UserDirectory.php');
 include_once('UpdateAssets.php');
 include_once('DeleteAssets.php');
+//include_once('FileUpload.php');
 ?>

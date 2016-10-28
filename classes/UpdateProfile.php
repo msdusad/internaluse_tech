@@ -2,7 +2,7 @@
 require_once('Common.php');
  require_once('UserDirectory.php');
 class UpdateProfile{
-private $user;
+private  $user;
 private  $full_name;
 private  $email;
 private  $mobile_number;
