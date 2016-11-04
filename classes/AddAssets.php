@@ -140,6 +140,13 @@ $file_upload_obj= new FileUpload();
 $file_upload_obj->createdirectory('Agent');
 $file_upload_obj->getimageproperty($agent_pic,$agent_pic_tmp,$agent_pic_type,$agent_pic_size,$agent_pic_size_value);
 $file_upload_process=$file_upload_obj->file_error_test();
+if($file_upload_process=="Success"){
+
+}
+else{
+	echo "<script>alert('".$file_upload_process."');</script>";
+	//echo "<script>window.history.back();</script>";
+}
 
 }
 

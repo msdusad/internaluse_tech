@@ -18,7 +18,7 @@
                   <div class="col-lg-7 padding-top-10"> <a href="<?php echo WEB_ROOT;?>agents/index.php" class="h4"><i class="icon-left-small"></i>Back to Contracts</a> </div>
                   <div class="col-lg-5 text-right MrTpMd-10"> <a href="<?php echo WEB_ROOT;?>agents/index.php" class="btn btn-danger btn-round">Cancel</a>
                     <div class="btn-group">
-                      <input type="submit" value="Save" name="add_agent" class="btn btn-dark btn-round">
+                      <input type="submit" value="Save" data-inline="true" data-rel="back"  name="add_agent" class="btn btn-dark btn-round">
                     </div>
                   </div>
 				 </div> 
@@ -223,3 +223,16 @@ echo   '<option value="'.$view_loc_object["id"].'">'.$view_loc_object["location_
 </div>
 </body>
 </html>
+<script type="text/javascript">
+$('#name').change(function(){
+ var ss=localStorage.setItem(name, $('#name').val());
+ alert(ss);
+});
+
+window.onload = function() {
+    var name = localStorage.getItem(name);
+     $('#name').val(name);
+}
+
+</script>
+
