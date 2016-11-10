@@ -78,6 +78,21 @@ return $item_data;
 }
 
 
+public static function Agents($var){
+	if($var==''){
+    	$item_query="SELECT * from agents";
+	}
+	else{
+	$item_query="select * from agents where id='$var'";
+	}
+
+
+$item_data=Common::FetchData($item_query);
+return $item_data;
+
+}
+
+
 
 }
 

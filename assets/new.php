@@ -102,7 +102,12 @@ echo   '<option value="'.$view_loc_object["id"].'">'.$view_loc_object["location_
                 <div class="col-sm-6 col-xs-12 padding-bottom-10">
                   <label>Managed By <span class="text-red">*</span></label>
                   <select class="form-control" name="managed_by_id">
-                    <option value="5">One</option>
+              <?php
+          $agent_object=Assets::Agents();
+          foreach ($agent_object as $view_agent) {
+          echo   '<option value="'.$view_agent["id"].'">'.$view_agent["name"].'</option>';
+          }
+          ?>
                   </select>
                 </div>
               </div>

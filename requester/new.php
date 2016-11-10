@@ -14,13 +14,12 @@
                     <?php require_once("../classes/Include_all.php"); ?>
 				  <div class="col-lg-12">
 				  <div class="row affix-top" style="background:#fff;" data-spy="affix" data-offset-top="197">
-             <p id="res"></p>
-                  <div class="col-lg-7 padding-top-10"> <a href="<?php echo WEB_ROOT;?>agents/index.php" class="h4"><i class="icon-left-small"></i>Back to Contracts</a> </div>
-                  <div class="col-lg-5 text-right MrTpMd-10"> <a href="<?php echo WEB_ROOT;?>agents/index.php" class="btn btn-danger btn-round">Cancel</a>
+             <form action="" method="post"  enctype="multipart/form-data">
+                  <div class="col-lg-7 padding-top-10"> <a href="<?php echo WEB_ROOT;?>requester/index.php" class="h4"><i class="icon-left-small"></i>Back to Requesters</a> </div>
+                  <div class="col-lg-5 text-right MrTpMd-10"> <a href="<?php echo WEB_ROOT;?>agents/index.php" class="btn btn-danger btn-round" style="margin-top:3px; position:relative">Cancel</a>
                     <div class="btn-group">
-                      <button id="showResults" value="Save" data-inline="true" data-rel="back"  name="add_agent" class="btn btn-dark btn-round">Save</button>
+                      <input type="submit" value="Save" data-inline="true" data-rel="back"  name="add_agent" class="btn btn-dark btn-round">
                     </div>
-                    
                   </div>
 				 </div> 
 				 </div>
@@ -28,9 +27,8 @@
                 <div class="clearfix"></div>
               </div>
               <div class="x_content">
-                <h1 class="h3 padding-bottom-10">New Agent</h1>
+                <h1 class="h3 padding-bottom-10">New Requester</h1>
                 <div class="row">
-                  <form id="form" enctype="multipart/form-data">
                   <div class="col-sm-4 col-xs-12 padding-bottom-10">
                      <div class="bgProfile">
 						<div class="panel-body ">
@@ -39,7 +37,6 @@
 						  <p class="p-xs padding-top-5">A Profile image of the person, it's best if the picture has the same length and height</p>
 						</div> 	
 
-
             <script>
     // code for show uploaded file
   var loadFile = function(event) {
@@ -47,12 +44,11 @@
     output.src = URL.createObjectURL(event.target.files[0]);
   };
 </script>
-		
-
+						
 					</div>	
                   </div>
                   <div class="col-sm-8 col-xs-12 padding-bottom-10">
-                    <div class="row">
+                    <!--<div class="row">
 					    <div class="col-sm-2">
 						  <p><strong>Agent Type</strong></p>
 						</div>
@@ -68,30 +64,64 @@
 							<label for="test2">Occasional</label>
 						  </div>  
 						</div>
-					</div>
-					<h4 class="h4 padding-top-10 weight-600">Agent information</h4>
+					</div>-->
+					<h4 class="h4 padding-top-10 weight-600">Requester information</h4>
 				
         
 					    <p class="margin-top-10">
 						  <label>Full Name</label>
-						  <input type="text" name="agent_name" id="agent_name" class="form-control" required>
+						  <input type="text" name="requster-name" id="name" class="form-control">
 						</p>
 						<p class="margin-top-10">
-						  <label>Email</label>
-						  <input type="emai" name="email" id="email" class="form-control">
+						  <label>Last Name</label>
+						  <input type="text" name="last_name" id="name" class="form-control">
 						</p>
+						
+						
+						<p style="margin-bottom:0">
+							<label>Email</label>
+							
+							  <div data-duplicate="email" data-duplicate-min="0" style="margin-top:5px" >
+								  <span data-duplicate-add="email" class="btn btn-sm btn-success">Add Another Email</span>
+								  <span data-duplicate-remove="email" class="btn btn-sm btn-danger">Remove</span>
+								  <input type="text" name="last_name" id="name" class="form-control">
+							  </div>
+						</p>
+					  
 						<p class="margin-top-10">
 						  <label>Title</label>
 						  <input type="text" name="title" id="title" class="form-control">
 						</p>
 						<p class="margin-top-10">
-						  <label>Phone No.</label>
+						  <label>Work Phone</label>
 						  <input type="text" name="phone_number" id="phone" class="form-control">
 						</p>
 						<p class="margin-top-10">
-						  <label>Mobile No.</label>
-						  <input type="text" name="mobile_number" id="mob" class="form-control">
+						  <label>Mobile Phone</label>
+						  <input type="text" name="phone_number" id="phone" class="form-control">
 						</p>
+						<p class="margin-top-10">
+						  <label>Department</label>
+						  <input type="text" placeholder="Enter Department Name" name="mobile_number" id="mob" class="form-control">
+						</p>
+						<p class="margin-top-10">
+						  <label>Reporting Manager</label>
+						  <input type="text" placeholder="Enter Reporting Manager Name" name="mobile_number" id="mob" class="form-control">
+						</p>
+						<div class="margin-top-10">
+						  <label>Address</label>
+						  <!-- start-->
+							<!-- <div class="btn-toolbar editor nav" data-role="editor-toolbar" data-target="#editor"> <a href="#" class="BoldAlign" data-toggle="tooltip" data-placement="top" title="" data-original-title="Bold">&nbsp;</a> <a href="#" class="italicAlign" data-toggle="tooltip" data-placement="top" title="" data-original-title="Italic">&nbsp;</a> <a href="#" class="list" data-toggle="tooltip" data-placement="top" title="" data-original-title="List Circle">&nbsp;</a> <a href="#" class="listNum" data-toggle="tooltip" data-placement="top" title="" data-original-title="List Number">&nbsp;</a> <a href="#" class="shiftTab" data-toggle="tooltip" data-placement="top" title="" data-original-title="Shift Tab">&nbsp;</a> <a href="#" class="shiftTab2" data-toggle="tooltip" data-placement="top" title="" data-original-title="Shift Tab">&nbsp;</a> <a href="#" class="fontColor" data-toggle="tooltip" data-placement="top" title="" data-original-title="Font Color">&nbsp;</a> <a href="#" class="backColor" data-toggle="tooltip" data-placement="top" title="" data-original-title="Back Color">&nbsp;</a> <span class="dropdown"> <a href="#" class="dropdown-toggle links" data-toggle="dropdown" role="button" aria-expanded="false" title="link">&nbsp;</a>
+							  <ul class="dropdown-menu">
+								<li><a href="#insertLink" data-toggle="modal" data-target="#insertLink">Insert Link ...</a></li>
+								<li><a href="#">Unlink</a></li>
+							  </ul>
+							</div> -->
+							<div id="editor" class="editor-wrapper placeholderText" contenteditable="true"></div>
+							<textarea name="signature" id="descr" style="display:none;"></textarea>
+						  <!--end-->
+						</div>
+						
 						<p class="margin-top-10">
 						  <label>Location</label>
 						  <select class="form-control" name="location_id">
@@ -105,12 +135,8 @@ echo   '<option value="'.$view_loc_object["id"].'">'.$view_loc_object["location_
 ?>
                           </select>
 						</p>
-						<p class="margin-top-10">
-						  <label>Reporting Manager</label>
-						  <input type="text" name="reporting_manager" id="mob" class="form-control">
-						</p>
 						<div class="margin-top-10 border-bottom padding-bottom-30">
-						  <label>Signature</label>
+						  <label>Background information</label>
 						  <!-- start-->
 							<!-- <div class="btn-toolbar editor nav" data-role="editor-toolbar" data-target="#editor"> <a href="#" class="BoldAlign" data-toggle="tooltip" data-placement="top" title="" data-original-title="Bold">&nbsp;</a> <a href="#" class="italicAlign" data-toggle="tooltip" data-placement="top" title="" data-original-title="Italic">&nbsp;</a> <a href="#" class="list" data-toggle="tooltip" data-placement="top" title="" data-original-title="List Circle">&nbsp;</a> <a href="#" class="listNum" data-toggle="tooltip" data-placement="top" title="" data-original-title="List Number">&nbsp;</a> <a href="#" class="shiftTab" data-toggle="tooltip" data-placement="top" title="" data-original-title="Shift Tab">&nbsp;</a> <a href="#" class="shiftTab2" data-toggle="tooltip" data-placement="top" title="" data-original-title="Shift Tab">&nbsp;</a> <a href="#" class="fontColor" data-toggle="tooltip" data-placement="top" title="" data-original-title="Font Color">&nbsp;</a> <a href="#" class="backColor" data-toggle="tooltip" data-placement="top" title="" data-original-title="Back Color">&nbsp;</a> <span class="dropdown"> <a href="#" class="dropdown-toggle links" data-toggle="dropdown" role="button" aria-expanded="false" title="link">&nbsp;</a>
 							  <ul class="dropdown-menu">
@@ -122,35 +148,8 @@ echo   '<option value="'.$view_loc_object["id"].'">'.$view_loc_object["location_
 							<textarea name="signature" id="descr" style="display:none;"></textarea>
 						  <!--end-->
 						</div>
-						<h4 class="h4 padding-top-10 weight-600">Roles and Scope</h4>
-						<div class="row margin-top-20">
-						    <div class="col-sm-5 col-md-4 col-xs-12 weight-600">
-							     Ticket Scope
-							</div>
-							<div class="col-sm-7 col-md-8 col-xs-12">
-								<input type="radio" name="ticket_scope" id="global" value="Group Acess">
-								<label for="global">Group Access
-								<!-- <div class="p-xs text-gray padding-bottom-10">Can view all Tickets in the Helpdesk</div> -->
-								</label><br>
-								<input type="radio" name="ticket_scope" id="group1" value="Global Access">
-								<label for="group1">Global Access
-							<!-- 	<div class="p-xs text-gray padding-bottom-10">Can view all Tickets in the Helpdesk</div> -->
-								</label><br>
-								<input type="radio" name="ticket_scope" id="restricted" value="Restricted Access">
-								<label for="restricted">Restricted Access
-						<!-- 		<div class="p-xs text-gray padding-bottom-10">Can view all Tickets in the Helpdesk</div> -->
-								</label>
-								
-							</div>
-						</div>
-						<div class="row margin-top-20">
-						    <div class="col-sm-5 col-md-4 col-xs-12 weight-600 padding-top-5 padding-bottom-10">
-							     Agent Role
-							</div>
-							<div class="col-sm-7 col-md-8 col-xs-12">
-								<a href="javascript:void(0)" data-toggle="modal" data-target="#attach" class="btn btn-success">Associate Roles </a>
-							</div>
-						</div>
+						
+						
 			
                   </div>
                 </div>
@@ -227,29 +226,30 @@ echo   '<option value="'.$view_loc_object["id"].'">'.$view_loc_object["location_
 </div>
 </body>
 </html>
-<script>
-$(document).ready(function(){
-$('#showResults').click(function() {
-   var agent_name=$("#agent_name").val();
-  if(agent_name==''){
-    alert('Please Fill Agent Name');
-return false;
-  }
 
-var post = $('#form').serialize(); 
-jQuery.ajax({
-        type: "GET",
-        url: "../classes/AddAssets.php",
-        data: post,      
-        cache: false,
-        success: function(html)
-            {
-$("#res").html(html);
-           
-                }
-        });
 
- });
+  <script>
+    // not needed, just an example of listening to events triggered by the plugin
+    $('body').on('duplicate.error', function(ev){
+      console.log('refused to add/remove', this);
+      $(ev.target).addClass('error');
+      setTimeout(function(){
+        $(ev.target).removeClass('error');
+      }, 1500);
+    });
+  </script>
 
- });
- </script>
+
+<script type="text/javascript">
+$('#name').change(function(){
+ var ss=localStorage.setItem(name, $('#name').val());
+ alert(ss);
+});
+
+window.onload = function() {
+    var name = localStorage.getItem(name);
+     $('#name').val(name);
+}
+
+</script>
+

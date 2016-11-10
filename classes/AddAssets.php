@@ -143,26 +143,31 @@ $file_upload_process=$file_upload_obj->file_error_test();
 if($file_upload_process=="Success"){
 
 }
+
 else{
-	echo "<script>alert('".$file_upload_process."');</script>";
-	//echo "<script>window.history.back();</script>";
+	
+	 return $file_upload_process;
 }
 
+}
+// if image not send by user
+else{
+	$agent_pic="";
 }
 
 // code image upload end here
 
-$agent_type=Common::remove_sql_injection((isset($_POST['agent_type'])) ? $_POST['agent_type'] : null);
-$agent_name=Common::remove_sql_injection((isset($_POST['agent_name'])) ? $_POST['agent_name'] : null);
-$email=Common::remove_sql_injection((isset($_POST['email'])) ? $_POST['email'] : null);
-$title=Common::remove_sql_injection((isset($_POST['title'])) ? $_POST['title'] : null);
-$phone_number=Common::remove_sql_injection((isset($_POST['phone_number'])) ? $_POST['phone_number'] : null);
-$mobile_number=Common::remove_sql_injection((isset($_POST['mobile_number'])) ? $_POST['mobile_number'] : null);
-$location_id=Common::remove_sql_injection((isset($_POST['location_id'])) ? $_POST['location_id'] : null);
-$reporting_manager=Common::remove_sql_injection((isset($_POST['reporting_manager'])) ? $_POST['reporting_manager'] : null);
-$signature=Common::remove_sql_injection((isset($_POST['signature'])) ? $_POST['signature'] : null);
-$ticket_scope=Common::remove_sql_injection((isset($_POST['ticket_scope'])) ? $_POST['ticket_scope'] : null);
-$associate_role=(isset($_POST['associate_role']) ? $_POST['associate_role'] : null);
+$agent_type=Common::remove_sql_injection((isset($_GET['agent_type'])) ? $_GET['agent_type'] : null);
+$agent_name=Common::remove_sql_injection((isset($_GET['agent_name'])) ? $_GET['agent_name'] : null);
+$email=Common::remove_sql_injection((isset($_GET['email'])) ? $_GET['email'] : null);
+$title=Common::remove_sql_injection((isset($_GET['title'])) ? $_GET['title'] : null);
+$phone_number=Common::remove_sql_injection((isset($_GET['phone_number'])) ? $_GET['phone_number'] : null);
+$mobile_number=Common::remove_sql_injection((isset($_GET['mobile_number'])) ? $_GET['mobile_number'] : null);
+$location_id=Common::remove_sql_injection((isset($_GET['location_id'])) ? $_GET['location_id'] : null);
+$reporting_manager=Common::remove_sql_injection((isset($_GET['reporting_manager'])) ? $_GET['reporting_manager'] : null);
+$signature=Common::remove_sql_injection((isset($_GET['signature'])) ? $_GET['signature'] : null);
+$ticket_scope=Common::remove_sql_injection((isset($_GET['ticket_scope'])) ? $_GET['ticket_scope'] : null);
+$associate_role=(isset($_GET['associate_role']) ? $_GET['associate_role'] : null);
 if($associate_role!=null){
 
 $chk="";  
@@ -176,10 +181,10 @@ else{
 	$chk="";
 }
 
-$add_query="insert into agents (agent_type,name,email,title,phone_no,mobile_number,location_id,reporting_manager_id,signature,ticket_scope,associate_role,created_at) values ('$agent_type','$agent_name','$email','$title','$phone_number','$mobile_number','$location_id','$reporting_manager','$signature','$ticket_scope','$chk',now())";
+$add_query="insert into agents (agent_type,name,email,title,phone_no,mobile_number,location_id,reporting_manager_id,signature,ticket_scope,associate_role,agent_pic,created_at) values ('$agent_type','$agent_name','$email','$title','$phone_number','$mobile_number','$location_id','$reporting_manager','$signature','$ticket_scope','$chk','$agent_pic',now())";
 $run_qry=Common::InsertData($add_query);
 if($run_qry){
-return $file_upload_process;
+return "Agent Added Successfully";
 }
  
 }
@@ -192,35 +197,49 @@ return $file_upload_process;
 
 if(isset($_POST['add_impact'])){
 AddAssets::AddImpact();
-echo Common::SuccessDailog(' New Impact Added ');
+echo Common::SuccessDailog(' New Impact Added Sucessfully');
 } 
 
 if(isset($_POST['add_category_assets'])){
 AddAssets::AddCategory();
-echo Common::SuccessDailog(' New Category Added ');
+echo Common::SuccessDailog(' New Category Added Sucessfully');
 } 
 if(isset($_POST['add_new_department'])){
 AddAssets::AddDepartment();
-echo Common::SuccessDailog(' New Department Added ');
+echo Common::SuccessDailog(' New Department Added Sucessfully');
 } 
 if(isset($_POST['add_groups'])){
 AddAssets::AddGroup();
-echo Common::SuccessDailog(' New Group Added ');
+echo Common::SuccessDailog(' New Group Added Sucessfully');
 }
 
 if(isset($_POST['add_location'])){
 AddAssets::AddLocation();
-echo Common::SuccessDailog(' New Location Added ');
+echo Common::SuccessDailog(' New Location Added Sucessfully');
 }
 
 if(isset($_POST['add_item'])){
 AddAssets::AddItems();
-echo Common::SuccessDailog(' New Item Added ');
+echo Common::SuccessDailog(' New Item Added Sucessfully ');
 }
 
-if(isset($_POST['add_agent'])){
-$agent_obj=AddAssets::AddAgent();
-echo Common::SuccessDailog($agent_obj);
+if(isset($_GET['agent_name'])){
+$obj=AddAssets::AddAgent();
+echo Common::SuccessDailog($obj);
 }
+
+if(isset($_POST['agent_name'])){
+echo $_POST['agent_name'];
+}
+// $query = '';
+//  if(isset($_GET['PartType'])){
+// 	echo "Got It".$_GET['PartType'];
+// }
+// for ($i = 0; $i < count($_GET['PartQuantity']);$i++){
+//   $query .= "(".mysql_real_escape_string($_GET['PartQuantity'][$i]).",".mysql_real_escape_string($_GET['PartType'][$i]).",".mysql_real_escape_string($_GET['PartNumber'][$i])."),";
+// }
+// $query = substr($query,0,strlen($query) - 1); //STRIP LAST COMMA
+// echo $query;
+//$result = mysql_query("insert into <TABLE> (partquantity,parttype,partnumber) VALUES $query") or die(mysql_error());
 
 ?>

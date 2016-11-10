@@ -103,6 +103,14 @@
 						 </div>
 						 <h4>Agents</h4>
 					 </a>
+					 <a class="admin col-xs-6 col-sm-4 col-md-2" href="<?php echo WEB_ROOT;?>requester/index.php">
+					     <div class="circleBig">
+						     <div class="circle">
+							     <i class="icon-users"></i>
+							 </div>
+						 </div>
+						 <h4>Requestor</h4>
+					 </a>
               </div>
             </div>
         </div>
