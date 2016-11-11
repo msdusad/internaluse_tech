@@ -11,9 +11,15 @@
           <div class="x_panel tile">
             <div class="x_title">
               <div class="row">
+
+              	<?php
+              	  require_once("../classes/Include_all.php");   
+$agent_obj=Assets::Agents($_GET['id']);
+foreach ($agent_obj as $agent_val) ?>
+
                   <div class="col-lg-7 col-xs-12 h4"><a href="<?php echo WEB_ROOT;?>agents/index.php"><i class="icon-left-small"></i>Back to Changes</a></div>
                   <div class="col-lg-5 col-xs-12 text-right visible-sm-right-center MrTpMd-10"> 
-                     <a href="<?php echo WEB_ROOT;?>agents/edit.php" class="btn btn-round btn-dark">Edit Agent</a>
+                     <a href="<?php echo WEB_ROOT;?>agents/edit.php?id=<?php echo $agent_val["id"];?>" class="btn btn-round btn-dark">Edit Agent</a>
                   </div>
                 </div>
               <div class="clearfix"></div>
@@ -22,31 +28,32 @@
 			    <div class="row">
 				    <div class="col-sm-4 col-xs-12">
 					    <div class="bgProfile">
+
 						    <div class="panel-body text-center border-bottom">
 					            <p><img src="<?php echo IMAGE_ROOT;?>green.png" alt="green"></p>
-						        <h1 class="h3 margin-top-20">Account Admin</h1>
-								<span class="text-gray">abc</span>
+						        <h1 class="h3 margin-top-20"><?php echo $agent_val['name'];?></h1>
+								<span class="text-gray"><!-- abc --></span>
 							</div>
                             <div class="panel-body ">
                                 <p>
 								    <strong>Email</strong><br>
-									account.desk@gmx.com
+									<?php echo $agent_val['email'];?>
 								</p>
 								<p>
 								    <strong>Phone</strong><br>
-									a
+									<?php echo $agent_val['phone_no'];?>
 								</p>
 								<p>
 								    <strong>Mobile</strong><br>
-									a
+									<?php echo $agent_val['mobile_number'];?>
 								</p>
-								<p>
+								<!-- <p>
 								    <strong>Time Zone</strong><br>
 									Chennai
-								</p>
+								</p> -->
 								<p>
 								    <strong>Location</strong><br>
-									US, America
+									<?php echo $agent_val['location_id'];?>
 								</p>
                             </div> 							
 						</div>	 
@@ -79,6 +86,8 @@
 									  <td>
 										<p>
 										 Used By: --
+										 <br>
+										 put all assets here that used by him
 										</p>
 									  </td>
 									  

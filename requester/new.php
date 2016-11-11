@@ -32,8 +32,20 @@
                   <div class="col-sm-4 col-xs-12 padding-bottom-10">
                      <div class="bgProfile">
 						<div class="panel-body ">
-							<p><img src="<?php echo IMAGE_ROOT;?>profile_blank_thumb.gif" id="output"  alt="profile" class="pull-left profilePic"></p>
-						    <input type="file" name="agent_image_sent"  onchange="loadFile(event)" accept="image/*">
+							<p><img src="<?php echo IMAGE_ROOT;?>profile_blank_thumb.gif" id="output"  alt="profile" class="pull-left profilePic">
+
+							<div class="clearfix"></div>
+							</p>
+
+
+							<div class="input-group no-left">
+			                  <input type="text" class="form-control" placeholder="No File Selected" readonly="">
+			                  <label class="input-group-btn"> <span class="btn btn-success"> Choose File
+			                    <input type="file" style="display: none;" multiple="" name="agent_image_sent"  onchange="loadFile(event)" accept="image/*">
+			                    </span> </label>
+			                </div>
+							
+						   
 						  <p class="p-xs padding-top-5">A Profile image of the person, it's best if the picture has the same length and height</p>
 						</div> 	
 

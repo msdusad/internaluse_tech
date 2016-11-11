@@ -113,9 +113,18 @@ echo   '<option value="'.$view_loc_object["id"].'">'.$view_loc_object["location_
               </div>
               <div class="row">
                   <div class="col-sm-6 col-xs-12 padding-bottom-10">
-                     <label class="padding-top-5">Assigned on</label>
-                     <input type="text" name="assign_date" class="form-control" id="datetimepicker_dark"/>
-                  </div>
+                  <label>Used By <span class="text-red">*</span></label>
+                  <select class="form-control" name="managed_by_id">
+              <?php
+              // put here  requestor data 
+              
+          $agent_object=Assets::Agents();
+          foreach ($agent_object as $view_agent) {
+          echo   '<option value="'.$view_agent["id"].'">'.$view_agent["name"].'</option>';
+          }
+          ?>
+                  </select>
+                </div>
                   <div class="col-sm-6 col-xs-12 padding-bottom-10">
                    <label class="padding-top-5">Attach a file (File size < 15 MB)</label>
                 <div class="input-group no-left">
@@ -126,6 +135,15 @@ echo   '<option value="'.$view_loc_object["id"].'">'.$view_loc_object["location_
                 </div>
                   </div>
               </div>
+
+              <div class="row">
+                  <div class="col-sm-6 col-xs-12 padding-bottom-10">
+                     <label class="padding-top-5">Assigned on</label>
+                     <input type="text" name="assign_date" class="form-control" id="datetimepicker_dark"/>
+                  </div>
+                  
+              </div>
+
             </div>
           </div>
           </div>

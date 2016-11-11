@@ -11,6 +11,7 @@
           <div class="x_panel tile">
             <div class="x_title">
               <div class="row">
+                 <?php require_once("../classes/Include_all.php"); ?>
                   <div class="col-lg-7 col-xs-12 h4"><a href="<?php echo WEB_ROOT;?>admin/index.php">Admin</a></div>
                   <div class="col-lg-5 col-xs-12 text-right visible-sm-right-center MrTpMd-10"> 
                      <a href="<?php echo WEB_ROOT;?>agents/new.php" class="btn btn-round btn-dark">New Agent</a>
@@ -23,15 +24,15 @@
 			    <div class="col-sm-6 h4">
 				    Agents
 				</div>
-				<div class="col-sm-6 text-right padding-top-5">
+			<!-- 	<div class="col-sm-6 text-right padding-top-5">
 				    <span class="badge bg-red">0</span> 
 					No agent seats available - <a href="#">Buy more</a>
 				</div>
-			  </div>
+			  </div> -->
               <ul class="nav nav-pills">
-                <li class="active"><a class="btn btn-default" href="#tab1" data-toggle="tab">Full-Time <span class="badge bg-default">3</span></a></li>
-                <li><a href="#tab2" class="btn btn-default" data-toggle="tab">Occasional <span class="badge bg-default">0</span></a></li>
-                <li><a href="#tab3" class="btn btn-default" data-toggle="tab">Deleted</a></li>
+                <li class="active"><a class="btn btn-default" href="#tab1" data-toggle="tab">All Agents<!-- Full-Time <span class="badge bg-default">3</span>--> </a></li>
+               <!--  <li><a href="#tab2" class="btn btn-default" data-toggle="tab">Occasional <span class="badge bg-default">0</span></a></li>
+                <li><a href="#tab3" class="btn btn-default" data-toggle="tab">Deleted</a></li> -->
               </ul>
               <div class="tab-content margin-top-20">
                 <div class="tab-pane active" id="tab1">
@@ -39,49 +40,42 @@
                   <div class="table-responsive">
                     <table class="table table-striped jambo_table bulk_action">
                       <tbody>
-                        <tr>
-                          <td width="40">
-						     <img src="<?php echo IMAGE_ROOT;?>profile_blank_thumb.gif" width="40" alt="" class="img-circle">
-						  </td>
-						  <td>
-						     <p><strong><a href="<?php echo WEB_ROOT;?>agents/profile.php" >Account Admin</a> </strong><br>
-								<small class="muted">abc</small>
-							 </p>
-						  </td>
+
+<?php
+$agent_obj=Assets::Agents('');
+if($agent_obj!=''){
+foreach ($agent_obj as $agent_val) {
+ 
+echo '
+   <tr>
+        <td width="40">
+                 <img src="'.IMAGE_ROOT.'profile_blank_thumb.gif" width="40" alt="" class="img-circle">
+              </td>
+              <td>
+                 <p><strong><a href="'.WEB_ROOT.'agents/profile.php?id='.$agent_val["id"].'" >'.$agent_val["name"].'</a> </strong><br>
+                <small class="muted"></small>
+               </p>
+              </td>
                           <td>
-							<p>account.desk@gmx.com<br>a</p>
-						  </td>
-						  <td>
-							<p>
-								Last logged in about 2 hours ago.<br>
-							</p>
-						  </td>
-						  <td>
-							<a href="<?php echo WEB_ROOT;?>agents/edit.php" class="btn btn-default btn-xs">Edit</a>
-						  </td>
-                        </tr>
-                        <tr>
-                          <td width="40">
-						     <img src="<?php echo IMAGE_ROOT;?>profile_blank_thumb.gif" width="40" alt="" class="img-circle">
-						  </td>
-						  <td>
-						     <p><strong><a href="<?php echo WEB_ROOT;?>agents/profile.php">Account Admin</a> </strong><br>
-								<small class="muted">abc</small>
-							 </p>
-						  </td>
-                          <td>
-							<p>account.desk@gmx.com<br>a</p>
-						  </td>
-						  <td>
-							<p>
-								Last logged in about 2 hours ago.<br>
-							</p>
-						  </td>
-						  <td>
-							<a href="<?php echo WEB_ROOT;?>agents/edit.php" class="btn btn-default btn-xs">Edit</a> 
-							<a href="#delete" data-toggle="modal" data-target="#delete" class="btn btn-default btn-xs"><i class="icon-trash"></i></a>
-						  </td>
-                        </tr>
+              <p>'.$agent_val["email"].'<br></p>
+              </td>
+              <td>
+              <p>
+                Last logged time<br>
+              </p>
+              </td>
+              <td>
+              <a href="'.WEB_ROOT.'agents/edit.php?id='.$agent_val["id"].'" class="btn btn-default btn-xs">Edit</a>
+              </td>
+                </tr>';
+
+
+}
+
+}
+
+                    ?>
+                        
                       </tbody>
                     </table>
                   </div>
