@@ -15,12 +15,14 @@
 				  <div class="col-lg-12">
 				  <div class="row affix-top" style="background:#fff;" data-spy="affix" data-offset-top="197">
              <p id="res"></p>
+                 <form id="form" enctype="multipart/form-data">
+
                   <div class="col-lg-7 padding-top-10"> <a href="<?php echo WEB_ROOT;?>agents/index.php" class="h4"><i class="icon-left-small"></i>Back to Contracts</a> </div>
                   <div class="col-lg-5 text-right MrTpMd-10"> <a href="<?php echo WEB_ROOT;?>agents/index.php" class="btn btn-danger btn-round">Cancel</a>
                     <div class="btn-group">
                       <button id="showResults" value="Save" data-inline="true" data-rel="back"  name="add_agent" class="btn btn-dark btn-round">Save</button>
                     </div>
-                    
+                     <input type="submit" value="Submit">
                   </div>
 				 </div> 
 				 </div>
@@ -30,12 +32,25 @@
               <div class="x_content">
                 <h1 class="h3 padding-bottom-10">New Agent</h1>
                 <div class="row">
-                  <form id="form" enctype="multipart/form-data">
+              
                   <div class="col-sm-4 col-xs-12 padding-bottom-10">
                      <div class="bgProfile">
 						<div class="panel-body ">
-							<p><img src="<?php echo IMAGE_ROOT;?>profile_blank_thumb.gif" id="output"  alt="profile" class="pull-left profilePic"></p>
-						    <input type="file" name="agent_image_sent"  onchange="loadFile(event)" accept="image/*">
+							<p><img src="<?php echo IMAGE_ROOT;?>profile_blank_thumb.gif" id="output"  alt="profile" class="pull-left profilePic">
+
+							<div class="clearfix"></div>
+							</p>
+
+
+							<div class="input-group no-left">
+			                  <input type="text" class="form-control" placeholder="No File Selected" readonly="">
+			                  <label class="input-group-btn"> <span class="btn btn-success"> Choose File
+			                    <input type="file" style="display: none;" multiple="" name="agent_image_sent"  onchange="loadFile(event)" accept="image/*">
+			                    </span> </label>
+			                </div>
+
+
+						   
 						  <p class="p-xs padding-top-5">A Profile image of the person, it's best if the picture has the same length and height</p>
 						</div> 	
 
@@ -229,19 +244,23 @@ echo   '<option value="'.$view_loc_object["id"].'">'.$view_loc_object["location_
 </html>
 <script>
 $(document).ready(function(){
-$('#showResults').click(function() {
+$('#form#form').click(function(event) {
    var agent_name=$("#agent_name").val();
   if(agent_name==''){
     alert('Please Fill Agent Name');
 return false;
   }
-
+ event.preventDefault();
+  var formData = new FormData($(this)[0]);
 var post = $('#form').serialize(); 
-jQuery.ajax({
-        type: "GET",
-        url: "../classes/AddAssets.php",
-        data: post,      
-        cache: false,
+$.ajax({
+        type: "post",
+        url: "../classes/AddAssets",
+        data: formData,      
+        async: false,
+    cache: false,
+    contentType: false,
+    processData: false,
         success: function(html)
             {
 $("#res").html(html);
@@ -252,4 +271,9 @@ $("#res").html(html);
  });
 
  });
+
+
+// 
+
+
  </script>

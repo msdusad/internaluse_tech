@@ -110,15 +110,15 @@ for (i = 0; i < acc.length; i++) {
 $(document).ready(function(){
 $('.showResults').click(function() {
 
-var post = $('#form').serialize(); 
+//var postdata = $('#form').serialize(); 
 $.ajax({
-        type: "Post",
-        url: "classes/AddAssets.php",
-        data: post,
-        cache: false,
+        type: "POST",
+        url: "classes/AddAssets",
+       data:$("#form").serialize(),
+            
         success: function(html)
-            {
-            $("#res").html(html);
+            {  
+            //$("#res").html(html);
             alert(html)
 
                 }

@@ -58,8 +58,16 @@
                   </select>
                 </div>
               </div>
+
+              <style>
+
+              .panel-heading.collapsed{margin-bottom: 25px !important;}
+
+              </style>
+
+
               <p class="margin-top-10">Description</p>
-              <textarea type="text" name="description" rows="6" cols="20" style="width:100%;"></textarea>
+              <textarea type="text" name="description" rows="6" cols="20" style="width:100%; border:1px solid #ccc "></textarea>
               <div class="accordion-down">
                 <div class="accordion padding-top-30" id="accordion" role="tablist" >
                   <div class="panel"> <a class="panel-heading" role="tab" id="headingOne" data-toggle="collapse" href="#collapseOne" aria-expanded="true" aria-controls="collapseOne">

@@ -127,6 +127,7 @@ return 'Added Sucessfully';
 public  function AddAgent(){
 
 // code for image uplad 
+
 	if(isset($_FILES['agent_image_sent']['name'])){
 
 $agent_pic=$_FILES['agent_image_sent']['name'];
@@ -157,17 +158,17 @@ else{
 
 // code image upload end here
 
-$agent_type=Common::remove_sql_injection((isset($_GET['agent_type'])) ? $_GET['agent_type'] : null);
-$agent_name=Common::remove_sql_injection((isset($_GET['agent_name'])) ? $_GET['agent_name'] : null);
-$email=Common::remove_sql_injection((isset($_GET['email'])) ? $_GET['email'] : null);
-$title=Common::remove_sql_injection((isset($_GET['title'])) ? $_GET['title'] : null);
-$phone_number=Common::remove_sql_injection((isset($_GET['phone_number'])) ? $_GET['phone_number'] : null);
-$mobile_number=Common::remove_sql_injection((isset($_GET['mobile_number'])) ? $_GET['mobile_number'] : null);
-$location_id=Common::remove_sql_injection((isset($_GET['location_id'])) ? $_GET['location_id'] : null);
-$reporting_manager=Common::remove_sql_injection((isset($_GET['reporting_manager'])) ? $_GET['reporting_manager'] : null);
-$signature=Common::remove_sql_injection((isset($_GET['signature'])) ? $_GET['signature'] : null);
-$ticket_scope=Common::remove_sql_injection((isset($_GET['ticket_scope'])) ? $_GET['ticket_scope'] : null);
-$associate_role=(isset($_GET['associate_role']) ? $_GET['associate_role'] : null);
+$agent_type=Common::remove_sql_injection((isset($_POST['agent_type'])) ? $_POST['agent_type'] : null);
+$agent_name=Common::remove_sql_injection((isset($_POST['agent_name'])) ? $_POST['agent_name'] : null);
+$email=Common::remove_sql_injection((isset($_POST['email'])) ? $_POST['email'] : null);
+$title=Common::remove_sql_injection((isset($_POST['title'])) ? $_POST['title'] : null);
+$phone_number=Common::remove_sql_injection((isset($_POST['phone_number'])) ? $_POST['phone_number'] : null);
+$mobile_number=Common::remove_sql_injection((isset($_POST['mobile_number'])) ? $_POST['mobile_number'] : null);
+$location_id=Common::remove_sql_injection((isset($_POST['location_id'])) ? $_POST['location_id'] : null);
+$reporting_manager=Common::remove_sql_injection((isset($_POST['reporting_manager'])) ? $_POST['reporting_manager'] : null);
+$signature=Common::remove_sql_injection((isset($_POST['signature'])) ? $_POST['signature'] : null);
+$ticket_scope=Common::remove_sql_injection((isset($_POST['ticket_scope'])) ? $_POST['ticket_scope'] : null);
+$associate_role=(isset($_POST['associate_role']) ? $_POST['associate_role'] : null);
 if($associate_role!=null){
 
 $chk="";  
@@ -223,13 +224,9 @@ AddAssets::AddItems();
 echo Common::SuccessDailog(' New Item Added Sucessfully ');
 }
 
-if(isset($_GET['agent_name'])){
+if(isset($_POST['agent_name'])){
 $obj=AddAssets::AddAgent();
 echo Common::SuccessDailog($obj);
-}
-
-if(isset($_POST['agent_name'])){
-echo $_POST['agent_name'];
 }
 // $query = '';
 //  if(isset($_GET['PartType'])){
