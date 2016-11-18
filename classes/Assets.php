@@ -94,6 +94,23 @@ return $item_data;
 
 
 
+
+public static function Requester($var){
+	if($var==''){
+    	$item_query="SELECT * from requesters";
+	}
+	else{
+	$item_query="select * from requesters where id='$var'";
+	}
+
+
+$item_data=Common::FetchData($item_query);
+return $item_data;
+
+}
+
+
+
 }
 
 ?>

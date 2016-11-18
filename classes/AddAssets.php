@@ -110,11 +110,12 @@ $impact_id=Common::remove_sql_injection((isset($_POST['impact_id'])) ? $_POST['i
 $description=Common::remove_sql_injection((isset($_POST['description'])) ? $_POST['description'] : null);
 $location_id=Common::remove_sql_injection((isset($_POST['location_id'])) ? $_POST['location_id'] : null);
 $managed_by_id=Common::remove_sql_injection((isset($_POST['managed_by_id'])) ? $_POST['managed_by_id'] : null);
+$used_by_id=Common::remove_sql_injection((isset($_POST['used_by'])) ? $_POST['used_by'] : null);
 $department_id=Common::remove_sql_injection((isset($_POST['department_id'])) ? $_POST['department_id'] : null);
 $assign_date=Common::remove_sql_injection((isset($_POST['assign_date'])) ? $_POST['assign_date'] : null);
 
 
-$add_query="insert into items (display_name,assets_type_id,impact_id,description,location_id,department_id,managed_by_id,assign_date,date) values ('$display_name','$assets_type_id','$impact_id','$description','$location_id','$department_id','$managed_by_id','$assign_date',now())";
+$add_query="insert into items(display_name,assets_type_id,impact_id,description,location_id,department_id,managed_by_id,used_by_id,assign_date,date) values ('$display_name','$assets_type_id','$impact_id','$description','$location_id','$department_id','$managed_by_id','$used_by_id','$assign_date',now())";
 $run_qry=Common::InsertData($add_query);
 if($run_qry){
 return 'Added Sucessfully';
@@ -128,13 +129,13 @@ public  function AddAgent(){
 
 // code for image uplad 
 
-	if(isset($_FILES['agent_image_sent']['name'])){
+	if(!empty($_FILES['agent_image_sent']['name'])){
 
 $agent_pic=$_FILES['agent_image_sent']['name'];
 $agent_pic_tmp=$_FILES['agent_image_sent']['tmp_name'];
 $agent_pic_type=$_FILES["agent_image_sent"]["type"];
 $agent_pic_size=$_FILES["agent_image_sent"]["size"];
-$agent_pic_size_value="500"; // in KB
+$agent_pic_size_value="5000000"; // in KB
 
 
 $file_upload_obj= new FileUpload();
@@ -191,6 +192,69 @@ return "Agent Added Successfully";
 }
 
 
+public static function AddRequester(){
+
+	if(!empty($_FILES['requester_image_sent']['name'])){
+
+$requester_pic=$_FILES['requester_image_sent']['name'];
+$requester_pic_tmp=$_FILES['requester_image_sent']['tmp_name'];
+$requester_pic_type=$_FILES["requester_image_sent"]["type"];
+$requester_pic_size=$_FILES["requester_image_sent"]["size"];
+$requester_pic_size_value="5000000"; // in KB
+
+
+$file_upload_obj= new FileUpload();
+$file_upload_obj->createdirectory('Requester');
+$file_upload_obj->getimageproperty($requester_pic,$requester_pic_tmp,$requester_pic_type,$requester_pic_size,$requester_pic_size_value);
+$file_upload_process=$file_upload_obj->file_error_test();
+if($file_upload_process=="Success"){
+
+}
+
+else{
+	
+	 return $file_upload_process;
+}
+
+}
+// if image not send by user
+else{
+	$requester_pic="";
+}
+
+// code image upload end here
+
+$requester_name=Common::remove_sql_injection((isset($_POST['requester_name'])) ? $_POST['requester_name'] : null);
+$requester_last_name=Common::remove_sql_injection((isset($_POST['requester_last_name'])) ? $_POST['requester_last_name'] : null);
+$title=Common::remove_sql_injection((isset($_POST['title'])) ? $_POST['title'] : null);
+$phone_number=Common::remove_sql_injection((isset($_POST['phone_number'])) ? $_POST['phone_number'] : null);
+$mobile_number=Common::remove_sql_injection((isset($_POST['mobile_number'])) ? $_POST['mobile_number'] : null);
+$location_id=Common::remove_sql_injection((isset($_POST['location_id'])) ? $_POST['location_id'] : null);
+$department_id=Common::remove_sql_injection((isset($_POST['department_id'])) ? $_POST['department_id'] : null);
+$reporting_manager=Common::remove_sql_injection((isset($_POST['reporting_manager_id'])) ? $_POST['reporting_manager_id'] : null);
+$address=Common::remove_sql_injection((isset($_POST['address'])) ? $_POST['address'] : null);
+$backgroung_information=Common::remove_sql_injection((isset($_POST['backgroung_information'])) ? $_POST['backgroung_information'] : null);
+$requester_email=(isset($_POST['requester_email']) ? $_POST['requester_email'] : null);
+if($requester_email!=null){
+
+$chk="";  
+foreach($requester_email as $chk1)  
+   {  
+      $chk .= $chk1.",";  
+   }  
+
+}
+else{
+	$chk="";
+}
+
+$add_query="insert into requesters (first_name,last_name,title,email,phone_no,mobile_number,department_id,reporting_manager_id,address,location_id,background_information,requester_image,created_at) values ('$requester_name','$requester_last_name','$title','$chk','$phone_number','$mobile_number','$department_id','$reporting_manager','$address','$location_id','$backgroung_information','$requester_pic',now())";
+$run_qry=Common::InsertData($add_query);
+if($run_qry){
+return "Requester Added Successfully";
+}
+
+}
 
 
 }
@@ -226,8 +290,26 @@ echo Common::SuccessDailog(' New Item Added Sucessfully ');
 
 if(isset($_POST['agent_name'])){
 $obj=AddAssets::AddAgent();
-echo Common::SuccessDailog($obj);
+if($obj=="Agent Added Successfully"){
+echo $obj;
 }
+else{
+	echo Common::SuccessDailog($obj);
+}
+}
+
+
+if(isset($_POST['requester_name'])){
+$obj=AddAssets::AddRequester();
+if($obj=="Requester Added Successfully"){
+echo $obj;
+}
+else{
+	echo Common::SuccessDailog($obj);
+}
+}
+
+
 // $query = '';
 //  if(isset($_GET['PartType'])){
 // 	echo "Got It".$_GET['PartType'];

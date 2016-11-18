@@ -1,6 +1,6 @@
 <?php
 require_once('Common.php');
-
+require_once('FileUpload.php');
 class UpdateAssets{
 
 
@@ -103,6 +103,143 @@ return 'Updated Sucessfully';
  
 }
 
+
+
+
+
+public  function UpdateAgent(){
+
+// code for image uplad 
+
+	if(!empty($_FILES['agent_image_sent']['name'])){
+
+$agent_pic=$_FILES['agent_image_sent']['name'];
+$agent_pic_tmp=$_FILES['agent_image_sent']['tmp_name'];
+$agent_pic_type=$_FILES["agent_image_sent"]["type"];
+$agent_pic_size=$_FILES["agent_image_sent"]["size"];
+$agent_pic_size_value="5000000"; // in KB
+
+
+$file_upload_obj= new FileUpload();
+$file_upload_obj->createdirectory('Agent');
+$file_upload_obj->getimageproperty($agent_pic,$agent_pic_tmp,$agent_pic_type,$agent_pic_size,$agent_pic_size_value);
+$file_upload_process=$file_upload_obj->file_error_test();
+if($file_upload_process=="Success"){
+
+}
+
+else{
+	
+	 return $file_upload_process;
+}
+
+}
+// if image not send by user
+else{
+	$agent_pic=$_POST['old_image'];
+}
+
+// code image upload end here
+$id=Common::remove_sql_injection((isset($_POST['id'])) ? $_POST['id'] : null);
+$agent_type=Common::remove_sql_injection((isset($_POST['agent_type'])) ? $_POST['agent_type'] : null);
+$agent_name=Common::remove_sql_injection((isset($_POST['agent_name'])) ? $_POST['agent_name'] : null);
+$email=Common::remove_sql_injection((isset($_POST['email'])) ? $_POST['email'] : null);
+$title=Common::remove_sql_injection((isset($_POST['title'])) ? $_POST['title'] : null);
+$phone_number=Common::remove_sql_injection((isset($_POST['phone_number'])) ? $_POST['phone_number'] : null);
+$mobile_number=Common::remove_sql_injection((isset($_POST['mobile_number'])) ? $_POST['mobile_number'] : null);
+$location_id=Common::remove_sql_injection((isset($_POST['location_id'])) ? $_POST['location_id'] : null);
+$reporting_manager=Common::remove_sql_injection((isset($_POST['reporting_manager'])) ? $_POST['reporting_manager'] : null);
+$signature=Common::remove_sql_injection((isset($_POST['signature'])) ? $_POST['signature'] : null);
+$ticket_scope=Common::remove_sql_injection((isset($_POST['ticket_scope'])) ? $_POST['ticket_scope'] : null);
+$associate_role=(isset($_POST['associate_role']) ? $_POST['associate_role'] : null);
+if($associate_role!=null){
+
+$chk="";  
+foreach($associate_role as $chk1)  
+   {  
+      $chk .= $chk1.",";  
+   }  
+
+}
+else{
+	$chk="";
+}
+
+$add_query="update agents set agent_type='$agent_type',name='$agent_name',email='$email',title='$title',phone_no='$phone_number',mobile_number='$mobile_number',location_id='$location_id',reporting_manager_id='$reporting_manager',signature='$signature',ticket_scope='$ticket_scope',associate_role='$chk',agent_pic='$agent_pic',created_at=now() where id='$id'";
+$run_qry=Common::InsertData($add_query);
+if($run_qry){
+return "Agent Updated Successfully";
+}
+ 
+}
+
+
+public static function UpdateRequester(){
+
+	if(!empty($_FILES['requester_image_sent']['name'])){
+
+$requester_pic=$_FILES['requester_image_sent']['name'];
+$requester_pic_tmp=$_FILES['requester_image_sent']['tmp_name'];
+$requester_pic_type=$_FILES["requester_image_sent"]["type"];
+$requester_pic_size=$_FILES["requester_image_sent"]["size"];
+$requester_pic_size_value="5000000"; // in KB
+
+
+$file_upload_obj= new FileUpload();
+$file_upload_obj->createdirectory('Requester');
+$file_upload_obj->getimageproperty($requester_pic,$requester_pic_tmp,$requester_pic_type,$requester_pic_size,$requester_pic_size_value);
+$file_upload_process=$file_upload_obj->file_error_test();
+if($file_upload_process=="Success"){
+
+}
+
+else{
+	
+	 return $file_upload_process;
+}
+
+}
+// if image not send by user
+else{
+	$requester_pic=$_POST['requester_old_image'];
+}
+
+// code image upload end here
+$id=$_POST['id'];
+$requester_name=Common::remove_sql_injection((isset($_POST['requester_name'])) ? $_POST['requester_name'] : null);
+$requester_last_name=Common::remove_sql_injection((isset($_POST['requester_last_name'])) ? $_POST['requester_last_name'] : null);
+$title=Common::remove_sql_injection((isset($_POST['title'])) ? $_POST['title'] : null);
+$phone_number=Common::remove_sql_injection((isset($_POST['phone_number'])) ? $_POST['phone_number'] : null);
+$mobile_number=Common::remove_sql_injection((isset($_POST['mobile_number'])) ? $_POST['mobile_number'] : null);
+$location_id=Common::remove_sql_injection((isset($_POST['location_id'])) ? $_POST['location_id'] : null);
+$department_id=Common::remove_sql_injection((isset($_POST['department_id'])) ? $_POST['department_id'] : null);
+$reporting_manager=Common::remove_sql_injection((isset($_POST['reporting_manager_id'])) ? $_POST['reporting_manager_id'] : null);
+$address=Common::remove_sql_injection((isset($_POST['address'])) ? $_POST['address'] : null);
+$backgroung_information=Common::remove_sql_injection((isset($_POST['backgroung_information'])) ? $_POST['backgroung_information'] : null);
+$requester_email=(isset($_POST['requester_email']) ? $_POST['requester_email'] : null);
+if($requester_email!=null){
+
+$chk="";  
+foreach($requester_email as $chk1)  
+   {  
+      $chk .= $chk1.",";  
+   }  
+
+}
+else{
+	$chk="";
+}
+
+$add_query="update requesters set first_name='$requester_name',last_name='$requester_last_name',title='$title',email='$chk',phone_no='$phone_number',mobile_number='$mobile_number',department_id='$department_id',reporting_manager_id='$reporting_manager',address='$address',location_id='$location_id',background_information='$backgroung_information',requester_image='$requester_pic',created_at=now() where id='$id'";
+$run_qry=Common::InsertData($add_query);
+if($run_qry){
+return "Requester Updated Successfully";
+}
+
+}
+
+
+
 }
 
 
@@ -128,5 +265,29 @@ if(isset($_POST['update_location'])){
 UpdateAssets::UpdateLocation();
 echo Common::SuccessDailog('  Location Updated ');
 }
+
+if(isset($_POST['agent_name'])){
+$obj=UpdateAssets::UpdateAgent();
+if($obj=="Agent Updated Successfully"){
+echo $obj;
+}
+else{
+	echo Common::SuccessDailog($obj);
+}
+}
+
+
+if(isset($_POST['requester_name'])){
+$obj=UpdateAssets::UpdateRequester();
+if($obj=="Requester Updated Successfully"){
+echo $obj;
+}
+else{
+	echo Common::SuccessDailog($obj);
+}
+}
+
+
+
 
 ?>

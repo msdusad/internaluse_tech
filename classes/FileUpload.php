@@ -49,47 +49,6 @@ if (file_exists($this->create_directory_name)) {
 
   }
 
-  public function file_error_test(){
-
-
-     $this->image_var=$this->create_directory_name.$this->image_name;
-
-$imagetype_check=$this->imagetype();
-if($imagetype_check==1){
-
-      $rename_file_check=$this->renamefile();
-      if($rename_file_check==1){
-
- $upload_size_file_check=$this->filesize();
-
-
-if($upload_size_file_check==1){
-  $upload_file_check=$this->uploadfile();
-return "Success";
-}
-
-else{
-
-  return "File Size Too Large";
-}
-
-
-      }
-      else{
-
-        return "File Rename Error";
-      }
-
-    }
-
-    else{
-
-      return "Invalid Image Type";
-    }
-
-
-
-  }
 
 	public  function imagetype(){
  $allowedExts = array("gif", "jpeg", "jpg", "png");
@@ -142,6 +101,51 @@ else{
 move_uploaded_file($this->image_name_tmp,$this->image_var);
 
 	}
+
+public function file_error_test(){
+
+
+     $this->image_var=$this->create_directory_name.$this->image_name;
+
+$imagetype_check=$this->imagetype();
+if($imagetype_check==1){
+
+      $rename_file_check=$this->renamefile();
+      if($rename_file_check==1){
+
+ $upload_size_file_check=$this->filesize();
+
+
+if($upload_size_file_check==1){
+  $upload_file_check=$this->uploadfile();
+return "Success";
+}
+
+else{
+
+  return "File Size Too Large";
+}
+
+
+      }
+      else{
+
+        return "File Already Exists";
+      }
+
+    }
+
+    else{
+
+      return "Invalid Image Type";
+    }
+
+
+
+  }
+
+
+
 
 }
 

@@ -30,7 +30,16 @@ foreach ($agent_obj as $agent_val) ?>
 					    <div class="bgProfile">
 
 						    <div class="panel-body text-center border-bottom">
-					            <p><img src="<?php echo IMAGE_ROOT;?>green.png" alt="green"></p>
+					            <p><img class="img-responsive" src=<?php  
+$pic=$agent_val['agent_pic'];
+if($pic!=''){
+ echo "../docs/".$_SESSION['userid']."/Agent/".$pic;
+}
+else{
+                echo IMAGE_ROOT."profile_blank_thumb.gif";
+
+                 }
+              ?> alt="green"></p>
 						        <h1 class="h3 margin-top-20"><?php echo $agent_val['name'];?></h1>
 								<span class="text-gray"><!-- abc --></span>
 							</div>

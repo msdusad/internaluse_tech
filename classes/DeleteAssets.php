@@ -76,6 +76,37 @@ return 'Deleted Sucessfully';
  
 }
 
+
+
+public  function DeleteAgent(){
+
+$id=Common::remove_sql_injection($_POST['id']);
+
+$add_query="delete from  agents where id='$id'";
+$run_qry=Common::InsertData($add_query);
+if($run_qry){
+return 'Deleted Sucessfully';
+}
+ 
+}
+
+
+
+
+public  function DeleteRequester(){
+
+$id=Common::remove_sql_injection($_POST['id']);
+
+$add_query="delete from  requesters where id='$id'";
+$run_qry=Common::InsertData($add_query);
+if($run_qry){
+return 'Deleted Sucessfully';
+}
+ 
+}
+
+
+
 }
 
 
@@ -101,6 +132,18 @@ echo Common::SuccessDailog('  Group Deleted ');
 if(isset($_POST['delete_location'])){
 DeleteAssets::DeleteLocation();
 echo Common::SuccessDailog('  Location Deleted ');
+}
+
+
+if(isset($_POST['delete_agent'])){
+DeleteAssets::DeleteAgent();
+echo Common::SuccessDailog('  Agent Deleted ');
+}
+
+
+if(isset($_POST['delete_requester'])){
+DeleteAssets::DeleteRequester();
+echo Common::SuccessDailog('  Requester Deleted ');
 }
 
 ?>

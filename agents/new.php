@@ -15,14 +15,20 @@
 				  <div class="col-lg-12">
 				  <div class="row affix-top" style="background:#fff;" data-spy="affix" data-offset-top="197">
              <p id="res"></p>
-                 <form id="form" enctype="multipart/form-data">
+                
 
                   <div class="col-lg-7 padding-top-10"> <a href="<?php echo WEB_ROOT;?>agents/index.php" class="h4"><i class="icon-left-small"></i>Back to Contracts</a> </div>
-                  <div class="col-lg-5 text-right MrTpMd-10"> <a href="<?php echo WEB_ROOT;?>agents/index.php" class="btn btn-danger btn-round">Cancel</a>
+                  <div class="col-lg-5 text-right MrTpMd-10"> 
+
+                  
+                  <a href="<?php echo WEB_ROOT;?>agents/index.php" class="btn btn-danger btn-round">Cancel</a>
+                     <form id="form" enctype="multipart/form-data">
                     <div class="btn-group">
-                      <button id="showResults" value="Save" data-inline="true" data-rel="back"  name="add_agent" class="btn btn-dark btn-round">Save</button>
+                       
+                     <!--  <button id="showResults" value="Save" data-inline="true" data-rel="back"  name="add_agent" class="btn btn-dark btn-round">Save</button> -->
                     </div>
-                     <input type="submit" value="Submit">
+
+                     <input type="submit" value="Save" data-inline="true" data-rel="back"  name="add_agent" class="btn btn-dark btn-round">
                   </div>
 				 </div> 
 				 </div>
@@ -36,7 +42,7 @@
                   <div class="col-sm-4 col-xs-12 padding-bottom-10">
                      <div class="bgProfile">
 						<div class="panel-body ">
-							<p><img src="<?php echo IMAGE_ROOT;?>profile_blank_thumb.gif" id="output"  alt="profile" class="pull-left profilePic">
+							<p><img src="<?php echo IMAGE_ROOT;?>profile_blank_thumb.gif" id="output"  alt="profile" class="pull-left profilePic img-responsive">
 
 							<div class="clearfix"></div>
 							</p>
@@ -133,8 +139,8 @@ echo   '<option value="'.$view_loc_object["id"].'">'.$view_loc_object["location_
 								<li><a href="#">Unlink</a></li>
 							  </ul>
 							</div> -->
-							<div id="editor" class="editor-wrapper placeholderText" contenteditable="true"></div>
-							<textarea name="signature" id="descr" style="display:none;"></textarea>
+							
+							<textarea name="signature" id="descr" style="width:100%; border:#ccc solid 1px; height: 130px;"></textarea>
 						  <!--end-->
 						</div>
 						<h4 class="h4 padding-top-10 weight-600">Roles and Scope</h4>
@@ -244,15 +250,15 @@ echo   '<option value="'.$view_loc_object["id"].'">'.$view_loc_object["location_
 </html>
 <script>
 $(document).ready(function(){
-$('#form#form').click(function(event) {
-   var agent_name=$("#agent_name").val();
+$('#form').click(function(event) {
+   var agent_name=$("#agent_name").val() ;
   if(agent_name==''){
     alert('Please Fill Agent Name');
 return false;
   }
  event.preventDefault();
   var formData = new FormData($(this)[0]);
-var post = $('#form').serialize(); 
+//var post = $('#form').serialize(); 
 $.ajax({
         type: "post",
         url: "../classes/AddAssets",
@@ -261,9 +267,15 @@ $.ajax({
     cache: false,
     contentType: false,
     processData: false,
-        success: function(html)
+        success: function(result)
             {
-$("#res").html(html);
+$("#res").html(result);
+
+if(result=="Agent Added Successfully"){
+  alert(result);
+ document.getElementById("form").reset();
+ window.location.href="index.php";
+}
            
                 }
         });
@@ -271,9 +283,5 @@ $("#res").html(html);
  });
 
  });
-
-
-// 
-
 
  </script>

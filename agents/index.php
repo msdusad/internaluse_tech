@@ -45,11 +45,20 @@
 $agent_obj=Assets::Agents('');
 if($agent_obj!=''){
 foreach ($agent_obj as $agent_val) {
- 
+ $pic=$agent_val['agent_pic'];
 echo '
    <tr>
         <td width="40">
-                 <img src="'.IMAGE_ROOT.'profile_blank_thumb.gif" width="40" alt="" class="img-circle">
+                 <img src="';
+if($pic!=""){
+ echo "../docs/".$_SESSION['userid']."/Agent/".$agent_val['agent_pic'];
+}
+else{
+                echo IMAGE_ROOT."profile_blank_thumb.gif";
+
+                 }
+
+                 echo ' " width="40" alt="" class="img-circle">
               </td>
               <td>
                  <p><strong><a href="'.WEB_ROOT.'agents/profile.php?id='.$agent_val["id"].'" >'.$agent_val["name"].'</a> </strong><br>
@@ -66,6 +75,7 @@ echo '
               </td>
               <td>
               <a href="'.WEB_ROOT.'agents/edit.php?id='.$agent_val["id"].'" class="btn btn-default btn-xs">Edit</a>
+              <a href="#delete" data-toggle="modal" data-target="#delete" class="btn btn-default btn-xs"><i class="icon-trash"></i></a
               </td>
                 </tr>';
 

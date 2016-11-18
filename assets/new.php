@@ -114,13 +114,13 @@ echo   '<option value="'.$view_loc_object["id"].'">'.$view_loc_object["location_
               <div class="row">
                   <div class="col-sm-6 col-xs-12 padding-bottom-10">
                   <label>Used By <span class="text-red">*</span></label>
-                  <select class="form-control" name="managed_by_id">
+                  <select class="form-control" name="used_by">
               <?php
               // put here  requestor data 
               
-          $agent_object=Assets::Agents();
-          foreach ($agent_object as $view_agent) {
-          echo   '<option value="'.$view_agent["id"].'">'.$view_agent["name"].'</option>';
+          $requester_object=Assets::Requester('');
+          foreach ($requester_object as $view_requester) {
+          echo   '<option value="'.$view_requester["id"].'">'.$view_requester["first_name"]." ".$view_requester["last_name"].'</option>';
           }
           ?>
                   </select>

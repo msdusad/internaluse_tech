@@ -11,9 +11,15 @@
           <div class="x_panel tile">
             <div class="x_title">
               <div class="row">
-                  <div class="col-lg-7 col-xs-12 h4"><a href="<?php echo WEB_ROOT;?>requester/index.php"><i class="icon-left-small"></i>Back to Changes</a></div>
+
+              	<?php require_once("../classes/Include_all.php");   
+$requester_obj=Assets::Requester($_GET['id']);
+foreach ($requester_obj as $requester_val) ?>
+
+
+                  <div class="col-lg-7 col-xs-12 h4"><a href="<?php echo WEB_ROOT;?>requester/index.php"><i class="icon-left-small"></i>Back to Requesters</a></div>
                   <div class="col-lg-5 col-xs-12 text-right visible-sm-right-center MrTpMd-10"> 
-                     <a href="<?php echo WEB_ROOT;?>requester/edit.php" class="btn btn-round btn-dark">Edit Requester</a>
+                     <a href="<?php echo WEB_ROOT;?>requester/edit.php?id=<?php echo $requester_val['id'];?>" class="btn btn-round btn-dark">Edit Requester</a>
                   </div>
                 </div>
               <div class="clearfix"></div>
@@ -23,30 +29,36 @@
 				    <div class="col-sm-4 col-xs-12">
 					    <div class="bgProfile">
 						    <div class="panel-body text-center border-bottom">
-					            <p><img src="<?php echo IMAGE_ROOT;?>profile.gif" alt="green"></p>
-						        <h1 class="h3 margin-top-20">Account Admin</h1>
-								<span class="text-gray">abc</span>
+					            <p><img class="img-responsive" src=<?php  
+$pic=$requester_val['requester_image'];
+if($pic!=''){
+ echo "../docs/".$_SESSION['userid']."/Requester/".$pic;
+}
+else{
+                echo IMAGE_ROOT."profile_blank_thumb.gif";
+
+                 }
+              ?> alt="green"></p>
+						        <h1 class="h3 margin-top-20"><?php echo $requester_val['first_name']." ".$requester_val['last_name'];?></h1>
+							<!-- 	<span class="text-gray">abc</span> -->
 							</div>
                             <div class="panel-body ">
                                 <p>
 								    <strong>Email</strong><br>
-									account.desk@gmx.com
+									<?php echo $requester_val['email'];?>
 								</p>
 								<p>
 								    <strong>Phone</strong><br>
-									a
+									<?php echo $requester_val['phone_no'];?>
 								</p>
 								<p>
 								    <strong>Mobile</strong><br>
-									a
+									<?php echo $requester_val['mobile_number'];?>
 								</p>
-								<p>
-								    <strong>Time Zone</strong><br>
-									Chennai
-								</p>
+								
 								<p>
 								    <strong>Location</strong><br>
-									US, America
+									<?php echo $requester_val['location_id'];?>
 								</p>
                             </div> 							
 						</div>	 
@@ -79,6 +91,8 @@
 									  <td>
 										<p>
 										 Used By: --
+										 <br>
+										  put all assets here that used by him
 										</p>
 									  </td>
 									  
