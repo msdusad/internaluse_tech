@@ -18,7 +18,7 @@
 <script src="<?php echo SCRIPT_ROOT;?>users/location.js"></script>
 <script src="<?php echo SCRIPT_ROOT;?>users/location.js"></script>
 <script src="<?php echo SCRIPT_ROOT;?>jquery.datetimepicker.full.js"></script>
-
+<script src="<?php echo SCRIPT_ROOT;?>users/form_submit.js"></script>
 <script src="<?php echo SCRIPT_ROOT;?>duplicateFields.js"></script>
 
 <script>

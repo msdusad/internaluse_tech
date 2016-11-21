@@ -73,8 +73,8 @@ else{
               </p>
               </td>
               <td>
-              <a href="'.WEB_ROOT.'requester/edit.php?id='.$requester_val["id"].'" class="btn btn-default btn-xs">Edit</a>
-              <a href="#delete" data-toggle="modal" data-target="#delete" class="btn btn-default btn-xs"><i class="icon-trash"></i></a
+              <a href="'.WEB_ROOT.'requester/edit.php?id='.$requester_val["id"].'" class="btn btn-default btn-xs">Edit</a><form action="" method="post" id="'.$requester_val["id"].'" style="display:none;"><input type="hidden" name="id" value="'.$requester_val["id"].'"><input type="hidden" name="delete_requester"></form>
+            <i onclick="requester_delete_form(this.id);" id="'.$requester_val["id"].'" class="icon-trash" style="cursor:pointer;" ></i> 
               </td>
                 </tr>';
 
@@ -82,8 +82,7 @@ else{
 }
 
 }
-
-                    ?>
+?>
                       </tbody>
                     </table>
                   </div>
@@ -114,24 +113,15 @@ else{
     <?php include("../include/footer.php"); ?>
   </div>
 </div>
-<div class="modal fade" id="delete" role="dialog">
-  <div class="modal-dialog">
-    <div class="modal-content">
-      <div class="modal-header">
-        <button type="button" class="close" data-dismiss="modal">&times;</button>
-        <h3>Delete Agent</h3>
-      </div>
-      <div class="modal-body">
-	    <p>
-		   The deleted agent will be available as a requester in the service desk. Are you sure you want to proceed?
-		</p>
-      </div>
-      <div class="modal-footer">
-        <button type="button" class="btn btn-default" data-dismiss="modal">Cancel</button>
-        <button type="button" class="btn btn-dark" data-dismiss="modal">Confirm</button>
-      </div>
-    </div>
-  </div>
-</div>
+
 </body>
 </html>
+<script type="text/javascript">
+function requester_delete_form(id){
+var result = confirm("Sure Want to delete?");
+if (result) {
+document.getElementById(id).submit();
+}
+ 
+}
+</script>

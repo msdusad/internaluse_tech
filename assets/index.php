@@ -146,9 +146,13 @@ $get_all_category=$category_object->display_child_nodes(NULL, 0);
 							 </div>
 						</div>
 						<div class="col-sm-6 text-right col-xs-12 visible-sm-right-left">
-							 Showing 1 to 1 of 1  &nbsp;&nbsp;&nbsp;
-							 <button type="button" class="btn btn-default btn-round" disabled="disabled"><i class="icon-left-dir"></i></button> 
-							 <button type="button" class="btn btn-default btn-round" disabled="disabled"><i class="icon-right-dir"></i></button>
+							<?php
+					
+							$items_d=new PaginatedData("select items.id,items.display_name,assets_type.name as assets_name,location.location_name,impact.name as impact_name,department.name as department_name,agents.name as agent_name,CONCAT(requesters.first_name,' ',requesters.last_name) as requester_name from items left join assets_type on items.assets_type_id=assets_type.id left join location on items.location_id=location.id left join impact on items.impact_id=impact.id left join department on items.department_id=department.id left join agents on items.managed_by_id=agents.id left join requesters on items.used_by_id=requesters.id",'5');
+$items=$items_d->pagination_link();
+?>
+							 <!-- <button type="button" class="btn btn-default btn-round" disabled="disabled"><i class="icon-left-dir"></i></button> 
+							 <button type="button" class="btn btn-default btn-round" disabled="disabled"><i class="icon-right-dir"></i></button> -->
 						</div>
 					</div>
 
@@ -171,7 +175,6 @@ $get_all_category=$category_object->display_child_nodes(NULL, 0);
 							<tbody>
 
 								<?php
-$items=Assets::Items('');
 if($items!=''){
 foreach ($items as  $items_value){
 
@@ -180,11 +183,11 @@ echo '<tr>
 									    <input type="checkbox" id="laptop" />
 								        <label for="laptop" class="column-title"><a href="'.WEB_ROOT.'products/index.php?id='.$items_value['id'].'">'.$items_value['display_name'].'</a></label>
 									</td>
-									<td class=" ">'.$items_value['assets_type_id'].'</td>
+									<td class=" ">'.$items_value['assets_name'].'</td>
 									<td class=" ">'.$items_value['location_name'].' </td>
-									<td class=" ">'.$items_value['department_id'].' <i class="success fa fa-long-arrow-up"></i></td>
-									<td class=" ">'.$items_value['managed_by_id'].'</td>
-									<td class=" ">None</td>
+									<td class=" ">'.$items_value['department_name'].' <i class="success fa fa-long-arrow-up"></i></td>
+									<td class=" ">'.$items_value['agent_name'].'</td>
+									<td class=" ">'.$items_value['requester_name'].'</td>
 								</tr>';
 
 }
@@ -196,11 +199,7 @@ echo '<tr>
 							</tbody>
                         </table>
 
-<?php 
-$pob=new PaginatedData('select * from category','3');
-$pobj=$pob->pagination_link();
-		
-?>
+
 
 
                     </div>

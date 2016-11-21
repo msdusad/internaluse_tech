@@ -8,10 +8,11 @@
     <div class="right_col" role="main">
       <div class="row">
         <div class="col-sm-7 col-md-8 col-lg-9 col-xs-12 margin-top-10">
+          <?php require_once("../classes/Include_all.php"); ?>
           <div class="x_panel tile">
             <div class="x_title">
               <div class="row">
-                 <?php require_once("../classes/Include_all.php"); ?>
+                 
                   <div class="col-lg-7 col-xs-12 h4"><a href="<?php echo WEB_ROOT;?>admin/index.php">Admin</a></div>
                   <div class="col-lg-5 col-xs-12 text-right visible-sm-right-center MrTpMd-10"> 
                      <a href="<?php echo WEB_ROOT;?>agents/new.php" class="btn btn-round btn-dark">New Agent</a>
@@ -61,7 +62,7 @@ else{
                  echo ' " width="40" alt="" class="img-circle">
               </td>
               <td>
-                 <p><strong><a href="'.WEB_ROOT.'agents/profile.php?id='.$agent_val["id"].'" >'.$agent_val["name"].'</a> </strong><br>
+                 <p><strong><a href="'.WEB_ROOT.'agents/profile.php?id='.$agent_val["id"].'" >'.$agent_val["name"].'</a> </strong>
                 <small class="muted"></small>
                </p>
               </td>
@@ -75,7 +76,7 @@ else{
               </td>
               <td>
               <a href="'.WEB_ROOT.'agents/edit.php?id='.$agent_val["id"].'" class="btn btn-default btn-xs">Edit</a>
-              <a href="#delete" data-toggle="modal" data-target="#delete" class="btn btn-default btn-xs"><i class="icon-trash"></i></a
+          <form action="" method="post" id="'.$agent_val["id"].'" style="display:none;"><input type="hidden" name="id" value="'.$agent_val["id"].'"><input type="hidden" name="delete_agent"></form><i onclick="agent_delete_form(this.id);" id="'.$agent_val["id"].'" class="icon-trash" style="cursor:pointer;"></i>
               </td>
                 </tr>';
 

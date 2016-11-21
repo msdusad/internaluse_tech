@@ -39,3 +39,15 @@ document.getElementById(id).submit();
 }
  
 }
+
+
+function agent_delete_form(id){
+
+var result = confirm("Sure Want to delete?");
+if (result) {
+document.getElementById(id).submit();
+}
+ 
+}
+
+
