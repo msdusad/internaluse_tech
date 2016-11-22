@@ -37,7 +37,7 @@
               <div class="row">
                 <div class="col-sm-6 col-xs-12 padding-bottom-10">
                   <label>Assets Type <span class="text-red">*</span></label>
-                  <select class="form-control" name="assets_type_id">
+                  <select class="form-control" name="assets_type_id" id="assets_type_id">
                     <?php
                         $assets_object=Assets::Assets_type();
                         foreach ($assets_object as $view_assets_type) {
@@ -84,11 +84,18 @@
               <!--end-->
               
               <textarea type="text" name="description" rows="6" cols="20" style="width:100%;"></textarea>
+
+<div id="changed_div"></div>
+
+
+
+
               <p class="left_col padding-5 text-white margin-top-20">Assignment</p>
               <div class="row padding-top-10">
                 <div class="col-sm-6 col-xs-12 padding-bottom-10">
                   <label>Location <span class="text-red">*</span></label>
                   <select class="form-control" name="location_id">
+
                     <?php
 $loc_object=Assets::Location('');
 if($loc_object!=''){
@@ -158,6 +165,27 @@ echo   '<option value="'.$view_loc_object["id"].'">'.$view_loc_object["location_
 </div>
 </body>
 </html>
+
+<script type="text/javascript">
+$("#assets_type_id").change(function (){
+
+var getproperty=$("#assets_type_id").val();
+$.ajax({
+
+type:'post',
+url:'../classes/Assets',
+data:{'asset_id':getproperty},
+success:function(data){
+  $("#changed_div").html(data);
+//alert(data);
+}
+
+});
+
+
+
+});
+</script>
 
 
             

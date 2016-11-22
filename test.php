@@ -128,3 +128,150 @@ $.ajax({
  });
  </script>
 
+<!DOCTYPE html>
+<html>
+<style>
+body {
+    font-family: "Lato", sans-serif;
+}
+
+.sidenav {
+    height: 100%;
+    width: 0;
+    position: fixed;
+    z-index: 1;
+    top: 0;
+    left: 0;
+    background-color: #111;
+    overflow-x: hidden;
+    transition: 0.5s;
+    padding-top: 60px;
+}
+
+.sidenav a {
+    padding: 8px 8px 8px 32px;
+    text-decoration: none;
+    font-size: 25px;
+    color: #818181;
+    display: block;
+    transition: 0.3s
+}
+
+.sidenav a:hover, .offcanvas a:focus{
+    color: #f1f1f1;
+}
+
+.sidenav .closebtn {
+    position: absolute;
+    top: 0;
+    right: 25px;
+    font-size: 36px;
+    margin-left: 50px;
+}
+
+@media screen and (max-height: 450px) {
+  .sidenav {padding-top: 15px;}
+  .sidenav a {font-size: 18px;}
+}
+</style>
+<body>
+
+<div id="mySidenav" class="sidenav" style="float:right;">
+  <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+  <a href="#">About</a>
+  <a href="#">Services</a>
+  <a href="#">Clients</a>
+  <a href="#">Contact</a>
+</div>
+
+<h2>Animated Sidenav Example</h2>
+<p>Click on the element below to open the side navigation menu.</p>
+<span style="font-size:30px;cursor:pointer;float:right" onclick="openNav()">&#9776; open</span>
+
+<script>
+function openNav() {
+    document.getElementById("mySidenav").style.width = "250px";
+}
+
+function closeNav() {
+    document.getElementById("mySidenav").style.width = "0";
+}
+</script>
+     
+</body>
+</html>
+
+<!-- anpther one -->
+<style type="text/css">
+
+/** Style for the body **/
+ body {
+    font: 12px Tahoma, Arial, Helvetica, Sans-Serif;
+}
+/** Style for the button & div **/
+ .myButton {
+    padding: .2em 1em;
+    font-size: 1em;
+}
+.mySelect {
+    padding: .2em 0;
+    font-size: 1em;
+}
+#myDiv {
+    color:Green;
+    background-color:#eee;
+    border:2px solid #333;
+    display:none;
+    text-align:justify;
+}
+#myDiv p {
+    margin: 15px;
+    font-size: 0.917em;
+}
+/** Style for the cointainer **/
+ #body {
+    clear: both;
+    margin: 0 auto;
+    max-width: 534px;
+}
+html, body {
+    background-color:White;
+}
+hr {
+    margin-bottom:40px;
+}
+</style>
+<script type="text/javascript">
+$(".myButton").click(function () {
+
+    // Set the effect type
+    var effect = 'slide';
+
+    // Set the options for the effect type chosen
+    var options = { direction: $('.mySelect').val() };
+
+    // Set the duration (default: 400 milliseconds)
+    var duration = 500;
+
+    $('#myDiv').toggle(effect, options, duration);
+});
+</script>
+<div id="body">
+    
+<h2>Slide toggle from right to left and left to right.</h2>
+
+    <hr/>
+    <p>
+        <select class="mySelect">
+            <option value="right">Right</option>
+            <option value="left">Left</option>            
+            <option value="up">Up</option>
+            <option value="down">Down</option>
+        </select>
+        <button id="button" class="myButton">Run Effect</button>
+    </p>
+    <div id="myDiv">
+        <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.</p>
+        <p>It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters, as opposed to using 'Content here, content here', making it look like readable English. Many desktop publishing packages and web page editors now use Lorem Ipsum as their default model text, and a search for 'lorem ipsum' will uncover many web sites still in their infancy. Various versions have evolved over the years, sometimes by accident, sometimes on purpose (injected humour and the like).</p>
+    </div>
+</div>

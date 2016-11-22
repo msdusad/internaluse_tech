@@ -109,7 +109,32 @@ return $item_data;
 }
 
 
+public static function AssetsForm($var){
+	if($var==''){
+    	$item_query="SELECT * from assets_form";
+	}
+	else{
+	$item_query="select * from assets_form where id='$var'";
+	}
 
+
+$item_data=Common::FetchData($item_query);
+return $item_data;
+
+}
+
+}
+
+
+if(isset($_POST['asset_id'])){
+$data=Assets::AssetsForm($_POST['asset_id']);
+foreach ($data as  $value) {
+	# code...
+	echo $value['assets_form'];
+}
+}
+else{
+	echo "no data posted";
 }
 
 ?>

@@ -65,7 +65,7 @@ $group_name=Common::remove_sql_injection((isset($_POST['group_name'])) ? $_POST[
 $group_description=Common::remove_sql_injection((isset($_POST['group_description'])) ? $_POST['group_description'] : null);
 $group_agents=Common::remove_sql_injection((isset($_POST['group_agents'])) ? $_POST['group_agents'] : null);
 
-$add_query="insert into groups (group_name,description,agents) values ('$group_name','$group_description','$group_agents')";
+$add_query="insert into groups (group_name,description,agents_id) values ('$group_name','$group_description','$group_agents')";
 $run_qry=Common::InsertData($add_query);
 if($run_qry){
 return 'Added Sucessfully';

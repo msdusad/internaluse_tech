@@ -45,7 +45,15 @@
 				 <div class="row">
 				<div class="col-sm-12 col-xs-12">
 				 <label>Agents<span class="text-red"></span></label>
-                    <input type="text" name="group_agents" class="form-control" rows="2" placeholder="Enter agent's name" required>
+         <select name="group_agents"  class="form-control" >
+<?php
+         $agent_obj=Assets::Agents('');
+foreach ($agent_obj as $agent_val) 
+
+echo "<option value='".$agent_val["id"]."'>".$agent_val["name"]."</option>";
+  ?>
+</select>
+                   <!--  <input type="text" name="group_agents" class="form-control" rows="2" placeholder="Enter agent's name" required> -->
 				</div>
 				</div>&nbsp;
 <!-- 				<div class="row">

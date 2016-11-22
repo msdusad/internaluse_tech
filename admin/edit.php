@@ -57,7 +57,25 @@ foreach ($group_agent_obj as  $agent_value)
 <b>Agents</b>
 
 </p>
-                    <input type="text"  name="group_agents" placeholder="Agent Name" class="form-control" value="<?php echo $agent_value['agents'];?>" >
+
+ <select name="group_agents"  class="form-control" >
+<?php
+         $agent_obj=Assets::Agents('');
+foreach ($agent_obj as $agent_val) {
+
+echo "<option value='".$agent_val["id"]."' ";
+
+if($agent_value['agents_id']==$agent_val['id']){
+echo "selected";
+}
+
+echo ">".$agent_val["name"]."</option>";
+
+}
+  ?>
+</select>
+
+                  
                   </div>
                  </div>
 <!-- <div class="row padding-bottom-10">

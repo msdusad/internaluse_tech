@@ -69,7 +69,7 @@ $group_name=Common::remove_sql_injection((isset($_POST['group_name'])) ? $_POST[
 $group_description=Common::remove_sql_injection((isset($_POST['group_description'])) ? $_POST['group_description'] : null);
 $group_agents=Common::remove_sql_injection((isset($_POST['group_agents'])) ? $_POST['group_agents'] : null);
 $id=Common::remove_sql_injection((isset($_POST['id'])) ? $_POST['id'] : null);
-$add_query="update groups set group_name='$group_name',description='$group_description',agents='$group_agents' where id='$id'";
+$add_query="update groups set group_name='$group_name',description='$group_description',agents_id='$group_agents' where id='$id'";
 $run_qry=Common::InsertData($add_query);
 if($run_qry){
 return 'Updated Sucessfully';
