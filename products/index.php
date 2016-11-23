@@ -5,7 +5,7 @@
   <div class="main_container">
       <?php include("../include/top-nav.php"); ?>
     <?php include("../include/right-nav.php"); ?>
-  
+   <?php include("../classes/Include_all.php"); ?>
     <div class="right_col" role="main">
       <div class="row">
         <div class="col-sm-7 col-md-8 col-lg-9 margin-top-10">
@@ -81,62 +81,53 @@
                 <h5 class="weight-600 padding-top-5">Edit Properties</h5>
                 <label>Impact</label>
                 <select class="form-control margin-bottom-10">
-                  <option>Low</option>
-                  <option>Medium</option>
-                  <option>High</option>
+                     <?php
+                        $impact_object=Assets::Impact();
+                        foreach ($impact_object as $impact_object_view) {
+                        echo   '<option value="'.$impact_object_view["id"].'">'.$impact_object_view["name"].'</option>';
+                        }
+                        ?>
                 </select>
-                <label>Asset State</label>
-                <select class="form-control margin-bottom-10">
-                  <option>Choose option</option>
-                  <option>Option one</option>
-                  <option>Option two</option>
-                  <option>Option three</option>
-                  <option>Option four</option>
-                </select>
+              
                 <label>Location</label>
                 <div class="form-group">
                   <select class="select2_group form-control margin-bottom-10">
-                    <option selected="selected" value="">Select Location</option>
-                    <optgroup label="Alaskan/Hawaiian Time Zone">
-                    <option value="AK">Alaska</option>
-                    <option value="HI">Hawaii</option>
-                    </optgroup>
-                    <optgroup label="Pacific Time Zone">
-                    <option value="CA">California</option>
-                    <option value="NV">Nevada</option>
-                    <option value="OR">Oregon</option>
-                    <option value="WA">Washington</option>
-                    </optgroup>
-                    <optgroup label="Mountain Time Zone">
-                    <option value="AZ">Arizona</option>
-                    <option value="CO">Colorado</option>
-                    <option value="ID">Idaho</option>
-                    <option value="MT">Montana</option>
-                    <option value="NE">Nebraska</option>
-                    <option value="NM">New Mexico</option>
-                    <option value="ND">North Dakota</option>
-                    <option value="UT">Utah</option>
-                    <option value="WY">Wyoming</option>
-                    </optgroup>
+                    <?php
+                        $location_object=Assets::Location();
+                        foreach ($location_object as $location_object_view) {
+                        echo   '<option value="'.$location_object_view["id"].'">'.$location_object_view["location_name"].'</option>';
+                        }
+                        ?>
                   </select>
                 </div>
                 <label>Department</label>
                 <select class="form-control margin-bottom-10">
-                  <option>Choose Department</option>
-                  <option>Option one</option>
-                  <option>Option two</option>
-                  <option>Option three</option>
-                  <option>Option four</option>
+                     <?php
+                        $department_object=Assets::Department();
+                        foreach ($department_object as $department_object_view) {
+                        echo   '<option value="'.$department_object_view["id"].'">'.$department_object_view["name"].'</option>';
+                        }
+                        ?>
                 </select>
                 <label>Used By</label>
-                <input type="text" class="form-control margin-bottom-10" placeholder="Andrea">
+                  <select class="form-control margin-bottom-10">
+                 <?php
+                        $requesters_object=Assets::Requester();
+                        foreach ($requesters_object as $requesters_object_view) {
+                        echo   '<option value="'.$requesters_object_view["id"].'">'.$requesters_object_view["first_name"].'</option>';
+                        }
+                        ?>
+                      </select>
+
+
                 <label>Managed By</label>
                 <select class="form-control margin-bottom-10">
-                  <option>---</option>
-                  <option>Option one</option>
-                  <option>Option two</option>
-                  <option>Option three</option>
-                  <option>Option four</option>
+                     <?php
+                        $agrnts_object=Assets::Agents();
+                        foreach ($agrnts_object as $agrnts_object_view) {
+                        echo   '<option value="'.$agrnts_object_view["id"].'">'.$agrnts_object_view["name"].'</option>';
+                        }
+                        ?>
                 </select>
                 <p class="text-right">
                   <button type="button" class="btn btn-dark noBorderRadius">Update<i class="icon-angle-double-right"></i></button>
