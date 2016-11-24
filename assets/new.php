@@ -37,7 +37,8 @@
               <div class="row">
                 <div class="col-sm-6 col-xs-12 padding-bottom-10">
                   <label>Assets Type <span class="text-red">*</span></label>
-                  <select class="form-control" name="assets_type_id" id="assets_type_id">
+                  <select class="form-control" name="assets_type_id" id="assets_type_id" required>
+                    <option value="">Please Select</option>
                     <?php
                         $assets_object=Assets::Assets_type();
                         foreach ($assets_object as $view_assets_type) {
