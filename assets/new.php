@@ -169,8 +169,9 @@ echo   '<option value="'.$view_loc_object["id"].'">'.$view_loc_object["location_
 
 <script type="text/javascript">
 $("#assets_type_id").change(function (){
-
 var getproperty=$("#assets_type_id").val();
+
+if(getproperty=''){
 $.ajax({
 
 type:'post',
@@ -183,7 +184,7 @@ success:function(data){
 
 });
 
-
+}
 
 });
 </script>
