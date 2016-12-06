@@ -59,7 +59,7 @@ div.panel.show {
 </style>
 </head>
 <body>
-
+<div id="a">Mahendcer</div>
 <h2>Accordion with symbols</h2>
 <p>In this example we have added a "plus" sign to each button. When the user clicks on the button, the "plus" sign is replaced with a "minus" sign.</p>
 <button class="accordion">Section 1</button>
@@ -296,7 +296,7 @@ list($a, $b) = array($b, $a);
 echo $a;
 echo "<br>";
 echo $b;
-
+echo "<br>";
   function factorial($number) { 
 
         if ($number < 2) { 
@@ -307,80 +307,79 @@ echo $b;
             return ($number * factorial($number-1)); 
         } 
     }
-echo factorial(5);
+echo factorial(10);
 
 echo "<br>";
+$rows=10;
+$cols=3;
+echo "<table border=\"1\">";
 
-function ip_info($ip = NULL, $purpose = "location", $deep_detect = TRUE) {
-    $output = NULL;
-    if (filter_var($ip, FILTER_VALIDATE_IP) === FALSE) {
-        $ip = $_SERVER["REMOTE_ADDR"];
-        if ($deep_detect) {
-            if (filter_var(@$_SERVER['HTTP_X_FORWARDED_FOR'], FILTER_VALIDATE_IP))
-                $ip = $_SERVER['HTTP_X_FORWARDED_FOR'];
-            if (filter_var(@$_SERVER['HTTP_CLIENT_IP'], FILTER_VALIDATE_IP))
-                $ip = $_SERVER['HTTP_CLIENT_IP'];
+        for ($r =1; $r < $rows; $r++){
+
+            echo'<tr>';
+
+            for ($c = 2; $c < $cols; $c++)
+                echo '<td>' .$c*$r.'</td>';
+           echo '</tr>'; // close tr tag here
+
         }
-    }
-    $purpose    = str_replace(array("name", "\n", "\t", " ", "-", "_"), NULL, strtolower(trim($purpose)));
-    $support    = array("country", "countrycode", "state", "region", "city", "location", "address");
-    $continents = array(
-        "AF" => "Africa",
-        "AN" => "Antarctica",
-        "AS" => "Asia",
-        "EU" => "Europe",
-        "OC" => "Australia (Oceania)",
-        "NA" => "North America",
-        "SA" => "South America"
-    );
-    if (filter_var($ip, FILTER_VALIDATE_IP) && in_array($purpose, $support)) {
-        $ipdat = @json_decode(file_get_contents("http://www.geoplugin.net/json.gp?ip=" . $ip));
-        if (@strlen(trim($ipdat->geoplugin_countryCode)) == 2) {
-            switch ($purpose) {
-                case "location":
-                    $output = array(
-                        "city"           => @$ipdat->geoplugin_city,
-                        "state"          => @$ipdat->geoplugin_regionName,
-                        "country"        => @$ipdat->geoplugin_countryName,
-                        "country_code"   => @$ipdat->geoplugin_countryCode,
-                        "continent"      => @$continents[strtoupper($ipdat->geoplugin_continentCode)],
-                        "continent_code" => @$ipdat->geoplugin_continentCode
-                    );
-                    break;
-                case "address":
-                    $address = array($ipdat->geoplugin_countryName);
-                    if (@strlen($ipdat->geoplugin_regionName) >= 1)
-                        $address[] = $ipdat->geoplugin_regionName;
-                    if (@strlen($ipdat->geoplugin_city) >= 1)
-                        $address[] = $ipdat->geoplugin_city;
-                    $output = implode(", ", array_reverse($address));
-                    break;
-                case "city":
-                    $output = @$ipdat->geoplugin_city;
-                    break;
-                case "state":
-                    $output = @$ipdat->geoplugin_regionName;
-                    break;
-                case "region":
-                    $output = @$ipdat->geoplugin_regionName;
-                    break;
-                case "country":
-                    $output = @$ipdat->geoplugin_countryName;
-                    break;
-                case "countrycode":
-                    $output = @$ipdat->geoplugin_countryCode;
-                    break;
-            }
-        }
-    }
-    return $output;
-}
-echo ip_info(); // India
-echo ip_info("192.168.1.194", "Country"); 
 
-$ip = $_SERVER['REMOTE_ADDR'];
-$details = json_decode(file_get_contents("http://ipinfo.io/{$ip}"));
-echo $details; // -> "US"
-
+  echo"</table>";
 
 ?>
+<p id="view">see here</p>
+<!-- <iframe style="display:block;" id="data_iframe" width='750px' height='400px' frameborder='no' src='https://techvedic.wildapricot.org/widget/Sys/Profile'  onload='tryToEnableWACookies("https://techvedic.wildapricot.org");' ></iframe><br/>
+ -->
+<script type="text/javascript">
+$(document).ready(function(){
+    $("#view").click(function(){
+
+var aa=$("#PAGEID_18004").html();
+$("#a").html(aa);
+alert(aa);
+});
+     
+    });
+    $(document).ready(function(){
+        $.ajax(
+        {
+            //apikey-qzdvu0oe7wne7xjzj1r7zm2t9uj59y 
+           // clintid-hcvh4lyjoy
+           // secreate-aump03q1r5qnwxp6t3ph2awcdig8bd
+           //localtest
+           //tdymkjp663zeisb310vd3g14if4hnw 
+           //localtest
+           //od11sj9x8mj300ioj7glxflxrs2n3k
+            url: "https://techvedic.wildapricot.org/sys/api/v2/accounts/1/contacts/me",
+            type: "GET",
+            dataType: "json",
+            cache: false,
+            async: true,     
+            headers: { "clientId": "tdymkjp663zeisb310vd3g14if4hnw" },
+            success: function (data, textStatus, jqXhr) {     
+                //alert("Current contact id:" + data.Id + ". Contact email:" + data.Email);},
+            error: function (jqXHR, textStatus, errorThrown) {
+                //alert(textStatus + " (" + jqXHR.status + ") : " + errorThrown);}
+        });
+    });
+
+
+    $(document).ready(function(){
+        $.ajax(
+        {
+            url: "https://techvedic.wildapricot.org/sys/api/v2/accounts/1/contacts/me",
+            type: "GET",
+            dataType: "json",
+            cache: false,
+            async: true,     
+            headers: { "clientId": "localtest" },
+            success: function (data, textStatus, jqXhr) {     
+                //alert("Current contact id:" + data.Id + ". Contact email:" + data.Email);},
+            error: function (jqXHR, textStatus, errorThrown) {
+               // alert(textStatus + " (" + jqXHR.status + ") : " + errorThrown);}
+        });
+    });
+
+</script>
+
+

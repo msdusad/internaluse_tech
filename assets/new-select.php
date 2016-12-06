@@ -1221,8 +1221,3375 @@
 
               <!-- =================================== Database ::::::::::: Closed ======================================== -->
 
+
+
+              <!-- =================================== DataCenter ::::::::::: Start ======================================== -->
+
+              <div class="accordion-down">
+                <div class="accordion" id="accordion" role="tablist" >
+                  <div class="panel"> <a class="panel-heading" role="tab" id="heading17" data-toggle="collapse" href="#collapse17" aria-expanded="true" aria-controls="collapse17">
+                    <h4 class="panel-title">HardwareProperties</h4>
+                    </a>
+                    <div id="collapse17" class="panel-collapse collapse in padding-top-10 padding-bottom-20" role="tabpanel" aria-labelledby="heading17">
+                      <div class="row padding-top-10">
+                        <div class="col-sm-6 col-xs-6 padding-bottom-10">
+                          <label>Product&nbsp;&nbsp;/&nbsp;<a href="#new-pro" data-toggle="modal" data-target="#new-pro"><i class="icon-plus-circled"></i>Add New Product</a></label>
+                          <select class="form-control">
+                            <option>Choose option</option>
+                            <option>Option one</option>
+                            <option>Option two</option>
+                            <option>Option three</option>
+                            <option>Option four</option>
+                        </select>
+                        </div>
+                        <div class="col-sm-6 col-xs-6 padding-bottom-10">
+                          <label>Vendor</label>
+                           <select class="form-control">
+                            <option>Choose option</option>
+                            <option>Option one</option>
+                            <option>Option two</option>
+                            <option>Option three</option>
+                            <option>Option four</option>
+                        </select>
+                        </div>
+                      </div>
+                      <div class="row">
+                        <div class="col-sm-6 col-xs-6 padding-bottom-10">
+                          <label>Cost</label>
+                          <input type="text" name="display_name" class="form-control" required>
+                        </div>
+                        <div class="col-sm-6 col-xs-6 padding-bottom-10">
+                          <div class="row">
+                             <div class="col-sm-6 col-xs-6">
+                                <label>Warranty</label>
+                                <select class="form-control">
+                                    <option>0 Yrs</option>
+                                    <option>1</option>
+                                    <option>2</option>
+                                    <option>3</option>
+                                    <option>4</option>
+                                </select>
+                             </div>
+                             <div class="col-sm-6 col-xs-6">
+                                <label>&nbsp;</label>
+                                <select class="form-control">
+                                    <option>0 Months</option>
+                                    <option>1</option>
+                                    <option>2</option>
+                                    <option>3</option>
+                                    <option>4</option>
+                                </select>
+                             </div>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="row">
+                        <div class="col-sm-6 col-xs-6 padding-bottom-10">
+                          <label>Acquisition Date</label>
+                          <input type="text" name="assign_date" class="form-control" id="datetimepicker_dark"/>
+                        </div>
+                        <div class="col-sm-6 col-xs-6 padding-bottom-10">
+                          <label>Warranty Expiry Date</label>
+                          <input type="text" name="assign_date" class="form-control" id="datetimepicker_dark"/>
+                        </div>
+                      </div>
+                      <div class="row">
+                        <div class="col-sm-6 col-xs-6 padding-bottom-10">
+                          <label>Domain</label>
+                          <select class="form-control">
+                                    <option>Choose Option</option>
+                                    <option>Option</option>
+                                    <option>Option</option>
+                                    <option>Option</option>
+                                    <option>Option</option>
+                                </select>
+                        </div>
+                        <div class="col-sm-6 col-xs-6 padding-bottom-10">
+                          <label>Asset State</label>
+                          <select class="form-control">
+                                    <option>In Stoke</option>
+                                    <option>In Transit</option>
+                                    <option>In Use</option>
+                                    <option>Missing</option>
+                                    <option>Retired</option>
+                                </select>
+                        </div>
+                        
+                      </div>
+                      
+                      <div class="row">
+                        <div class="col-sm-6 col-xs-6 padding-bottom-10">
+                          <label>Asset Tag</label>
+                          <input type="text" name="last-audit-date" id="last-audit-date"  class="form-control" id="datetimepicker_dark"/>
+                        </div>
+                        <div class="col-sm-6 col-xs-6 padding-bottom-10">
+                          <label>Serial Number</label>
+                          <input type="text" name="assign_date" class="form-control" id="datetimepicker_dark"/>
+                        </div>
+
+                      </div>
+
+                      <div class="row">
+                        <div class="col-sm-6 col-xs-6 padding-bottom-10">
+                          <label>Last Audit Date</label>
+                          <input type="text" name="assign_date" class="form-control" id="datetimepicker_dark"/>
+                        </div>
+                        
+                      </div>
+                    </div>
+                  </div>
+                 
+                </div>
+              </div>
+
+
+              <!-- =================================== DataCenter ::::::::::: Closed ======================================== -->
+
+
+              <!-- =================================== Desktop ::::::::::: Start ======================================== -->
+
+                  <div class="accordion-down">
+                <div class="accordion padding-top-30" id="accordion" role="tablist" >
+                  <div class="panel"> <a class="panel-heading" role="tab" id="heading18" data-toggle="collapse" href="#collapse18" aria-expanded="true" aria-controls="collapse18">
+                    <h4 class="panel-title">HardwareProperties</h4>
+                    </a>
+                    <div id="collapse18" class="panel-collapse collapse in padding-top-10 padding-bottom-20" role="tabpanel" aria-labelledby="heading18">
+                      <div class="row padding-top-10">
+                        <div class="col-sm-6 col-xs-6 padding-bottom-10">
+                          <label>Product&nbsp;&nbsp;/&nbsp;<a href="#new-pro" data-toggle="modal" data-target="#new-pro"><i class="icon-plus-circled"></i>Add New Product</a></label>
+                          <select class="form-control">
+                            <option>Choose option</option>
+                            <option>Option one</option>
+                            <option>Option two</option>
+                            <option>Option three</option>
+                            <option>Option four</option>
+                        </select>
+                        </div>
+                        <div class="col-sm-6 col-xs-6 padding-bottom-10">
+                          <label>Vendor</label>
+                           <select class="form-control">
+                            <option>Choose option</option>
+                            <option>Option one</option>
+                            <option>Option two</option>
+                            <option>Option three</option>
+                            <option>Option four</option>
+                        </select>
+                        </div>
+                      </div>
+                      <div class="row">
+                        <div class="col-sm-6 col-xs-6 padding-bottom-10">
+                          <label>Cost</label>
+                          <input type="text" name="display_name" class="form-control" required>
+                        </div>
+                        <div class="col-sm-6 col-xs-6 padding-bottom-10">
+                          <div class="row">
+                             <div class="col-sm-6 col-xs-6">
+                                <label>Warranty</label>
+                                <select class="form-control">
+                                    <option>0 Yrs</option>
+                                    <option>1</option>
+                                    <option>2</option>
+                                    <option>3</option>
+                                    <option>4</option>
+                                </select>
+                             </div>
+                             <div class="col-sm-6 col-xs-6">
+                                <label>&nbsp;</label>
+                                <select class="form-control">
+                                    <option>0 Months</option>
+                                    <option>1</option>
+                                    <option>2</option>
+                                    <option>3</option>
+                                    <option>4</option>
+                                </select>
+                             </div>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="row">
+                        <div class="col-sm-6 col-xs-6 padding-bottom-10">
+                          <label>Acquisition Date</label>
+                          <input type="text" name="assign_date" class="form-control" id="datetimepicker_dark"/>
+                        </div>
+                        <div class="col-sm-6 col-xs-6 padding-bottom-10">
+                          <label>Warranty Expiry Date</label>
+                          <input type="text" name="assign_date" class="form-control" id="datetimepicker_dark"/>
+                        </div>
+                      </div>
+                      <div class="row">
+                        <div class="col-sm-6 col-xs-6 padding-bottom-10">
+                          <label>Domain</label>
+                          <select class="form-control">
+                                    <option>Choose Option</option>
+                                    <option>Option</option>
+                                    <option>Option</option>
+                                    <option>Option</option>
+                                    <option>Option</option>
+                                </select>
+                        </div>
+                        <div class="col-sm-6 col-xs-6 padding-bottom-10">
+                          <label>Asset State</label>
+                          <select class="form-control">
+                                    <option>In Stoke</option>
+                                    <option>In Transit</option>
+                                    <option>In Use</option>
+                                    <option>Missing</option>
+                                    <option>Retired</option>
+                                </select>
+                        </div>
+                        
+                      </div>
+                      
+                      <div class="row">
+                        <div class="col-sm-6 col-xs-6 padding-bottom-10">
+                          <label>Asset Tag</label>
+                          <input type="text" name="last-audit-date" id="last-audit-date"  class="form-control" id="datetimepicker_dark"/>
+                        </div>
+                        <div class="col-sm-6 col-xs-6 padding-bottom-10">
+                          <label>Serial Number</label>
+                          <input type="text" name="assign_date" class="form-control" id="datetimepicker_dark"/>
+                        </div>
+
+                      </div>
+
+                      <div class="row">
+                        <div class="col-sm-6 col-xs-6 padding-bottom-10">
+                          <label>Last Audit Date</label>
+                          <input type="text" name="assign_date" class="form-control" id="datetimepicker_dark"/>
+                        </div>
+                        
+                      </div>
+                    </div>
+                  </div>
+
+
+                  <div class="panel"> <a class="panel-heading" role="tab" id="headingTwo" data-toggle="collapse" href="#collapseTwo" aria-expanded="true" aria-controls="collapseTwo">
+                    <h4 class="panel-title">ComputerProperties</h4>
+                    </a>
+                    <div id="collapseTwo" class="panel-collapse collapse in padding-top-10 padding-bottom-20" role="tabpanel" aria-labelledby="headingTwo">
+                      <div class="row padding-top-10">
+                        <div class="col-sm-6 col-xs-6 padding-bottom-10">
+                          <label>OS</label>
+                          <select class="form-control">
+                            <option>.....</option>
+                            <option>Option one</option>
+                            <option>Option two</option>
+                            <option>Option three</option>
+                            <option>Option four</option>
+                          </select>
+                        </div>
+                        <div class="col-sm-6 col-xs-6 padding-bottom-10">
+                          <label>OS Version</label>
+                          <input type="text" name="os-service" id="os-service" class="form-control" required>
+                        </div>
+                      </div>
+                      <div class="row padding-top-10">
+                        <div class="col-sm-6 col-xs-6 padding-bottom-10">
+                          <label>OS Service Pack</label>
+                          <input type="text" name="os-service" id="os-service" class="form-control" required>
+                        </div>
+                        <div class="col-sm-6 col-xs-6 padding-bottom-10">
+                          <label>Memory(GB)</label>
+                          <input type="text" name="os-service" id="os-service" class="form-control" required>
+                        </div>
+                        
+                      </div>
+
+                      <div class="row padding-top-10">
+                        <div class="col-sm-6 col-xs-6 padding-bottom-10">
+                          <label>Disk Space (GB)</label>
+                          <input type="text" name="os-service" id="os-service" class="form-control" required>
+                        </div>
+                        <div class="col-sm-6 col-xs-6 padding-bottom-10">
+                          <label>CPU Speed(GHz)</label>
+                          <input type="text" name="os-service" id="os-service" class="form-control" required>
+                        </div>
+                        
+                      </div>
+                      
+                      <div class="row padding-top-10">
+                        <div class="col-sm-6 col-xs-6 padding-bottom-10">
+                          <label>CPU Core Count</label>
+                          <input type="text" name="os-service" id="os-service" class="form-control" required>
+                        </div>
+                        <div class="col-sm-6 col-xs-6 padding-bottom-10">
+                          <label>MAC Address</label>
+                          <input type="text" name="os-service" id="os-service" class="form-control" required>
+                        </div>
+                        
+                      </div>
+
+                      <div class="row padding-top-10">
+                        <div class="col-sm-6 col-xs-6 padding-bottom-10">
+                          <label>UUID</label>
+                          <input type="text" name="os-service" id="os-service" class="form-control" required>
+                        </div>
+                        <div class="col-sm-6 col-xs-6 padding-bottom-10">
+                          <label>Hostname</label>
+                          <input type="text" name="os-service" id="os-service" class="form-control" required>
+                        </div>
+                        
+                      </div>                      
+                      
+                     
+                    </div>
+                  </div>
+                 
+                </div>
+              </div>
+
+
+
+              <!-- =================================== Desktop ::::::::::: Closed ======================================== -->
+
+
+
+              <!-- =================================== Disk ::::::::::: Start ======================================== -->
+
+                <div class="accordion-down">
+                <div class="accordion" id="accordion" role="tablist" >
+                  <div class="panel"> <a class="panel-heading" role="tab" id="heading19" data-toggle="collapse" href="#collapse19" aria-expanded="true" aria-controls="collapse19">
+                    <h4 class="panel-title">HardwareProperties</h4>
+                    </a>
+                    <div id="collapse19" class="panel-collapse collapse in padding-top-10 padding-bottom-20" role="tabpanel" aria-labelledby="heading19">
+                      <div class="row padding-top-10">
+                        <div class="col-sm-6 col-xs-6 padding-bottom-10">
+                          <label>Product&nbsp;&nbsp;/&nbsp;<a href="#new-pro" data-toggle="modal" data-target="#new-pro"><i class="icon-plus-circled"></i>Add New Product</a></label>
+                          <select class="form-control">
+                            <option>Choose option</option>
+                            <option>Option one</option>
+                            <option>Option two</option>
+                            <option>Option three</option>
+                            <option>Option four</option>
+                        </select>
+                        </div>
+                        <div class="col-sm-6 col-xs-6 padding-bottom-10">
+                          <label>Vendor</label>
+                           <select class="form-control">
+                            <option>Choose option</option>
+                            <option>Option one</option>
+                            <option>Option two</option>
+                            <option>Option three</option>
+                            <option>Option four</option>
+                        </select>
+                        </div>
+                      </div>
+                      <div class="row">
+                        <div class="col-sm-6 col-xs-6 padding-bottom-10">
+                          <label>Cost</label>
+                          <input type="text" name="display_name" class="form-control" required>
+                        </div>
+                        <div class="col-sm-6 col-xs-6 padding-bottom-10">
+                          <div class="row">
+                             <div class="col-sm-6 col-xs-6">
+                                <label>Warranty</label>
+                                <select class="form-control">
+                                    <option>0 Yrs</option>
+                                    <option>1</option>
+                                    <option>2</option>
+                                    <option>3</option>
+                                    <option>4</option>
+                                </select>
+                             </div>
+                             <div class="col-sm-6 col-xs-6">
+                                <label>&nbsp;</label>
+                                <select class="form-control">
+                                    <option>0 Months</option>
+                                    <option>1</option>
+                                    <option>2</option>
+                                    <option>3</option>
+                                    <option>4</option>
+                                </select>
+                             </div>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="row">
+                        <div class="col-sm-6 col-xs-6 padding-bottom-10">
+                          <label>Acquisition Date</label>
+                          <input type="text" name="assign_date" class="form-control" id="datetimepicker_dark"/>
+                        </div>
+                        <div class="col-sm-6 col-xs-6 padding-bottom-10">
+                          <label>Warranty Expiry Date</label>
+                          <input type="text" name="assign_date" class="form-control" id="datetimepicker_dark"/>
+                        </div>
+                      </div>
+                      <div class="row">
+                        <div class="col-sm-6 col-xs-6 padding-bottom-10">
+                          <label>Domain</label>
+                          <select class="form-control">
+                                    <option>Choose Option</option>
+                                    <option>Option</option>
+                                    <option>Option</option>
+                                    <option>Option</option>
+                                    <option>Option</option>
+                                </select>
+                        </div>
+                        <div class="col-sm-6 col-xs-6 padding-bottom-10">
+                          <label>Asset State</label>
+                          <select class="form-control">
+                                    <option>In Stoke</option>
+                                    <option>In Transit</option>
+                                    <option>In Use</option>
+                                    <option>Missing</option>
+                                    <option>Retired</option>
+                                </select>
+                        </div>
+                        
+                      </div>
+                      
+                      <div class="row">
+                        <div class="col-sm-6 col-xs-6 padding-bottom-10">
+                          <label>Asset Tag</label>
+                          <input type="text" name="last-audit-date" id="last-audit-date"  class="form-control" id="datetimepicker_dark"/>
+                        </div>
+                        <div class="col-sm-6 col-xs-6 padding-bottom-10">
+                          <label>Serial Number</label>
+                          <input type="text" name="assign_date" class="form-control" id="datetimepicker_dark"/>
+                        </div>
+
+                      </div>
+
+                      <div class="row">
+                        <div class="col-sm-6 col-xs-6 padding-bottom-10">
+                          <label>Last Audit Date</label>
+                          <input type="text" name="assign_date" class="form-control" id="datetimepicker_dark"/>
+                        </div>
+                        
+                      </div>
+                    </div>
+                  </div>
+
+
+                  <div class="panel"> <a class="panel-heading" role="tab" id="headingTwo" data-toggle="collapse" href="#collapseTwo" aria-expanded="true" aria-controls="collapseTwo">
+                    <h4 class="panel-title">ComputerProperties</h4>
+                    </a>
+                    <div id="collapseTwo" class="panel-collapse collapse in padding-top-10 padding-bottom-20" role="tabpanel" aria-labelledby="headingTwo">
+                      <div class="row padding-top-10">
+                        <div class="col-sm-6 col-xs-6 padding-bottom-10">
+                          <label>Drive Type</label>
+                          <select class="form-control">
+                            <option>.....</option>
+                            <option>Option one</option>
+                            <option>Option two</option>
+                            <option>Option three</option>
+                            <option>Option four</option>
+                          </select>
+                        </div>
+                        <div class="col-sm-6 col-xs-6 padding-bottom-10">
+                          <label>Disk Space(GB) </label>
+                          <input type="text" name="os-service" id="os-service" class="form-control" required>
+                        </div>
+                      </div>
+                      <div class="row padding-top-10">
+                        <div class="col-sm-6 col-xs-6 padding-bottom-10">
+                          <label>Free Space(GB)</label>
+                          <input type="text" name="os-service" id="os-service" class="form-control" required>
+                        </div>
+                        <div class="col-sm-6 col-xs-6 padding-bottom-10">
+                          <label>Free Space Checked On</label>
+                          <input type="text" name="os-service" id="os-service" class="form-control" required>
+                        </div>
+                        
+                      </div>
+
+                    </div>
+                  </div>
+                 
+                </div>
+              </div>
+
+              <!-- =================================== Disk ::::::::::: Closed ======================================== -->
+
+
+              <!-- =================================== Document ::::::::::: Start ======================================== -->
+
+                  <div class="accordion-down">
+                <div class="accordion" id="accordion" role="tablist" >
+                  <div class="panel"> <a class="panel-heading" role="tab" id="heading20" data-toggle="collapse" href="#collapse20" aria-expanded="true" aria-controls="collapse20">
+                    <h4 class="panel-title">DocumentProperties</h4>
+                    </a>
+                    <div id="collapse20" class="panel-collapse collapse in padding-top-10 padding-bottom-20" role="tabpanel" aria-labelledby="heading20">
+                      <div class="row padding-top-10">
+                        <div class="col-sm-6 col-xs-6 padding-bottom-10">
+                          <label>Status</label>
+                          <select class="form-control">
+                            <option>Choose option</option>
+                            <option>Option one</option>
+                            <option>Option two</option>
+                            <option>Option three</option>
+                            <option>Option four</option>
+                        </select>
+                        </div>
+                        <div class="col-sm-6 col-xs-6 padding-bottom-10">
+                          <label>Type</label>
+                           <select class="form-control">
+                            <option>Choose option</option>
+                            <option>Option one</option>
+                            <option>Option two</option>
+                            <option>Option three</option>
+                            <option>Option four</option>
+                        </select>
+                        </div>
+                      </div>
+                      <div class="row">
+                        <div class="col-sm-6 col-xs-6 padding-bottom-10">
+                          <label>Version</label>
+                          <input type="text" name="display_name" class="form-control" required>
+                        </div>
+                        
+                      </div>
+                      
+                    </div>
+                  </div>
+
+                 
+                </div>
+              </div>
+
+
+              <!-- =================================== Document ::::::::::: Closed ======================================== -->
+
+
+              <!-- =================================== EBS ::::::::::: Start ======================================== -->
+
+                  <div class="accordion-down">
+                <div class="accordion" id="accordion" role="tablist" >
+                  <div class="panel"> <a class="panel-heading" role="tab" id="heading21" data-toggle="collapse" href="#collapse21" aria-expanded="true" aria-controls="collapse21">
+                    <h4 class="panel-title">CloudProperties</h4>
+                    </a>
+                    <div id="collapse21" class="panel-collapse collapse in padding-top-10 padding-bottom-20" role="tabpanel" aria-labelledby="heading21">
+                      
+                      <div class="row">
+                        <div class="col-sm-6 col-xs-6 padding-bottom-10">
+                          <label>Cost</label>
+                          <input type="text" name="display_name" class="form-control" required>
+                        </div>
+                        <div class="col-sm-6 col-xs-6 padding-bottom-10">
+                          <label>Last Audit Date</label>
+                          <input type="text" name="assign_date" class="form-control" id="datetimepicker_dark"/>
+                        </div>
+                      </div>
+                      
+                      
+                      
+                      
+                    </div>
+                  </div>
+                  <div class="panel"> <a class="panel-heading" role="tab" id="headingTwo" data-toggle="collapse" href="#collapseTwo" aria-expanded="true" aria-controls="collapseTwo">
+                    <h4 class="panel-title">AWSProperties</h4>
+                    </a>
+                    <div id="collapseTwo" class="panel-collapse collapse in padding-top-10 padding-bottom-20" role="tabpanel" aria-labelledby="headingTwo">
+                      <div class="row padding-top-10">
+                        <div class="col-sm-6 col-xs-6 padding-bottom-10">
+                          <label>Account</label>
+                          <select class="form-control">
+                            <option>.....</option>
+                            <option>Option one</option>
+                            <option>Option two</option>
+                            <option>Option three</option>
+                            <option>Option four</option>
+                          </select>
+                        </div>
+                        <div class="col-sm-6 col-xs-6 padding-bottom-10">
+                          <label>Region</label>
+                          <select class="form-control">
+                            <option>.....</option>
+                            <option>Option one</option>
+                            <option>Option two</option>
+                            <option>Option three</option>
+                            <option>Option four</option>
+                          </select>
+                        </div>
+                      </div>
+                      <div class="row padding-top-10">
+                        <div class="col-sm-6 col-xs-6 padding-bottom-10">
+                          <label>Availibity Zone</label>
+                          <input type="text" name="os-service" id="os-service" class="form-control" required>
+                        </div>
+                        
+                      </div>
+                      
+                      
+                     
+                    </div>
+                  </div>
+
+                  <div class="panel"> <a class="panel-heading" role="tab" id="heading22" data-toggle="collapse" href="#collapse22" aria-expanded="true" aria-controls="collapse22">
+                    <h4 class="panel-title">EBSProperties</h4>
+                    </a>
+                    <div id="collapse22" class="panel-collapse collapse in padding-top-10 padding-bottom-20" role="tabpanel" aria-labelledby="heading22">
+                      <div class="row padding-top-10">
+                        <div class="col-sm-6 col-xs-6 padding-bottom-10">
+                          <label>Volume ID</label>
+                          <input type="text" name="os-service" id="os-service" class="form-control" required>
+                        </div>
+                        
+                        <div class="col-sm-6 col-xs-6 padding-bottom-10">
+                          <label>Size</label>
+                          <input type="text" name="os-service" id="os-service" class="form-control" required>
+                        </div>
+                        
+                      </div>
+                      <div class="row padding-top-10">
+                        <div class="col-sm-6 col-xs-6 padding-bottom-10">
+                          <label>Created</label>
+                          <input type="text" name="os-service" id="os-service" class="form-control" required>
+                        </div>
+
+                        <div class="col-sm-6 col-xs-6 padding-bottom-10">
+                          <label>State</label>
+                          <input type="text" name="os-service" id="os-service" class="form-control" required>
+                        </div>
+                        
+                        
+                      </div>
+
+                      <div class="row padding-top-10">
+                        <div class="col-sm-6 col-xs-6 padding-bottom-10">
+                          <label>Volume Type</label>
+                          <input type="text" name="os-service" id="os-service" class="form-control" required>
+                        </div>
+
+                        <div class="col-sm-6 col-xs-6 padding-bottom-10">
+                          <label>Snapshot</label>
+                          <input type="text" name="os-service" id="os-service" class="form-control" required>
+                        </div>
+                        
+                        
+                      </div>
+
+                      <div class="row padding-top-10">
+                        <div class="col-sm-6 col-xs-6 padding-bottom-10">
+                          <label>Encrypted</label>
+                          <input type="text" name="os-service" id="os-service" class="form-control" required>
+                        </div>
+
+                        
+                        
+                        
+                      </div>
+                      
+                      
+                     
+                    </div>
+                  </div>
+
+                </div>
+              </div>
+
+
+              <!-- =================================== EBS ::::::::::: Closed ======================================== -->
+
+
+              <!-- =================================== EC2 ::::::::::: Start ======================================== -->
+
+                  <div class="accordion-down">
+                <div class="accordion" id="accordion" role="tablist" >
+                  <div class="panel"> <a class="panel-heading" role="tab" id="heading23" data-toggle="collapse" href="#collapse23" aria-expanded="true" aria-controls="collapse23">
+                    <h4 class="panel-title">CloudProperties</h4>
+                    </a>
+                    <div id="collapse23" class="panel-collapse collapse in padding-top-10 padding-bottom-20" role="tabpanel" aria-labelledby="heading23">
+                      
+                      <div class="row">
+                        <div class="col-sm-6 col-xs-6 padding-bottom-10">
+                          <label>Cost</label>
+                          <input type="text" name="display_name" class="form-control" required>
+                        </div>
+                        <div class="col-sm-6 col-xs-6 padding-bottom-10">
+                          <label>Last Audit Date</label>
+                          <input type="text" name="assign_date" class="form-control" id="datetimepicker_dark"/>
+                        </div>
+                      </div>
+                      
+                      
+                      
+                      
+                    </div>
+                  </div>
+                  <div class="panel"> <a class="panel-heading" role="tab" id="heading24" data-toggle="collapse" href="#collapse24" aria-expanded="true" aria-controls="collapse24">
+                    <h4 class="panel-title">AWSProperties</h4>
+                    </a>
+                    <div id="collapse24" class="panel-collapse collapse in padding-top-10 padding-bottom-20" role="tabpanel" aria-labelledby="heading24">
+                      <div class="row padding-top-10">
+                        <div class="col-sm-6 col-xs-6 padding-bottom-10">
+                          <label>Account</label>
+                          <select class="form-control">
+                            <option>.....</option>
+                            <option>Option one</option>
+                            <option>Option two</option>
+                            <option>Option three</option>
+                            <option>Option four</option>
+                          </select>
+                        </div>
+                        <div class="col-sm-6 col-xs-6 padding-bottom-10">
+                          <label>Region</label>
+                          <select class="form-control">
+                            <option>.....</option>
+                            <option>Option one</option>
+                            <option>Option two</option>
+                            <option>Option three</option>
+                            <option>Option four</option>
+                          </select>
+                        </div>
+                      </div>
+                      <div class="row padding-top-10">
+                        <div class="col-sm-6 col-xs-6 padding-bottom-10">
+                          <label>Availibity Zone</label>
+                          <input type="text" name="os-service" id="os-service" class="form-control" required>
+                        </div>
+                        
+                      </div>
+                      
+                      
+                     
+                    </div>
+                  </div>
+
+                  <div class="panel"> <a class="panel-heading" role="tab" id="heading25" data-toggle="collapse" href="#collapse25" aria-expanded="true" aria-controls="collapse25">
+                    <h4 class="panel-title">EC2Properties</h4>
+                    </a>
+                    <div id="collapse25" class="panel-collapse collapse in padding-top-10 padding-bottom-20" role="tabpanel" aria-labelledby="heading25">
+                      <div class="row padding-top-10">
+                        <div class="col-sm-6 col-xs-6 padding-bottom-10">
+                          <label>Instance ID</label>
+                          <input type="text" name="os-service" id="os-service" class="form-control" required>
+                        </div>
+                        
+                        <div class="col-sm-6 col-xs-6 padding-bottom-10">
+                          <label>Instance Type</label>
+                          <input type="text" name="os-service" id="os-service" class="form-control" required>
+                        </div>
+                        
+                      </div>
+                      <div class="row padding-top-10">
+                        <div class="col-sm-6 col-xs-6 padding-bottom-10">
+                          <label>Private IP</label>
+                          <input type="text" name="os-service" id="os-service" class="form-control" required>
+                        </div>
+
+                        <div class="col-sm-6 col-xs-6 padding-bottom-10">
+                          <label>Private DNS</label>
+                          <input type="text" name="os-service" id="os-service" class="form-control" required>
+                        </div>
+                        
+                        
+                      </div>
+
+                      <div class="row padding-top-10">
+                        <div class="col-sm-6 col-xs-6 padding-bottom-10">
+                          <label>Public IP</label>
+                          <input type="text" name="os-service" id="os-service" class="form-control" required>
+                        </div>
+
+                        <div class="col-sm-6 col-xs-6 padding-bottom-10">
+                          <label>Public DNS</label>
+                          <input type="text" name="os-service" id="os-service" class="form-control" required>
+                        </div>
+                        
+                        
+                      </div>
+
+                      <div class="row padding-top-10">
+                        <div class="col-sm-6 col-xs-6 padding-bottom-10">
+                          <label>AMI ID</label>
+                          <input type="text" name="os-service" id="os-service" class="form-control" required>
+                        </div>
+
+                        <div class="col-sm-6 col-xs-6 padding-bottom-10">
+                          <label>Instance State</label>
+                          <input type="text" name="os-service" id="os-service" class="form-control" required>
+                        </div>
+
+                        
+                        
+                        
+                      </div>
+                      
+                      
+                     
+                    </div>
+                  </div>
+
+                </div>
+              </div>
+
+
+              <!-- =================================== EC2 ::::::::::: Closed ======================================== -->
+
+
+              <!-- =================================== Email Service ::::::::::: Start ======================================== -->
+
+                  <div class="accordion-down">
+                <div class="accordion" id="accordion" role="tablist" >
+                  <div class="panel"> <a class="panel-heading" role="tab" id="heading26" data-toggle="collapse" href="#collapse26" aria-expanded="true" aria-controls="collapse26">
+                    <h4 class="panel-title">IT ServiceProperties</h4>
+                    </a>
+                    <div id="collapse26" class="panel-collapse collapse in padding-top-10 padding-bottom-20" role="tabpanel" aria-labelledby="heading26">
+                      
+                      <div class="row">
+                        <div class="col-sm-6 col-xs-6 padding-bottom-10">
+                          <label>SLA (Availability in %)</label>
+                          <input type="text" name="display_name" class="form-control" required>
+                        </div>
+                        <div class="col-sm-6 col-xs-6 padding-bottom-10">
+                          <label>Operational Status</label>
+                          <input type="text" name="assign_date" class="form-control" id="datetimepicker_dark"/>
+                        </div>
+                      </div>
+
+                      <div class="row">
+                        <div class="col-sm-6 col-xs-6 padding-bottom-10">
+                          <label>Service Support Hours</label>
+                          <input type="text" name="display_name" class="form-control" required>
+                        </div>
+                        
+                      </div>
+                      
+                      
+                      
+                      
+                    </div>
+                  </div>
+                  
+
+                  
+
+                </div>
+              </div>
+
+
+              <!-- =================================== Email Service ::::::::::: Closed ======================================== -->
+
+
+              <!-- =================================== Firewall ::::::::::: Start ======================================== -->
+
+                  <div class="accordion-down">
+                <div class="accordion" id="accordion" role="tablist" >
+                  <div class="panel"> <a class="panel-heading" role="tab" id="heading27" data-toggle="collapse" href="#collapse27" aria-expanded="true" aria-controls="collapse27">
+                    <h4 class="panel-title">HardwareProperties</h4>
+                    </a>
+                    <div id="collapse27" class="panel-collapse collapse in padding-top-10 padding-bottom-20" role="tabpanel" aria-labelledby="heading27">
+                      <div class="row padding-top-10">
+                        <div class="col-sm-6 col-xs-6 padding-bottom-10">
+                          <label>Product&nbsp;&nbsp;/&nbsp;<a href="#new-pro" data-toggle="modal" data-target="#new-pro"><i class="icon-plus-circled"></i>Add New Product</a></label>
+                          <select class="form-control">
+                            <option>Choose option</option>
+                            <option>Option one</option>
+                            <option>Option two</option>
+                            <option>Option three</option>
+                            <option>Option four</option>
+                        </select>
+                        </div>
+                        <div class="col-sm-6 col-xs-6 padding-bottom-10">
+                          <label>Vendor</label>
+                          <input type="text" name="display_name" class="form-control" required>
+                        </div>
+                      </div>
+                      <div class="row">
+                        <div class="col-sm-6 col-xs-6 padding-bottom-10">
+                          <label>Cost</label>
+                          <input type="text" name="display_name" class="form-control" required>
+                        </div>
+                        <div class="col-sm-6 col-xs-6 padding-bottom-10">
+                          <div class="row">
+                             <div class="col-sm-6 col-xs-6">
+                                <label>Warranty</label>
+                                <select class="form-control">
+                                    <option>0 Yrs</option>
+                                    <option>1</option>
+                                    <option>2</option>
+                                    <option>3</option>
+                                    <option>4</option>
+                                </select>
+                             </div>
+                             <div class="col-sm-6 col-xs-6">
+                                <label>&nbsp;</label>
+                                <select class="form-control">
+                                    <option>0 Months</option>
+                                    <option>1</option>
+                                    <option>2</option>
+                                    <option>3</option>
+                                    <option>4</option>
+                                </select>
+                             </div>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="row">
+                        <div class="col-sm-6 col-xs-6 padding-bottom-10">
+                          <label>Acquisition Date</label>
+                          <input type="text" name="assign_date" class="form-control" id="datetimepicker_dark"/>
+                        </div>
+                        <div class="col-sm-6 col-xs-6 padding-bottom-10">
+                          <label>Warranty Expiry Date</label>
+                          <input type="text" name="assign_date" class="form-control" id="datetimepicker_dark"/>
+                        </div>
+                      </div>
+                      <div class="row">
+                        <div class="col-sm-6 col-xs-6 padding-bottom-10">
+                          <label>Domain</label>
+                          <input type="text" name="display_name" class="form-control" required>
+                        </div>
+                        <div class="col-sm-6 col-xs-6 padding-bottom-10">
+                          <label>Asset State<span class="text-red">*</span></label>
+                          <select class="form-control">
+                            <option>Choose option</option>
+                            <option>Option one</option>
+                            <option>Option two</option>
+                            <option>Option three</option>
+                            <option>Option four</option>
+                        </select>
+                        </div>
+                      </div>
+                      <div class="row">
+                        <div class="col-sm-6 col-xs-6 padding-bottom-10">
+                          <label>Asset Tag</label>
+                          <input type="text" name="tag" id="tag" class="form-control" required>
+                        </div>
+                        <div class="col-sm-6 col-xs-6 padding-bottom-10">
+                          <label>Serial Number</label>
+                          <input type="text" name="serial-number" id="serial-number" class="form-control" required>
+                        </div>
+                      </div>
+                      <div class="row">
+                        <div class="col-sm-6 col-xs-6 padding-bottom-10">
+                          <label>Last Audit Date</label>
+                          <input type="text" name="last-audit-date" id="last-audit-date"  class="form-control" id="datetimepicker_dark"/>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="panel"> <a class="panel-heading" role="tab" id="heading28" data-toggle="collapse" href="#collapse28" aria-expanded="true" aria-controls="collapse28">
+                    <h4 class="panel-title">FirewallProperties</h4>
+                    </a>
+                    <div id="collapse28" class="panel-collapse collapse in padding-top-10 padding-bottom-20" role="tabpanel" aria-labelledby="heading28">
+                      <div class="row padding-top-10">
+                        <div class="col-sm-6 col-xs-6 padding-bottom-10">
+                          <label>Firmware</label>
+                          <input type="text" name="firmware" id="firmware" class="form-control" required>
+                        </div>
+                        <div class="col-sm-6 col-xs-6 padding-bottom-10">
+                          <label>Firmware Version</label>
+                          <input type="text" name="vendor" id="vendor" class="form-control" required>
+                        </div>
+                      </div>
+                      <div class="row padding-top-10">
+                        <div class="col-sm-6 col-xs-6 padding-bottom-10">
+                          <label>IP Address</label>
+                          <input type="text" name="ip-address" id="ip-address" class="form-control" required>
+                        </div>
+                        <div class="col-sm-6 col-xs-6 padding-bottom-10">
+                          <label>Ports</label>
+                          <input type="text" name="ports" id="ports" class="form-control" required>
+                        </div>
+                      </div>
+                      <div class="row padding-top-10">
+                        <div class="col-sm-6 col-xs-6 padding-bottom-10">
+                          <label>MAC Address</label>
+                          <input type="text" name="mac-address" id="mac-address" class="form-control" required>
+                        </div>
+                        <div class="col-sm-6 col-xs-6 padding-bottom-10">
+                          <label>Subnet Mask</label>
+                          <input type="text" name="subnet-mask" id="subnet-mask" class="form-control" required>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+
+              <!-- =================================== Firewall ::::::::::: Closed ======================================== -->
+
+
+              <!-- =================================== Hardware ::::::::::: Start ======================================== -->
+
+                  <div class="accordion-down">
+                <div class="accordion" id="accordion" role="tablist" >
+                  <div class="panel"> <a class="panel-heading" role="tab" id="heading29" data-toggle="collapse" href="#collapse29" aria-expanded="true" aria-controls="collapse29">
+                    <h4 class="panel-title">HardwareProperties</h4>
+                    </a>
+                    <div id="collapse29" class="panel-collapse collapse in padding-top-10 padding-bottom-20" role="tabpanel" aria-labelledby="heading29">
+                      <div class="row padding-top-10">
+                        <div class="col-sm-6 col-xs-6 padding-bottom-10">
+                          <label>Product&nbsp;&nbsp;/&nbsp;<a href="#new-pro" data-toggle="modal" data-target="#new-pro"><i class="icon-plus-circled"></i>Add New Product</a></label>
+                          <select class="form-control">
+                            <option>Choose option</option>
+                            <option>Option one</option>
+                            <option>Option two</option>
+                            <option>Option three</option>
+                            <option>Option four</option>
+                        </select>
+                        </div>
+                        <div class="col-sm-6 col-xs-6 padding-bottom-10">
+                          <label>Vendor</label>
+                          <input type="text" name="display_name" class="form-control" required>
+                        </div>
+                      </div>
+                      <div class="row">
+                        <div class="col-sm-6 col-xs-6 padding-bottom-10">
+                          <label>Cost</label>
+                          <input type="text" name="display_name" class="form-control" required>
+                        </div>
+                        <div class="col-sm-6 col-xs-6 padding-bottom-10">
+                          <div class="row">
+                             <div class="col-sm-6 col-xs-6">
+                                <label>Warranty</label>
+                                <select class="form-control">
+                                    <option>0 Yrs</option>
+                                    <option>1</option>
+                                    <option>2</option>
+                                    <option>3</option>
+                                    <option>4</option>
+                                </select>
+                             </div>
+                             <div class="col-sm-6 col-xs-6">
+                                <label>&nbsp;</label>
+                                <select class="form-control">
+                                    <option>0 Months</option>
+                                    <option>1</option>
+                                    <option>2</option>
+                                    <option>3</option>
+                                    <option>4</option>
+                                </select>
+                             </div>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="row">
+                        <div class="col-sm-6 col-xs-6 padding-bottom-10">
+                          <label>Acquisition Date</label>
+                          <input type="text" name="assign_date" class="form-control" id="datetimepicker_dark"/>
+                        </div>
+                        <div class="col-sm-6 col-xs-6 padding-bottom-10">
+                          <label>Warranty Expiry Date</label>
+                          <input type="text" name="assign_date" class="form-control" id="datetimepicker_dark"/>
+                        </div>
+                      </div>
+                      <div class="row">
+                        <div class="col-sm-6 col-xs-6 padding-bottom-10">
+                          <label>Domain</label>
+                          <input type="text" name="display_name" class="form-control" required>
+                        </div>
+                        <div class="col-sm-6 col-xs-6 padding-bottom-10">
+                          <label>Asset State<span class="text-red">*</span></label>
+                          <select class="form-control">
+                            <option>Choose option</option>
+                            <option>Option one</option>
+                            <option>Option two</option>
+                            <option>Option three</option>
+                            <option>Option four</option>
+                        </select>
+                        </div>
+                      </div>
+                      <div class="row">
+                        <div class="col-sm-6 col-xs-6 padding-bottom-10">
+                          <label>Asset Tag</label>
+                          <input type="text" name="tag" id="tag" class="form-control" required>
+                        </div>
+                        <div class="col-sm-6 col-xs-6 padding-bottom-10">
+                          <label>Serial Number</label>
+                          <input type="text" name="serial-number" id="serial-number" class="form-control" required>
+                        </div>
+                      </div>
+                      <div class="row">
+                        <div class="col-sm-6 col-xs-6 padding-bottom-10">
+                          <label>Last Audit Date</label>
+                          <input type="text" name="last-audit-date" id="last-audit-date"  class="form-control" id="datetimepicker_dark"/>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  
+                </div>
+              </div>
+
+
+              <!-- =================================== Hardware ::::::::::: Closed ======================================== -->
+
+              <!-- =================================== Hosting Service ::::::::::: Start ======================================== -->
+
+                  <div class="accordion-down">
+                <div class="accordion" id="accordion" role="tablist" >
+                  <div class="panel"> <a class="panel-heading" role="tab" id="heading30" data-toggle="collapse" href="#collapse30" aria-expanded="true" aria-controls="collapse30">
+                    <h4 class="panel-title">IT ServiceProperties</h4>
+                    </a>
+                    <div id="collapse30" class="panel-collapse collapse in padding-top-10 padding-bottom-20" role="tabpanel" aria-labelledby="heading30">
+                      
+                      <div class="row">
+                        <div class="col-sm-6 col-xs-6 padding-bottom-10">
+                          <label>SLA (Availability in %)</label>
+                          <input type="text" name="display_name" class="form-control" required>
+                        </div>
+                        <div class="col-sm-6 col-xs-6 padding-bottom-10">
+                          <label>Operational Status</label>
+                          <input type="text" name="assign_date" class="form-control" id="datetimepicker_dark"/>
+                        </div>
+                      </div>
+
+                      <div class="row">
+                        <div class="col-sm-6 col-xs-6 padding-bottom-10">
+                          <label>Service Support Hours</label>
+                          <input type="text" name="display_name" class="form-control" required>
+                        </div>
+                        
+                      </div>
+                      
+                      
+                      
+                      
+                    </div>
+                  </div>
+                                 
+
+                </div>
+              </div>
+
+
+              <!-- =================================== Hosting Service ::::::::::: Closed ======================================== -->
+
+
+              <!-- =================================== IIS ::::::::::: Start ======================================== -->
+
+                  <div class="accordion-down">
+                <div class="accordion" id="accordion" role="tablist" >
+                  <div class="panel"> <a class="panel-heading" role="tab" id="heading31" data-toggle="collapse" href="#collapse31" aria-expanded="true" aria-controls="collapse31">
+                    <h4 class="panel-title">SoftwareProperties</h4>
+                    </a>
+                    <div id="collapse31" class="panel-collapse collapse in padding-top-10 padding-bottom-20" role="tabpanel" aria-labelledby="heading31">
+                      <div class="row padding-top-10">
+                        <div class="col-sm-6 col-xs-6 padding-bottom-10">
+                          <label>Product&nbsp;&nbsp;/&nbsp;<a href="#new-pro" data-toggle="modal" data-target="#new-pro"><i class="icon-plus-circled"></i>Add New Product</a></label>
+                          <select class="form-control">
+                            <option>Choose option</option>
+                            <option>Option one</option>
+                            <option>Option two</option>
+                            <option>Option three</option>
+                            <option>Option four</option>
+                        </select>
+                        </div>
+                        <div class="col-sm-6 col-xs-6 padding-bottom-10">
+                          <label>Vendor</label>
+                          <input type="text" name="display_name" class="form-control" required>
+                        </div>
+                      </div>
+                      <div class="row">
+                        <div class="col-sm-6 col-xs-6 padding-bottom-10">
+                          <label>Cost</label>
+                          <input type="text" name="display_name" class="form-control" required>
+                        </div>
+                        <div class="col-sm-6 col-xs-6 padding-bottom-10">
+                          <div class="row">
+                             <div class="col-sm-6 col-xs-6">
+                                <label>License Validity</label>
+                                <select class="form-control">
+                                    <option>0 Yrs</option>
+                                    <option>1</option>
+                                    <option>2</option>
+                                    <option>3</option>
+                                    <option>4</option>
+                                </select>
+                             </div>
+                             <div class="col-sm-6 col-xs-6">
+                                <label>&nbsp;</label>
+                                <select class="form-control">
+                                    <option>0 Months</option>
+                                    <option>1</option>
+                                    <option>2</option>
+                                    <option>3</option>
+                                    <option>4</option>
+                                </select>
+                             </div>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="row">
+                        <div class="col-sm-6 col-xs-6 padding-bottom-10">
+                          <label>Installation Date</label>
+                          <input type="text" name="assign_date" class="form-control" id="datetimepicker_dark"/>
+                        </div>
+                        <div class="col-sm-6 col-xs-6 padding-bottom-10">
+                          <label>License Expiry Date</label>
+                          <input type="text" name="assign_date" class="form-control" id="datetimepicker_dark"/>
+                        </div>
+                      </div>
+                      <div class="row">
+                        <div class="col-sm-6 col-xs-6 padding-bottom-10">
+                          <label>License Key</label>
+                          <input type="text" name="display_name" class="form-control" required>
+                        </div>
+                        <div class="col-sm-6 col-xs-6 padding-bottom-10">
+                          <label>Version</label>
+                          <input type="text" name="display_name" class="form-control" required>
+                        </div>
+                      </div>
+                      <div class="row">
+                        <div class="col-sm-6 col-xs-6 padding-bottom-10">
+                          <label>License Type</label>
+                          <select class="form-control">
+                                    <option>...</option>
+                                    <option>Open Source</option>
+                                    <option>Commercial</option>
+                          </select>
+                        </div>
+                        <div class="col-sm-6 col-xs-6 padding-bottom-10">
+                          <label>Installed Machine</label>
+                          <select class="form-control">
+                                    <option>...</option>
+                                    <option>...</option>
+                                    <option>...</option>
+                          </select>
+                        </div>
+                      </div>
+                      <div class="row">
+                        <div class="col-sm-6 col-xs-6 padding-bottom-10">
+                          <label>Installation Path</label>
+                          <input type="text" class="form-control" id="datetimepicker_dark"/>
+                        </div>
+                        <div class="col-sm-6 col-xs-6 padding-bottom-10">
+                          <label>Last Audit Date</label>
+                          <input type="text" name="last-audit-date" id="last-audit-date"  class="form-control" id="datetimepicker_dark"/>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  
+                </div>
+              </div>
+
+
+              <!-- =================================== IIS ::::::::::: Closed ======================================== -->
+
+              <!-- =================================== IT Service ::::::::::: Start ======================================== -->
+
+                  <div class="accordion-down">
+                <div class="accordion" id="accordion" role="tablist" >
+                  <div class="panel"> <a class="panel-heading" role="tab" id="heading32" data-toggle="collapse" href="#collapse32" aria-expanded="true" aria-controls="collapse32">
+                    <h4 class="panel-title">IT ServiceProperties</h4>
+                    </a>
+                    <div id="collapse32" class="panel-collapse collapse in padding-top-10 padding-bottom-20" role="tabpanel" aria-labelledby="heading32">
+                      
+                      <div class="row">
+                        <div class="col-sm-6 col-xs-6 padding-bottom-10">
+                          <label>SLA (Availability in %)</label>
+                          <input type="text" name="display_name" class="form-control" required>
+                        </div>
+                        <div class="col-sm-6 col-xs-6 padding-bottom-10">
+                          <label>Operational Status</label>
+                          <input type="text" name="assign_date" class="form-control" id="datetimepicker_dark"/>
+                        </div>
+                      </div>
+
+                      <div class="row">
+                        <div class="col-sm-6 col-xs-6 padding-bottom-10">
+                          <label>Service Support Hours</label>
+                          <input type="text" name="display_name" class="form-control" required>
+                        </div>
+                        
+                      </div>
+                      
+                      
+                      
+                      
+                    </div>
+                  </div>
+                                 
+
+                </div>
+              </div>
+
+
+              <!-- =================================== IT Service ::::::::::: Closed ======================================== -->
+
+
+              <!-- =================================== Linux ::::::::::: Start ======================================== -->
+
+                  <div class="accordion-down">
+                <div class="accordion" id="accordion" role="tablist" >
+                  <div class="panel"> <a class="panel-heading" role="tab" id="heading33" data-toggle="collapse" href="#collapse33" aria-expanded="true" aria-controls="collapse33">
+                    <h4 class="panel-title">SoftwareProperties</h4>
+                    </a>
+                    <div id="collapse33" class="panel-collapse collapse in padding-top-10 padding-bottom-20" role="tabpanel" aria-labelledby="heading33">
+                      <div class="row padding-top-10">
+                        <div class="col-sm-6 col-xs-6 padding-bottom-10">
+                          <label>Product&nbsp;&nbsp;/&nbsp;<a href="#new-pro" data-toggle="modal" data-target="#new-pro"><i class="icon-plus-circled"></i>Add New Product</a></label>
+                          <select class="form-control">
+                            <option>Choose option</option>
+                            <option>Option one</option>
+                            <option>Option two</option>
+                            <option>Option three</option>
+                            <option>Option four</option>
+                        </select>
+                        </div>
+                        <div class="col-sm-6 col-xs-6 padding-bottom-10">
+                          <label>Vendor</label>
+                          <input type="text" name="display_name" class="form-control" required>
+                        </div>
+                      </div>
+                      <div class="row">
+                        <div class="col-sm-6 col-xs-6 padding-bottom-10">
+                          <label>Cost</label>
+                          <input type="text" name="display_name" class="form-control" required>
+                        </div>
+                        <div class="col-sm-6 col-xs-6 padding-bottom-10">
+                          <div class="row">
+                             <div class="col-sm-6 col-xs-6">
+                                <label>License Validity</label>
+                                <select class="form-control">
+                                    <option>0 Yrs</option>
+                                    <option>1</option>
+                                    <option>2</option>
+                                    <option>3</option>
+                                    <option>4</option>
+                                </select>
+                             </div>
+                             <div class="col-sm-6 col-xs-6">
+                                <label>&nbsp;</label>
+                                <select class="form-control">
+                                    <option>0 Months</option>
+                                    <option>1</option>
+                                    <option>2</option>
+                                    <option>3</option>
+                                    <option>4</option>
+                                </select>
+                             </div>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="row">
+                        <div class="col-sm-6 col-xs-6 padding-bottom-10">
+                          <label>Installation Date</label>
+                          <input type="text" name="assign_date" class="form-control" id="datetimepicker_dark"/>
+                        </div>
+                        <div class="col-sm-6 col-xs-6 padding-bottom-10">
+                          <label>License Expiry Date</label>
+                          <input type="text" name="assign_date" class="form-control" id="datetimepicker_dark"/>
+                        </div>
+                      </div>
+                      <div class="row">
+                        <div class="col-sm-6 col-xs-6 padding-bottom-10">
+                          <label>License Key</label>
+                          <input type="text" name="display_name" class="form-control" required>
+                        </div>
+                        <div class="col-sm-6 col-xs-6 padding-bottom-10">
+                          <label>Version</label>
+                          <input type="text" name="display_name" class="form-control" required>
+                        </div>
+                      </div>
+                      <div class="row">
+                        <div class="col-sm-6 col-xs-6 padding-bottom-10">
+                          <label>License Type</label>
+                          <select class="form-control">
+                                    <option>...</option>
+                                    <option>Open Source</option>
+                                    <option>Commercial</option>
+                          </select>
+                        </div>
+                        <div class="col-sm-6 col-xs-6 padding-bottom-10">
+                          <label>Installed Machine</label>
+                          <select class="form-control">
+                                    <option>...</option>
+                                    <option>...</option>
+                                    <option>...</option>
+                          </select>
+                        </div>
+                      </div>
+                      <div class="row">
+                        <div class="col-sm-6 col-xs-6 padding-bottom-10">
+                          <label>Installation Path</label>
+                          <input type="text" class="form-control" id="datetimepicker_dark"/>
+                        </div>
+                        <div class="col-sm-6 col-xs-6 padding-bottom-10">
+                          <label>Last Audit Date</label>
+                          <input type="text" name="last-audit-date" id="last-audit-date"  class="form-control" id="datetimepicker_dark"/>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  
+                </div>
+              </div>
+
+
+              <!-- =================================== Linux ::::::::::: Closed ======================================== -->
+
+
+              <!-- =================================== Mac OS X ::::::::::: Start ======================================== -->
+
+                  <div class="accordion-down">
+                <div class="accordion" id="accordion" role="tablist" >
+                  <div class="panel"> <a class="panel-heading" role="tab" id="heading34" data-toggle="collapse" href="#collapse34" aria-expanded="true" aria-controls="collapse34">
+                    <h4 class="panel-title">SoftwareProperties</h4>
+                    </a>
+                    <div id="collapse34" class="panel-collapse collapse in padding-top-10 padding-bottom-20" role="tabpanel" aria-labelledby="heading34">
+                      <div class="row padding-top-10">
+                        <div class="col-sm-6 col-xs-6 padding-bottom-10">
+                          <label>Product&nbsp;&nbsp;/&nbsp;<a href="#new-pro" data-toggle="modal" data-target="#new-pro"><i class="icon-plus-circled"></i>Add New Product</a></label>
+                          <select class="form-control">
+                            <option>Choose option</option>
+                            <option>Option one</option>
+                            <option>Option two</option>
+                            <option>Option three</option>
+                            <option>Option four</option>
+                        </select>
+                        </div>
+                        <div class="col-sm-6 col-xs-6 padding-bottom-10">
+                          <label>Vendor</label>
+                          <input type="text" name="display_name" class="form-control" required>
+                        </div>
+                      </div>
+                      <div class="row">
+                        <div class="col-sm-6 col-xs-6 padding-bottom-10">
+                          <label>Cost</label>
+                          <input type="text" name="display_name" class="form-control" required>
+                        </div>
+                        <div class="col-sm-6 col-xs-6 padding-bottom-10">
+                          <div class="row">
+                             <div class="col-sm-6 col-xs-6">
+                                <label>License Validity</label>
+                                <select class="form-control">
+                                    <option>0 Yrs</option>
+                                    <option>1</option>
+                                    <option>2</option>
+                                    <option>3</option>
+                                    <option>4</option>
+                                </select>
+                             </div>
+                             <div class="col-sm-6 col-xs-6">
+                                <label>&nbsp;</label>
+                                <select class="form-control">
+                                    <option>0 Months</option>
+                                    <option>1</option>
+                                    <option>2</option>
+                                    <option>3</option>
+                                    <option>4</option>
+                                </select>
+                             </div>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="row">
+                        <div class="col-sm-6 col-xs-6 padding-bottom-10">
+                          <label>Installation Date</label>
+                          <input type="text" name="assign_date" class="form-control" id="datetimepicker_dark"/>
+                        </div>
+                        <div class="col-sm-6 col-xs-6 padding-bottom-10">
+                          <label>License Expiry Date</label>
+                          <input type="text" name="assign_date" class="form-control" id="datetimepicker_dark"/>
+                        </div>
+                      </div>
+                      <div class="row">
+                        <div class="col-sm-6 col-xs-6 padding-bottom-10">
+                          <label>License Key</label>
+                          <input type="text" name="display_name" class="form-control" required>
+                        </div>
+                        <div class="col-sm-6 col-xs-6 padding-bottom-10">
+                          <label>Version</label>
+                          <input type="text" name="display_name" class="form-control" required>
+                        </div>
+                      </div>
+                      <div class="row">
+                        <div class="col-sm-6 col-xs-6 padding-bottom-10">
+                          <label>License Type</label>
+                          <select class="form-control">
+                                    <option>...</option>
+                                    <option>Open Source</option>
+                                    <option>Commercial</option>
+                          </select>
+                        </div>
+                        <div class="col-sm-6 col-xs-6 padding-bottom-10">
+                          <label>Installed Machine</label>
+                          <select class="form-control">
+                                    <option>...</option>
+                                    <option>...</option>
+                                    <option>...</option>
+                          </select>
+                        </div>
+                      </div>
+                      <div class="row">
+                        <div class="col-sm-6 col-xs-6 padding-bottom-10">
+                          <label>Installation Path</label>
+                          <input type="text" class="form-control" id="datetimepicker_dark"/>
+                        </div>
+                        <div class="col-sm-6 col-xs-6 padding-bottom-10">
+                          <label>Last Audit Date</label>
+                          <input type="text" name="last-audit-date" id="last-audit-date"  class="form-control" id="datetimepicker_dark"/>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  
+                </div>
+              </div>
+
+
+              <!-- =================================== Mac OS X ::::::::::: Closed ======================================== -->
+
+              <!-- =================================== Microsoft ::::::::::: Start ======================================== -->
+
+                  <div class="accordion-down">
+                <div class="accordion" id="accordion" role="tablist" >
+                  <div class="panel"> <a class="panel-heading" role="tab" id="heading35" data-toggle="collapse" href="#collapse35" aria-expanded="true" aria-controls="collapse35">
+                    <h4 class="panel-title">SoftwareProperties</h4>
+                    </a>
+                    <div id="collapse35" class="panel-collapse collapse in padding-top-10 padding-bottom-20" role="tabpanel" aria-labelledby="heading35">
+                      <div class="row padding-top-10">
+                        <div class="col-sm-6 col-xs-6 padding-bottom-10">
+                          <label>Product&nbsp;&nbsp;/&nbsp;<a href="#new-pro" data-toggle="modal" data-target="#new-pro"><i class="icon-plus-circled"></i>Add New Product</a></label>
+                          <select class="form-control">
+                            <option>Choose option</option>
+                            <option>Option one</option>
+                            <option>Option two</option>
+                            <option>Option three</option>
+                            <option>Option four</option>
+                        </select>
+                        </div>
+                        <div class="col-sm-6 col-xs-6 padding-bottom-10">
+                          <label>Vendor</label>
+                          <input type="text" name="display_name" class="form-control" required>
+                        </div>
+                      </div>
+                      <div class="row">
+                        <div class="col-sm-6 col-xs-6 padding-bottom-10">
+                          <label>Cost</label>
+                          <input type="text" name="display_name" class="form-control" required>
+                        </div>
+                        <div class="col-sm-6 col-xs-6 padding-bottom-10">
+                          <div class="row">
+                             <div class="col-sm-6 col-xs-6">
+                                <label>License Validity</label>
+                                <select class="form-control">
+                                    <option>0 Yrs</option>
+                                    <option>1</option>
+                                    <option>2</option>
+                                    <option>3</option>
+                                    <option>4</option>
+                                </select>
+                             </div>
+                             <div class="col-sm-6 col-xs-6">
+                                <label>&nbsp;</label>
+                                <select class="form-control">
+                                    <option>0 Months</option>
+                                    <option>1</option>
+                                    <option>2</option>
+                                    <option>3</option>
+                                    <option>4</option>
+                                </select>
+                             </div>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="row">
+                        <div class="col-sm-6 col-xs-6 padding-bottom-10">
+                          <label>Installation Date</label>
+                          <input type="text" name="assign_date" class="form-control" id="datetimepicker_dark"/>
+                        </div>
+                        <div class="col-sm-6 col-xs-6 padding-bottom-10">
+                          <label>License Expiry Date</label>
+                          <input type="text" name="assign_date" class="form-control" id="datetimepicker_dark"/>
+                        </div>
+                      </div>
+                      <div class="row">
+                        <div class="col-sm-6 col-xs-6 padding-bottom-10">
+                          <label>License Key</label>
+                          <input type="text" name="display_name" class="form-control" required>
+                        </div>
+                        <div class="col-sm-6 col-xs-6 padding-bottom-10">
+                          <label>Version</label>
+                          <input type="text" name="display_name" class="form-control" required>
+                        </div>
+                      </div>
+                      <div class="row">
+                        <div class="col-sm-6 col-xs-6 padding-bottom-10">
+                          <label>License Type</label>
+                          <select class="form-control">
+                                    <option>...</option>
+                                    <option>Open Source</option>
+                                    <option>Commercial</option>
+                          </select>
+                        </div>
+                        <div class="col-sm-6 col-xs-6 padding-bottom-10">
+                          <label>Installed Machine</label>
+                          <select class="form-control">
+                                    <option>...</option>
+                                    <option>...</option>
+                                    <option>...</option>
+                          </select>
+                        </div>
+                      </div>
+                      <div class="row">
+                        <div class="col-sm-6 col-xs-6 padding-bottom-10">
+                          <label>Installation Path</label>
+                          <input type="text" class="form-control" id="datetimepicker_dark"/>
+                        </div>
+                        <div class="col-sm-6 col-xs-6 padding-bottom-10">
+                          <label>Last Audit Date</label>
+                          <input type="text" name="last-audit-date" id="last-audit-date"  class="form-control" id="datetimepicker_dark"/>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  
+                </div>
+              </div>
+
+
+              <!-- =================================== Microsoft ::::::::::: Closed ======================================== -->
+
+
+              <!-- =================================== Mobile ::::::::::: Start ======================================== -->
+
+                  <div class="accordion-down">
+                <div class="accordion" id="accordion" role="tablist" >
+                  <div class="panel"> <a class="panel-heading" role="tab" id="heading36" data-toggle="collapse" href="#collapse36" aria-expanded="true" aria-controls="collapse36">
+                    <h4 class="panel-title">HardwareProperties</h4>
+                    </a>
+                    <div id="collapse36" class="panel-collapse collapse in padding-top-10 padding-bottom-20" role="tabpanel" aria-labelledby="heading36">
+                      <div class="row padding-top-10">
+                        <div class="col-sm-6 col-xs-6 padding-bottom-10">
+                          <label>Product&nbsp;&nbsp;/&nbsp;<a href="#new-pro" data-toggle="modal" data-target="#new-pro"><i class="icon-plus-circled"></i>Add New Product</a></label>
+                          <select class="form-control">
+                            <option>Choose option</option>
+                            <option>Option one</option>
+                            <option>Option two</option>
+                            <option>Option three</option>
+                            <option>Option four</option>
+                        </select>
+                        </div>
+                        <div class="col-sm-6 col-xs-6 padding-bottom-10">
+                          <label>Vendor</label>
+                          <input type="text" name="display_name" class="form-control" required>
+                        </div>
+                      </div>
+                      <div class="row">
+                        <div class="col-sm-6 col-xs-6 padding-bottom-10">
+                          <label>Cost</label>
+                          <input type="text" name="display_name" class="form-control" required>
+                        </div>
+                        <div class="col-sm-6 col-xs-6 padding-bottom-10">
+                          <div class="row">
+                             <div class="col-sm-6 col-xs-6">
+                                <label>Warranty</label>
+                                <select class="form-control">
+                                    <option>0 Yrs</option>
+                                    <option>1</option>
+                                    <option>2</option>
+                                    <option>3</option>
+                                    <option>4</option>
+                                </select>
+                             </div>
+                             <div class="col-sm-6 col-xs-6">
+                                <label>&nbsp;</label>
+                                <select class="form-control">
+                                    <option>0 Months</option>
+                                    <option>1</option>
+                                    <option>2</option>
+                                    <option>3</option>
+                                    <option>4</option>
+                                </select>
+                             </div>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="row">
+                        <div class="col-sm-6 col-xs-6 padding-bottom-10">
+                          <label>Acquisition Date</label>
+                          <input type="text" name="assign_date" class="form-control" id="datetimepicker_dark"/>
+                        </div>
+                        <div class="col-sm-6 col-xs-6 padding-bottom-10">
+                          <label>Warranty Expiry Date</label>
+                          <input type="text" name="assign_date" class="form-control" id="datetimepicker_dark"/>
+                        </div>
+                      </div>
+                      <div class="row">
+                        <div class="col-sm-6 col-xs-6 padding-bottom-10">
+                          <label>Domain</label>
+                          <select class="form-control">
+                                    <option>...</option>
+                                    <option>...</option>
+                                    <option>...</option>
+                          </select>
+                        </div>
+                        <div class="col-sm-6 col-xs-6 padding-bottom-10">
+                          <label>Asset State</label>
+                          <select class="form-control">
+                                    <option>In Stock</option>
+                                    <option>In Transit</option>
+                                    <option>Missing</option>
+                                    <option>In Use</option>
+                                    <option>Retired</option>
+                                  
+                          </select>
+                        </div>
+                      </div>
+                      <div class="row">
+                        <div class="col-sm-6 col-xs-6 padding-bottom-10">
+                          <label>Asset Tag</label>
+                          <input type="text" class="form-control" id="datetimepicker_dark"/>
+                        </div>
+                        <div class="col-sm-6 col-xs-6 padding-bottom-10">
+                          <label>Serial Number</label>
+                          <input type="text" class="form-control" id="datetimepicker_dark"/>
+                        </div>
+                      </div>
+                      <div class="row">
+                        <div class="col-sm-6 col-xs-6 padding-bottom-10">
+                          <label>Last Audit Date</label>
+                          <input type="text" name="last-audit-date" id="last-audit-date"  class="form-control" id="datetimepicker_dark"/>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  
+                </div>
+              </div>
+
+
+              <!-- =================================== Mobile ::::::::::: Closed ======================================== -->
+
+
+              <!-- =================================== Mobile Devices ::::::::::: Start ======================================== -->
+
+                  <div class="accordion-down">
+                <div class="accordion" id="accordion" role="tablist" >
+                  <div class="panel"> <a class="panel-heading" role="tab" id="heading37" data-toggle="collapse" href="#collapse37" aria-expanded="true" aria-controls="collapse37">
+                    <h4 class="panel-title">HardwareProperties</h4>
+                    </a>
+                    <div id="collapse37" class="panel-collapse collapse in padding-top-10 padding-bottom-20" role="tabpanel" aria-labelledby="heading37">
+                      <div class="row padding-top-10">
+                        <div class="col-sm-6 col-xs-6 padding-bottom-10">
+                          <label>Product&nbsp;&nbsp;/&nbsp;<a href="#new-pro" data-toggle="modal" data-target="#new-pro"><i class="icon-plus-circled"></i>Add New Product</a></label>
+                          <select class="form-control">
+                            <option>Choose option</option>
+                            <option>Option one</option>
+                            <option>Option two</option>
+                            <option>Option three</option>
+                            <option>Option four</option>
+                        </select>
+                        </div>
+                        <div class="col-sm-6 col-xs-6 padding-bottom-10">
+                          <label>Vendor</label>
+                          <input type="text" name="display_name" class="form-control" required>
+                        </div>
+                      </div>
+                      <div class="row">
+                        <div class="col-sm-6 col-xs-6 padding-bottom-10">
+                          <label>Cost</label>
+                          <input type="text" name="display_name" class="form-control" required>
+                        </div>
+                        <div class="col-sm-6 col-xs-6 padding-bottom-10">
+                          <div class="row">
+                             <div class="col-sm-6 col-xs-6">
+                                <label>Warranty</label>
+                                <select class="form-control">
+                                    <option>0 Yrs</option>
+                                    <option>1</option>
+                                    <option>2</option>
+                                    <option>3</option>
+                                    <option>4</option>
+                                </select>
+                             </div>
+                             <div class="col-sm-6 col-xs-6">
+                                <label>&nbsp;</label>
+                                <select class="form-control">
+                                    <option>0 Months</option>
+                                    <option>1</option>
+                                    <option>2</option>
+                                    <option>3</option>
+                                    <option>4</option>
+                                </select>
+                             </div>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="row">
+                        <div class="col-sm-6 col-xs-6 padding-bottom-10">
+                          <label>Acquisition Date</label>
+                          <input type="text" name="assign_date" class="form-control" id="datetimepicker_dark"/>
+                        </div>
+                        <div class="col-sm-6 col-xs-6 padding-bottom-10">
+                          <label>Warranty Expiry Date</label>
+                          <input type="text" name="assign_date" class="form-control" id="datetimepicker_dark"/>
+                        </div>
+                      </div>
+                      <div class="row">
+                        <div class="col-sm-6 col-xs-6 padding-bottom-10">
+                          <label>Domain</label>
+                          <select class="form-control">
+                                    <option>...</option>
+                                    <option>...</option>
+                                    <option>...</option>
+                          </select>
+                        </div>
+                        <div class="col-sm-6 col-xs-6 padding-bottom-10">
+                          <label>Asset State</label>
+                          <select class="form-control">
+                                    <option>In Stock</option>
+                                    <option>In Transit</option>
+                                    <option>Missing</option>
+                                    <option>In Use</option>
+                                    <option>Retired</option>
+                                  
+                          </select>
+                        </div>
+                      </div>
+                      <div class="row">
+                        <div class="col-sm-6 col-xs-6 padding-bottom-10">
+                          <label>Asset Tag</label>
+                          <input type="text" class="form-control" id="datetimepicker_dark"/>
+                        </div>
+                        <div class="col-sm-6 col-xs-6 padding-bottom-10">
+                          <label>Serial Number</label>
+                          <input type="text" class="form-control" id="datetimepicker_dark"/>
+                        </div>
+                      </div>
+                      <div class="row">
+                        <div class="col-sm-6 col-xs-6 padding-bottom-10">
+                          <label>Last Audit Date</label>
+                          <input type="text" name="last-audit-date" id="last-audit-date"  class="form-control" id="datetimepicker_dark"/>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  
+                </div>
+              </div>
+
+
+              <!-- =================================== Mobile Devices ::::::::::: Closed ======================================== -->
+
+
+              <!-- =================================== Monitor ::::::::::: Start ======================================== -->
+
+                  <div class="accordion-down">
+                <div class="accordion" id="accordion" role="tablist" >
+                  <div class="panel"> <a class="panel-heading" role="tab" id="heading38" data-toggle="collapse" href="#collapse38" aria-expanded="true" aria-controls="collapse38">
+                    <h4 class="panel-title">HardwareProperties</h4>
+                    </a>
+                    <div id="collapse38" class="panel-collapse collapse in padding-top-10 padding-bottom-20" role="tabpanel" aria-labelledby="heading38">
+                      <div class="row padding-top-10">
+                        <div class="col-sm-6 col-xs-6 padding-bottom-10">
+                          <label>Product&nbsp;&nbsp;/&nbsp;<a href="#new-pro" data-toggle="modal" data-target="#new-pro"><i class="icon-plus-circled"></i>Add New Product</a></label>
+                          <select class="form-control">
+                            <option>Choose option</option>
+                            <option>Option one</option>
+                            <option>Option two</option>
+                            <option>Option three</option>
+                            <option>Option four</option>
+                        </select>
+                        </div>
+                        <div class="col-sm-6 col-xs-6 padding-bottom-10">
+                          <label>Vendor</label>
+                          <input type="text" name="display_name" class="form-control" required>
+                        </div>
+                      </div>
+                      <div class="row">
+                        <div class="col-sm-6 col-xs-6 padding-bottom-10">
+                          <label>Cost</label>
+                          <input type="text" name="display_name" class="form-control" required>
+                        </div>
+                        <div class="col-sm-6 col-xs-6 padding-bottom-10">
+                          <div class="row">
+                             <div class="col-sm-6 col-xs-6">
+                                <label>Warranty</label>
+                                <select class="form-control">
+                                    <option>0 Yrs</option>
+                                    <option>1</option>
+                                    <option>2</option>
+                                    <option>3</option>
+                                    <option>4</option>
+                                </select>
+                             </div>
+                             <div class="col-sm-6 col-xs-6">
+                                <label>&nbsp;</label>
+                                <select class="form-control">
+                                    <option>0 Months</option>
+                                    <option>1</option>
+                                    <option>2</option>
+                                    <option>3</option>
+                                    <option>4</option>
+                                </select>
+                             </div>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="row">
+                        <div class="col-sm-6 col-xs-6 padding-bottom-10">
+                          <label>Acquisition Date</label>
+                          <input type="text" name="assign_date" class="form-control" id="datetimepicker_dark"/>
+                        </div>
+                        <div class="col-sm-6 col-xs-6 padding-bottom-10">
+                          <label>Warranty Expiry Date</label>
+                          <input type="text" name="assign_date" class="form-control" id="datetimepicker_dark"/>
+                        </div>
+                      </div>
+                      <div class="row">
+                        <div class="col-sm-6 col-xs-6 padding-bottom-10">
+                          <label>Domain</label>
+                          <select class="form-control">
+                                    <option>...</option>
+                                    <option>...</option>
+                                    <option>...</option>
+                          </select>
+                        </div>
+                        <div class="col-sm-6 col-xs-6 padding-bottom-10">
+                          <label>Asset State</label>
+                          <select class="form-control">
+                                    <option>In Stock</option>
+                                    <option>In Transit</option>
+                                    <option>Missing</option>
+                                    <option>In Use</option>
+                                    <option>Retired</option>
+                                  
+                          </select>
+                        </div>
+                      </div>
+                      <div class="row">
+                        <div class="col-sm-6 col-xs-6 padding-bottom-10">
+                          <label>Asset Tag</label>
+                          <input type="text" class="form-control" id="datetimepicker_dark"/>
+                        </div>
+                        <div class="col-sm-6 col-xs-6 padding-bottom-10">
+                          <label>Serial Number</label>
+                          <input type="text" class="form-control" id="datetimepicker_dark"/>
+                        </div>
+                      </div>
+                      <div class="row">
+                        <div class="col-sm-6 col-xs-6 padding-bottom-10">
+                          <label>Last Audit Date</label>
+                          <input type="text" name="last-audit-date" id="last-audit-date"  class="form-control" id="datetimepicker_dark"/>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  
+                </div>
+              </div>
+
+
+              <!-- =================================== Monitor ::::::::::: Closed ======================================== -->
+
+
+              <!-- =================================== MSSQL ::::::::::: Start ======================================== -->
+
+                  <div class="accordion-down">
+                <div class="accordion" id="accordion" role="tablist" >
+                  <div class="panel"> <a class="panel-heading" role="tab" id="heading39" data-toggle="collapse" href="#collapse39" aria-expanded="true" aria-controls="collapse39">
+                    <h4 class="panel-title">SoftwareProperties</h4>
+                    </a>
+                    <div id="collapse39" class="panel-collapse collapse in padding-top-10 padding-bottom-20" role="tabpanel" aria-labelledby="heading39">
+                      <div class="row padding-top-10">
+                        <div class="col-sm-6 col-xs-6 padding-bottom-10">
+                          <label>Product&nbsp;&nbsp;/&nbsp;<a href="#new-pro" data-toggle="modal" data-target="#new-pro"><i class="icon-plus-circled"></i>Add New Product</a></label>
+                          <select class="form-control">
+                            <option>Choose option</option>
+                            <option>Option one</option>
+                            <option>Option two</option>
+                            <option>Option three</option>
+                            <option>Option four</option>
+                        </select>
+                        </div>
+                        <div class="col-sm-6 col-xs-6 padding-bottom-10">
+                          <label>Vendor</label>
+                          <input type="text" name="display_name" class="form-control" required>
+                        </div>
+                      </div>
+                      <div class="row">
+                        <div class="col-sm-6 col-xs-6 padding-bottom-10">
+                          <label>Cost</label>
+                          <input type="text" name="display_name" class="form-control" required>
+                        </div>
+                        <div class="col-sm-6 col-xs-6 padding-bottom-10">
+                          <div class="row">
+                             <div class="col-sm-6 col-xs-6">
+                                <label>License Validity</label>
+                                <select class="form-control">
+                                    <option>0 Yrs</option>
+                                    <option>1</option>
+                                    <option>2</option>
+                                    <option>3</option>
+                                    <option>4</option>
+                                </select>
+                             </div>
+                             <div class="col-sm-6 col-xs-6">
+                                <label>&nbsp;</label>
+                                <select class="form-control">
+                                    <option>0 Months</option>
+                                    <option>1</option>
+                                    <option>2</option>
+                                    <option>3</option>
+                                    <option>4</option>
+                                </select>
+                             </div>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="row">
+                        <div class="col-sm-6 col-xs-6 padding-bottom-10">
+                          <label>Installation Date</label>
+                          <input type="text" name="assign_date" class="form-control" id="datetimepicker_dark"/>
+                        </div>
+                        <div class="col-sm-6 col-xs-6 padding-bottom-10">
+                          <label>License Expiry Date</label>
+                          <input type="text" name="assign_date" class="form-control" id="datetimepicker_dark"/>
+                        </div>
+                      </div>
+                      <div class="row">
+                        <div class="col-sm-6 col-xs-6 padding-bottom-10">
+                          <label>License Key</label>
+                          <input type="text" name="display_name" class="form-control" required>
+                        </div>
+                        <div class="col-sm-6 col-xs-6 padding-bottom-10">
+                          <label>Version</label>
+                          <input type="text" name="display_name" class="form-control" required>
+                        </div>
+                      </div>
+                      <div class="row">
+                        <div class="col-sm-6 col-xs-6 padding-bottom-10">
+                          <label>License Type</label>
+                          <select class="form-control">
+                                    <option>...</option>
+                                    <option>Open Source</option>
+                                    <option>Commercial</option>
+                          </select>
+                        </div>
+                        <div class="col-sm-6 col-xs-6 padding-bottom-10">
+                          <label>Installed Machine</label>
+                          <select class="form-control">
+                                    <option>...</option>
+                                    <option>...</option>
+                                    <option>...</option>
+                          </select>
+                        </div>
+                      </div>
+                      <div class="row">
+                        <div class="col-sm-6 col-xs-6 padding-bottom-10">
+                          <label>Installation Path</label>
+                          <input type="text" class="form-control" id="datetimepicker_dark"/>
+                        </div>
+                        <div class="col-sm-6 col-xs-6 padding-bottom-10">
+                          <label>Last Audit Date</label>
+                          <input type="text" name="last-audit-date" id="last-audit-date"  class="form-control" id="datetimepicker_dark"/>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  
+                </div>
+              </div>
+
+
+              <!-- =================================== MSSQL ::::::::::: Closed ======================================== -->
+
+
+              <!-- =================================== MySQL ::::::::::: Start ======================================== -->
+
+                  <div class="accordion-down">
+                <div class="accordion" id="accordion" role="tablist" >
+                  <div class="panel"> <a class="panel-heading" role="tab" id="heading40" data-toggle="collapse" href="#collapse40" aria-expanded="true" aria-controls="collapse40">
+                    <h4 class="panel-title">SoftwareProperties</h4>
+                    </a>
+                    <div id="collapse40" class="panel-collapse collapse in padding-top-10 padding-bottom-20" role="tabpanel" aria-labelledby="heading40">
+                      <div class="row padding-top-10">
+                        <div class="col-sm-6 col-xs-6 padding-bottom-10">
+                          <label>Product&nbsp;&nbsp;/&nbsp;<a href="#new-pro" data-toggle="modal" data-target="#new-pro"><i class="icon-plus-circled"></i>Add New Product</a></label>
+                          <select class="form-control">
+                            <option>Choose option</option>
+                            <option>Option one</option>
+                            <option>Option two</option>
+                            <option>Option three</option>
+                            <option>Option four</option>
+                        </select>
+                        </div>
+                        <div class="col-sm-6 col-xs-6 padding-bottom-10">
+                          <label>Vendor</label>
+                          <input type="text" name="display_name" class="form-control" required>
+                        </div>
+                      </div>
+                      <div class="row">
+                        <div class="col-sm-6 col-xs-6 padding-bottom-10">
+                          <label>Cost</label>
+                          <input type="text" name="display_name" class="form-control" required>
+                        </div>
+                        <div class="col-sm-6 col-xs-6 padding-bottom-10">
+                          <div class="row">
+                             <div class="col-sm-6 col-xs-6">
+                                <label>License Validity</label>
+                                <select class="form-control">
+                                    <option>0 Yrs</option>
+                                    <option>1</option>
+                                    <option>2</option>
+                                    <option>3</option>
+                                    <option>4</option>
+                                </select>
+                             </div>
+                             <div class="col-sm-6 col-xs-6">
+                                <label>&nbsp;</label>
+                                <select class="form-control">
+                                    <option>0 Months</option>
+                                    <option>1</option>
+                                    <option>2</option>
+                                    <option>3</option>
+                                    <option>4</option>
+                                </select>
+                             </div>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="row">
+                        <div class="col-sm-6 col-xs-6 padding-bottom-10">
+                          <label>Installation Date</label>
+                          <input type="text" name="assign_date" class="form-control" id="datetimepicker_dark"/>
+                        </div>
+                        <div class="col-sm-6 col-xs-6 padding-bottom-10">
+                          <label>License Expiry Date</label>
+                          <input type="text" name="assign_date" class="form-control" id="datetimepicker_dark"/>
+                        </div>
+                      </div>
+                      <div class="row">
+                        <div class="col-sm-6 col-xs-6 padding-bottom-10">
+                          <label>License Key</label>
+                          <input type="text" name="display_name" class="form-control" required>
+                        </div>
+                        <div class="col-sm-6 col-xs-6 padding-bottom-10">
+                          <label>Version</label>
+                          <input type="text" name="display_name" class="form-control" required>
+                        </div>
+                      </div>
+                      <div class="row">
+                        <div class="col-sm-6 col-xs-6 padding-bottom-10">
+                          <label>License Type</label>
+                          <select class="form-control">
+                                    <option>...</option>
+                                    <option>Open Source</option>
+                                    <option>Commercial</option>
+                          </select>
+                        </div>
+                        <div class="col-sm-6 col-xs-6 padding-bottom-10">
+                          <label>Installed Machine</label>
+                          <select class="form-control">
+                                    <option>...</option>
+                                    <option>...</option>
+                                    <option>...</option>
+                          </select>
+                        </div>
+                      </div>
+                      <div class="row">
+                        <div class="col-sm-6 col-xs-6 padding-bottom-10">
+                          <label>Installation Path</label>
+                          <input type="text" class="form-control" id="datetimepicker_dark"/>
+                        </div>
+                        <div class="col-sm-6 col-xs-6 padding-bottom-10">
+                          <label>Last Audit Date</label>
+                          <input type="text" name="last-audit-date" id="last-audit-date"  class="form-control" id="datetimepicker_dark"/>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  
+                </div>
+              </div>
+
+
+              <!-- =================================== MySQL ::::::::::: Closed ======================================== -->
+
+
+              <!-- =================================== Network ::::::::::: Start ======================================== -->
+
+                  <div class="accordion-down">
+                <div class="accordion" id="accordion" role="tablist" >
+                  <div class="panel"> <a class="panel-heading" role="tab" id="heading41" data-toggle="collapse" href="#collapse41" aria-expanded="true" aria-controls="collapse41">
+                    <h4 class="panel-title">NetworkProperties</h4>
+                    </a>
+                    <div id="collapse41" class="panel-collapse collapse in padding-top-10 padding-bottom-20" role="tabpanel" aria-labelledby="heading41">
+                      
+                      <div class="row">
+                        <div class="col-sm-6 col-xs-6 padding-bottom-10">
+                          <label>Bandwidth</label>
+                          <input type="text" name="display_name" class="form-control" required>
+                        </div>
+                        <div class="col-sm-6 col-xs-6 padding-bottom-10">
+                          <label>Network Range</label>
+                          <input type="text" name="assign_date" class="form-control" id="datetimepicker_dark"/>
+                        </div>
+                      </div>
+                    </div>
+
+                  </div>
+                                 
+
+                </div>
+              </div>
+
+
+              <!-- =================================== Network ::::::::::: Closed ======================================== -->
+
+
+              <!-- =================================== Operating System ::::::::::: Start ======================================== -->
+
+                  <div class="accordion-down">
+                <div class="accordion" id="accordion" role="tablist" >
+                  <div class="panel"> <a class="panel-heading" role="tab" id="heading42" data-toggle="collapse" href="#collapse42" aria-expanded="true" aria-controls="collapse42">
+                    <h4 class="panel-title">SoftwareProperties</h4>
+                    </a>
+                    <div id="collapse42" class="panel-collapse collapse in padding-top-10 padding-bottom-20" role="tabpanel" aria-labelledby="heading42">
+                      <div class="row padding-top-10">
+                        <div class="col-sm-6 col-xs-6 padding-bottom-10">
+                          <label>Product&nbsp;&nbsp;/&nbsp;<a href="#new-pro" data-toggle="modal" data-target="#new-pro"><i class="icon-plus-circled"></i>Add New Product</a></label>
+                          <select class="form-control">
+                            <option>Choose option</option>
+                            <option>Option one</option>
+                            <option>Option two</option>
+                            <option>Option three</option>
+                            <option>Option four</option>
+                        </select>
+                        </div>
+                        <div class="col-sm-6 col-xs-6 padding-bottom-10">
+                          <label>Vendor</label>
+                          <input type="text" name="display_name" class="form-control" required>
+                        </div>
+                      </div>
+                      <div class="row">
+                        <div class="col-sm-6 col-xs-6 padding-bottom-10">
+                          <label>Cost</label>
+                          <input type="text" name="display_name" class="form-control" required>
+                        </div>
+                        <div class="col-sm-6 col-xs-6 padding-bottom-10">
+                          <div class="row">
+                             <div class="col-sm-6 col-xs-6">
+                                <label>License Validity</label>
+                                <select class="form-control">
+                                    <option>0 Yrs</option>
+                                    <option>1</option>
+                                    <option>2</option>
+                                    <option>3</option>
+                                    <option>4</option>
+                                </select>
+                             </div>
+                             <div class="col-sm-6 col-xs-6">
+                                <label>&nbsp;</label>
+                                <select class="form-control">
+                                    <option>0 Months</option>
+                                    <option>1</option>
+                                    <option>2</option>
+                                    <option>3</option>
+                                    <option>4</option>
+                                </select>
+                             </div>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="row">
+                        <div class="col-sm-6 col-xs-6 padding-bottom-10">
+                          <label>Installation Date</label>
+                          <input type="text" name="assign_date" class="form-control" id="datetimepicker_dark"/>
+                        </div>
+                        <div class="col-sm-6 col-xs-6 padding-bottom-10">
+                          <label>License Expiry Date</label>
+                          <input type="text" name="assign_date" class="form-control" id="datetimepicker_dark"/>
+                        </div>
+                      </div>
+                      <div class="row">
+                        <div class="col-sm-6 col-xs-6 padding-bottom-10">
+                          <label>License Key</label>
+                          <input type="text" name="display_name" class="form-control" required>
+                        </div>
+                        <div class="col-sm-6 col-xs-6 padding-bottom-10">
+                          <label>Version</label>
+                          <input type="text" name="display_name" class="form-control" required>
+                        </div>
+                      </div>
+                      <div class="row">
+                        <div class="col-sm-6 col-xs-6 padding-bottom-10">
+                          <label>License Type</label>
+                          <select class="form-control">
+                                    <option>...</option>
+                                    <option>Open Source</option>
+                                    <option>Commercial</option>
+                          </select>
+                        </div>
+                        <div class="col-sm-6 col-xs-6 padding-bottom-10">
+                          <label>Installed Machine</label>
+                          <select class="form-control">
+                                    <option>...</option>
+                                    <option>...</option>
+                                    <option>...</option>
+                          </select>
+                        </div>
+                      </div>
+                      <div class="row">
+                        <div class="col-sm-6 col-xs-6 padding-bottom-10">
+                          <label>Installation Path</label>
+                          <input type="text" class="form-control" id="datetimepicker_dark"/>
+                        </div>
+                        <div class="col-sm-6 col-xs-6 padding-bottom-10">
+                          <label>Last Audit Date</label>
+                          <input type="text" name="last-audit-date" id="last-audit-date"  class="form-control" id="datetimepicker_dark"/>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  
+                </div>
+              </div>
+
+
+              <!-- =================================== Operating System ::::::::::: Closed ======================================== -->
+
+              <!-- =================================== Other Devices ::::::::::: Start ======================================== -->
+
+                  <div class="accordion-down">
+                <div class="accordion" id="accordion" role="tablist" >
+                  <div class="panel"> <a class="panel-heading" role="tab" id="heading43" data-toggle="collapse" href="#collapse43" aria-expanded="true" aria-controls="collapse43">
+                    <h4 class="panel-title">HardwareProperties</h4>
+                    </a>
+                    <div id="collapse43" class="panel-collapse collapse in padding-top-10 padding-bottom-20" role="tabpanel" aria-labelledby="heading43">
+                      <div class="row padding-top-10">
+                        <div class="col-sm-6 col-xs-6 padding-bottom-10">
+                          <label>Product&nbsp;&nbsp;/&nbsp;<a href="#new-pro" data-toggle="modal" data-target="#new-pro"><i class="icon-plus-circled"></i>Add New Product</a></label>
+                          <select class="form-control">
+                            <option>Choose option</option>
+                            <option>Option one</option>
+                            <option>Option two</option>
+                            <option>Option three</option>
+                            <option>Option four</option>
+                        </select>
+                        </div>
+                        <div class="col-sm-6 col-xs-6 padding-bottom-10">
+                          <label>Vendor</label>
+                          <input type="text" name="display_name" class="form-control" required>
+                        </div>
+                      </div>
+                      <div class="row">
+                        <div class="col-sm-6 col-xs-6 padding-bottom-10">
+                          <label>Cost</label>
+                          <input type="text" name="display_name" class="form-control" required>
+                        </div>
+                        <div class="col-sm-6 col-xs-6 padding-bottom-10">
+                          <div class="row">
+                             <div class="col-sm-6 col-xs-6">
+                                <label>Warranty</label>
+                                <select class="form-control">
+                                    <option>0 Yrs</option>
+                                    <option>1</option>
+                                    <option>2</option>
+                                    <option>3</option>
+                                    <option>4</option>
+                                </select>
+                             </div>
+                             <div class="col-sm-6 col-xs-6">
+                                <label>&nbsp;</label>
+                                <select class="form-control">
+                                    <option>0 Months</option>
+                                    <option>1</option>
+                                    <option>2</option>
+                                    <option>3</option>
+                                    <option>4</option>
+                                </select>
+                             </div>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="row">
+                        <div class="col-sm-6 col-xs-6 padding-bottom-10">
+                          <label>Acquisition Date</label>
+                          <input type="text" name="assign_date" class="form-control" id="datetimepicker_dark"/>
+                        </div>
+                        <div class="col-sm-6 col-xs-6 padding-bottom-10">
+                          <label>Warranty Expiry Date</label>
+                          <input type="text" name="assign_date" class="form-control" id="datetimepicker_dark"/>
+                        </div>
+                      </div>
+                      <div class="row">
+                        <div class="col-sm-6 col-xs-6 padding-bottom-10">
+                          <label>Domain</label>
+                          <select class="form-control">
+                                    <option>...</option>
+                                    <option>...</option>
+                                    <option>...</option>
+                          </select>
+                        </div>
+                        <div class="col-sm-6 col-xs-6 padding-bottom-10">
+                          <label>Asset State</label>
+                          <select class="form-control">
+                                    <option>In Stock</option>
+                                    <option>In Transit</option>
+                                    <option>Missing</option>
+                                    <option>In Use</option>
+                                    <option>Retired</option>
+                                  
+                          </select>
+                        </div>
+                      </div>
+                      <div class="row">
+                        <div class="col-sm-6 col-xs-6 padding-bottom-10">
+                          <label>Asset Tag</label>
+                          <input type="text" class="form-control" id="datetimepicker_dark"/>
+                        </div>
+                        <div class="col-sm-6 col-xs-6 padding-bottom-10">
+                          <label>Serial Number</label>
+                          <input type="text" class="form-control" id="datetimepicker_dark"/>
+                        </div>
+                      </div>
+                      <div class="row">
+                        <div class="col-sm-6 col-xs-6 padding-bottom-10">
+                          <label>Last Audit Date</label>
+                          <input type="text" name="last-audit-date" id="last-audit-date"  class="form-control" id="datetimepicker_dark"/>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  
+                </div>
+              </div>
+
+
+              <!-- =================================== Other Devices ::::::::::: Closed ======================================== -->
+
+
+              <!-- =================================== Printer ::::::::::: Start ======================================== -->
+
+                  <div class="accordion-down">
+                <div class="accordion" id="accordion" role="tablist" >
+                  <div class="panel"> <a class="panel-heading" role="tab" id="heading44" data-toggle="collapse" href="#collapse44" aria-expanded="true" aria-controls="collapse44">
+                    <h4 class="panel-title">HardwareProperties</h4>
+                    </a>
+                    <div id="collapse44" class="panel-collapse collapse in padding-top-10 padding-bottom-20" role="tabpanel" aria-labelledby="heading44">
+                      <div class="row padding-top-10">
+                        <div class="col-sm-6 col-xs-6 padding-bottom-10">
+                          <label>Product&nbsp;&nbsp;/&nbsp;<a href="#new-pro" data-toggle="modal" data-target="#new-pro"><i class="icon-plus-circled"></i>Add New Product</a></label>
+                          <select class="form-control">
+                            <option>Choose option</option>
+                            <option>Option one</option>
+                            <option>Option two</option>
+                            <option>Option three</option>
+                            <option>Option four</option>
+                        </select>
+                        </div>
+                        <div class="col-sm-6 col-xs-6 padding-bottom-10">
+                          <label>Vendor</label>
+                          <input type="text" name="display_name" class="form-control" required>
+                        </div>
+                      </div>
+                      <div class="row">
+                        <div class="col-sm-6 col-xs-6 padding-bottom-10">
+                          <label>Cost</label>
+                          <input type="text" name="display_name" class="form-control" required>
+                        </div>
+                        <div class="col-sm-6 col-xs-6 padding-bottom-10">
+                          <div class="row">
+                             <div class="col-sm-6 col-xs-6">
+                                <label>Warranty</label>
+                                <select class="form-control">
+                                    <option>0 Yrs</option>
+                                    <option>1</option>
+                                    <option>2</option>
+                                    <option>3</option>
+                                    <option>4</option>
+                                </select>
+                             </div>
+                             <div class="col-sm-6 col-xs-6">
+                                <label>&nbsp;</label>
+                                <select class="form-control">
+                                    <option>0 Months</option>
+                                    <option>1</option>
+                                    <option>2</option>
+                                    <option>3</option>
+                                    <option>4</option>
+                                </select>
+                             </div>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="row">
+                        <div class="col-sm-6 col-xs-6 padding-bottom-10">
+                          <label>Acquisition Date</label>
+                          <input type="text" name="assign_date" class="form-control" id="datetimepicker_dark"/>
+                        </div>
+                        <div class="col-sm-6 col-xs-6 padding-bottom-10">
+                          <label>Warranty Expiry Date</label>
+                          <input type="text" name="assign_date" class="form-control" id="datetimepicker_dark"/>
+                        </div>
+                      </div>
+                      <div class="row">
+                        <div class="col-sm-6 col-xs-6 padding-bottom-10">
+                          <label>Domain</label>
+                          <select class="form-control">
+                                    <option>...</option>
+                                    <option>...</option>
+                                    <option>...</option>
+                          </select>
+                        </div>
+                        <div class="col-sm-6 col-xs-6 padding-bottom-10">
+                          <label>Asset State</label>
+                          <select class="form-control">
+                                    <option>In Stock</option>
+                                    <option>In Transit</option>
+                                    <option>Missing</option>
+                                    <option>In Use</option>
+                                    <option>Retired</option>
+                                  
+                          </select>
+                        </div>
+                      </div>
+                      <div class="row">
+                        <div class="col-sm-6 col-xs-6 padding-bottom-10">
+                          <label>Asset Tag</label>
+                          <input type="text" class="form-control" id="datetimepicker_dark"/>
+                        </div>
+                        <div class="col-sm-6 col-xs-6 padding-bottom-10">
+                          <label>Serial Number</label>
+                          <input type="text" class="form-control" id="datetimepicker_dark"/>
+                        </div>
+                      </div>
+                      <div class="row">
+                        <div class="col-sm-6 col-xs-6 padding-bottom-10">
+                          <label>Last Audit Date</label>
+                          <input type="text" name="last-audit-date" id="last-audit-date"  class="form-control" id="datetimepicker_dark"/>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  
+                </div>
+              </div>
+
+
+              <!-- =================================== Printer ::::::::::: Closed ======================================== -->
+
+
+              <!-- =================================== Projector ::::::::::: Start ======================================== -->
+
+                  <div class="accordion-down">
+                <div class="accordion" id="accordion" role="tablist" >
+                  <div class="panel"> <a class="panel-heading" role="tab" id="heading45" data-toggle="collapse" href="#collapse45" aria-expanded="true" aria-controls="collapse45">
+                    <h4 class="panel-title">HardwareProperties</h4>
+                    </a>
+                    <div id="collapse45" class="panel-collapse collapse in padding-top-10 padding-bottom-20" role="tabpanel" aria-labelledby="heading45">
+                      <div class="row padding-top-10">
+                        <div class="col-sm-6 col-xs-6 padding-bottom-10">
+                          <label>Product&nbsp;&nbsp;/&nbsp;<a href="#new-pro" data-toggle="modal" data-target="#new-pro"><i class="icon-plus-circled"></i>Add New Product</a></label>
+                          <select class="form-control">
+                            <option>Choose option</option>
+                            <option>Option one</option>
+                            <option>Option two</option>
+                            <option>Option three</option>
+                            <option>Option four</option>
+                        </select>
+                        </div>
+                        <div class="col-sm-6 col-xs-6 padding-bottom-10">
+                          <label>Vendor</label>
+                          <input type="text" name="display_name" class="form-control" required>
+                        </div>
+                      </div>
+                      <div class="row">
+                        <div class="col-sm-6 col-xs-6 padding-bottom-10">
+                          <label>Cost</label>
+                          <input type="text" name="display_name" class="form-control" required>
+                        </div>
+                        <div class="col-sm-6 col-xs-6 padding-bottom-10">
+                          <div class="row">
+                             <div class="col-sm-6 col-xs-6">
+                                <label>Warranty</label>
+                                <select class="form-control">
+                                    <option>0 Yrs</option>
+                                    <option>1</option>
+                                    <option>2</option>
+                                    <option>3</option>
+                                    <option>4</option>
+                                </select>
+                             </div>
+                             <div class="col-sm-6 col-xs-6">
+                                <label>&nbsp;</label>
+                                <select class="form-control">
+                                    <option>0 Months</option>
+                                    <option>1</option>
+                                    <option>2</option>
+                                    <option>3</option>
+                                    <option>4</option>
+                                </select>
+                             </div>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="row">
+                        <div class="col-sm-6 col-xs-6 padding-bottom-10">
+                          <label>Acquisition Date</label>
+                          <input type="text" name="assign_date" class="form-control" id="datetimepicker_dark"/>
+                        </div>
+                        <div class="col-sm-6 col-xs-6 padding-bottom-10">
+                          <label>Warranty Expiry Date</label>
+                          <input type="text" name="assign_date" class="form-control" id="datetimepicker_dark"/>
+                        </div>
+                      </div>
+                      <div class="row">
+                        <div class="col-sm-6 col-xs-6 padding-bottom-10">
+                          <label>Domain</label>
+                          <select class="form-control">
+                                    <option>...</option>
+                                    <option>...</option>
+                                    <option>...</option>
+                          </select>
+                        </div>
+                        <div class="col-sm-6 col-xs-6 padding-bottom-10">
+                          <label>Asset State</label>
+                          <select class="form-control">
+                                    <option>In Stock</option>
+                                    <option>In Transit</option>
+                                    <option>Missing</option>
+                                    <option>In Use</option>
+                                    <option>Retired</option>
+                                  
+                          </select>
+                        </div>
+                      </div>
+                      <div class="row">
+                        <div class="col-sm-6 col-xs-6 padding-bottom-10">
+                          <label>Asset Tag</label>
+                          <input type="text" class="form-control" id="datetimepicker_dark"/>
+                        </div>
+                        <div class="col-sm-6 col-xs-6 padding-bottom-10">
+                          <label>Serial Number</label>
+                          <input type="text" class="form-control" id="datetimepicker_dark"/>
+                        </div>
+                      </div>
+                      <div class="row">
+                        <div class="col-sm-6 col-xs-6 padding-bottom-10">
+                          <label>Last Audit Date</label>
+                          <input type="text" name="last-audit-date" id="last-audit-date"  class="form-control" id="datetimepicker_dark"/>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  
+                </div>
+              </div>
+
+
+              <!-- =================================== Projector ::::::::::: Closed ======================================== -->
+
               
 
+
+              <!-- =================================== Rack ::::::::::: Start ======================================== -->
+
+                  <div class="accordion-down">
+                <div class="accordion" id="accordion" role="tablist" >
+                  <div class="panel"> <a class="panel-heading" role="tab" id="heading47" data-toggle="collapse" href="#collapse47" aria-expanded="true" aria-controls="collapse47">
+                    <h4 class="panel-title">HardwareProperties</h4>
+                    </a>
+                    <div id="collapse47" class="panel-collapse collapse in padding-top-10 padding-bottom-20" role="tabpanel" aria-labelledby="heading47">
+                      <div class="row padding-top-10">
+                        <div class="col-sm-6 col-xs-6 padding-bottom-10">
+                          <label>Product&nbsp;&nbsp;/&nbsp;<a href="#new-pro" data-toggle="modal" data-target="#new-pro"><i class="icon-plus-circled"></i>Add New Product</a></label>
+                          <select class="form-control">
+                            <option>Choose option</option>
+                            <option>Option one</option>
+                            <option>Option two</option>
+                            <option>Option three</option>
+                            <option>Option four</option>
+                        </select>
+                        </div>
+                        <div class="col-sm-6 col-xs-6 padding-bottom-10">
+                          <label>Vendor</label>
+                          <input type="text" name="display_name" class="form-control" required>
+                        </div>
+                      </div>
+                      <div class="row">
+                        <div class="col-sm-6 col-xs-6 padding-bottom-10">
+                          <label>Cost</label>
+                          <input type="text" name="display_name" class="form-control" required>
+                        </div>
+                        <div class="col-sm-6 col-xs-6 padding-bottom-10">
+                          <div class="row">
+                             <div class="col-sm-6 col-xs-6">
+                                <label>Warranty</label>
+                                <select class="form-control">
+                                    <option>0 Yrs</option>
+                                    <option>1</option>
+                                    <option>2</option>
+                                    <option>3</option>
+                                    <option>4</option>
+                                </select>
+                             </div>
+                             <div class="col-sm-6 col-xs-6">
+                                <label>&nbsp;</label>
+                                <select class="form-control">
+                                    <option>0 Months</option>
+                                    <option>1</option>
+                                    <option>2</option>
+                                    <option>3</option>
+                                    <option>4</option>
+                                </select>
+                             </div>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="row">
+                        <div class="col-sm-6 col-xs-6 padding-bottom-10">
+                          <label>Acquisition Date</label>
+                          <input type="text" name="assign_date" class="form-control" id="datetimepicker_dark"/>
+                        </div>
+                        <div class="col-sm-6 col-xs-6 padding-bottom-10">
+                          <label>Warranty Expiry Date</label>
+                          <input type="text" name="assign_date" class="form-control" id="datetimepicker_dark"/>
+                        </div>
+                      </div>
+                      <div class="row">
+                        <div class="col-sm-6 col-xs-6 padding-bottom-10">
+                          <label>Domain</label>
+                          <input type="text" name="display_name" class="form-control" required>
+                        </div>
+                        <div class="col-sm-6 col-xs-6 padding-bottom-10">
+                          <label>Asset State<span class="text-red">*</span></label>
+                          <select class="form-control">
+                            <option>Choose option</option>
+                            <option>Option one</option>
+                            <option>Option two</option>
+                            <option>Option three</option>
+                            <option>Option four</option>
+                        </select>
+                        </div>
+                      </div>
+                      <div class="row">
+                        <div class="col-sm-6 col-xs-6 padding-bottom-10">
+                          <label>Asset Tag</label>
+                          <input type="text" name="tag" id="tag" class="form-control" required>
+                        </div>
+                        <div class="col-sm-6 col-xs-6 padding-bottom-10">
+                          <label>Serial Number</label>
+                          <input type="text" name="serial-number" id="serial-number" class="form-control" required>
+                        </div>
+                      </div>
+                      <div class="row">
+                        <div class="col-sm-6 col-xs-6 padding-bottom-10">
+                          <label>Last Audit Date</label>
+                          <input type="text" name="last-audit-date" id="last-audit-date"  class="form-control" id="datetimepicker_dark"/>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="panel"> <a class="panel-heading" role="tab" id="heading48" data-toggle="collapse" href="#collapse48" aria-expanded="true" aria-controls="collapse48">
+                    <h4 class="panel-title">RackProperties</h4>
+                    </a>
+                    <div id="collapse48" class="panel-collapse collapse in padding-top-10 padding-bottom-20" role="tabpanel" aria-labelledby="heading48">
+                      <div class="row padding-top-10">
+                        <div class="col-sm-6 col-xs-6 padding-bottom-10">
+                          <label>Footprint</label>
+                          <input type="text" name="firmware" id="firmware" class="form-control" required>
+                        </div>
+                        <div class="col-sm-6 col-xs-6 padding-bottom-10">
+                          <label>Power Consumption</label>
+                          <input type="text" name="vendor" id="vendor" class="form-control" required>
+                        </div>
+                      </div>
+                      <div class="row padding-top-10">
+                        <div class="col-sm-6 col-xs-6 padding-bottom-10">
+                          <label>Rack Units</label>
+                          <input type="text" name="ip-address" id="ip-address" class="form-control" required>
+                        </div>
+                        <div class="col-sm-6 col-xs-6 padding-bottom-10">
+                          <label>Rack Units In Use</label>
+                          <input type="text" name="ports" id="ports" class="form-control" required>
+                        </div>
+                      </div>
+                      
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+
+              <!-- =================================== Firewall ::::::::::: Closed ======================================== -->
+
+                            
+              <!-- =================================== RDS ::::::::::: Start =============================================== -->
+
+                <div class="accordion-down">
+                <div class="accordion padding-top-30" id="accordion" role="tablist" >
+                  <div class="panel"> <a class="panel-heading" role="tab" id="heading49" data-toggle="collapse" href="#collapse49" aria-expanded="true" aria-controls="collapse49">
+                    <h4 class="panel-title">CloudProperties</h4>
+                    </a>
+                    <div id="collapse49" class="panel-collapse collapse in padding-top-10 padding-bottom-20" role="tabpanel" aria-labelledby="heading49">
+                      
+                      <div class="row">
+                        <div class="col-sm-6 col-xs-6 padding-bottom-10">
+                          <label>Cost</label>
+                          <input type="text" name="display_name" class="form-control" required>
+                        </div>
+                        <div class="col-sm-6 col-xs-6 padding-bottom-10">
+                          <label>Last Audit Date</label>
+                          <input type="text" name="assign_date" class="form-control" id="datetimepicker_dark"/>
+                        </div>
+                      </div>
+                      
+                      
+                      
+                      
+                    </div>
+                  </div>
+                  <div class="panel"> <a class="panel-heading" role="tab" id="heading50" data-toggle="collapse" href="#collapse50" aria-expanded="true" aria-controls="collapse50">
+                    <h4 class="panel-title">AWSProperties</h4>
+                    </a>
+                    <div id="collapse50" class="panel-collapse collapse in padding-top-10 padding-bottom-20" role="tabpanel" aria-labelledby="heading50">
+                      <div class="row padding-top-10">
+                        <div class="col-sm-6 col-xs-6 padding-bottom-10">
+                          <label>Account</label>
+                          <select class="form-control">
+                            <option>.....</option>
+                            <option>Option one</option>
+                            <option>Option two</option>
+                            <option>Option three</option>
+                            <option>Option four</option>
+                          </select>
+                        </div>
+                        <div class="col-sm-6 col-xs-6 padding-bottom-10">
+                          <label>Region</label>
+                          <select class="form-control">
+                            <option>.....</option>
+                            <option>Option one</option>
+                            <option>Option two</option>
+                            <option>Option three</option>
+                            <option>Option four</option>
+                          </select>
+                        </div>
+                      </div>
+                      <div class="row padding-top-10">
+                        <div class="col-sm-6 col-xs-6 padding-bottom-10">
+                          <label>Availity Zone</label>
+                          <input type="text" name="os-service" id="os-service" class="form-control" required>
+                        </div>
+                        
+                      </div>
+                      
+                      
+                     
+                    </div>
+                  </div>
+
+                  <div class="panel"> <a class="panel-heading" role="tab" id="heading51" data-toggle="collapse" href="#collapse51" aria-expanded="true" aria-controls="collapse51">
+                    <h4 class="panel-title">RDSProperties</h4>
+                    </a>
+                    <div id="collapse51" class="panel-collapse collapse in padding-top-10 padding-bottom-20" role="tabpanel" aria-labelledby="heading51">
+                      <div class="row padding-top-10">
+                        <div class="col-sm-6 col-xs-6 padding-bottom-10">
+                          <label>Instance Name</label>
+                          <input type="text" name="os-service" id="os-service" class="form-control" required>
+                        </div>
+                        <div class="col-sm-6 col-xs-6 padding-bottom-10">
+                          <label>Class</label>
+                          <input type="text" name="os-service" id="os-service" class="form-control" required>
+                        </div>
+                      </div>
+                      <div class="row padding-top-10">
+                        <div class="col-sm-6 col-xs-6 padding-bottom-10">
+                          <label>Storage Type</label>
+                          <input type="text" name="os-service" id="os-service" class="form-control" required>
+                        </div>
+
+                        <div class="col-sm-6 col-xs-6 padding-bottom-10">
+                          <label>Storage</label>
+                          <input type="text" name="os-service" id="os-service" class="form-control" required>
+                        </div>
+
+                        
+                      </div>
+
+
+                      <div class="row padding-top-10">
+                        <div class="col-sm-6 col-xs-6 padding-bottom-10">
+                          <label>Engine</label>
+                          <input type="text" name="os-service" id="os-service" class="form-control" required>
+                        </div>
+
+                        <div class="col-sm-6 col-xs-6 padding-bottom-10">
+                          <label>Security Group</label>
+                          <input type="text" name="os-service" id="os-service" class="form-control" required>
+                        </div>
+
+                        
+                      </div>
+
+                      <div class="row padding-top-10">
+                        <div class="col-sm-6 col-xs-6 padding-bottom-10">
+                          <label>Encrypted</label>
+                          <input type="text" name="os-service" id="os-service" class="form-control" required>
+                        </div>
+
+                        <div class="col-sm-6 col-xs-6 padding-bottom-10">
+                          <label>Status</label>
+                          <input type="text" name="os-service" id="os-service" class="form-control" required>
+                        </div>
+
+                        
+                      </div>
+
+                      <div class="row padding-top-10">
+                        <div class="col-sm-6 col-xs-6 padding-bottom-10">
+                          <label>Parameter Group</label>
+                          <input type="text" name="os-service" id="os-service" class="form-control" required>
+                        </div>
+                        
+                      </div>
+                      
+                      
+                     
+                    </div>
+                  </div>
+
+
+
+
+                </div>
+              </div>
+
+              <!-- =================================== RDS ::::::::::: Closed =============================================== -->
+
+
+              <!-- =================================== Router ::::::::::: Start =============================================== -->
+
+                <div class="accordion-down">
+                <div class="accordion" id="accordion" role="tablist" >
+                  <div class="panel"> <a class="panel-heading" role="tab" id="heading52" data-toggle="collapse" href="#collapse52" aria-expanded="true" aria-controls="collapse52">
+                    <h4 class="panel-title">HardwareProperties</h4>
+                    </a>
+                    <div id="collapse52" class="panel-collapse collapse in padding-top-10 padding-bottom-20" role="tabpanel" aria-labelledby="heading52">
+                      <div class="row padding-top-10">
+                        <div class="col-sm-6 col-xs-6 padding-bottom-10">
+                          <label>Product&nbsp;&nbsp;/&nbsp;<a href="#new-pro" data-toggle="modal" data-target="#new-pro"><i class="icon-plus-circled"></i>Add New Product</a></label>
+                          <select class="form-control">
+                            <option>Choose option</option>
+                            <option>Option one</option>
+                            <option>Option two</option>
+                            <option>Option three</option>
+                            <option>Option four</option>
+                        </select>
+                        </div>
+                        <div class="col-sm-6 col-xs-6 padding-bottom-10">
+                          <label>Vendor</label>
+                          <input type="text" name="display_name" class="form-control" required>
+                        </div>
+                      </div>
+                      <div class="row">
+                        <div class="col-sm-6 col-xs-6 padding-bottom-10">
+                          <label>Cost</label>
+                          <input type="text" name="display_name" class="form-control" required>
+                        </div>
+                        <div class="col-sm-6 col-xs-6 padding-bottom-10">
+                          <div class="row">
+                             <div class="col-sm-6 col-xs-6">
+                                <label>Warranty</label>
+                                <select class="form-control">
+                                    <option>0 Yrs</option>
+                                    <option>1</option>
+                                    <option>2</option>
+                                    <option>3</option>
+                                    <option>4</option>
+                                </select>
+                             </div>
+                             <div class="col-sm-6 col-xs-6">
+                                <label>&nbsp;</label>
+                                <select class="form-control">
+                                    <option>0 Months</option>
+                                    <option>1</option>
+                                    <option>2</option>
+                                    <option>3</option>
+                                    <option>4</option>
+                                </select>
+                             </div>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="row">
+                        <div class="col-sm-6 col-xs-6 padding-bottom-10">
+                          <label>Acquisition Date</label>
+                          <input type="text" name="assign_date" class="form-control" id="datetimepicker_dark"/>
+                        </div>
+                        <div class="col-sm-6 col-xs-6 padding-bottom-10">
+                          <label>Warranty Expiry Date</label>
+                          <input type="text" name="assign_date" class="form-control" id="datetimepicker_dark"/>
+                        </div>
+                      </div>
+                      <div class="row">
+                        <div class="col-sm-6 col-xs-6 padding-bottom-10">
+                          <label>Domain</label>
+                          <input type="text" name="display_name" class="form-control" required>
+                        </div>
+                        <div class="col-sm-6 col-xs-6 padding-bottom-10">
+                          <label>Asset State<span class="text-red">*</span></label>
+                          <select class="form-control">
+                            <option>Choose option</option>
+                            <option>Option one</option>
+                            <option>Option two</option>
+                            <option>Option three</option>
+                            <option>Option four</option>
+                        </select>
+                        </div>
+                      </div>
+                      <div class="row">
+                        <div class="col-sm-6 col-xs-6 padding-bottom-10">
+                          <label>Asset Tag</label>
+                          <input type="text" name="tag" id="tag" class="form-control" required>
+                        </div>
+                        <div class="col-sm-6 col-xs-6 padding-bottom-10">
+                          <label>Serial Number</label>
+                          <input type="text" name="serial-number" id="serial-number" class="form-control" required>
+                        </div>
+                      </div>
+                      <div class="row">
+                        <div class="col-sm-6 col-xs-6 padding-bottom-10">
+                          <label>Last Audit Date</label>
+                          <input type="text" name="last-audit-date" id="last-audit-date"  class="form-control" id="datetimepicker_dark"/>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="panel"> <a class="panel-heading" role="tab" id="heading53" data-toggle="collapse" href="#collapse53" aria-expanded="true" aria-controls="collapse53">
+                    <h4 class="panel-title">RouterProperties</h4>
+                    </a>
+                    <div id="collapse53" class="panel-collapse collapse in padding-top-10 padding-bottom-20" role="tabpanel" aria-labelledby="heading53">
+                      <div class="row padding-top-10">
+                        <div class="col-sm-6 col-xs-6 padding-bottom-10">
+                          <label>Firmware</label>
+                          <input type="text" name="firmware" id="firmware" class="form-control" required>
+                        </div>
+                        <div class="col-sm-6 col-xs-6 padding-bottom-10">
+                          <label>Firmware Version</label>
+                          <input type="text" name="vendor" id="vendor" class="form-control" required>
+                        </div>
+                      </div>
+                      <div class="row padding-top-10">
+                        <div class="col-sm-6 col-xs-6 padding-bottom-10">
+                          <label>IP Address</label>
+                          <input type="text" name="ip-address" id="ip-address" class="form-control" required>
+                        </div>
+                        <div class="col-sm-6 col-xs-6 padding-bottom-10">
+                          <label>Ports</label>
+                          <input type="text" name="ports" id="ports" class="form-control" required>
+                        </div>
+                      </div>
+                      <div class="row padding-top-10">
+                        <div class="col-sm-6 col-xs-6 padding-bottom-10">
+                          <label>MAC Address</label>
+                          <input type="text" name="mac-address" id="mac-address" class="form-control" required>
+                        </div>
+                        <div class="col-sm-6 col-xs-6 padding-bottom-10">
+                          <label>Subnet Mask</label>
+                          <input type="text" name="subnet-mask" id="subnet-mask" class="form-control" required>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+
+
+              <!-- =================================== Router ::::::::::: Closed =============================================== -->
+
+
+              <!-- =================================== Sales Service ::::::::::: Start =============================================== -->
+
+              <div class="accordion-down">
+                <div class="accordion padding-top-30" id="accordion" role="tablist" >
+                  <div class="panel"> <a class="panel-heading" role="tab" id="heading54" data-toggle="collapse" data-parent="#accordion" href="#collapse54" aria-expanded="true" aria-controls="collapse54">
+                    <h4 class="panel-title">Business ServiceProperties</h4>
+                    </a>
+                    <div id="collapse54" class="panel-collapse collapse in padding-top-10 padding-bottom-20"  role="tabpanel" aria-labelledby="heading54">
+                      <div class="row">
+                        <div class="col-sm-6 col-xs-6 padding-bottom-10">
+                          <label>SLA(Availability in %)</label>
+                          <input type="text" name="display_name" class="form-control" required>
+                        </div>
+                        <div class="col-sm-6 col-xs-6 padding-bottom-10">
+                          <label>Cost</label>
+                          <input type="text" name="display_name" class="form-control" required>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <!-- =================================== Sales Service ::::::::::: Closed ============================================== -->
+
+              <!-- =================================== Scanner ::::::::::: Start ======================================== -->
+
+                  <div class="accordion-down">
+                <div class="accordion" id="accordion" role="tablist" >
+                  <div class="panel"> <a class="panel-heading" role="tab" id="heading55" data-toggle="collapse" href="#collapse55" aria-expanded="true" aria-controls="collapse55">
+                    <h4 class="panel-title">HardwareProperties</h4>
+                    </a>
+                    <div id="collapse55" class="panel-collapse collapse in padding-top-10 padding-bottom-20" role="tabpanel" aria-labelledby="heading55">
+                      <div class="row padding-top-10">
+                        <div class="col-sm-6 col-xs-6 padding-bottom-10">
+                          <label>Product&nbsp;&nbsp;/&nbsp;<a href="#new-pro" data-toggle="modal" data-target="#new-pro"><i class="icon-plus-circled"></i>Add New Product</a></label>
+                          <select class="form-control">
+                            <option>Choose option</option>
+                            <option>Option one</option>
+                            <option>Option two</option>
+                            <option>Option three</option>
+                            <option>Option four</option>
+                        </select>
+                        </div>
+                        <div class="col-sm-6 col-xs-6 padding-bottom-10">
+                          <label>Vendor</label>
+                          <input type="text" name="display_name" class="form-control" required>
+                        </div>
+                      </div>
+                      <div class="row">
+                        <div class="col-sm-6 col-xs-6 padding-bottom-10">
+                          <label>Cost</label>
+                          <input type="text" name="display_name" class="form-control" required>
+                        </div>
+                        <div class="col-sm-6 col-xs-6 padding-bottom-10">
+                          <div class="row">
+                             <div class="col-sm-6 col-xs-6">
+                                <label>Warranty</label>
+                                <select class="form-control">
+                                    <option>0 Yrs</option>
+                                    <option>1</option>
+                                    <option>2</option>
+                                    <option>3</option>
+                                    <option>4</option>
+                                </select>
+                             </div>
+                             <div class="col-sm-6 col-xs-6">
+                                <label>&nbsp;</label>
+                                <select class="form-control">
+                                    <option>0 Months</option>
+                                    <option>1</option>
+                                    <option>2</option>
+                                    <option>3</option>
+                                    <option>4</option>
+                                </select>
+                             </div>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="row">
+                        <div class="col-sm-6 col-xs-6 padding-bottom-10">
+                          <label>Acquisition Date</label>
+                          <input type="text" name="assign_date" class="form-control" id="datetimepicker_dark"/>
+                        </div>
+                        <div class="col-sm-6 col-xs-6 padding-bottom-10">
+                          <label>Warranty Expiry Date</label>
+                          <input type="text" name="assign_date" class="form-control" id="datetimepicker_dark"/>
+                        </div>
+                      </div>
+                      <div class="row">
+                        <div class="col-sm-6 col-xs-6 padding-bottom-10">
+                          <label>Domain</label>
+                          <select class="form-control">
+                                    <option>...</option>
+                                    <option>...</option>
+                                    <option>...</option>
+                          </select>
+                        </div>
+                        <div class="col-sm-6 col-xs-6 padding-bottom-10">
+                          <label>Asset State</label>
+                          <select class="form-control">
+                                    <option>In Stock</option>
+                                    <option>In Transit</option>
+                                    <option>Missing</option>
+                                    <option>In Use</option>
+                                    <option>Retired</option>
+                                  
+                          </select>
+                        </div>
+                      </div>
+                      <div class="row">
+                        <div class="col-sm-6 col-xs-6 padding-bottom-10">
+                          <label>Asset Tag</label>
+                          <input type="text" class="form-control" id="datetimepicker_dark"/>
+                        </div>
+                        <div class="col-sm-6 col-xs-6 padding-bottom-10">
+                          <label>Serial Number</label>
+                          <input type="text" class="form-control" id="datetimepicker_dark"/>
+                        </div>
+                      </div>
+                      <div class="row">
+                        <div class="col-sm-6 col-xs-6 padding-bottom-10">
+                          <label>Last Audit Date</label>
+                          <input type="text" name="last-audit-date" id="last-audit-date"  class="form-control" id="datetimepicker_dark"/>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  
+                </div>
+              </div>
+
+
+              <!-- =================================== Scanner ::::::::::: Closed ======================================== -->
+
+              <!-- =================================== Aix Server ::::::::::: Start =============================================== -->
+
+                <div class="accordion-down">
+                <div class="accordion" id="accordion" role="tablist" >
+                  <div class="panel"> <a class="panel-heading" role="tab" id="heading4" data-toggle="collapse" href="#collapse4" aria-expanded="true" aria-controls="collapse4">
+                    <h4 class="panel-title">HardwareProperties</h4>
+                    </a>
+                    <div id="collapse4" class="panel-collapse collapse in padding-top-10 padding-bottom-20" role="tabpanel" aria-labelledby="heading4">
+                      <div class="row padding-top-10">
+                        <div class="col-sm-6 col-xs-6 padding-bottom-10">
+                          <label>Product&nbsp;&nbsp;/&nbsp;<a href="#new-pro" data-toggle="modal" data-target="#new-pro"><i class="icon-plus-circled"></i>Add New Product</a></label>
+                          <select class="form-control">
+                            <option>Choose option</option>
+                            <option>Option one</option>
+                            <option>Option two</option>
+                            <option>Option three</option>
+                            <option>Option four</option>
+                        </select>
+                        </div>
+                        <div class="col-sm-6 col-xs-6 padding-bottom-10">
+                          <label>Vendor</label>
+                          <input type="text" name="display_name" class="form-control" required>
+                        </div>
+                      </div>
+                      <div class="row">
+                        <div class="col-sm-6 col-xs-6 padding-bottom-10">
+                          <label>Cost</label>
+                          <input type="text" name="display_name" class="form-control" required>
+                        </div>
+                        <div class="col-sm-6 col-xs-6 padding-bottom-10">
+                          <div class="row">
+                             <div class="col-sm-6 col-xs-6">
+                                <label>Warranty</label>
+                                <select class="form-control">
+                                    <option>0 Yrs</option>
+                                    <option>1</option>
+                                    <option>2</option>
+                                    <option>3</option>
+                                    <option>4</option>
+                                </select>
+                             </div>
+                             <div class="col-sm-6 col-xs-6">
+                                <label>&nbsp;</label>
+                                <select class="form-control">
+                                    <option>0 Months</option>
+                                    <option>1</option>
+                                    <option>2</option>
+                                    <option>3</option>
+                                    <option>4</option>
+                                </select>
+                             </div>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="row">
+                        <div class="col-sm-6 col-xs-6 padding-bottom-10">
+                          <label>Acquisition Date</label>
+                          <input type="text" name="assign_date" class="form-control" id="datetimepicker_dark"/>
+                        </div>
+                        <div class="col-sm-6 col-xs-6 padding-bottom-10">
+                          <label>Warranty Expiry Date</label>
+                          <input type="text" name="assign_date" class="form-control" id="datetimepicker_dark"/>
+                        </div>
+                      </div>
+                      <div class="row">
+                        <div class="col-sm-6 col-xs-6 padding-bottom-10">
+                          <label>Domain</label>
+                          <input type="text" name="display_name" class="form-control" required>
+                        </div>
+                        <div class="col-sm-6 col-xs-6 padding-bottom-10">
+                          <label>Asset State<span class="text-red">*</span></label>
+                          <select class="form-control">
+                            <option>Choose option</option>
+                            <option>Option one</option>
+                            <option>Option two</option>
+                            <option>Option three</option>
+                            <option>Option four</option>
+                        </select>
+                        </div>
+                      </div>
+                      <div class="row">
+                        <div class="col-sm-6 col-xs-6 padding-bottom-10">
+                          <label>Asset Tag</label>
+                          <input type="text" name="tag" id="tag" class="form-control" required>
+                        </div>
+                        <div class="col-sm-6 col-xs-6 padding-bottom-10">
+                          <label>Serial Number</label>
+                          <input type="text" name="serial-number" id="serial-number" class="form-control" required>
+                        </div>
+                      </div>
+                      <div class="row">
+                        <div class="col-sm-6 col-xs-6 padding-bottom-10">
+                          <label>Last Audit Date</label>
+                          <input type="text" name="last-audit-date" id="last-audit-date"  class="form-control" id="datetimepicker_dark"/>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="panel"> <a class="panel-heading" role="tab" id="heading5" data-toggle="collapse" href="#collapse5" aria-expanded="true" aria-controls="collapse5">
+                    <h4 class="panel-title">ComputerProperties</h4>
+                    </a>
+                    <div id="collapse5" class="panel-collapse collapse in padding-top-10 padding-bottom-20" role="tabpanel" aria-labelledby="heading5">
+                      <div class="row padding-top-10">
+                        <div class="col-sm-6 col-xs-6 padding-bottom-10">
+                          <label>OS</label>
+                          <select class="form-control">
+                            <option>.....</option>
+                            <option>Option one</option>
+                            <option>Option two</option>
+                            <option>Option three</option>
+                            <option>Option four</option>
+                          </select>
+                        </div>
+                        <div class="col-sm-6 col-xs-6 padding-bottom-10">
+                          <label>OS Version</label>
+                          <input type="text" name="os-version" id="os-version" class="form-control" required>
+                        </div>
+                      </div>
+                      <div class="row padding-top-10">
+                        <div class="col-sm-6 col-xs-6 padding-bottom-10">
+                          <label>OS Service Pack</label>
+                          <input type="text" name="os-service" id="os-service" class="form-control" required>
+                        </div>
+                        <div class="col-sm-6 col-xs-6 padding-bottom-10">
+                          <label>Memory(GB)</label>
+                          <input type="text" name="memory" id="memory" class="form-control" required>
+                        </div>
+                      </div>
+                      <div class="row padding-top-10">
+                        <div class="col-sm-6 col-xs-6 padding-bottom-10">
+                          <label>Disk Space(GB)</label>
+                          <input type="text" name="disk-space" id="disk-space" class="form-control" required>
+                        </div>
+                        <div class="col-sm-6 col-xs-6 padding-bottom-10">
+                          <label>CPU Speed(GHz)</label>
+                          <input type="text" name="cpu-speed" id="cpu-speed" class="form-control" required>
+                        </div>
+                      </div>
+                      <div class="row padding-top-10">
+                        <div class="col-sm-6 col-xs-6 padding-bottom-10">
+                          <label>CPU Core Count</label>
+                          <input type="text" name="cpu-core" id="cpu-core" class="form-control" required>
+                        </div>
+                        <div class="col-sm-6 col-xs-6 padding-bottom-10">
+                          <label>MAC Address</label>
+                          <input type="text" name="address" id="address" class="form-control" required>
+                        </div>
+                      </div>
+                      <div class="row padding-top-10">
+                        <div class="col-sm-6 col-xs-6 padding-bottom-10">
+                          <label>UUID</label>
+                          <input type="text" name="uuid" id="uuid" class="form-control" required>
+                        </div>
+                        <div class="col-sm-6 col-xs-6 padding-bottom-10">
+                          <label>Hostname</label>
+                          <input type="text" name="hostname" id="hostname" class="form-control" required>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+
+
+              <!-- =================================== Aix Server ::::::::::: Closed =============================================== -->
                 
 
 

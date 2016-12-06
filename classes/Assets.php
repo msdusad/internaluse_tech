@@ -126,15 +126,13 @@ return $item_data;
 }
 
 
+
 if(isset($_POST['asset_id'])){
 $data=Assets::AssetsForm($_POST['asset_id']);
 foreach ($data as  $value) {
 	# code...
 	echo $value['assets_form'];
 }
-}
-else{
-	echo "no data posted";
 }
 
 ?>

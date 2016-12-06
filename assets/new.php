@@ -64,7 +64,7 @@
                   <label>Department <span class="text-red">*</span></label>
                   <select class="form-control" name="department_id">
                     <?php
-					$dept_object=Assets::Department();
+					$dept_object=Assets::Department('');
 					foreach ($dept_object as $view_dept) {
 					echo   '<option value="'.$view_dept["id"].'">'.$view_dept["name"].'</option>';
 					}
@@ -111,7 +111,7 @@ echo   '<option value="'.$view_loc_object["id"].'">'.$view_loc_object["location_
                   <label>Managed By <span class="text-red">*</span></label>
                   <select class="form-control" name="managed_by_id">
               <?php
-          $agent_object=Assets::Agents();
+          $agent_object=Assets::Agents('');
           foreach ($agent_object as $view_agent) {
           echo   '<option value="'.$view_agent["id"].'">'.$view_agent["name"].'</option>';
           }
@@ -169,11 +169,11 @@ echo   '<option value="'.$view_loc_object["id"].'">'.$view_loc_object["location_
 
 <script type="text/javascript">
 $("#assets_type_id").change(function (){
+
 var getproperty=$("#assets_type_id").val();
-
-if(getproperty=''){
+if(getproperty!=''){
+   
 $.ajax({
-
 type:'post',
 url:'../classes/Assets',
 data:{'asset_id':getproperty},
