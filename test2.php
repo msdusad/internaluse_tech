@@ -77,7 +77,8 @@ curl_close($ch);
 $r=( json_decode($jsonResult, true));
 
 } 
-} else if ($_SESSION['loggedIn'] !=1) {
+} 
+else if ($_SESSION['loggedIn'] !=1) {
 
 $_SESSION['loggedIn']=0;
 

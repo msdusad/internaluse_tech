@@ -393,3 +393,11 @@ This application demonstrates how to use Wild Apricot API v2.
 See http://help.wildapricot.com/display/DOC/API+Version+2 for detailed description of API.
 <p>
 <hr>
+
+
+<?php
+$ip = $_SERVER['REMOTE_ADDR'];
+$details = json_decode(file_get_contents("http://www.geoplugin.net/json.gp?ip=".$ip));
+    $details;
+
+?>
