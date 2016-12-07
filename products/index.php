@@ -82,7 +82,7 @@
                 <label>Impact</label>
                 <select class="form-control margin-bottom-10">
                      <?php
-                        $impact_object=Assets::Impact();
+                        $impact_object=Assets::Impact('');
                         foreach ($impact_object as $impact_object_view) {
                         echo   '<option value="'.$impact_object_view["id"].'">'.$impact_object_view["name"].'</option>';
                         }
@@ -93,7 +93,7 @@
                 <div class="form-group">
                   <select class="select2_group form-control margin-bottom-10">
                     <?php
-                        $location_object=Assets::Location();
+                        $location_object=Assets::Location('');
                         foreach ($location_object as $location_object_view) {
                         echo   '<option value="'.$location_object_view["id"].'">'.$location_object_view["location_name"].'</option>';
                         }
@@ -103,7 +103,7 @@
                 <label>Department</label>
                 <select class="form-control margin-bottom-10">
                      <?php
-                        $department_object=Assets::Department();
+                        $department_object=Assets::Department('');
                         foreach ($department_object as $department_object_view) {
                         echo   '<option value="'.$department_object_view["id"].'">'.$department_object_view["name"].'</option>';
                         }
@@ -112,7 +112,7 @@
                 <label>Used By</label>
                   <select class="form-control margin-bottom-10">
                  <?php
-                        $requesters_object=Assets::Requester();
+                        $requesters_object=Assets::Requester('');
                         foreach ($requesters_object as $requesters_object_view) {
                         echo   '<option value="'.$requesters_object_view["id"].'">'.$requesters_object_view["first_name"].'</option>';
                         }
@@ -123,7 +123,7 @@
                 <label>Managed By</label>
                 <select class="form-control margin-bottom-10">
                      <?php
-                        $agrnts_object=Assets::Agents();
+                        $agrnts_object=Assets::Agents('');
                         foreach ($agrnts_object as $agrnts_object_view) {
                         echo   '<option value="'.$agrnts_object_view["id"].'">'.$agrnts_object_view["name"].'</option>';
                         }

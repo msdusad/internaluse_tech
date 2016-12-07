@@ -4,8 +4,8 @@
        if(!isset($_SESSION['userid'])){
    header('Location:login/index.php');
  }
-  require_once('classes/Path.php');
- require_once('classes/UserDetail.php');
+  require_once('classes/Include_all.php');
+ //require_once('classes/UserDetail.php');
  $getuser=new UserDetail() ;
 $getuserdetail=$getuser->userdetails();
 foreach ($getuserdetail as $viewdata) 
@@ -90,24 +90,94 @@ echo DOCS_ROOT.$_SESSION['userid']."/profile/".$viewdata['profile_pic'];
     include("include/right-nav.php"); ?>
     <div class="right_col" role="main">
       <div class="row tile_count">
-        <div class="col-md-2 col-sm-4 col-xs-6 tile_stats_count"> <span class="count_top"><i class="fa icon-user"></i> Overdue</span>
-          <div class="count">2500</div>
-          <span class="count_bottom"><i class="green">4% </i> From last Week</span> </div>
-        <div class="col-md-2 col-sm-4 col-xs-6 tile_stats_count"> <span class="count_top"><i class="fa icon-clock"></i> Open</span>
-          <div class="count">123.50</div>
-          <span class="count_bottom"><i class="green"><i class="fa icon-up-dir"></i> 3% </i> From last Week</span> </div>
-        <div class="col-md-2 col-sm-4 col-xs-6 tile_stats_count"> <span class="count_top"><i class="fa icon-user"></i> Total Males</span>
-          <div class="count green">2,500</div>
-          <span class="count_bottom"><i class="green"><i class="fa icon-up-dir"></i> 34% </i> From last Week</span> </div>
-        <div class="col-md-2 col-sm-4 col-xs-6 tile_stats_count"> <span class="count_top"><i class="fa icon-user"></i> On Hold</span>
-          <div class="count">4,567</div>
-          <span class="count_bottom"><i class="red"><i class="fa icon-up-dir"></i> 12% </i> From last Week</span> </div>
-        <div class="col-md-2 col-sm-4 col-xs-6 tile_stats_count"> <span class="count_top"><i class="fa icon-user"></i> Due Today</span>
-          <div class="count">2,315</div>
-          <span class="count_bottom"><i class="green"><i class="fa icon-up-dir"></i> 34% </i> From last Week</span> </div>
-        <div class="col-md-2 col-sm-4 col-xs-6 tile_stats_count"> <span class="count_top"><i class="fa icon-user"></i> Unassigned</span>
-          <div class="count">7,325</div>
-          <span class="count_bottom"><i class="green"><i class="fa icon-up-dir"></i> 34% </i> From last Week</span> </div>
+        <div class="col-md-2 col-sm-4 col-xs-6 tile_stats_count"> <span class="count_top"><i class="fa icon-user"></i> Computer</span>
+          <div class="count">
+<?php
+
+$com_obj=Common::NumRows('select* from items where assets_type_id="1"');
+echo $com_obj;
+
+?>
+
+          </div>
+         <!--  <span class="count_bottom"><i class="green">4% </i> From last Week</span> --> </div>
+        <div class="col-md-2 col-sm-4 col-xs-6 tile_stats_count"> <span class="count_top"><i class="fa icon-clock"></i> Desktop</span>
+          <div class="count">
+<?php
+
+$com_obj=Common::NumRows('select* from items where assets_type_id="2"');
+echo $com_obj;
+
+?>
+          </div>
+           </div>
+        <div class="col-md-2 col-sm-4 col-xs-6 tile_stats_count"> <span class="count_top"><i class="fa icon-user"></i> Applications</span>
+          <div class="count">
+<?php
+
+$com_obj=Common::NumRows('select* from items where assets_type_id="6"');
+if($com_obj==0){
+echo 0;
+}
+else{
+  echo $com_obj;
+}
+
+
+?>
+          </div>
+         
+         </div>
+        <div class="col-md-2 col-sm-4 col-xs-6 tile_stats_count"> <span class="count_top"><i class="fa icon-user"></i>Cloud</span>
+          <div class="count">
+
+<?php
+
+$com_obj=Common::NumRows('select* from items where assets_type_id="10"');
+if($com_obj==0){
+echo 0;
+}
+else{
+  echo $com_obj;
+}
+
+
+?>
+          </div>
+        </div>
+        <div class="col-md-2 col-sm-4 col-xs-6 tile_stats_count"> <span class="count_top"><i class="fa icon-user"></i>Mac OS</span>
+          <div class="count">
+
+<?php
+
+$com_obj=Common::NumRows('select* from items where assets_type_id="25"');
+if($com_obj==0){
+echo 0;
+}
+else{
+  echo $com_obj;
+}
+
+
+?>
+          </div>
+           </div>
+        <div class="col-md-2 col-sm-4 col-xs-6 tile_stats_count"> <span class="count_top"><i class="fa icon-user"></i> Firewall</span>
+          <div class="count">
+<?php
+
+$com_obj=Common::NumRows('select* from items where assets_type_id="19"');
+if($com_obj==0){
+echo 0;
+}
+else{
+  echo $com_obj;
+}
+
+
+?>
+          </div>
+         </div>
       </div>
       <div class="row">
         <div class="col-md-12 col-sm-12 col-xs-12 margin-bottom-20">
@@ -155,6 +225,8 @@ echo DOCS_ROOT.$_SESSION['userid']."/profile/".$viewdata['profile_pic'];
           </div>
         </div>
       </div>
+
+<!-- 
       <div class="row">
         <div class="col-md-4 col-sm-4 col-xs-12">
           <div class="x_panel tile fixed_height_320">
@@ -240,8 +312,10 @@ echo DOCS_ROOT.$_SESSION['userid']."/profile/".$viewdata['profile_pic'];
             </div>
           </div>
         </div>
-      </div>
-      <div class="row">
+      </div> -->
+
+
+<!--       <div class="row">
         <div class="col-md-6 col-sm-6 col-xs-12">
           <div class="x_panel tile fixed_height_320">
             <div class="x_title">
@@ -343,7 +417,10 @@ echo DOCS_ROOT.$_SESSION['userid']."/profile/".$viewdata['profile_pic'];
             </div>
           </div>
         </div>
-      </div>
+      </div> -->
+
+
+
     </div>
     <?php include("include/footer.php"); ?>
   </div>

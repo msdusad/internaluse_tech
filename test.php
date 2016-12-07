@@ -382,4 +382,14 @@ alert(aa);
 
 </script>
 
+<html>
+<head>
+<title>Sample PHP application for Wild Apricot API</title>
+</head>
+<body>
+<p>
+This application demonstrates how to use Wild Apricot API v2.
 
+See http://help.wildapricot.com/display/DOC/API+Version+2 for detailed description of API.
+<p>
+<hr>
