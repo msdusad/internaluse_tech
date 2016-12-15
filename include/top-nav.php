@@ -83,14 +83,14 @@ echo strtoupper($short_name);
             </li>
           </ul>
         </li>
-        <li role="presentation" class="dropdown"> <a href="javascript:;" class="dropdown-toggle info-number" data-toggle="dropdown" aria-expanded="false"> <i class="fa icon-plus"></i>&nbsp;&nbsp;New </a>
+        <!-- <li role="presentation" class="dropdown"> <a href="javascript:;" class="dropdown-toggle info-number" data-toggle="dropdown" aria-expanded="false"> <i class="fa icon-plus"></i>&nbsp;&nbsp;New </a>
           <ul id="menu3" class="dropdown-menu list-unstyled msg_list">
             <li> <a href="<?php echo WEB_ROOT;?>tickets/new.php"> Incident </a> </li>
             <li> <a href="<?php echo WEB_ROOT;?>problems/new.php"> Problem </a> </li>
             <li> <a href="<?php echo WEB_ROOT;?>changes/new.php"> Change </a> </li>
             <li> <a href="<?php echo WEB_ROOT;?>releases/new.php"> Release </a> </li>
           </ul>
-        </li>
+        </li> -->
       </ul>
     </nav>
   </div>

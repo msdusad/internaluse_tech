@@ -376,9 +376,11 @@ alert(aa);
             async: true,     
             headers: { "clientId": "tdymkjp663zeisb310vd3g14if4hnw" },
             success: function (data, textStatus, jqXhr) {     
-                //alert("Current contact id:" + data.Id + ". Contact email:" + data.Email);},
+                //alert("Current contact id:" + data.Id + ". Contact email:" + data.Email);
+            },
             error: function (jqXHR, textStatus, errorThrown) {
-                //alert(textStatus + " (" + jqXHR.status + ") : " + errorThrown);}
+                //alert(textStatus + " (" + jqXHR.status + ") : " + errorThrown);
+             }
         });
     });
 
