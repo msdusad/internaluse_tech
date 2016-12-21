@@ -414,7 +414,121 @@ This application demonstrates how to use Wild Apricot API v2.
 See http://help.wildapricot.com/display/DOC/API+Version+2 for detailed description of API.
 <p>
 <hr>
+<style type="text/css">div.items p {
+  display: none
+}
+div.items p:target {
+  display: block
+}
+#stage {
+  position: releative;
+}
+#stage>div {
+  display: inline-block;
+}
+#stage .item {
+  position: absolute;
+  z-index: 10;
+  display: none;
+  left: 8px;
+  width: 90%
+}
+#stage #item1 .item {
+  display: block;
+  z-index: 1;
+}
+#stage>div:target .item {
+  display: block;
+}
+.tabbuttons {
+  color: #fff;
+  background-color: #3195c1;
+  border: none;
+  padding: 10px;
+}
+.tabbuttons:hover,
+:target .tabbuttons {
+  background-color: PURPLE;
+}
+.tabcontent {
+  background: #ddd;
+  min-height: 100px;
+}</style>
+<div id="stage">
+  <div id="item1">
+    <a href="#item1" class="tabbuttons">item 1</a>
+    <div class="item">
+      <p class="tabcontent">... item 1...</p>
+    </div>
+  </div>
+  <div id="item2">
+    <a href="#item2" class="tabbuttons">item 2</a>
+    <div class="item">
+      <p class="tabcontent">... item 2...</p>
+    </div>
+  </div>
+  <div id="item3">
+    <a href="#item3" class="tabbuttons">item 3</a>
+    <div class="item">
+      <p id="item3" class="tabcontent">...</p>
+    </div>
+  </div>
 
+    <div id="item4">
+    <a href="#item4" class="tabbuttons">item 4</a>
+    <div class="item">
+      <p id="item4" class="tabcontent">...IT$</p>
+    </div>
+  </div>
+
+</div>
+
+<script type="text/javascript">
+
+$(function() {    
+    $('.tabbuttons').on('click', function() {
+        $('.tabbuttons').removeClass('activeTab'); /* solution for a. */
+        $(this).addClass('activeTab'); /* solution for a. */
+        var i = $(this).attr('href');
+        $('.items p').hide();
+        $(i).show();
+    });
+});
+</script>
+
+<ul class="tabs">
+<li><a href="#welcome">welcome</a></li>
+<li><a href="#one">tab 01</a></li>
+<li><a href="#two">tab 02</a></li>
+</ul>
+
+<section class="tab_container">
+<article id="welcome" class="tab_content"><p>content</p></article>
+<article id="one" class="tab_content"><p>content</p></article>
+<article id="two" class="tab_content"><p>content</p></article>
+</section>
+
+<script type="text/javascript">
+
+$(document).ready(function() {
+
+    //Default Action
+    $(".tab_content").hide(); //Hide all content
+    $("ul.tabs li:first").addClass("active").show(); //Activate first tab
+    $(".tab_content:first").show(); //Show first tab content
+
+    //On Click Event
+    $("ul.tabs li").click(function() {
+        $("ul.tabs li").removeClass("active"); //Remove any "active" class
+        $(this).addClass("active"); //Add "active" class to selected tab
+        $(".tab_content").hide(); //Hide all tab content
+        var activeTab = $(this).find("a").attr("href"); //Find the rel attribute value to identify the active tab + content
+        $(activeTab).fadeIn(); //Fade in the active content
+        return false;
+    });
+
+});
+</script>
 
 <?php
 $ip = $_SERVER['REMOTE_ADDR'];
