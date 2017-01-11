@@ -150,6 +150,7 @@ $mobile_number=Common::remove_sql_injection((isset($_POST['mobile_number'])) ? $
 $location_id=Common::remove_sql_injection((isset($_POST['location_id'])) ? $_POST['location_id'] : null);
 $reporting_manager=Common::remove_sql_injection((isset($_POST['reporting_manager'])) ? $_POST['reporting_manager'] : null);
 $signature=Common::remove_sql_injection((isset($_POST['signature'])) ? $_POST['signature'] : null);
+//$signature=htmlspecialchars($signature);
 $ticket_scope=Common::remove_sql_injection((isset($_POST['ticket_scope'])) ? $_POST['ticket_scope'] : null);
 $associate_role=(isset($_POST['associate_role']) ? $_POST['associate_role'] : null);
 if($associate_role!=null){
@@ -240,6 +241,78 @@ return "Requester Updated Successfully";
 
 
 
+
+public  function UpdateItems(){
+	
+	// code for image uplad 
+	if(!empty($_FILES['item_image_sent']['name'])){
+
+$agent_pic=$_FILES['item_image_sent']['name'];
+$agent_pic_tmp=$_FILES['item_image_sent']['tmp_name'];
+$agent_pic_type=$_FILES["item_image_sent"]["type"];
+$agent_pic_size=$_FILES["item_image_sent"]["size"];
+$agent_pic_size_value="15000000"; // in KB
+
+
+$file_upload_obj= new FileUpload();
+$file_upload_obj->createdirectory('Item');
+$file_upload_obj->getimageproperty($agent_pic,$agent_pic_tmp,$agent_pic_type,$agent_pic_size,$agent_pic_size_value);
+$file_upload_process=$file_upload_obj->file_error_test();
+if($file_upload_process=="Success"){
+
+}
+
+else{
+	
+	 return $file_upload_process;
+}
+
+}
+// if image not send by user
+else{
+	$agent_pic=$_POST['img_name'];
+}
+
+// code image upload end here
+
+
+$item_id=mysql_real_escape_string($_POST['item_id']);
+$display_name=Common::remove_sql_injection((isset($_POST['display_name'])) ? $_POST['display_name'] : null);
+$assets_type_id=Common::remove_sql_injection((isset($_POST['assets_type_id'])) ? $_POST['assets_type_id'] : null);
+$impact_id=Common::remove_sql_injection((isset($_POST['impact_id'])) ? $_POST['impact_id'] : null);
+$description=Common::remove_sql_injection((isset($_POST['description'])) ? $_POST['description'] : null);
+$location_id=Common::remove_sql_injection((isset($_POST['location_id'])) ? $_POST['location_id'] : null);
+$managed_by_id=Common::remove_sql_injection((isset($_POST['managed_by_id'])) ? $_POST['managed_by_id'] : null);
+$used_by_id=Common::remove_sql_injection((isset($_POST['used_by'])) ? $_POST['used_by'] : null);
+$department_id=Common::remove_sql_injection((isset($_POST['department_id'])) ? $_POST['department_id'] : null);
+$assign_date=Common::remove_sql_injection((isset($_POST['assign_date'])) ? $_POST['assign_date'] : null);
+
+if(isset($_POST['dynamic_form']))
+{
+
+    $ser_data = serialize($_POST['dynamic_form']); //takes the data from a post operation...
+    $add_data = mysql_real_escape_string($ser_data);
+     
+}
+
+else{
+	  $add_data="";  
+}
+
+
+
+$add_query="update items set display_name='$display_name',assets_type_id='$assets_type_id',impact_id='$impact_id',description='$description',location_id='$location_id',department_id='$department_id',managed_by_id='$managed_by_id',attachment='$agent_pic',used_by_id='$used_by_id',assign_date='$assign_date',date=now(),form_data='$add_data' where id='$item_id'";
+$run_qry=Common::InsertData($add_query);
+if($run_qry){
+return 'Updated Sucessfully';
+}
+ 
+}
+
+
+
+
+
 }
 
 
@@ -269,6 +342,17 @@ echo Common::SuccessDailog('  Location Updated ');
 if(isset($_POST['agent_name'])){
 $obj=UpdateAssets::UpdateAgent();
 if($obj=="Agent Updated Successfully"){
+echo $obj;
+}
+else{
+	echo Common::SuccessDailog($obj);
+}
+}
+
+
+if(isset($_POST['update_item'])){
+$obj=UpdateAssets::UpdateItems();
+if($obj=="Item Updated Successfully"){
 echo $obj;
 }
 else{

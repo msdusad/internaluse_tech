@@ -13,9 +13,12 @@
             <div class="x_panel tile">
               <div class="x_title">
                 <div class="row">
+
+                   <?php require_once("../classes/Include_all.php"); ?>
+
 				  <div class="col-lg-12">
 				  <div class="row" style="background:#fff;" data-spy="affix" data-offset-top="197">
-                  <div class="col-lg-7 padding-top-10"> <a href="<?php echo WEB_ROOT;?>assets/index.php" class="h4"><i class="icon-left-small"></i>Back to Contracts</a> </div>
+                  <div class="col-lg-7 padding-top-10"> <a href="<?php echo WEB_ROOT;?>product-catalogue/index.php" class="h4"><i class="icon-left-small"></i>Back to Contracts</a> </div>
                   <div class="col-lg-5 text-right MrTpMd-10"> <a href="javascript:window.history.back();" class="btn btn-default ">Cancel</a>
                     
                       <button type="button" class="btn btn-dark ">Save</button>
@@ -31,23 +34,21 @@
                 <div class="row">
                   <div class="col-sm-6  col-xs-12 padding-bottom-10">
                     <label>Name <span class="text-red">*</span></label>
-                    <input type="text"  id="itil_product_name1" name="assets_name" class="form-control" required size="30">
+                    <input type="text"  id="itil_product_name1" name="product_name" class="form-control" required size="30">
                   </div>
                  
 
                <div class="col-sm-6 col-xs-12 padding-bottom-10">
                     <label>Assest type<span class="text-red">*</span></label>
-                    <select class="form-control" tabindex="-1" id="select-box">
-										<option>--Choose an Asset Type--</option>
-										<option value="AK">Access Point</option>
-										<option value="HI">Aix Server</option>
-										<option value="CA">Computer</option>
-										<option value="NV">Data Center</option>
-										<option value="OR">Desktop</option>
-										<option value="WA">Disk</option>
-										<option value="AZ">Arizona</option>
-											<option>--Choose an Asset Type--</option>
-									</select>
+                    <select class="form-control" name="assets_type_id" id="assets_type_id" required>
+                    <option value="">Please Select</option>
+                    <?php
+                        $assets_object=Assets::Assets_type();
+                        foreach ($assets_object as $view_assets_type) {
+                        echo   '<option value="'.$view_assets_type["id"].'">'.$view_assets_type["name"].'</option>';
+                        }
+                        ?>
+                  </select>
 					
 					</div>
 					</div>

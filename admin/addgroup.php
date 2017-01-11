@@ -16,14 +16,14 @@
                 <div class="row">
                   <div class="col-lg-7 h4"><a href="<?php echo WEB_ROOT;?>admin/index.php"><i class="icon-cog"></i>Admin</a></div>
                   <div class="col-lg-5 text-right MrTpMd-10"> 
-               <button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+               <a href="<?php echo WEB_ROOT;?>admin/Agent.php"  class="btn btn-default dropdown-toggle">
     Create New <span class="caret"></span>
-  </button>
-  <ul class="dropdown-menu">
+  </a>
+<!--   <ul class="dropdown-menu">
     <li><a href="<?php echo WEB_ROOT;?>admin/Agent.php">Agent Group</a></li>
     <li><a href="<?php echo WEB_ROOT;?>admin/Requestorgroup.php">Requester Group</a></li>
     
-  </ul>      
+  </ul>  -->     
 					 </div>
                 </div>
                 <div class="clearfix"></div>
@@ -35,8 +35,8 @@
 			<li class="active">
         <a  href="#1" data-toggle="tab">Agents</a>
 			</li>
-			<li><a href="#2" data-toggle="tab">Requester Groups</a>
-			</li>
+			<!-- <li><a href="#2" data-toggle="tab">Requester Groups</a>
+			</li> -->
     </ul>
 	<div class="x_title title1">
                </div>
@@ -78,7 +78,7 @@ foreach ($group_agent_obj as  $agent_value){
 </table>
 </div>
 <!--2ndtable-->
-<div class="tab-pane" id="2">
+<!-- <div class="tab-pane" id="2">
 <table class="table table-striped">
     <tbody><tr id="itil_requester_group_4000031781">
       <td>
@@ -93,6 +93,8 @@ foreach ($group_agent_obj as  $agent_value){
  
 </tbody></table>
 </div>
+--2ndtable end -->
+  
 </div>
             </div>
         </div>

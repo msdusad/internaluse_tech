@@ -148,7 +148,7 @@ $get_all_category=$category_object->display_child_nodes(NULL, 0);
 						<div class="col-sm-6 text-right col-xs-12 visible-sm-right-left">
 							<?php
 					
-							$items_d=new PaginatedData("select items.id,items.display_name,assets_type.name as assets_name,location.location_name,impact.name as impact_name,department.name as department_name,agents.name as agent_name,CONCAT(requesters.first_name,' ',requesters.last_name) as requester_name from items left join assets_type on items.assets_type_id=assets_type.id left join location on items.location_id=location.id left join impact on items.impact_id=impact.id left join department on items.department_id=department.id left join agents on items.managed_by_id=agents.id left join requesters on items.used_by_id=requesters.id order by items.display_name Asc",'5');
+							$items_d=new PaginatedData("select items.id,items.date,items.display_name,assets_type.name as assets_name,location.location_name,impact.name as impact_name,department.name as department_name,agents.name as agent_name,CONCAT(requesters.first_name,' ',requesters.last_name) as requester_name from items left join assets_type on items.assets_type_id=assets_type.id left join location on items.location_id=location.id left join impact on items.impact_id=impact.id left join department on items.department_id=department.id left join agents on items.managed_by_id=agents.id left join requesters on items.used_by_id=requesters.id order by items.date desc",'5');
 $items=$items_d->pagination_link();
 ?>
 							 <!-- <button type="button" class="btn btn-default btn-round" disabled="disabled"><i class="icon-left-dir"></i></button> 
@@ -161,8 +161,8 @@ $items=$items_d->pagination_link();
                             <thead>
 							  <tr>
 								<th>
-								  <input type="checkbox" id="test1" />
-								  <label for="test1" class="column-title weight-600" style="padding-top:3px;">Display Name</label>
+								  <input type="checkbox" id="select_all" />
+								  <label for="select_all" class="column-title weight-600" style="padding-top:3px;">Display Name</label>
 								</th>
 								<th>Asset Type </th>
 								<th>Location </th>
@@ -176,12 +176,13 @@ $items=$items_d->pagination_link();
 
 								<?php
 if($items!=''){
+	$i=0;
 foreach ($items as  $items_value){
-
+$i++;
 echo '<tr>
 									<td class="a-center ">
-									    <input type="checkbox" id="laptop" />
-								        <label for="laptop" class="column-title"><a href="'.WEB_ROOT.'products/index.php?id='.$items_value['id'].'">'.$items_value['display_name'].'</a></label>
+									    <input type="checkbox" id="'.$i.'" name="select[]" />
+								        <label for="'.$i.'" class="column-title"><a href="'.WEB_ROOT.'products/index.php?id='.$items_value['id'].'">'.$items_value['display_name'].'</a></label>
 									</td>
 									<td class=" ">'.$items_value['assets_name'].'</td>
 									<td class=" ">'.$items_value['location_name'].' </td>
@@ -274,3 +275,14 @@ echo '<tr>
     
 </body>
 </html>
+<script type="text/javascript">
+
+$('#test1').change(function() {
+    var checkboxes = $(this).closest('form').find(':checkbox');
+    if($(this).is(':checked')) {
+        checkboxes.prop('checked', true);
+    } else {
+        checkboxes.prop('checked', false);
+    }
+});
+</script>

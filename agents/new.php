@@ -1,6 +1,12 @@
 <!DOCTYPE html>
 <html lang="en">
 <body class="nav-md">
+
+	<link href='https://cdnjs.cloudflare.com/ajax/libs/froala-editor/2.4.0/css/froala_editor.min.css' rel='stylesheet' type='text/css' />
+<link href='https://cdnjs.cloudflare.com/ajax/libs/froala-editor/2.4.0/css/froala_style.min.css' rel='stylesheet' type='text/css' />
+
+<!-- Include JS file. -->
+<script type='text/javascript' src='https://cdnjs.cloudflare.com/ajax/libs/froala-editor/2.4.0/js/froala_editor.min.js'></script>
 <div class="container body">
   <div class="main_container">
        <?php include("../include/top-nav.php"); 
@@ -130,6 +136,7 @@ echo   '<option value="'.$view_loc_object["id"].'">'.$view_loc_object["location_
 						  <label>Reporting Manager</label>
 						  <input type="text" name="reporting_manager" id="mob" class="form-control">
 						</p>
+
 						<div class="margin-top-10 border-bottom padding-bottom-30">
 						  <label>Signature</label>
 						  <!-- start-->
@@ -283,5 +290,4 @@ if(result=="Agent Added Successfully"){
  });
 
  });
-
  </script>

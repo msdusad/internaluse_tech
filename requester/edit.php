@@ -128,7 +128,7 @@ $dep_object=Assets::Department('');
 if($dep_object!=''){
 foreach ($dep_object as $view_dep_object) {
 echo   '<option value="'.$view_dep_object["id"].'"';
-if($requester_val['location_id']==$view_dep_object['id']){
+if($requester_val['department_id']==$view_dep_object['id']){
 echo "selected";
 }
 echo    '>'.$view_dep_object["name"].'</option>';

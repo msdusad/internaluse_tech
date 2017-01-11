@@ -30,6 +30,8 @@ require_once('../classes/UserDetail.php');
 <?php 
 $getuser=new UserDetail() ;
 $getuserdetail=$getuser->userdetails();
+
+
 foreach ($getuserdetail as $viewdata) 
 
 ?>

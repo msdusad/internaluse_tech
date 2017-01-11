@@ -106,8 +106,30 @@ return 'Deleted Sucessfully';
 }
 
 
+public  function DeleteItem(){
+
+$id=Common::remove_sql_injection($_POST['id']);
+
+$add_query="delete from  items where id='$id'";
+$run_qry=Common::InsertData($add_query);
+if($run_qry){
+return 'Deleted Sucessfully';
+}
+ 
+}
+
+
 
 }
+
+
+if(isset($_POST['delete_item'])){
+DeleteAssets::DeleteItem();
+
+echo "<script>alert('Item Delete Sucessfully');window.location.href='../assets/index.php';</script>";
+//echo Common::SuccessDailog('  Item Deleted');
+} 
+
 
 
 if(isset($_POST['delete_impact'])){

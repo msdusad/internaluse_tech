@@ -122,14 +122,8 @@ function removeRow(rnum) {
 }
 
 </script>
-  <?php
-  if(mysqli_num_rows($result) > 0){
-
-?>
    <p><input type="submit" name="ok" value="Save Changes" class="btn btn-round btn-dark"></p>
-<?php
-}
-?>
+
   </form>
 </div>
 

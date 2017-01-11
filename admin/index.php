@@ -109,15 +109,7 @@
 						 <h4>Requestor</h4>
 					 </a>
 
-					   <a class="admin col-xs-6 col-sm-4 col-md-2" href="<?php echo WEB_ROOT;?>product-catalogue/index.php">
-					     <div class="circleBig">
-						     <div class="circle">
-							     <i class="icon-box"></i>
-							 </div>
-						 </div>
-						 <h4>Product Catalogue</h4>
-					 </a>
-
+					  
 					    <a class="admin col-xs-6 col-sm-4 col-md-2" href="<?php echo WEB_ROOT;?>asset-form/index.php">
 					     <div class="circleBig">
 						     <div class="circle">
@@ -126,7 +118,18 @@
 						 </div>
 						 <h4>Asset Forms</h4>
 					 </a>
-					 			
+					 		
+
+					 		 <a class="admin col-xs-6 col-sm-4 col-md-2" href="<?php echo WEB_ROOT;?>product-catalogue/index.php">
+					     <div class="circleBig">
+						     <div class="circle">
+							     <i class="icon-box"></i>
+							 </div>
+						 </div>
+						 <h4>Product Catalogue</h4>
+					 </a>
+
+	
 					 				
 				</div>
 				<!--<div class="row text-center">

@@ -15,12 +15,12 @@ session_start();
            // clintid-hcvh4lyjoy
            // secreate-aump03q1r5qnwxp6t3ph2awcdig8bd
 const LOGIN_URL="https://techvedic.wildapricot.org"; //this is your WA website url eg www.google.com 
-$cID='05zq5ni0s7'; 
-$cSecret='39z6isi7igt0hxk5brbwe6zuxrw8hm'; 
+$cID='localtest'; 
+$cSecret='od11sj9x8mj300ioj7glxflxrs2n3k'; 
 $accountID="218078"; //your WA accoun number 
-$redirectURL="http://securechat.in";
+$redirectURL="http://192.168.1.194:8081/currenteasyweb/";
 
-if ($_SESSION['loggedIn']!=1 && $_GET['code']) {
+if ($_SESSION['loggedIn']!=1 && $_GET['code']) {   
 
 $data["grant_type"]="authorization_code"; 
 $data["code"]=$_GET['code']; 
@@ -49,7 +49,6 @@ curl_setopt($ch, CURLOPT_VERBOSE, true);
 $res = curl_exec($ch); 
 $err=curl_error($ch); 
 $info = curl_getinfo($ch);
-
 curl_close($ch); 
 $json= (json_decode($res, true));
 
@@ -72,9 +71,10 @@ curl_setopt($ch,CURLOPT_HTTPHEADER, $headers);
 $jsonResult = curl_exec($ch); 
 $err=curl_error($ch); 
 $info = curl_getinfo($ch);
-
+echo $info;
 curl_close($ch); 
 $r=( json_decode($jsonResult, true));
+
 
 } 
 } 

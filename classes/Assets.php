@@ -12,7 +12,7 @@ return $impact_data;
 
 }
 public static function Assets_type(){
-	$assets_query="select * from assets_type";
+	$assets_query="select * from category";
 $assets_data=Common::FetchData($assets_query);
 return $assets_data;
 

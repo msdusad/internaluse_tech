@@ -89,14 +89,24 @@ echo DOCS_ROOT.$_SESSION['userid']."/profile/".$viewdata['profile_pic'];
     <?php 
     include("include/right-nav.php"); ?>
     <div class="right_col" role="main">
+<?php
+print_r($_SESSION['json_check1']);
+print_r($_SESSION['json_check']);
+?>
+
+
       <div class="row tile_count">
         <div class="col-md-2 col-sm-4 col-xs-6 tile_stats_count"> <span class="count_top"><i class="fa icon-user"></i> Computer</span>
           <div class="count">
 <?php
 
 $com_obj=Common::NumRows('select* from items where assets_type_id="1"');
+if(empty($com_obj)){
+  echo "0";
+}
+else{
 echo $com_obj;
-
+}
 ?>
 
           </div>
@@ -106,7 +116,12 @@ echo $com_obj;
 <?php
 
 $com_obj=Common::NumRows('select* from items where assets_type_id="2"');
+if(empty($com_obj)){
+  echo "0";
+}
+else{
 echo $com_obj;
+}
 
 ?>
           </div>
@@ -116,11 +131,11 @@ echo $com_obj;
 <?php
 
 $com_obj=Common::NumRows('select* from items where assets_type_id="6"');
-if($com_obj==0){
-echo 0;
+if(empty($com_obj)){
+  echo "0";
 }
 else{
-  echo $com_obj;
+echo $com_obj;
 }
 
 
@@ -134,13 +149,12 @@ else{
 <?php
 
 $com_obj=Common::NumRows('select* from items where assets_type_id="10"');
-if($com_obj==0){
-echo 0;
+if(empty($com_obj)){
+  echo "0";
 }
 else{
-  echo $com_obj;
+echo $com_obj;
 }
-
 
 ?>
           </div>
@@ -151,11 +165,11 @@ else{
 <?php
 
 $com_obj=Common::NumRows('select* from items where assets_type_id="25"');
-if($com_obj==0){
-echo 0;
+if(empty($com_obj)){
+  echo "0";
 }
 else{
-  echo $com_obj;
+echo $com_obj;
 }
 
 
@@ -167,11 +181,11 @@ else{
 <?php
 
 $com_obj=Common::NumRows('select* from items where assets_type_id="19"');
-if($com_obj==0){
-echo 0;
+if(empty($com_obj)){
+  echo "0";
 }
 else{
-  echo $com_obj;
+echo $com_obj;
 }
 
 
