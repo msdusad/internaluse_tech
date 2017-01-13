@@ -315,8 +315,8 @@ ul.assetsCategory  li:last-child{border-bottom:0; }
 .admin h4{font-size:14px; line-height:18px;}
 .admin .circleBig{width:85px; height:85px; margin:15px auto 5px auto;}
 .admin .circle{width:80px; height:80px; margin:5px auto 0px auto; border-radius:50%; background:#2A3F54; 
-transition: width 0.5s, height 0.8s; color:rgba(255, 255, 255, 0.95); font-size:40px; line-height:85px}
-.admin:hover .circle{width:85px; height:85px; margin:0px auto; color:rgba(255, 255, 255, 1); border-radius:50%; background:#172D44}
+transition: width 0.5s, height 0.8s; color:rgba(255, 255, 255, 0.95); font-size:40px; line-height:85px; transform: scale(1); -webkit-transform: scale(1); -moz-transform: scale(1); transition: .2s ease-in-out; -webkit-transition: .2s ease-in-out; -moz-transition: .2s ease-in-out;}
+.admin:hover .circle{transform: scale(1.1); -webkit-transform: scale(1.1); -moz-transform: scale(1.1); transition: .2s ease-in-out; -webkit-transition: .2s ease-in-out; -moz-transition: .2s ease-in-out; margin:0px auto; color:rgba(255, 255, 255, 1); border-radius:50%; background:#172D44}
 @media (min-width:768px){.visible-sm-left-center{display:block!important;text-align:left !important;}
 .visible-sm-right-center, .visible-sm-right-left{display:block!important;text-align:right !important;}
 }
@@ -334,9 +334,9 @@ transition: width 0.5s, height 0.8s; color:rgba(255, 255, 255, 0.95); font-size:
 }
 #select-box
 {
-	border: 1px solid #e4e4e4;
-    border-radius: 8px;
-    box-shadow: 0 1px 0 #bbb inset;
+	border: 1px solid #ccc;
+    *border-radius: 8px;
+    *box-shadow: 0 1px 0 #bbb inset;
     font-weight: 300;
     padding: 4px;
     font-size: 14px;

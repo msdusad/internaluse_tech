@@ -89,10 +89,6 @@ echo DOCS_ROOT.$_SESSION['userid']."/profile/".$viewdata['profile_pic'];
     <?php 
     include("include/right-nav.php"); ?>
     <div class="right_col" role="main">
-<?php
-print_r($_SESSION['json_check1']);
-print_r($_SESSION['json_check']);
-?>
 
 
       <div class="row tile_count">

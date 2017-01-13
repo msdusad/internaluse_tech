@@ -62,7 +62,7 @@ else{
 								</p> -->
 								<p>
 								    <strong>Location</strong><br>
-									<?php echo $agent_val['location_id'];?>
+									<?php echo $agent_val['lc'];?>
 								</p>
                             </div> 							
 						</div>	 

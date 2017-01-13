@@ -4,7 +4,6 @@ require_once('Common.php');
 
 Class Assets{
 
-
 public static function Impact(){
 $Impact_query="select * from impact";
 $impact_data=Common::FetchData($Impact_query);
@@ -79,10 +78,10 @@ return $item_data;
 
 public static function Agents($var){
 	if($var==''){
-    	$item_query="SELECT * from agents";
+    	$item_query="SELECT agents.*,location.location_name as location_name from agents left join location on agents.location_id=location.id";
 	}
 	else{
-	$item_query="select * from agents where id='$var'";
+	$item_query="select agents.*,location.location_name as lc from agents left join location on agents.location_id=location.id where agents.id='$var' ";
 	}
 
 
@@ -91,7 +90,19 @@ return $item_data;
 
 }
 
+public static function Products($var){
+	if($var==''){
+    	$item_query="SELECT products.*,category.name as asset_type,category.id as cat_id  from products left join category on products.assets_type_id=category.id";
+	}
+	else{
+	$item_query="select products.*,category.name as asset_type,category.id as cat_id  from products left join category on products.assets_type_id=category.id where products.id='$var'";
+	}
 
+
+$item_data=Common::FetchData($item_query);
+return $item_data;
+
+}
 
 
 public static function Requester($var){

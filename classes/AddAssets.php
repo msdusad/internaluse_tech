@@ -306,13 +306,41 @@ return "Requester Added Successfully";
 }
 
 
+public  function AddProduct(){
+	
+$product_name=Common::remove_sql_injection((isset($_POST['product_name'])) ? $_POST['product_name'] : null);
+$assets_type_id=Common::remove_sql_injection((isset($_POST['assets_type_id'])) ? $_POST['assets_type_id'] : null);
+$manufacturer=Common::remove_sql_injection((isset($_POST['manufacturer'])) ? $_POST['manufacturer'] : null);
+$status=Common::remove_sql_injection((isset($_POST['status'])) ? $_POST['status'] : null);
+$mode_of_procurement=Common::remove_sql_injection((isset($_POST['mode_of_procurement'])) ? $_POST['mode_of_procurement'] : null);
+$description=Common::remove_sql_injection((isset($_POST['description'])) ? $_POST['description'] : null);
+
+$add_query="insert into products (name,assets_type_id,manufacturer,status,mode_of_procurement,description,create_date) values ('$product_name','$assets_type_id','$manufacturer','$status','$mode_of_procurement','$description',now())";
+$run_qry=Common::InsertData($add_query);
+if($run_qry){
+return 'Added Sucessfully';
 }
+ 
+}
+
+
+
+
+
+}
+
+
+if(isset($_POST['add_product'])){
+AddAssets::AddProduct();
+echo Common::SuccessDailog(' New Product Added Sucessfully');
+} 
 
 
 if(isset($_POST['add_impact'])){
 AddAssets::AddImpact();
 echo Common::SuccessDailog(' New Impact Added Sucessfully');
 } 
+
 
 if(isset($_POST['add_category_assets'])){
 AddAssets::AddCategory();

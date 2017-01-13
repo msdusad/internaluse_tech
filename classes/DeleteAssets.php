@@ -16,10 +16,6 @@ return 'Deleted Sucessfully';
 }
 
 
-public static  function DeleteManagedBy(){
-return "df";
-}
-
 
 public static function  DeleteCategory(){	
 
@@ -47,6 +43,19 @@ return 'Deleted Sucessfully';
 }
 
 	}
+
+
+	public static  function Product(){
+$id=Common::remove_sql_injection($_POST['product_id']);
+$add_query="delete from products where id='$id'";
+$run_qry=Common::InsertData($add_query);
+if($run_qry){
+
+return 'Deleted Sucessfully';
+
+}
+}
+
 
 
 public static  function DeleteGroup(){
@@ -136,6 +145,12 @@ if(isset($_POST['delete_impact'])){
 DeleteAssets::DeleteImpact();
 echo Common::SuccessDailog('  Category Deleted');
 } 
+if(isset($_POST['delete_product'])){
+DeleteAssets::Product();
+echo Common::SuccessDailog('  Product Deleted');
+} 
+
+
 
 if(isset($_GET['assets_id'])){
 DeleteAssets::DeleteCategory();

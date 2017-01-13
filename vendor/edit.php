@@ -21,8 +21,8 @@
                   <div class="col-lg-7 padding-top-10"> <a href="<?php echo WEB_ROOT;?>product-catalogue/index.php" class="h4"><i class="icon-left-small"></i>Back to Products</a> </div>
                   <div class="col-lg-5 text-right MrTpMd-10"> <a href="<?php echo WEB_ROOT;?>product-catalogue/index.php" class="btn btn-default ">Cancel</a>
                     
-                      <input type="submit" value="Save" name="add_product" class="btn btn-dark ">
-                   
+                      <input type="submit" value="Save" name="update_product" class="btn btn-dark ">
+             
                   </div>
 				 </div> 
 				 </div>
@@ -30,11 +30,22 @@
                 <div class="clearfix"></div>
               </div>
               <div class="x_content">
-                <h1 class="h3 padding-bottom-10">Product Catalogue</h1>
+                <h1 class="h3 padding-bottom-10">Product Edit</h1>
                 <div class="row">
+
+
+                  <?php
+$product=Assets::Products($_GET['id']);
+if($product!=''){
+foreach ($product as $product_val) {
+
+?>
+
+
                   <div class="col-sm-6  col-xs-12 padding-bottom-10">
                     <label>Name <span class="text-red">*</span></label>
-                    <input type="text"  id="itil_product_name1" name="product_name" class="form-control" required>
+                           <input type="hidden"  name="id" value="<?php echo $product_val['id'];?>" >
+                    <input type="text"  value="<?php echo $product_val['name'];?>" id="itil_product_name1" name="product_name" class="form-control" required>
                   </div>
                  
 
@@ -45,7 +56,13 @@
                     <?php
                         $assets_object=Assets::Assets_type();
                         foreach ($assets_object as $view_assets_type) {
-                        echo   '<option value="'.$view_assets_type["id"].'">'.$view_assets_type["name"].'</option>';
+                        echo   '<option value="'.$view_assets_type["id"].'"';
+
+if($view_assets_type["id"]==$product_val['cat_id']){
+echo "selected";
+}
+
+                       echo  '>'.$view_assets_type["name"].'</option>';
                         }
                         ?>
                   </select>
@@ -54,16 +71,29 @@
 
             <div class="col-sm-6  col-xs-12 padding-bottom-10">
                     <label>Manufacturer<span class="text-red"></span></label>
-                    <input type="text" id="itil_product_name1" name="manufacturer" class="form-control" required>
+                    <input type="text" value="<?php echo $product_val['manufacturer'];?>" id="itil_product_name1" name="manufacturer" class="form-control" required>
                   </div>
                   <div class="col-sm-6 col-xs-12 padding-bottom-10">
                     <label>Status<span class="text-red"></span></label>
                     <select class="form-control" name="status" id="select-box" required>
-                     
-                      <option>In production</option>
-                      <option value="In pipeline">In pipeline</option>
-                      <option value="Retired">Retired</option>
-                      <option value="Production">Production</option>
+
+                      <option value="In pipeline"
+<?php if($product_val["status"]=="In pipeline"){
+echo "selected";
+} ?>
+                      >In pipeline</option>
+                      <option value="Retired" 
+                      <option value="In pipeline"
+<?php if($product_val["status"]=="Retired"){
+echo "selected";
+} ?>
+                      >Retired</option>
+                      <option value="Production"
+                      <option value="In pipeline"
+<?php if($product_val["status"]=="In Production"){
+echo "selected";
+} ?>
+                      >In Production</option>
                     </select>
                   </div>
                 
@@ -71,10 +101,22 @@
                     <div class="col-sm-6 col-xs-12 padding-bottom-10">
                     <label>Mode of Procurement<span class="text-red"></span></label>
                       <select class="form-control" name="mode_of_procurement" tabindex="-1" id="select-box">
-                      <option value="Buy">Buy</option>
-                      <option value="Lease">Lease</option>
-                      <option value="Both">Both</option>
-                      <option value="Buy">Buy</option>
+                      <option value="Buy"
+<?php if($product_val["mode_of_procurement"]=="Buy"){
+echo "selected";
+} ?>
+                      >Buy</option>
+                      <option value="Lease"
+<?php if($product_val["mode_of_procurement"]=="Lease"){
+echo "selected";
+} ?>
+                      >Lease</option>
+                      <option value="Both"
+<?php if($product_val["mode_of_procurement"]=="Both"){
+echo "selected";
+} ?>
+                      >Both</option>
+                      
                     </select>
                   
 
@@ -97,16 +139,21 @@
                   </ul>
                 </div> 
                 <div id="editor" class="editor-wrapper placeholderText" contenteditable="true"></div>-->
-                <textarea name="description" id="descr" cols="20" rows="6" style="border:#ccc solid 1px; width: 100%;"></textarea>
+                <textarea name="description" id="descr" cols="20" rows="6" style="border:#ccc solid 1px; width: 100%;">
+<?php echo $product_val['description'];?>
+                </textarea>
                 <!--end-->
 </div>
 
            
                 </div>
+</form>
 
 
-
-   </form>
+   <?php
+ }
+}
+?>
 
                
             
