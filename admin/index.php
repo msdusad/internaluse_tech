@@ -64,7 +64,8 @@
 							     <i class="icon-sitemap"></i>
 							 </div>
 						 </div>
-						 <h4>Asset Types</h4></a>
+						 <h4>Asset Types</h4>
+						</a>
 					 
 					 <a class="admin col-xs-6 col-sm-4 col-md-2" href="<?php echo WEB_ROOT;?>assets/indexlocation.php">
 					     <div class="circleBig">

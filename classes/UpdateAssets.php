@@ -112,9 +112,9 @@ $email=Common::remove_sql_injection((isset($_POST['email'])) ? $_POST['email'] :
 $phone=Common::remove_sql_injection((isset($_POST['phone'])) ? $_POST['phone'] : '');
 $address=Common::remove_sql_injection((isset($_POST['address'])) ? $_POST['address'] : null);
 $address2=Common::remove_sql_injection((isset($_POST['address2'])) ? $_POST['address2'] : null);
-$country=Common::remove_sql_injection((isset($_POST['country'])) ? $_POST['country'] : '');
-$state=Common::remove_sql_injection((isset($_POST['state'])) ? $_POST['state'] : '');
-$city=Common::remove_sql_injection((isset($_POST['city'])) ? $_POST['city'] : '');
+$country=Common::remove_sql_injection((isset($_POST['country'])) ? $_POST['country'] : null);
+$state=Common::remove_sql_injection((isset($_POST['state'])) ? $_POST['state'] : null);
+$city=Common::remove_sql_injection((isset($_POST['city'])) ? $_POST['city'] : null);
 $zipcode=Common::remove_sql_injection((isset($_POST['zipcode'])) ? $_POST['zipcode'] : null);
 $id=Common::remove_sql_injection((isset($_POST['id'])) ? $_POST['id'] : 'null');
 

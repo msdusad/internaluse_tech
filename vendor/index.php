@@ -18,7 +18,7 @@
 
                   <div class="col-lg-7 h4"><a href="<?php echo WEB_ROOT;?>admin/index.php"><i class="icon-cog"></i>Admin</a></div>
                   <div class="col-lg-5 text-right MrTpMd-10"> 
-                     <a href="<?php echo WEB_ROOT;?>product-catalogue/new.php" class="btn btn-round btn-dark">New Product</a>
+                     <a href="<?php echo WEB_ROOT;?>vendor/new.php" class="btn btn-round btn-dark">New Product</a>
                   </div>
                 </div>
                 <div class="clearfix"></div>

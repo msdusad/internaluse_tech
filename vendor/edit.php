@@ -18,8 +18,8 @@
 
 				  <div class="col-lg-12">
 				  <div class="row" style="background:#fff;" data-spy="affix" data-offset-top="197">
-                  <div class="col-lg-7 padding-top-10"> <a href="<?php echo WEB_ROOT;?>product-catalogue/index.php" class="h4"><i class="icon-left-small"></i>Back to Products</a> </div>
-                  <div class="col-lg-5 text-right MrTpMd-10"> <a href="<?php echo WEB_ROOT;?>product-catalogue/index.php" class="btn btn-default ">Cancel</a>
+                  <div class="col-lg-7 padding-top-10"> <a href="<?php echo WEB_ROOT;?>vendor/index.php" class="h4"><i class="icon-left-small"></i>Back to Vendors</a> </div>
+                  <div class="col-lg-5 text-right MrTpMd-10"> <a href="<?php echo WEB_ROOT;?>vendor/index.php" class="btn btn-default ">Cancel</a>
                     
                       <input type="submit" value="Save" name="update_product" class="btn btn-dark ">
              
@@ -30,7 +30,7 @@
                 <div class="clearfix"></div>
               </div>
               <div class="x_content">
-                <h1 class="h3 padding-bottom-10">Product Edit</h1>
+                <h1 class="h3 padding-bottom-10">Vendor Edit</h1>
                 <div class="row">
 
 
@@ -44,84 +44,42 @@ foreach ($product as $product_val) {
 
                   <div class="col-sm-6  col-xs-12 padding-bottom-10">
                     <label>Name <span class="text-red">*</span></label>
-                           <input type="hidden"  name="id" value="<?php echo $product_val['id'];?>" >
-                    <input type="text"  value="<?php echo $product_val['name'];?>" id="itil_product_name1" name="product_name" class="form-control" required>
+                           <!-- <input type="hidden"  name="vendor_name" value="<?php echo $product_val['id'];?>" > -->
+                    <input type="text"  value="" id="itil_product_name1" name="vendor_name" class="form-control" required>
                   </div>
                  
 
-               <div class="col-sm-6 col-xs-12 padding-bottom-10">
-                    <label>Assest type<span class="text-red">*</span></label>
-                    <select class="form-control" name="assets_type_id" id="assets_type_id" required>
-                    <option value="">Please Select</option>
-                    <?php
-                        $assets_object=Assets::Assets_type();
-                        foreach ($assets_object as $view_assets_type) {
-                        echo   '<option value="'.$view_assets_type["id"].'"';
-
-if($view_assets_type["id"]==$product_val['cat_id']){
-echo "selected";
-}
-
-                       echo  '>'.$view_assets_type["name"].'</option>';
-                        }
-                        ?>
-                  </select>
-					
-					</div>
-
-            <div class="col-sm-6  col-xs-12 padding-bottom-10">
-                    <label>Manufacturer<span class="text-red"></span></label>
-                    <input type="text" value="<?php echo $product_val['manufacturer'];?>" id="itil_product_name1" name="manufacturer" class="form-control" required>
+               <div class="col-sm-6  col-xs-12 padding-bottom-10">
+                    <label>Primary Contact <span class="text-red">*</span></label>
+                         <!--   <input type="hidden"  name="id" value="<?php echo $product_val['id'];?>" > -->
+                    <input type="text"  value="vendor_primary" id="itil_product_name1" name="vendor_primary" class="form-control" required>
                   </div>
-                  <div class="col-sm-6 col-xs-12 padding-bottom-10">
-                    <label>Status<span class="text-red"></span></label>
-                    <select class="form-control" name="status" id="select-box" required>
 
-                      <option value="In pipeline"
-<?php if($product_val["status"]=="In pipeline"){
-echo "selected";
-} ?>
-                      >In pipeline</option>
-                      <option value="Retired" 
-                      <option value="In pipeline"
-<?php if($product_val["status"]=="Retired"){
-echo "selected";
-} ?>
-                      >Retired</option>
-                      <option value="Production"
-                      <option value="In pipeline"
-<?php if($product_val["status"]=="In Production"){
-echo "selected";
-} ?>
-                      >In Production</option>
-                    </select>
+                <div class="col-sm-6 col-xs-12">
+
+                    <div class="col-sm-6  col-xs-12 padding-bottom-10" style="padding-left:0">
+                    <label>Phone<span class="text-red">*</span></label>
+                          <!--  <input type="hidden"  name="id" value="<?php echo $product_val['id'];?>" > -->
+                    <input type="text"  value="" id="itil_product_name1" name="vendor_phone" class="form-control" required>
                   </div>
+
+                  <div class="col-sm-6  col-xs-12 padding-bottom-10" style="padding-right:0">
+                    <label>Mobile<span class="text-red">*</span></label>
+                           <!-- <input type="hidden"  name="id" value="<?php echo $product_val['id'];?>" > -->
+                    <input type="text"  value="" id="itil_product_name1" name="vendor_mobile" class="form-control" required>
+                  </div>
+
+                <div class="clearfix"></div>
+                </div>
+
+                 <div class="col-sm-6  col-xs-12 padding-bottom-10">
+                    <label>Email<span class="text-red"></span></label>
+                    <input type="text" value=" " id="itil_product_name1" name="vendor_email" class="form-control" required>
+                  </div>
+                  
                 
                   
-                    <div class="col-sm-6 col-xs-12 padding-bottom-10">
-                    <label>Mode of Procurement<span class="text-red"></span></label>
-                      <select class="form-control" name="mode_of_procurement" tabindex="-1" id="select-box">
-                      <option value="Buy"
-<?php if($product_val["mode_of_procurement"]=="Buy"){
-echo "selected";
-} ?>
-                      >Buy</option>
-                      <option value="Lease"
-<?php if($product_val["mode_of_procurement"]=="Lease"){
-echo "selected";
-} ?>
-                      >Lease</option>
-                      <option value="Both"
-<?php if($product_val["mode_of_procurement"]=="Both"){
-echo "selected";
-} ?>
-                      >Both</option>
-                      
-                    </select>
-                  
-
                     
-                  </div>
 
 					</div>
 					
@@ -139,12 +97,71 @@ echo "selected";
                   </ul>
                 </div> 
                 <div id="editor" class="editor-wrapper placeholderText" contenteditable="true"></div>-->
-                <textarea name="description" id="descr" cols="20" rows="6" style="border:#ccc solid 1px; width: 100%;">
-<?php echo $product_val['description'];?>
+                <textarea name="vendor_description" id="descr" cols="20" rows="6" style="border:#ccc solid 1px; width: 100%;">
                 </textarea>
                 <!--end-->
 </div>
 
+
+<div class="x_content">
+                <h1 class="h3 padding-bottom-10">Address</h1>
+                <div class="row">
+
+                  <div class="col-sm-6  col-xs-12 padding-bottom-10">
+                    <label>Line 1</label>
+                           <!-- <input type="hidden"  name="vendor_name" value="<?php echo $product_val['id'];?>" > -->
+                    <input type="text"  value="" id="itil_product_name1" name="address_line1" class="form-control" required>
+                  </div>
+                 
+
+               <div class="col-sm-6  col-xs-12 padding-bottom-10">
+                    <label>Line 2</label>
+                         <!--   <input type="hidden"  name="id" value="<?php echo $product_val['id'];?>" > -->
+                    <input type="text"  value="" id="itil_product_name1" name="address_line2" class="form-control" required>
+                  </div>
+
+                <div class="col-sm-6 col-xs-12">
+
+                    <div class="col-sm-6  col-xs-12 padding-bottom-10" style="padding-left:0">
+                    <label>City</label>
+                          <!--  <input type="hidden"  name="id" value="<?php echo $product_val['id'];?>" > -->
+                    <input type="text"  value="" id="itil_product_name1" name="vendor_city" class="form-control" required>
+                  </div>
+
+                  <div class="col-sm-6  col-xs-12 padding-bottom-10" style="padding-right:0">
+                    <label>State</label>
+                           <!-- <input type="hidden"  name="id" value="<?php echo $product_val['id'];?>" > -->
+                    <input type="text"  value="" id="itil_product_name1" name="vendor_city" class="form-control" required>
+                  </div>
+
+                <div class="clearfix"></div>
+                </div>
+
+                 <div class="col-sm-6 col-xs-12">
+
+                    <div class="col-sm-6  col-xs-12 padding-bottom-10" style="padding-left:0">
+                    <label>Country</label>
+                          <!--  <input type="hidden"  name="id" value="<?php echo $product_val['id'];?>" > -->
+                    <input type="text"  value="" id="itil_product_name1" name="vendor_country" class="form-control" required>
+                  </div>
+
+                  <div class="col-sm-6  col-xs-12 padding-bottom-10" style="padding-right:0">
+                    <label>Zipcode</label>
+                           <!-- <input type="hidden"  name="id" value="<?php echo $product_val['id'];?>" > -->
+                    <input type="text"  value="" id="itil_product_name1" name="vendor_zipcode" class="form-control" required>
+                  </div>
+
+                <div class="clearfix"></div>
+                </div>
+                  
+                
+                  
+                    
+
+          </div>
+          
+                     
+                  </div>
            
                 </div>
 </form>

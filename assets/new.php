@@ -87,7 +87,9 @@
               
               <textarea type="text" name="description" rows="6" cols="20" style="width:100%; border:#ccc solid 1px;"></textarea>
 
-<div id="changed_div"></div>
+<div id="changed_div">
+    
+</div>
 
 
 
@@ -179,7 +181,10 @@ type:'get',
 url:'../classes/AssetForm',
 data:{'id':getproperty},
 success:function(data){
+ 
   $("#changed_div").html(data);
+ $("#changed_div").prepend('<p class="left_col padding-5 text-white margin-top-20">Properties</p>');
+
 //alert(data);
 }
 

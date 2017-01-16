@@ -18,7 +18,7 @@
              <?php require_once("../classes/Include_all.php"); ?>
              <form method="post" action="" name="update_location">
                   <div class="col-lg-7 padding-top-10"> <a href="<?php echo WEB_ROOT;?>assets/indexlocation.php" class="h4"><i class="icon-left-small"></i>Back to Locations</a> </div>
-                  <div class="col-lg-5 text-right MrTpMd-10"><button type="button "class="btn btn-default ">Cancel</button>
+                  <div class="col-lg-5 text-right MrTpMd-10"><a href="<?php echo WEB_ROOT;?>assets/indexlocation.php" type="button "class="btn btn-default ">Cancel</a>
                     
                       <input type="submit" name="update_location" class="btn btn-dark" value="Save">
                    
