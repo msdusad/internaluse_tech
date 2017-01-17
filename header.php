@@ -108,8 +108,7 @@
                 <div class="col-md-4 header-right">
                     <ul class="small-links">
                         <li><a href="#">About Us</a></li>
-                        <li><a href="#">Contact</a></li>
-                        <li><a href="#">Apply Now</a></li>
+                        <li><a href="#">Contact</a></li>                    
                         <li><a href="admin/">Admin</a></li>
                 <li><a href="#" data-toggle="modal" data-target=".bs-example-modal-sm">Login</a></li>
                 <li> <a href="#" data-toggle="modal" data-target=".bs-example-modal-sm2">Signup</a></li>
