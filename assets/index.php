@@ -285,4 +285,9 @@ $('#test1').change(function() {
         checkboxes.prop('checked', false);
     }
 });
+
+
+function datafilter(id){
+  alert(id);
+}
 </script>

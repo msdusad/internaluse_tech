@@ -44,7 +44,7 @@ function display_child_nodes($parent_id, $level)
            }
            else{
           
-            echo '<div class="panel-body" style="padding:5px;">'.str_repeat('<span class="glyphicon-pencil text-primary" style=""></span>', $level).$this->data[$id]["name"].'</div>';
+            echo '<div class="panel-body" style="padding:5px;">'.str_repeat('<span class="glyphicon-pencil text-primary" style=""></span><a href="#" id="'.$this->data[$id]["id"].'" onclick="datafilter(this.id)">', $level).$this->data[$id]["name"].'</a></div>';
         }
                 if($level==0){
 echo '</div>';
@@ -114,4 +114,4 @@ $category_object=new Category();
 $cat_obj_result=$category_object->get_category();
 //$res=$category_object->display_child_nodes(NULL, 0);
 //print_r($res);
-
+?>

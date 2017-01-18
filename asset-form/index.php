@@ -57,6 +57,45 @@
 </div>
 
 </div>
+
+
+         <div class="x_content">
+                <h1 class="h4 padding-bottom-10">Add Property Name</h1>
+          <!-- start table -->
+
+
+<div> 
+  <form method="post">
+  <div id="itemRows">
+    <div class="col-sm-12 col-xs-12 padding-bottom-10">
+      <div class="form-group" id="oldRow<?=$product['id']?>">
+                   
+                      <div class="col-md-12 col-sm-12  col-xs-12">
+                      <label class="control-label col-md-5 col-sm-5 col-xs-12">Please Select A Category<span class="text-red">*</span></label>   
+
+                      <select name="propert_add" class="form-control" id="propert_add" required> 
+                        <option value="">Root Category</option>
+                    <?php     
+
+                    $get_all_category=$category_object->View_Cat(NULL, 0);
+
+                    ?>             
+                      </select> 
+                      </div>
+                      
+                      <div class="clearfix"></div>
+                      </div>
+
+         <p>
+                     <label></label></p>      
+                  </div>
+  </div>
+  </form>
+</div>
+
+</div>
+
+
 </div>
               </div>
             </div>
@@ -74,6 +113,15 @@ $( document ).ready(function() {
  $("#cat_val").change(function(){
 var id_val=(this.value);
 window.location.href="add_form.php?id="+id_val;
+
+ });
+});
+
+
+$( document ).ready(function() {
+ $("#propert_add").change(function(){
+var id_val=(this.value);
+window.location.href="add_property.php?id="+id_val;
 
  });
 });

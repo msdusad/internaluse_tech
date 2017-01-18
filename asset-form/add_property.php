@@ -23,7 +23,7 @@
                 <div class="clearfix"></div>
               </div>
               <div class="x_content">
-                <h1 class="h4 padding-bottom-10">Add Form</h1>
+                <h1 class="h4 padding-bottom-10">Add Property</h1>
           <!-- start table -->
 <?php
 // Connect to the DB
@@ -33,20 +33,20 @@ if(!empty($_POST['ok'])) {
   if( !empty($_POST['delete_ids']) and is_array($_POST['delete_ids'])) {
     // you can optimize below into a single query, but let's keep it simple and clear for now:
     foreach($_POST['delete_ids'] as $id) {
-      $sql = "DELETE FROM assets_form WHERE id=$id && property_id='".$_POST['property_id']."' && assets_type_id='".$_GET['id']."' ";
+      $sql = "DELETE FROM item_property_name WHERE id=$id && category_id='".$_GET['id']."' ";
       $link->query($sql);
     }
   }
 
   // now, to edit the existing data, we have to select all the records in a variable.
-  $sql="SELECT * FROM assets_form where assets_type_id='".$_GET['id']."' ORDER BY id";
+  $sql="SELECT * FROM item_property_name where category_id='".$_GET['id']."' ORDER BY id";
   $result = $link->query($sql);
   
   // now edit them
   while($product = mysqli_fetch_array($result)) {
     // remember how we constructed the field names above? This was with the idea to access the values easy now
-    $sql = "UPDATE assets_form SET assets_type_id='".$_GET['id']."' , name='".$_POST['name'.$product['id']]."'
-    WHERE id='$product[id]' && property_id='".$_POST['property_id']."' && assets_type_id='".$_GET['id']."'";   
+    $sql = "UPDATE item_property_name SET category_id='".$_GET['id']."' , name='".$_POST['name'.$product['id']]."'
+    WHERE id='$product[id]' && category_id='".$_GET['id']."'";   
     $link->query($sql);
   }
   // (feel free to optimize this so query is executed only when a product is actually changed)
@@ -54,34 +54,21 @@ if(!empty($_POST['ok'])) {
   // adding new products
   if(!empty($_POST['name'])) {
     foreach($_POST['name'] as $cnt => $qty) {
-      $sql = "INSERT INTO assets_form (assets_type_id,name,property_id) VALUES ('".$_GET['id']."','".$_POST['name'][$cnt]."','".$_POST['property_id']."');";
+      $sql = "INSERT INTO item_property_name (category_id,name) VALUES ('".$_GET['id']."','".$_POST['name'][$cnt]."');";
       $link->query($sql);
     }
   } 
 }
 
 // select existing products here
-$sql="SELECT * FROM assets_form where assets_type_id='".$_GET['id']."' ORDER BY id";
+$sql="SELECT * FROM item_property_name where category_id='".$_GET['id']."' ORDER BY id";
 $result = $link->query($sql);
 ?>
 
 
 <div> 
   <form method="post">
-<select  name="property_id" class="form-control" required>
-  <option value="">Please Select A Property</option>
-<?php 
-$property_name=Assets::Item_property_name($_GET['id']);
-if($property_name!='')
-foreach ($property_name as $property_name_val) {
-echo "<option value='".$property_name_val['id']."'>".$property_name_val['name']."</option>";
-}
-
-?>
-</select>
-<br><br>
 <input type="hidden" name="cat_id" value="<?php echo $_GET['id']; ?>" />
-
   <div id="itemRows">
 
 <input type="hidden" name="add_name" /> <input onclick="addRow(this.form);" type="button" value="Add row" class="btn btn-info" style="float:right"  />
@@ -152,6 +139,3 @@ function removeRow(rnum) {
 
 </body>
 </html>
-
-
-

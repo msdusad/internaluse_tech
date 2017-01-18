@@ -10,6 +10,20 @@ $impact_data=Common::FetchData($Impact_query);
 return $impact_data;
 
 }
+
+
+public static function Item_property_name($var){
+	if($var==''){
+$Impact_query="select * from item_property_name";
+}
+else{
+$Impact_query="select * from item_property_name where category_id='$var'";	
+}
+$impact_data=Common::FetchData($Impact_query);
+return $impact_data;
+
+}
+
 public static function Assets_type(){
 	$assets_query="select * from category";
 $assets_data=Common::FetchData($assets_query);
