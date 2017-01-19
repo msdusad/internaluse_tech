@@ -61,6 +61,7 @@
                 </div>
               </div>
               <div class="row">
+
                 <div class="col-sm-6 col-xs-12 padding-bottom-10">
                   <label>Department <span class="text-red">*</span></label>
                   <select class="form-control" name="department_id">
@@ -183,7 +184,7 @@ data:{'id':getproperty},
 success:function(data){
  
   $("#changed_div").html(data);
- $("#changed_div").prepend('<p class="left_col padding-5 text-white margin-top-20">Properties</p>');
+ //$("#changed_div").prepend('<p class="left_col padding-5 text-white margin-top-20">Properties</p>');
 
 //alert(data);
 }

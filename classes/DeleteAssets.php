@@ -129,6 +129,23 @@ return 'Deleted Sucessfully';
 
 
 
+public  function MultipalItemDelete(){
+
+$checkbox=$_POST['checkbox'];
+
+if (is_array($checkbox)) { 
+
+	foreach ($checkbox as $your_slected_id){
+
+$add_query="delete from  items where id='$your_slected_id'";
+$run_qry=Common::InsertData($add_query);
+	}
+}
+}
+
+
+
+
 }
 
 
@@ -181,6 +198,13 @@ echo Common::SuccessDailog('  Agent Deleted ');
 if(isset($_POST['delete_requester'])){
 DeleteAssets::DeleteRequester();
 echo Common::SuccessDailog('  Requester Deleted ');
+}
+
+
+
+if(isset($_POST['delete_item_multipal'])){
+DeleteAssets::MultipalItemDelete();
+echo Common::SuccessDailog('  Sucessfully Deleted ');
 }
 
 ?>

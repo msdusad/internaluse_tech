@@ -37,23 +37,40 @@ if(!empty($_POST['ok'])) {
 }
 
 // select existing products here
-$sql="SELECT * FROM assets_form where assets_type_id='".$_GET['id']."' ORDER BY id";
+$sql="SELECT   a.*,b.name as property_name,b.id FROM assets_form  a left join item_property_name b  on  a.property_id=b.id  where a.assets_type_id='".$_GET['id']."' order by b.id";
+//$sql="SELECT * FROM assets_form where assets_type_id='".$_GET['id']."' ORDER BY id";
 $result = $link->query($sql);
 ?>
   <br><br>   <div class="row">
   <?php
   // let's assume you have the product data from the DB in variable called $products
   while($product = mysqli_fetch_array($result)): 
+    $p_name=$product['property_name'];
+
+  if(!isset($p_name_old)){
+ echo '<p class="left_col padding-5 text-white margin-top-20">'.$p_name.'</p>';
+  }
+    if(isset($p_name_old)){
+  if($p_name_old!=$p_name){
+echo '<p class="left_col padding-5 text-white margin-top-20"  >'.$p_name.'</p>';
+  }
+}
     ?>
+
+ 
 
                 <div class="col-sm-6 padding-bottom-10">
                   <label> <?=$product['name']?> </label>
                   <input type="text" name="dynamic_form[]"  class="form-control" />
                 </div>
                
-             
+               <div class="clearfix"></div>
+
                 
-  <?php endwhile;?>
+  <?php
+    $p_name_old=$product['property_name'];
+
+   endwhile;?>
 
  </div>
 

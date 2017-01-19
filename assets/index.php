@@ -134,7 +134,9 @@ $get_all_category=$category_object->display_child_nodes(NULL, 0);
 				    <div class="row">
 						<div class="col-md-6 col-sm-6 col-xs-12">
 							 <div class="media">
-								<div class="media-left"><button type="button" class="btn btn-default btn-round" disabled="disabled">Delete</button></div>
+							 	<form method="post" action="">
+								<div class="media-left">
+			<input name="delete_item_multipal" type="submit" id="delete_item_multipal" value="Delete" class="btn btn-default btn-round" ></div>
 								<div class="media-left">
 									<div class="input-group noMargin">
 										<input class="form-control" placeholder="Search for..." type="text">
@@ -160,10 +162,7 @@ $items=$items_d->pagination_link();
                         <table class="table table-striped jambo_table bulk_action">
                             <thead>
 							  <tr>
-								<th>
-								  <input type="checkbox" id="select_all" />
-								  <label for="select_all" class="column-title weight-600" style="padding-top:3px;">Display Name</label>
-								</th>
+								<th><input type="checkbox" onclick="toggle(this);" style="position: relative !important; left: -5px" />Display Name</th>
 								<th>Asset Type </th>
 								<th>Location </th>
 								<th>Department </th>
@@ -181,7 +180,8 @@ foreach ($items as  $items_value){
 $i++;
 echo '<tr>
 									<td class="a-center ">
-									    <input type="checkbox" id="'.$i.'" name="select[]" />
+									
+									  <input type="checkbox"  name="checkbox[]" id="'.$i.'" value="'.$items_value['id'].'"  />
 								        <label for="'.$i.'" class="column-title"><a href="'.WEB_ROOT.'products/index.php?id='.$items_value['id'].'">'.$items_value['display_name'].'</a></label>
 									</td>
 									<td class=" ">'.$items_value['assets_name'].'</td>
@@ -201,7 +201,7 @@ echo '<tr>
                         </table>
 
 
-
+</form>
 
                     </div>
                   </div>
@@ -276,18 +276,25 @@ echo '<tr>
 </body>
 </html>
 <script type="text/javascript">
+function toggle(source) {
 
-$('#test1').change(function() {
-    var checkboxes = $(this).closest('form').find(':checkbox');
-    if($(this).is(':checked')) {
-        checkboxes.prop('checked', true);
-    } else {
-        checkboxes.prop('checked', false);
+    var checkboxes = document.querySelectorAll('input[type="checkbox"]');
+    for (var i = 0; i < checkboxes.length; i++) {
+        if (checkboxes[i] != source)
+            checkboxes[i].checked = source.checked;
     }
-});
+}
+// $('#test1').change(function() {
+//     var checkboxes = $(this).closest('form').find(':checkbox');
+//     if($(this).is(':checked')) {
+//         checkboxes.prop('checked', true);
+//     } else {
+//         checkboxes.prop('checked', false);
+//     }
+// });
 
 
 function datafilter(id){
-  alert(id);
+ // alert(id);
 }
 </script>

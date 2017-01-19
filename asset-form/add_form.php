@@ -39,9 +39,10 @@ if(!empty($_POST['ok'])) {
   }
 
   // now, to edit the existing data, we have to select all the records in a variable.
-  $sql="SELECT * FROM assets_form where assets_type_id='".$_GET['id']."' ORDER BY id";
+  if(isset($_GET['proprtyid'])){
+  $sql="SELECT * FROM assets_form where assets_type_id='".$_GET['id']."' && property_id='".$_GET['proprtyid']."' ORDER BY id";
   $result = $link->query($sql);
-  
+  }
   // now edit them
   while($product = mysqli_fetch_array($result)) {
     // remember how we constructed the field names above? This was with the idea to access the values easy now
@@ -61,32 +62,47 @@ if(!empty($_POST['ok'])) {
 }
 
 // select existing products here
-$sql="SELECT * FROM assets_form where assets_type_id='".$_GET['id']."' ORDER BY id";
+
+if(isset($_GET['proprtyid'])){
+$sql="SELECT * FROM assets_form where assets_type_id='".$_GET['id']."' && property_id='".$_GET['proprtyid']."' ORDER BY id";
 $result = $link->query($sql);
+}
 ?>
 
 
 <div> 
   <form method="post">
-<select  name="property_id" class="form-control" required>
+<select id="property_id"  name="property_id" class="form-control" required>
   <option value="">Please Select A Property</option>
 <?php 
 $property_name=Assets::Item_property_name($_GET['id']);
 if($property_name!='')
 foreach ($property_name as $property_name_val) {
-echo "<option value='".$property_name_val['id']."'>".$property_name_val['name']."</option>";
+echo "<option value='".$property_name_val['id']."'";
+if(isset($_GET['proprtyid'])){
+if($_GET['proprtyid']==$property_name_val['id']){
+echo "selected";
+}
+}  
+
+echo ">".$property_name_val['name']."</option>";
 }
 
 ?>
 </select>
+<input type="hidden" id="cat_id" name="cat_id" value="<?php echo $_GET['id']; ?>" />
+<?php
+if(isset($_GET['proprtyid'])){
+?> 
 <br><br>
-<input type="hidden" name="cat_id" value="<?php echo $_GET['id']; ?>" />
+
 
   <div id="itemRows">
 
-<input type="hidden" name="add_name" /> <input onclick="addRow(this.form);" type="button" value="Add row" class="btn btn-info" style="float:right"  />
+<input type="hidden" name="add_name" />
+
+ <input onclick="addRow(this.form);" type="button" value="Add row" class="btn btn-info" style="float:right"  />
   
-   
   <?php
   // let's assume you have the product data from the DB in variable called $products
   while($product = mysqli_fetch_array($result)): 
@@ -120,24 +136,17 @@ echo "<option value='".$property_name_val['id']."'>".$property_name_val['name'].
 
   </div>
 <script type="text/javascript">
-var rowNum = 0;
-function addRow(frm) {
-  rowNum ++;
-  var row = '<div class="row"> <div class="col-sm-12  col-xs-12 padding-bottom-10"><div class="form-group" id="rowNum'+rowNum+'"><label class="control-label col-md-2 col-sm-2 col-xs-12">Filed Name:</label><div class="col-md-7 col-sm-7 col-xs-12"><input type="text" name="name[]" class="form-control" value="'+frm.add_name.value+'"></div><div class="col-md-3 col-sm-3 col-xs-12 padding-top-5"><input type="button" value="Remove" onclick="removeRow('+rowNum+');"></div><div class="clearfix"></div></div></div> </div>';
-  jQuery('#itemRows').append(row);
-  frm.add_qty.value = '';
-  frm.add_name.value = '';
-}
 
-function removeRow(rnum) {
-  jQuery('#rowNum'+rnum).remove();
-}
 
 </script>
    <p><input type="submit" name="ok" value="Save Changes" class="btn btn-round btn-dark"></p>
 
   </form>
 </div>
+
+<?php
+}
+?>
 
 </div>
 </div>
@@ -154,4 +163,31 @@ function removeRow(rnum) {
 </html>
 
 
+<script type="text/javascript">
+
+// code for add row automatically
+var rowNum = 0;
+function addRow(frm) {
+  rowNum ++;
+  var row = '<div class="row"> <div class="col-sm-12  col-xs-12 padding-bottom-10"><div class="form-group" id="rowNum'+rowNum+'"><label class="control-label col-md-2 col-sm-2 col-xs-12">Filed Name:</label><div class="col-md-7 col-sm-7 col-xs-12"><input type="text" name="name[]" class="form-control" value="'+frm.add_name.value+'"></div><div class="col-md-3 col-sm-3 col-xs-12 padding-top-5"><input type="button" value="Remove" onclick="removeRow('+rowNum+');"></div><div class="clearfix"></div></div></div> </div>';
+  jQuery('#itemRows').append(row);
+  frm.add_qty.value = '';
+  frm.add_name.value = '';
+}
+
+function removeRow(rnum) {
+  jQuery('#rowNum'+rnum).remove();
+}
+
+
+// code for get property id 
+
+$( document ).ready(function() {
+ $("#property_id").change(function(){
+var id_val=(this.value);
+var cat_id=$("#cat_id").val();
+window.location.href="?id="+cat_id+"&proprtyid="+id_val;
+ });
+});
+</script>
 
