@@ -6,7 +6,7 @@
       	<?php 
       	require_once("../include/top-nav.php"); 	
          require_once("../include/right-nav.php"); 
-           require_once("../classes /Include_all.php"); 
+         
 
 //  require_once("../classes/Category.php");
 //  include_once('../classes/PaginatedData.php');
@@ -17,7 +17,9 @@
         <div class="right_col" role="main">
 		  <div class="row checkList">
 		    <div class="col-md-3 col-sm-4 col-xs-12 margin-top-10">
-			   
+		  <?php
+		  require_once("../classes /Include_all.php"); 
+		  ?>
 						
 <!-- for category auto Genrate -->
 
