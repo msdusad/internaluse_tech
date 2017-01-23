@@ -54,17 +54,17 @@
 
 <div class="col-sm-6  col-xs-12 padding-bottom-10">
                     <label>Primary Contact<span class="text-red"></span></label>
-                    <input type="text" id="itil_product_name1" name="primary_contact" class="form-control" required>
+                    <input type="text" id="itil_product_name1" name="primary_contact" class="form-control" >
                   </div>
                   <div class="col-sm-6 col-xs-12 padding-bottom-10">
                     <label> Email<span class="text-red"></span></label>
-                    <input type="text"  id="itil_product_name1" name="email" class="form-control" required  >
+                    <input type="text"  id="itil_product_name1" name="email" class="form-control"   >
 									</div>
 								
 									
 									  <div class="col-sm-6 col-xs-12 padding-bottom-10">
                     <label>Phone<span class="text-red"></span></label>
-                   <input type="text"  id="itil_product_name1" name="phone" class="form-control" required  >
+                   <input type="text"  id="itil_product_name1" name="phone" class="form-control"   >
 
                     </select>
                   </div>
@@ -73,7 +73,7 @@
                 <div class="row">
                   <div class="col-sm-6  col-xs-12 padding-bottom-10">
                     <label>Line1 <span class="text-red"></span></label>
-                    <input type="text"  id="itil_product_name1" name="address" class="form-control"  required >
+                    <input type="text"  id="itil_product_name1" name="address" class="form-control"   >
 					&nbsp;
 					<div class="row padding-bottom-20">
 <div class="col-sm-6  col-xs-12 padding-bottom-10">
@@ -106,7 +106,7 @@ foreach ($location as $view_loc) {
 
                     <div class="col-sm-6  col-xs-12 padding-bottom-10">
                     <label>Line2 <span class="text-red"></span></label>
-                    <input type="text"  id="itil_product_name1" name="address2" class="form-control" required  >
+                    <input type="text"  id="itil_product_name1" name="address2" class="form-control"   >
           &nbsp;
           <div class="row padding-bottom-20">
 <div class="col-sm-6  col-xs-12 padding-bottom-10">
@@ -121,7 +121,7 @@ foreach ($location as $view_loc) {
                   </div>
                   <div class="col-sm-6 col-xs-12 padding-bottom-10">
                     <label> ZipCode<span class="text-red"></span></label>
-                   <input type="text"  id="itil_product_name1" name="zipcode" class="form-control" required  >
+                   <input type="text"  id="itil_product_name1" name="zipcode" class="form-control"   >
                   </div>
                 
                   

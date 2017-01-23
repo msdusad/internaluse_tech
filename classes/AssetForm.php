@@ -48,30 +48,33 @@ $result = $link->query($sql);
     $p_name=$product['property_name'];
 
   if(!isset($p_name_old)){
- echo '<p class="left_col padding-5 text-white margin-top-20">'.$p_name.'</p>';
+ echo '<div class="padding-5 text-white margin-top-20" style="background:#2A3F54; clear:both; margin:20px 0 0 0;">'.$p_name.'</div><br>';
   }
     if(isset($p_name_old)){
   if($p_name_old!=$p_name){
-echo '<p class="left_col padding-5 text-white margin-top-20"  >'.$p_name.'</p>';
+echo '<div class="padding-5 text-white margin-top-20" style="background:#2A3F54; clear:both" >'.$p_name.'</div><br>';
   }
 }
     ?>
 
  
-
-                <div class="col-sm-6 padding-bottom-10">
+              <div class="col-sm-6 col-xs-12 padding-bottom-10">
                   <label> <?=$product['name']?> </label>
                   <input type="text" name="dynamic_form[]"  class="form-control" />
                 </div>
+
+
+
                
-               <div class="clearfix"></div>
+               <!-- <div class="clearfix"></div> -->
+              
 
                 
   <?php
     $p_name_old=$product['property_name'];
 
    endwhile;?>
-
+<div class="clearfix"></div>
  </div>
 
 
